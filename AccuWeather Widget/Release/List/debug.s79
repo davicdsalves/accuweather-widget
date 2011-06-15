@@ -1,0 +1,402 @@
+//////////////////////////////////////////////////////////////////////////////
+//                                                                           /
+// IAR ARM ANSI C/C++ Compiler V4.42A/W32 EVALUATION   06/Apr/2011  22:50:31 /
+// Copyright 1999-2005 IAR Systems. All rights reserved.                     /
+//                                                                           /
+//    Cpu mode        =  interwork                                           /
+//    Endian          =  little                                              /
+//    Stack alignment =  4                                                   /
+//    Source file     =  C:\Documents and Settings\Davi\Desktop\StudyElf\Acc /
+//                       uWeather Widget\debug.cpp                           /
+//    Command line    =  "C:\Documents and Settings\Davi\Desktop\StudyElf\Ac /
+//                       cuWeather Widget\debug.cpp" -lC "C:\Documents and   /
+//                       Settings\Davi\Desktop\StudyElf\AccuWeather          /
+//                       Widget\Release\List\" -lA "C:\Documents and         /
+//                       Settings\Davi\Desktop\StudyElf\AccuWeather          /
+//                       Widget\Release\List\" -o "C:\Documents and          /
+//                       Settings\Davi\Desktop\StudyElf\AccuWeather          /
+//                       Widget\Release\Obj\" -s9 --no_unroll --no_inline    /
+//                       --cpu_mode arm --endian little --cpu ARM926EJ-S     /
+//                       --stack_align 4 --interwork -e --fpu None --eec++   /
+//                       --dlib_config "C:\Documents and                     /
+//                       Settings\Davi\Desktop\IAR\Embedded Workbench 4.0    /
+//                       Evaluation\ARM\LIB\dl5tpainl8n.h" -I "C:\Documents  /
+//                       and Settings\Davi\Desktop\IAR\Embedded Workbench    /
+//                       4.0 Evaluation\ARM\INC\"                            /
+//    List file       =  C:\Documents and Settings\Davi\Desktop\StudyElf\Acc /
+//                       uWeather Widget\Release\List\debug.s79              /
+//                                                                           /
+//                                                                           /
+//////////////////////////////////////////////////////////////////////////////
+
+        NAME debug
+
+        RTMODEL "StackAlign4", "USED"
+        RTMODEL "__cpu_mode", "__pcs__interwork"
+        RTMODEL "__data_model", "absolute"
+        RTMODEL "__endian", "little"
+        RTMODEL "__rt_version", "6"
+
+        RSEG CSTACK:DATA:NOROOT(2)
+
+        ERROR
+//NOTE: This module defines or uses C++ features that are not
+//      accessible from assembler code. Assembling this file will
+//      not produce an equivalent object file to the one produced
+//      by the C++ compiler.
+
+        PUBLIC ??dbtf
+        FUNCTION ??dbtf,0203H
+        LOCFRAME CSTACK, 12, STACK
+        MULTWEAK ??dbtf??rT
+        MULTWEAK `??operator delete??rA`
+        MULTWEAK `??operator new[]??rA`
+        PUBLIC ??printInt
+        FUNCTION ??printInt,0203H
+        LOCFRAME CSTACK, 12, STACK
+        MULTWEAK ??printInt??rT
+        PUBLIC ??printWchar
+        FUNCTION ??printWchar,0203H
+        LOCFRAME CSTACK, 16, STACK
+        MULTWEAK ??printWchar??rT
+        PUBLIC ??printWstr
+        FUNCTION ??printWstr,0203H
+        LOCFRAME CSTACK, 12, STACK
+        MULTWEAK ??printWstr??rT
+        
+        CFI Names cfiNames0
+        CFI StackFrame CFA R13 HUGEDATA
+        CFI Resource R0:32, R1:32, R2:32, R3:32, R4:32, R5:32, R6:32, R7:32
+        CFI Resource R8:32, R9:32, R10:32, R11:32, R12:32, CPSR:32, R13:32
+        CFI Resource R14:32, SPSR:32
+        CFI VirtualResource ?RET:32
+        CFI EndNames cfiNames0
+        
+        CFI Common cfiCommon0 Using cfiNames0
+        CFI CodeAlign 2
+        CFI DataAlign 4
+        CFI ReturnAddress ?RET CODE
+        CFI CFA R13+0
+        CFI R0 Undefined
+        CFI R1 Undefined
+        CFI R2 Undefined
+        CFI R3 Undefined
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI R8 SameValue
+        CFI R9 SameValue
+        CFI R10 SameValue
+        CFI R11 SameValue
+        CFI R12 Undefined
+        CFI CPSR SameValue
+        CFI R14 Undefined
+        CFI SPSR SameValue
+        CFI ?RET R14
+        CFI EndCommon cfiCommon0
+        
+        
+        CFI Common cfiCommon1 Using cfiNames0
+        CFI CodeAlign 4
+        CFI DataAlign 4
+        CFI ReturnAddress ?RET CODE
+        CFI CFA R13+0
+        CFI R0 Undefined
+        CFI R1 Undefined
+        CFI R2 Undefined
+        CFI R3 Undefined
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI R8 SameValue
+        CFI R9 SameValue
+        CFI R10 SameValue
+        CFI R11 SameValue
+        CFI R12 Undefined
+        CFI CPSR SameValue
+        CFI R14 Undefined
+        CFI SPSR SameValue
+        CFI ?RET R14
+        CFI EndCommon cfiCommon1
+        
+
+
+
+??dbtf??rT          SYMBOL "??rT", ??dbtf
+`??operator delete??rA` SYMBOL "??rA", `??operator delete`
+`??operator new[]??rA` SYMBOL "??rA", `??operator new[]`
+
+??printInt??rT      SYMBOL "??rT", ??printInt
+
+??printWchar??rT    SYMBOL "??rT", ??printWchar
+
+??printWstr??rT     SYMBOL "??rT", ??printWstr
+
+        EXTERN `??operator delete`
+        FUNCTION `??operator delete`,0202H
+        EXTERN `??operator new[]`
+        FUNCTION `??operator new[]`,0202H
+
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock0 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??dbtf??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock0
+        REQUIRE ??dbtf
+// C:\Documents and Settings\Davi\Desktop\StudyElf\AccuWeather Widget\debug.cpp
+//    1 #include "..\include\Lib_Clara.h"
+//    2 #include "..\include\Dir.h"
+//    3 #include "debug.h"
+//    4 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock1 Using cfiCommon1
+        CFI Function ??dbtf
+        ARM
+//    5 void dbtf(char* msg) {
+??dbtf:
+        PUSH     {R4,R5,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R5 Frame(CFA, -8)
+        CFI R4 Frame(CFA, -12)
+        CFI CFA R13+12
+//    6 //  w_chdir(GetDir(DIR_OTHER|MEM_INTERNAL));
+//    7 //  int file = w_fopen(L"debug.txt", WA_Create+ WA_Append+WA_Write ,0x1FF,0);
+//    8 //  if ( file > -1 ) { 
+//    9 //    int length = strlen(msg);
+//   10 //    w_fwrite( file , msg , length ) ;
+//   11 //    w_fclose( file ) ; 
+//   12 //  }
+//   13   debug_printf("\n+-+-+-+- ");
+        LDR      R5,??dbtf_1      ;; `?<Constant "\\n+-+-+-+- ">`
+        MOV      R4,R0
+        MOV      R0,R5
+        SWI      +433
+//   14   debug_printf(msg);
+        MOV      R0,R4
+        SWI      +433
+//   15   debug_printf(" +-+-+-+-\n");
+        ADD      R0,R5,#+12
+        SWI      +433
+//   16 }
+        POP      {R4,R5,PC}       ;; return
+        DATA
+??dbtf_1:
+        DC32     `?<Constant "\\n+-+-+-+- ">`
+        CFI EndBlock cfiBlock1
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock2 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??printInt??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock2
+        REQUIRE ??printInt
+//   17 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock3 Using cfiCommon1
+        CFI Function ??printInt
+        ARM
+//   18 void printInt(int num) {
+??printInt:
+        PUSH     {R4,R5,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R5 Frame(CFA, -8)
+        CFI R4 Frame(CFA, -12)
+        CFI CFA R13+12
+        MOV      R4,R0
+//   19   //<!--debug
+//   20   char* intI = new char[0x10];
+        MOV      R0,#+16
+        _BLF     `??operator new[]`,`??operator new[]??rA`
+        MOV      R5,R0
+//   21   sprintf(intI,"%d\n",num);
+        MOV      R2,R4
+        ADR      R1,??printInt_1  ;; "%d\n"
+        SWI      +276
+//   22   dbtf(intI);
+        MOV      R0,R5
+        BL       ??dbtf
+//   23   delete intI;
+        MOV      R0,R5
+        POP      {R4,R5,LR}       ;; Pop
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI ?RET R14
+        CFI CFA R13+0
+        _BF      `??operator delete`,`??operator delete??rA`  ;; tailcall
+        DATA
+??printInt_1:
+        DC8      "%d\n"
+        CFI EndBlock cfiBlock3
+//   24   //-->
+//   25 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock4 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??printWchar??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock4
+        REQUIRE ??printWchar
+//   26 //wchar_t* wstrrchr( const wchar_t* wstr, wchar_t wchar );
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock5 Using cfiCommon1
+        CFI Function ??printWchar
+        ARM
+//   27 void printWchar(wchar_t wString) {
+??printWchar:
+        PUSH     {R4-R6,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R6 Frame(CFA, -8)
+        CFI R5 Frame(CFA, -12)
+        CFI R4 Frame(CFA, -16)
+        CFI CFA R13+16
+        MOV      R4,R0
+//   28   //<!--debug
+//   29   char* intI = new char[0x2];
+        MOV      R0,#+2
+        _BLF     `??operator new[]`,`??operator new[]??rA`
+        MOV      R5,R0
+//   30   wchar_t* wstr = new wchar_t[0x2];
+        MOV      R0,#+4
+        _BLF     `??operator new[]`,`??operator new[]??rA`
+        MOV      R6,R0
+//   31   wstr[0x0] = wString;
+        STRH     R4,[R6, #+0]
+//   32   wstr2strn(intI,wstr,wstrlen(wstr));
+        SWI      +343
+        MOV      R2,R0
+        MOV      R1,R6
+        MOV      R0,R5
+        SWI      +347
+//   33   dbtf(intI);
+        MOV      R0,R5
+        BL       ??dbtf
+//   34 
+//   35   //dbtf(" \n");
+//   36   delete wstr;
+        MOV      R0,R6
+        _BLF     `??operator delete`,`??operator delete??rA`
+//   37   delete intI;
+        MOV      R0,R5
+        POP      {R4-R6,LR}       ;; Pop
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI R6 SameValue
+        CFI ?RET R14
+        CFI CFA R13+0
+        _BF      `??operator delete`,`??operator delete??rA`  ;; tailcall
+        CFI EndBlock cfiBlock5
+//   38   //-->
+//   39 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock6 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??printWstr??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock6
+        REQUIRE ??printWstr
+//   40 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock7 Using cfiCommon1
+        CFI Function ??printWstr
+        ARM
+//   41 void printWstr(const wchar_t* wString) {
+??printWstr:
+        PUSH     {R4,R5,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R5 Frame(CFA, -8)
+        CFI R4 Frame(CFA, -12)
+        CFI CFA R13+12
+        MOV      R4,R0
+//   42   //<!--debug
+//   43   char* intI = new char[0x256];
+        MOV      R0,#+86
+        ORR      R0,R0,#0x200
+        _BLF     `??operator new[]`,`??operator new[]??rA`
+        MOV      R5,R0
+//   44   wstr2strn(intI,wString,wstrlen(wString));
+        MOV      R0,R4
+        SWI      +343
+        MOV      R2,R0
+        MOV      R1,R4
+        MOV      R0,R5
+        SWI      +347
+//   45   dbtf(intI);
+        MOV      R0,R5
+        BL       ??dbtf
+//   46   delete intI;
+        MOV      R0,R5
+        POP      {R4,R5,LR}       ;; Pop
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI ?RET R14
+        CFI CFA R13+0
+        _BF      `??operator delete`,`??operator delete??rA`  ;; tailcall
+        CFI EndBlock cfiBlock7
+//   47   //-->
+//   48 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock8 Using cfiCommon1
+        CFI NoFunction
+        ARM
+`??operator new[]??rA`:
+        LDR      R12,??Subroutine4_0  ;; `??operator new[]`
+        BX       R12
+        DATA
+??Subroutine4_0:
+        DC32     `??operator new[]`
+        CFI EndBlock cfiBlock8
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock9 Using cfiCommon1
+        CFI NoFunction
+        ARM
+`??operator delete??rA`:
+        LDR      R12,??Subroutine5_0  ;; `??operator delete`
+        BX       R12
+        DATA
+??Subroutine5_0:
+        DC32     `??operator delete`
+        CFI EndBlock cfiBlock9
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant "\\n+-+-+-+- ">`:
+        DATA
+        DC8 "\012+-+-+-+- "
+        DC8 0
+        DC8 " +-+-+-+-\012"
+        DC8 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+        DATA
+        DC8 "%d\012"
+
+        END
+// 
+// 292 bytes in segment CODE
+//  28 bytes in segment DATA_C
+// 
+// 252 bytes of CODE  memory (+ 40 bytes shared)
+//  28 bytes of CONST memory
+//
+//Errors: none
+//Warnings: none

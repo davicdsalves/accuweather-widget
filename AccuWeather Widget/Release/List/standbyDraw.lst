@@ -1,0 +1,2426 @@
+##############################################################################
+#                                                                            #
+# IAR ARM ANSI C/C++ Compiler V4.42A/W32 EVALUATION    06/Jun/2011  22:25:10 #
+# Copyright 1999-2005 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Cpu mode        =  interwork                                            #
+#    Endian          =  little                                               #
+#    Stack alignment =  4                                                    #
+#    Source file     =  C:\Documents and Settings\Davi\Desktop\StudyElf\Accu #
+#                       Weather Widget\standby\standbyDraw.cpp               #
+#    Command line    =  "C:\Documents and Settings\Davi\Desktop\StudyElf\Acc #
+#                       uWeather Widget\standby\standbyDraw.cpp" -lC         #
+#                       "C:\Documents and Settings\Davi\Desktop\StudyElf\Acc #
+#                       uWeather Widget\Release\List\" -lA "C:\Documents     #
+#                       and Settings\Davi\Desktop\StudyElf\AccuWeather       #
+#                       Widget\Release\List\" -o "C:\Documents and           #
+#                       Settings\Davi\Desktop\StudyElf\AccuWeather           #
+#                       Widget\Release\Obj\" -s9 --no_unroll --no_inline     #
+#                       --cpu_mode arm --endian little --cpu ARM926EJ-S      #
+#                       --stack_align 4 --interwork -e --fpu None --eec++    #
+#                       --dlib_config "C:\Documents and                      #
+#                       Settings\Davi\Desktop\IAR\Embedded Workbench 4.0     #
+#                       Evaluation\ARM\LIB\dl5tpainl8n.h" -I "C:\Documents   #
+#                       and Settings\Davi\Desktop\IAR\Embedded Workbench     #
+#                       4.0 Evaluation\ARM\INC\"                             #
+#    List file       =  C:\Documents and Settings\Davi\Desktop\StudyElf\Accu #
+#                       Weather Widget\Release\List\standbyDraw.lst          #
+#    Object file     =  C:\Documents and Settings\Davi\Desktop\StudyElf\Accu #
+#                       Weather Widget\Release\Obj\standbyDraw.r79           #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Davi\Desktop\StudyElf\AccuWeather Widget\standby\standbyDraw.cpp
+      1          #include "..\..\include\Lib_Clara.h"
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \   __??Code32?? __code __interwork __atpcs LPARAM::LPARAM(int)
+   \                     ??LPARAM:
+   \   00000000   001080E5           STR      R1,[R0, #+0]
+   \   00000004   1EFF2FE1           BX       LR               ;; return
+      2          #include "..\..\include\Dir.h"
+      3          #include "..\..\include\cfg_items.h"
+      4          #include "..\bcfg\config_data.h"
+      5          #include "..\bcfg\conf_loader.h"
+      6          #include "..\file\openfile.h"
+      7          #include "..\file\fileAnaliser.h"
+      8          #include "..\utils\weather.h"
+      9          #include "..\utils\utils.h"
+     10          #include "..\mybook.h"
+     11          #include "standbyDraw.h"
+     12          #include "stdby.h"
+
+   \                                 In segment DATA_I, align 4, align-sorted
+   \   wchar_t __data statesID[72]
+   \                     statesID:
+   \   00000000                      DS8 144
+   \   00000090                      REQUIRE `?<Initializer for statesID>`
+   \   wchar_t __data bgID[32]
+   \                     bgID:
+   \   00000090                      DS8 64
+   \   000000D0                      REQUIRE `?<Initializer for bgID>`
+   \   void (*__data SIonRedraw)(DISP_OBJ *, int, int, int)
+   \                     SIonRedraw:
+   \   000000D0                      DS8 4
+   \   000000D4                      REQUIRE `?<Initializer for SIonRedraw>`
+   \   DISP_OBJ *__data StatusIndication
+   \                     StatusIndication:
+   \   000000D4                      DS8 4
+   \   000000D8                      REQUIRE `?<Initializer for StatusIndication>`
+   \   wchar_t *__data stateImages[68]
+   \                     stateImages:
+   \   000000D8                      DS8 272
+   \   000001E8                      REQUIRE `?<Initializer for stateImages>`
+   \   wchar_t *__data bgImages[32]
+   \                     bgImages:
+   \   000001E8                      DS8 128
+   \   00000268                      REQUIRE `?<Initializer for bgImages>`
+     13          
+     14          MyBook* mybook;
+   \                     mybook:
+   \   00000268                      DS8 4
+   \   0000026C                      REQUIRE `?<Initializer for mybook>`
+     15          
+     16          //<!--bookmanager
+
+   \                                 In segment CODE, align 4, keep-with-next
+     17          void Send_REDRAW_RELEASE() {
+   \                     ??Send_REDRAW_RELEASE:
+   \   00000000   10402DE9           PUSH     {R4,LR}
+     18            REDRAW_RELEASE_MESSAGE * sbm= new REDRAW_RELEASE_MESSAGE;
+   \   00000004   1800A0E3           MOV      R0,#+24
+   \   00000008   ........           _BLF     `??operator new`,`??operator new??rA`
+   \   0000000C   0040A0E1           MOV      R4,R0
+     19            memset(sbm,0,sizeof(REDRAW_RELEASE_MESSAGE));
+   \   00000010   1820A0E3           MOV      R2,#+24
+   \   00000014   0010A0E3           MOV      R1,#+0
+   \   00000018   120100EF           SWI      +274
+     20            sbm->SB_OldOnRedraw=SIonRedraw;
+   \   0000001C   28009FE5           LDR      R0,??Send_REDRAW_RELEASE_1  ;; statesID + 208
+   \   00000020   000090E5           LDR      R0,[R0, #+0]
+   \   00000024   000084E5           STR      R0,[R4, #+0]
+     21            sbm->SB_NewOnRedraw=Draw;
+   \   00000028   ........           LDR      R0,??DataTable0  ;; ??Draw
+   \   0000002C   040084E5           STR      R0,[R4, #+4]
+     22            UI_Event_wData(SBY_REDRAW_RELEASE_EVENT ,sbm,(void (*)(void*))mfree_adr());
+   \   00000030   048100EF           SWI      +33028
+   \   00000034   0020A0E1           MOV      R2,R0
+   \   00000038   0410A0E1           MOV      R1,R4
+   \   0000003C   E300A0E3           MOV      R0,#+227
+   \   00000040   C00F80E3           ORR      R0,R0,#0x300
+   \   00000044   A90100EF           SWI      +425
+     23          }
+   \   00000048   1080BDE8           POP      {R4,PC}          ;; return
+   \                     ??Send_REDRAW_RELEASE_1:
+   \   0000004C   ........           DC32     statesID + 208
+     24          
+     25          
+     26          //-->
+     27          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     28          void drawOnStby(wchar_t* message, int fontSize, int align, int x, int y, int textColor ) {
+   \                     ??drawOnStby:
+   \   00000000   F44F2DE9           PUSH     {R2,R4-R11,LR}
+   \   00000004   28709DE5           LDR      R7,[SP, #+40]
+   \   00000008   2C809DE5           LDR      R8,[SP, #+44]
+   \   0000000C   0040A0E1           MOV      R4,R0
+   \   00000010   0150A0E1           MOV      R5,R1
+   \   00000014   0360A0E1           MOV      R6,R3
+     29            int displayWidth = Display_GetWidth( 0 );
+   \   00000018   0000A0E3           MOV      R0,#+0
+   \   0000001C   590200EF           SWI      +601
+   \   00000020   00A0A0E1           MOV      R10,R0
+     30            int displayHeigth = Display_GetHeight( 0 );
+   \   00000024   0000A0E3           MOV      R0,#+0
+   \   00000028   580200EF           SWI      +600
+   \   0000002C   00B0A0E1           MOV      R11,R0
+     31            int msgSize = wstrlen(message);
+   \   00000030   0400A0E1           MOV      R0,R4
+   \   00000034   570100EF           SWI      +343
+   \   00000038   0090A0E1           MOV      R9,R0
+     32            if (searchLine(message)) {
+   \   0000003C   0400A0E1           MOV      R0,R4
+   \   00000040   ........           _BLF     ??searchLine,??searchLine??rA
+   \   00000044   000050E3           CMP      R0,#+0
+   \   00000048   2900000A           BEQ      ??drawOnStby_1
+     33              int indexLine = wGetIndexOfLine(message);
+   \   0000004C   0400A0E1           MOV      R0,R4
+   \   00000050   ........           _BLF     ??wGetIndexOfLine,??wGetIndexOfLine??rA
+   \   00000054   0090A0E1           MOV      R9,R0
+     34              wchar_t* line1 = getWSubStr(message,0,indexLine-1);
+   \   00000058   012049E2           SUB      R2,R9,#+1
+   \   0000005C   0010A0E3           MOV      R1,#+0
+   \   00000060   0400A0E1           MOV      R0,R4
+   \   00000064   ........           _BLF     ??getWSubStr,??getWSubStr??rA
+   \   00000068   00A0A0E1           MOV      R10,R0
+     35              wchar_t* line2 = getWSubStr(message,indexLine+2,wstrlen(message));
+   \   0000006C   0400A0E1           MOV      R0,R4
+   \   00000070   570100EF           SWI      +343
+   \   00000074   0020A0E1           MOV      R2,R0
+   \   00000078   021089E2           ADD      R1,R9,#+2
+   \   0000007C   0400A0E1           MOV      R0,R4
+   \   00000080   ........           _BLF     ??getWSubStr,??getWSubStr??rA
+   \   00000084   0040A0E1           MOV      R4,R0
+     36              msgSize = wstrlen(line1);
+   \   00000088   0A00A0E1           MOV      R0,R10
+   \   0000008C   570100EF           SWI      +343
+     37              
+     38              TEXTID drawText = TextID_Create(line1, ENC_UCS2 , msgSize);
+   \   00000090   0020A0E1           MOV      R2,R0
+   \   00000094   0010A0E3           MOV      R1,#+0
+   \   00000098   0A00A0E1           MOV      R0,R10
+   \   0000009C   5D0100EF           SWI      +349
+   \   000000A0   0090A0E1           MOV      R9,R0
+     39              SetFont(fontSize);
+   \   000000A4   0500A0E1           MOV      R0,R5
+   \   000000A8   F10100EF           SWI      +497
+     40          #if defined(DB3210)|| defined(DB3200) || defined (DB3350)
+     41              DrawString( drawText , align , x , y , displayWidth, displayHeigth , 0 , 0 , textColor , textColor );
+     42          #elif defined(DB3150) || defined(DB2020)
+     43              DrawString( drawText , align , x , y , displayWidth, displayHeigth , 60 , 0x05 , textColor , textColor );    
+     44          #endif
+     45              TextID_Destroy( drawText );
+   \   000000AC   0900A0E1           MOV      R0,R9
+   \   000000B0   610100EF           SWI      +353
+     46          
+     47              delete line1; 
+   \   000000B4   0A00A0E1           MOV      R0,R10
+   \   000000B8   ........           _BLF     `??operator delete`,`??operator delete??rA`
+     48              line1 = NULL;
+     49              drawOnStby(line2, fontSize, align, x, y + BCFG_Tags_DayState_LineSpacing, textColor );
+   \   000000BC   94009FE5           LDR      R0,??drawOnStby_2  ;; BCFG_Tags_DayState_LineSpacing
+   \   000000C0   00012DE9           PUSH     {R8}
+   \   000000C4   000090E5           LDR      R0,[R0, #+0]
+   \   000000C8   0630A0E1           MOV      R3,R6
+   \   000000CC   070080E0           ADD      R0,R0,R7
+   \   000000D0   01002DE9           PUSH     {R0}
+   \   000000D4   08209DE5           LDR      R2,[SP, #+8]
+   \   000000D8   0510A0E1           MOV      R1,R5
+   \   000000DC   0400A0E1           MOV      R0,R4
+   \   000000E0   C6FFFFEB           BL       ??drawOnStby
+     50              delete line2;
+   \   000000E4   0400A0E1           MOV      R0,R4
+   \   000000E8   ........           _BLF     `??operator delete`,`??operator delete??rA`
+     51              line2 = NULL;
+   \   000000EC   08D08DE2           ADD      SP,SP,#+8
+   \   000000F0   F18FBDE8           POP      {R0,R4-R11,PC}
+     52            }
+     53            else {
+     54              TEXTID drawText = TextID_Create(message, ENC_UCS2 , msgSize);
+   \                     ??drawOnStby_1:
+   \   000000F4   0920A0E1           MOV      R2,R9
+   \   000000F8   0010A0E3           MOV      R1,#+0
+   \   000000FC   0400A0E1           MOV      R0,R4
+   \   00000100   5D0100EF           SWI      +349
+   \   00000104   0040A0E1           MOV      R4,R0
+     55              SetFont(fontSize);
+   \   00000108   0500A0E1           MOV      R0,R5
+   \   0000010C   F10100EF           SWI      +497
+     56              DrawString( drawText , align , x , y , displayWidth, displayHeigth , 60 , 0x05 , textColor , textColor );
+   \   00000110   0800A0E1           MOV      R0,R8
+   \   00000114   01002DE9           PUSH     {R0}
+   \   00000118   00012DE9           PUSH     {R8}
+   \   0000011C   0730A0E1           MOV      R3,R7
+   \   00000120   0500A0E3           MOV      R0,#+5
+   \   00000124   01002DE9           PUSH     {R0}
+   \   00000128   0620A0E1           MOV      R2,R6
+   \   0000012C   3C00A0E3           MOV      R0,#+60
+   \   00000130   01002DE9           PUSH     {R0}
+   \   00000134   00082DE9           PUSH     {R11}
+   \   00000138   00042DE9           PUSH     {R10}
+   \   0000013C   18109DE5           LDR      R1,[SP, #+24]
+   \   00000140   0400A0E1           MOV      R0,R4
+   \   00000144   ED0100EF           SWI      +493
+     57              TextID_Destroy( drawText );
+   \   00000148   0400A0E1           MOV      R0,R4
+   \   0000014C   610100EF           SWI      +353
+   \   00000150   18D08DE2           ADD      SP,SP,#+24
+     58            }
+     59          }
+   \   00000154   F18FBDE8           POP      {R0,R4-R11,PC}   ;; return
+   \                     ??drawOnStby_2:
+   \   00000158   ........           DC32     BCFG_Tags_DayState_LineSpacing
+     60          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     61          void Draw(DISP_OBJ* db,int r1, int r2,int r3) { //change lines for w800
+   \                     ??Draw:
+   \   00000000   10402DE9           PUSH     {R4,LR}
+     62            if (SIonRedraw) SIonRedraw(db,r1,r2,r3);
+   \   00000004   ........           LDR      R4,??DataTable29  ;; statesID
+   \   00000008   D0C094E5           LDR      R12,[R4, #+208]
+   \   0000000C   00005CE3           CMP      R12,#+0
+   \   00000010   0000000A           BEQ      ??Draw_1
+   \   00000014   3CFF2FE1           BLX      R12
+     63            BCFG_HideOnMusic ? (!FindBook(get_IsAudioPlayerBook()) ? drawWeatherContents() : mybook->donothing() ) : drawWeatherContents();
+   \                     ??Draw_1:
+   \   00000018   2C009FE5           LDR      R0,??Draw_2      ;; BCFG_HideOnMusic
+   \   0000001C   000090E5           LDR      R0,[R0, #+0]
+   \   00000020   000050E3           CMP      R0,#+0
+   \   00000024   0600000A           BEQ      ??Draw_3
+   \   00000028   8B8200EF           SWI      +33419
+   \   0000002C   300100EF           SWI      +304
+   \   00000030   000050E3           CMP      R0,#+0
+   \   00000034   0200000A           BEQ      ??Draw_3
+   \   00000038   680294E5           LDR      R0,[R4, #+616]
+   \   0000003C   1040BDE8           POP      {R4,LR}          ;; Pop
+   \   00000040   ........           _BF      ??donothing,??donothing??rA  ;; tailcall
+   \                     ??Draw_3:
+   \   00000044   1040BDE8           POP      {R4,LR}          ;; Pop
+   \   00000048   ........           B        ??drawWeatherContents  ;; tailcall
+   \                     ??Draw_2:
+   \   0000004C   ........           DC32     BCFG_HideOnMusic
+     64          
+     65          } 
+     66          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     67          void drawForShadow( wchar_t* message, int fontSize, int align, int x, int y, unsigned int color, unsigned int shadowColor, bool shadowEnable) {
+   \                     ??drawForShadow:
+   \   00000000   F0432DE9           PUSH     {R4-R9,LR}
+   \   00000004   20709DE5           LDR      R7,[SP, #+32]
+   \   00000008   ........           LDR      R8,??DataTable16  ;; BCFG_WidgetPosition_X
+   \   0000000C   0260A0E1           MOV      R6,R2
+   \   00000010   008098E5           LDR      R8,[R8, #+0]
+   \   00000014   2820DDE5           LDRB     R2,[SP, #+40]
+   \   00000018   038088E0           ADD      R8,R8,R3
+   \   0000001C   ........           LDR      R3,??DataTable17  ;; BCFG_WidgetPosition_Y
+   \   00000020   0040A0E1           MOV      R4,R0
+   \   00000024   1C009DE5           LDR      R0,[SP, #+28]
+   \   00000028   003093E5           LDR      R3,[R3, #+0]
+   \   0000002C   0150A0E1           MOV      R5,R1
+   \   00000030   24109DE5           LDR      R1,[SP, #+36]
+   \   00000034   009083E0           ADD      R9,R3,R0
+   \   00000038   000052E3           CMP      R2,#+0
+   \   0000003C   0800000A           BEQ      ??drawForShadow_1
+     68            if (shadowEnable)
+     69              drawOnStby( message , fontSize , align , x - 2 + BCFG_WidgetPosition_X, y + BCFG_WidgetPosition_Y, shadowColor );
+   \   00000040   02002DE9           PUSH     {R1}
+   \   00000044   0900A0E1           MOV      R0,R9
+   \   00000048   01002DE9           PUSH     {R0}
+   \   0000004C   023048E2           SUB      R3,R8,#+2
+   \   00000050   0620A0E1           MOV      R2,R6
+   \   00000054   0510A0E1           MOV      R1,R5
+   \   00000058   0400A0E1           MOV      R0,R4
+   \   0000005C   ........           BL       ??drawOnStby
+   \   00000060   08D08DE2           ADD      SP,SP,#+8
+     70            drawOnStby( message , fontSize , align , x + BCFG_WidgetPosition_X, y + BCFG_WidgetPosition_Y, color );
+   \                     ??drawForShadow_1:
+   \   00000064   80002DE9           PUSH     {R7}
+   \   00000068   00022DE9           PUSH     {R9}
+   \   0000006C   0830A0E1           MOV      R3,R8
+   \   00000070   0620A0E1           MOV      R2,R6
+   \   00000074   0510A0E1           MOV      R1,R5
+   \   00000078   0400A0E1           MOV      R0,R4
+   \   0000007C   ........           BL       ??drawOnStby
+     71          }
+   \   00000080   F383BDE8           POP      {R0,R1,R4-R9,PC}  ;; return
+     72          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     73          wchar_t* returnMask(const wchar_t* mask, int tag, bool contentIf, float (*func)(int) , int cond=0) {
+   \                     ??returnMask:
+   \   00000000   F0472DE9           PUSH     {R4-R10,LR}
+   \   00000004   20A09DE5           LDR      R10,[SP, #+32]
+   \   00000008   0040A0E1           MOV      R4,R0
+   \   0000000C   0170A0E1           MOV      R7,R1
+   \   00000010   0280A0E1           MOV      R8,R2
+   \   00000014   0390A0E1           MOV      R9,R3
+     74            int sizeOfTemp = wstrlen(mask) + intlen(tag);
+   \   00000018   570100EF           SWI      +343
+   \   0000001C   0050A0E1           MOV      R5,R0
+   \   00000020   0700A0E1           MOV      R0,R7
+   \   00000024   ........           _BLF     ??intlen,??intlen??rA
+   \   00000028   055080E0           ADD      R5,R0,R5
+     75            wchar_t* newMask = new wchar_t[ sizeOfTemp + 0x1 ];
+   \   0000002C   010085E2           ADD      R0,R5,#+1
+   \   00000030   8000A0E1           LSL      R0,R0,#+1
+   \   00000034   ........           _BLF     `??operator new[]`,`??operator new[]??rA`
+   \   00000038   0060A0E1           MOV      R6,R0
+     76            snwprintf( newMask, sizeOfTemp, mask, ( contentIf == cond ? tag : (*func)(tag) ) );
+   \   0000003C   0A0058E1           CMP      R8,R10
+   \   00000040   0700A0E1           MOV      R0,R7
+   \   00000044   0100001A           BNE      ??returnMask_1
+   \   00000048   ........           _BLF     __longToFloat,??__longToFloat??rA
+   \   0000004C   000000EA           B        ??returnMask_2
+   \                     ??returnMask_1:
+   \   00000050   39FF2FE1           BLX      R9
+   \                     ??returnMask_2:
+   \   00000054   ........           _BLF     __floatToDouble,??__floatToDouble??rA
+   \   00000058   03002DE9           PUSH     {R0,R1}
+   \   0000005C   0800BDE8           POP      {R3}
+   \   00000060   0420A0E1           MOV      R2,R4
+   \   00000064   0510A0E1           MOV      R1,R5
+   \   00000068   0600A0E1           MOV      R0,R6
+   \   0000006C   150100EF           SWI      +277
+     77            newMask[sizeOfTemp] = 0;
+   \   00000070   850086E0           ADD      R0,R6,R5, LSL #+1
+   \   00000074   0010A0E3           MOV      R1,#+0
+   \   00000078   B010C0E1           STRH     R1,[R0, #+0]
+     78            return newMask;
+   \   0000007C   0600A0E1           MOV      R0,R6
+   \   00000080   F287BDE8           POP      {R1,R4-R10,PC}   ;; return
+     79          }
+
+   \                                 In segment CODE, align 4, keep-with-next
+     80          void manageCursor() {
+   \                     ??manageCursor:
+   \   00000000   20402DE9           PUSH     {R5,LR}
+     81            (mybook->cursorDown) ? mybook->addCursor(-1) : mybook->addCursor(1);
+   \   00000004   ........           LDR      R5,??DataTable29  ;; statesID
+   \   00000008   680295E5           LDR      R0,[R5, #+616]
+   \   0000000C   2910D0E5           LDRB     R1,[R0, #+41]
+   \   00000010   000051E3           CMP      R1,#+0
+   \   00000014   0010E013           MVNNE    R1,#+0
+   \   00000018   0110A003           MOVEQ    R1,#+1
+   \   0000001C   ........           _BLF     ??addCursor,??addCursor??rA
+     82            if (mybook->getCursor() == 0) { mybook->cursorDown = false; mybook->changeWallpaper = false; }
+   \   00000020   680295E5           LDR      R0,[R5, #+616]
+   \   00000024   ........           _BLF     ??getCursor,??getCursor??rA
+   \   00000028   000050E3           CMP      R0,#+0
+   \   0000002C   0300001A           BNE      ??manageCursor_1
+   \   00000030   680295E5           LDR      R0,[R5, #+616]
+   \   00000034   0010A0E3           MOV      R1,#+0
+   \   00000038   2910C0E5           STRB     R1,[R0, #+41]
+   \   0000003C   2810C0E5           STRB     R1,[R0, #+40]
+     83            if (mybook->getCursor() == 19) { mybook->cursorDown = true; mybook->changeWallpaper = false; }
+   \                     ??manageCursor_1:
+   \   00000040   680295E5           LDR      R0,[R5, #+616]
+   \   00000044   ........           _BLF     ??getCursor,??getCursor??rA
+   \   00000048   130050E3           CMP      R0,#+19
+   \   0000004C   2080BD18           POPNE    {R5,PC}
+   \   00000050   680295E5           LDR      R0,[R5, #+616]
+   \   00000054   0110A0E3           MOV      R1,#+1
+   \   00000058   2910C0E5           STRB     R1,[R0, #+41]
+   \   0000005C   0010A0E3           MOV      R1,#+0
+   \   00000060   2810C0E5           STRB     R1,[R0, #+40]
+     84            
+     85          }
+   \   00000064   2080BDE8           POP      {R5,PC}
+
+   \                                 In segment CODE, align 4, keep-with-next
+     86          void finalDraw(wchar_t* location, int dayState, int tempMin, int tempMax, int windSpeed, wchar_t* state, wchar_t* windDirection, int averageTemp) {
+   \                     ??finalDraw:
+   \   00000000   F84F2DE9           PUSH     {R3-R11,LR}
+     87            wchar_t* temp = NULL;
+     88            //<!--images
+     89            if (BCFG_Images_Background_Enable) {
+   \   00000004   ........           LDR      R5,??DataTable33  ;; statesID
+   \   00000008   00A0A0E1           MOV      R10,R0
+   \   0000000C   ........           LDR      R0,??DataTable37  ;; BCFG_Images_Background_Enable
+   \   00000010   04D04DE2           SUB      SP,SP,#+4
+   \   00000014   000090E5           LDR      R0,[R0, #+0]
+   \   00000018   2C409DE5           LDR      R4,[SP, #+44]
+   \   0000001C   0160A0E1           MOV      R6,R1
+   \   00000020   02B0A0E1           MOV      R11,R2
+   \   00000024   000050E3           CMP      R0,#+0
+   \   00000028   3A00000A           BEQ      ??finalDraw_1
+     90              if (BCFG_Images_Background_Method == 0) 
+   \   0000002C   ........           LDR      R1,??DataTable36  ;; BCFG_Images_Background_Method
+   \   00000030   680295E5           LDR      R0,[R5, #+616]
+   \   00000034   001091E5           LDR      R1,[R1, #+0]
+   \   00000038   000051E3           CMP      R1,#+0
+   \   0000003C   1200001A           BNE      ??finalDraw_2
+     91                DrawImage(mybook->getGC(), BCFG_Images_Background_Position_X , BCFG_Images_Background_Position_Y, statesID[0x0] );
+   \   00000040   ........           _BLF     ??getGC,??getGC??rA
+   \   00000044   B010D5E1           LDRH     R1,[R5, #+0]
+   \                     ??finalDraw_3:
+   \   00000048   ........           LDR      R2,??DataTable17  ;; BCFG_WidgetPosition_Y
+   \   0000004C   ........           LDR      R7,??DataTable16  ;; BCFG_WidgetPosition_X
+   \   00000050   02002DE9           PUSH     {R1}
+   \   00000054   0030A0E3           MOV      R3,#+0
+   \   00000058   0010A0E3           MOV      R1,#+0
+   \   0000005C   02002DE9           PUSH     {R1}
+   \   00000060   002092E5           LDR      R2,[R2, #+0]
+   \   00000064   007097E5           LDR      R7,[R7, #+0]
+   \   00000068   0C169FE5           LDR      R1,??finalDraw_4  ;; BCFG_Images_Background_Position_Y
+   \   0000006C   001091E5           LDR      R1,[R1, #+0]
+   \   00000070   012082E0           ADD      R2,R2,R1
+   \   00000074   04169FE5           LDR      R1,??finalDraw_4+0x4  ;; BCFG_Images_Background_Position_X
+   \   00000078   001091E5           LDR      R1,[R1, #+0]
+   \   0000007C   011087E0           ADD      R1,R7,R1
+   \   00000080   400100EF           SWI      +320
+   \   00000084   08D08DE2           ADD      SP,SP,#+8
+   \   00000088   220000EA           B        ??finalDraw_1
+     92              else if (BCFG_Images_Background_Method == 1)
+   \                     ??finalDraw_2:
+   \   0000008C   010051E3           CMP      R1,#+1
+   \   00000090   0500001A           BNE      ??finalDraw_5
+     93                DrawImage(mybook->getGC(), BCFG_Images_Background_Position_X , BCFG_Images_Background_Position_Y, statesID[ 0x1 + mybook->wallpaperType ] );
+   \   00000094   ........           _BLF     ??getGC,??getGC??rA
+   \   00000098   681295E5           LDR      R1,[R5, #+616]
+   \   0000009C   241091E5           LDR      R1,[R1, #+36]
+   \   000000A0   811085E0           ADD      R1,R5,R1, LSL #+1
+   \   000000A4   B210D1E1           LDRH     R1,[R1, #+2]
+   \   000000A8   E6FFFFEA           B        ??finalDraw_3
+     94              else {
+     95                DrawImage(mybook->getGC(), BCFG_Images_Background_Position_X , BCFG_Images_Background_Position_Y, bgID[ mybook->getCursor() ] );
+   \                     ??finalDraw_5:
+   \   000000AC   ........           _BLF     ??getCursor,??getCursor??rA
+   \   000000B0   0070A0E1           MOV      R7,R0
+   \   000000B4   680295E5           LDR      R0,[R5, #+616]
+   \   000000B8   ........           _BLF     ??getGC,??getGC??rA
+   \   000000BC   ........           LDR      R2,??DataTable17  ;; BCFG_WidgetPosition_Y
+   \   000000C0   871085E0           ADD      R1,R5,R7, LSL #+1
+   \   000000C4   B019D1E1           LDRH     R1,[R1, #+144]
+   \   000000C8   ........           LDR      R7,??DataTable16  ;; BCFG_WidgetPosition_X
+   \   000000CC   0030A0E3           MOV      R3,#+0
+   \   000000D0   02002DE9           PUSH     {R1}
+   \   000000D4   0010A0E3           MOV      R1,#+0
+   \   000000D8   02002DE9           PUSH     {R1}
+   \   000000DC   002092E5           LDR      R2,[R2, #+0]
+   \   000000E0   007097E5           LDR      R7,[R7, #+0]
+   \   000000E4   90159FE5           LDR      R1,??finalDraw_4  ;; BCFG_Images_Background_Position_Y
+   \   000000E8   001091E5           LDR      R1,[R1, #+0]
+   \   000000EC   012082E0           ADD      R2,R2,R1
+   \   000000F0   88159FE5           LDR      R1,??finalDraw_4+0x4  ;; BCFG_Images_Background_Position_X
+   \   000000F4   001091E5           LDR      R1,[R1, #+0]
+   \   000000F8   011087E0           ADD      R1,R7,R1
+   \   000000FC   400100EF           SWI      +320
+     96                if (mybook->changeWallpaper) manageCursor();
+   \   00000100   680295E5           LDR      R0,[R5, #+616]
+   \   00000104   2800D0E5           LDRB     R0,[R0, #+40]
+   \   00000108   08D08DE2           ADD      SP,SP,#+8
+   \   0000010C   000050E3           CMP      R0,#+0
+   \   00000110   0000000A           BEQ      ??finalDraw_1
+   \   00000114   ........           BL       ??manageCursor
+     97              }
+     98            }
+     99            
+    100            if (BCFG_Images_AccuWeatherLogo_Enable)
+   \                     ??finalDraw_1:
+   \   00000118   64059FE5           LDR      R0,??finalDraw_4+0x8  ;; BCFG_Images_AccuWeatherLogo_Enable
+   \   0000011C   000090E5           LDR      R0,[R0, #+0]
+   \   00000120   000050E3           CMP      R0,#+0
+   \   00000124   1200000A           BEQ      ??finalDraw_6
+    101              DrawImage(mybook->getGC(), BCFG_Images_AccuWeatherLogo_Position_X , BCFG_Images_AccuWeatherLogo_Position_Y , statesID[0x1] );
+   \   00000128   680295E5           LDR      R0,[R5, #+616]
+   \   0000012C   ........           LDR      R7,??DataTable16  ;; BCFG_WidgetPosition_X
+   \   00000130   ........           _BLF     ??getGC,??getGC??rA
+   \   00000134   B210D5E1           LDRH     R1,[R5, #+2]
+   \   00000138   ........           LDR      R2,??DataTable17  ;; BCFG_WidgetPosition_Y
+   \   0000013C   0030A0E3           MOV      R3,#+0
+   \   00000140   02002DE9           PUSH     {R1}
+   \   00000144   0010A0E3           MOV      R1,#+0
+   \   00000148   02002DE9           PUSH     {R1}
+   \   0000014C   002092E5           LDR      R2,[R2, #+0]
+   \   00000150   007097E5           LDR      R7,[R7, #+0]
+   \   00000154   2C159FE5           LDR      R1,??finalDraw_4+0xC  ;; BCFG_Images_AccuWeatherLogo_Position_Y
+   \   00000158   001091E5           LDR      R1,[R1, #+0]
+   \   0000015C   012082E0           ADD      R2,R2,R1
+   \   00000160   24159FE5           LDR      R1,??finalDraw_4+0x10  ;; BCFG_Images_AccuWeatherLogo_Position_X
+   \   00000164   001091E5           LDR      R1,[R1, #+0]
+   \   00000168   011087E0           ADD      R1,R7,R1
+   \   0000016C   400100EF           SWI      +320
+   \   00000170   08D08DE2           ADD      SP,SP,#+8
+    102              
+    103            if (!BCFG_Images_ImageOnTop && BCFG_Images_DayState_Enable)
+   \                     ??finalDraw_6:
+   \   00000174   14059FE5           LDR      R0,??finalDraw_4+0x14  ;; BCFG_Images_DayState_Enable
+   \   00000178   861085E0           ADD      R1,R5,R6, LSL #+1
+   \   0000017C   00108DE5           STR      R1,[SP, #+0]
+   \   00000180   006090E5           LDR      R6,[R0, #+0]
+   \   00000184   08059FE5           LDR      R0,??finalDraw_4+0x18  ;; BCFG_Images_ImageOnTop
+   \   00000188   007090E5           LDR      R7,[R0, #+0]
+   \   0000018C   000057E3           CMP      R7,#+0
+   \   00000190   1500001A           BNE      ??finalDraw_7
+   \   00000194   000056E3           CMP      R6,#+0
+   \   00000198   1300000A           BEQ      ??finalDraw_7
+    104                DrawImage(mybook->getGC(), BCFG_Images_DayState_Position_X , BCFG_Images_DayState_Position_Y , statesID[dayState+0x3] );
+   \   0000019C   680295E5           LDR      R0,[R5, #+616]
+   \   000001A0   ........           LDR      R8,??DataTable16  ;; BCFG_WidgetPosition_X
+   \   000001A4   ........           _BLF     ??getGC,??getGC??rA
+   \   000001A8   00109DE5           LDR      R1,[SP, #+0]
+   \   000001AC   ........           LDR      R2,??DataTable17  ;; BCFG_WidgetPosition_Y
+   \   000001B0   B610D1E1           LDRH     R1,[R1, #+6]
+   \   000001B4   0030A0E3           MOV      R3,#+0
+   \   000001B8   02002DE9           PUSH     {R1}
+   \   000001BC   0010A0E3           MOV      R1,#+0
+   \   000001C0   02002DE9           PUSH     {R1}
+   \   000001C4   002092E5           LDR      R2,[R2, #+0]
+   \   000001C8   008098E5           LDR      R8,[R8, #+0]
+   \   000001CC   C4149FE5           LDR      R1,??finalDraw_4+0x1C  ;; BCFG_Images_DayState_Position_Y
+   \   000001D0   001091E5           LDR      R1,[R1, #+0]
+   \   000001D4   012082E0           ADD      R2,R2,R1
+   \   000001D8   BC149FE5           LDR      R1,??finalDraw_4+0x20  ;; BCFG_Images_DayState_Position_X
+   \   000001DC   001091E5           LDR      R1,[R1, #+0]
+   \   000001E0   011088E0           ADD      R1,R8,R1
+   \   000001E4   400100EF           SWI      +320
+   \   000001E8   08D08DE2           ADD      SP,SP,#+8
+    105            //-->
+    106            //<!--text
+    107            if (BCFG_Tags_Location_Enable)
+   \                     ??finalDraw_7:
+   \   000001EC   AC049FE5           LDR      R0,??finalDraw_4+0x24  ;; BCFG_Tags_Location_Enable
+   \   000001F0   0180A0E3           MOV      R8,#+1
+   \   000001F4   000090E5           LDR      R0,[R0, #+0]
+   \   000001F8   000050E3           CMP      R0,#+0
+   \   000001FC   1700000A           BEQ      ??finalDraw_8
+    108              drawForShadow( location , BCFG_Tags_Location_FontSize , BCFG_Tags_Location_Align , BCFG_Tags_Location_Position_X ,
+    109                            BCFG_Tags_Location_Position_Y - 16 , BCFG_Tags_Location_TextColor , BCFG_Tags_Location_ShadowColor ,
+    110                            BCFG_Tags_Location_EnableShadow );
+   \   00000200   9C049FE5           LDR      R0,??finalDraw_4+0x28  ;; BCFG_Tags_Location_EnableShadow
+   \   00000204   000090E5           LDR      R0,[R0, #+0]
+   \   00000208   000050E3           CMP      R0,#+0
+   \   0000020C   0100A013           MOVNE    R0,#+1
+   \   00000210   01002DE9           PUSH     {R0}
+   \   00000214   8C049FE5           LDR      R0,??finalDraw_4+0x2C  ;; BCFG_Tags_Location_ShadowColor
+   \   00000218   000090E5           LDR      R0,[R0, #+0]
+   \   0000021C   01002DE9           PUSH     {R0}
+   \   00000220   84049FE5           LDR      R0,??finalDraw_4+0x30  ;; BCFG_Tags_Location_TextColor
+   \   00000224   000090E5           LDR      R0,[R0, #+0]
+   \   00000228   01002DE9           PUSH     {R0}
+   \   0000022C   7C049FE5           LDR      R0,??finalDraw_4+0x34  ;; BCFG_Tags_Location_Position_Y
+   \   00000230   000090E5           LDR      R0,[R0, #+0]
+   \   00000234   100040E2           SUB      R0,R0,#+16
+   \   00000238   01002DE9           PUSH     {R0}
+   \   0000023C   70049FE5           LDR      R0,??finalDraw_4+0x38  ;; BCFG_Tags_Location_Position_X
+   \   00000240   003090E5           LDR      R3,[R0, #+0]
+   \   00000244   6C049FE5           LDR      R0,??finalDraw_4+0x3C  ;; BCFG_Tags_Location_Align
+   \   00000248   002090E5           LDR      R2,[R0, #+0]
+   \   0000024C   68049FE5           LDR      R0,??finalDraw_4+0x40  ;; BCFG_Tags_Location_FontSize
+   \   00000250   001090E5           LDR      R1,[R0, #+0]
+   \   00000254   0A00A0E1           MOV      R0,R10
+   \   00000258   ........           BL       ??drawForShadow
+   \   0000025C   10D08DE2           ADD      SP,SP,#+16
+    111            
+    112              
+    113            
+    114            if (BCFG_Tags_MinTemperature_Enable) {//L: %d
+   \                     ??finalDraw_8:
+   \   00000260   58049FE5           LDR      R0,??finalDraw_4+0x44  ;; BCFG_Tags_MinTemperature_Enable
+   \   00000264   58A49FE5           LDR      R10,??finalDraw_4+0x48  ;; ??celsiusToFahrenheit
+   \   00000268   000090E5           LDR      R0,[R0, #+0]
+   \   0000026C   000050E3           CMP      R0,#+0
+   \   00000270   2700000A           BEQ      ??finalDraw_9
+    115              temp = returnMask( BCFG_Tags_MinTemperature_Mask , tempMin , BCFG_Tags_MinTemperature_Unit , celsiusToFahrenheit );
+   \   00000274   4C049FE5           LDR      R0,??finalDraw_4+0x4C  ;; BCFG_Tags_MinTemperature_Unit
+   \   00000278   0A30A0E1           MOV      R3,R10
+   \   0000027C   000090E5           LDR      R0,[R0, #+0]
+   \   00000280   0B10A0E1           MOV      R1,R11
+   \   00000284   000050E3           CMP      R0,#+0
+   \   00000288   0000A0E3           MOV      R0,#+0
+   \   0000028C   01002DE9           PUSH     {R0}
+   \   00000290   34049FE5           LDR      R0,??finalDraw_4+0x50  ;; BCFG_Tags_MinTemperature_Mask
+   \   00000294   0120A013           MOVNE    R2,#+1
+   \   00000298   0020A003           MOVEQ    R2,#+0
+   \   0000029C   ........           BL       ??returnMask
+   \   000002A0   00B0A0E1           MOV      R11,R0
+    116             
+    117              drawForShadow( temp , BCFG_Tags_MinTemperature_FontSize , BCFG_Tags_MinTemperature_Align , BCFG_Tags_MinTemperature_Position_X,
+    118                            BCFG_Tags_MinTemperature_Position_Y - 16 , BCFG_Tags_MinTemperature_TextColor , BCFG_Tags_MinTemperature_ShadowColor,
+    119                            BCFG_Tags_MinTemperature_EnableShadow );
+   \   000002A4   24049FE5           LDR      R0,??finalDraw_4+0x54  ;; BCFG_Tags_MinTemperature_EnableShadow
+   \   000002A8   000090E5           LDR      R0,[R0, #+0]
+   \   000002AC   04D08DE2           ADD      SP,SP,#+4
+   \   000002B0   000050E3           CMP      R0,#+0
+   \   000002B4   0100A013           MOVNE    R0,#+1
+   \   000002B8   0000A003           MOVEQ    R0,#+0
+   \   000002BC   01002DE9           PUSH     {R0}
+   \   000002C0   0C049FE5           LDR      R0,??finalDraw_4+0x58  ;; BCFG_Tags_MinTemperature_ShadowColor
+   \   000002C4   000090E5           LDR      R0,[R0, #+0]
+   \   000002C8   01002DE9           PUSH     {R0}
+   \   000002CC   04049FE5           LDR      R0,??finalDraw_4+0x5C  ;; BCFG_Tags_MinTemperature_TextColor
+   \   000002D0   000090E5           LDR      R0,[R0, #+0]
+   \   000002D4   01002DE9           PUSH     {R0}
+   \   000002D8   FC039FE5           LDR      R0,??finalDraw_4+0x60  ;; BCFG_Tags_MinTemperature_Position_Y
+   \   000002DC   000090E5           LDR      R0,[R0, #+0]
+   \   000002E0   100040E2           SUB      R0,R0,#+16
+   \   000002E4   01002DE9           PUSH     {R0}
+   \   000002E8   F0039FE5           LDR      R0,??finalDraw_4+0x64  ;; BCFG_Tags_MinTemperature_Position_X
+   \   000002EC   003090E5           LDR      R3,[R0, #+0]
+   \   000002F0   EC039FE5           LDR      R0,??finalDraw_4+0x68  ;; BCFG_Tags_MinTemperature_Align
+   \   000002F4   002090E5           LDR      R2,[R0, #+0]
+   \   000002F8   E8039FE5           LDR      R0,??finalDraw_4+0x6C  ;; BCFG_Tags_MinTemperature_FontSize
+   \   000002FC   001090E5           LDR      R1,[R0, #+0]
+   \   00000300   0B00A0E1           MOV      R0,R11
+   \   00000304   ........           BL       ??drawForShadow
+    120          
+    121              delete temp; temp = NULL;
+   \   00000308   0B00A0E1           MOV      R0,R11
+   \   0000030C   ........           _BLF     `??operator delete`,`??operator delete??rA`
+   \   00000310   10D08DE2           ADD      SP,SP,#+16
+    122            }
+    123            
+    124            if (BCFG_Tags_MaxTemperature_Enable) { //H: %d
+   \                     ??finalDraw_9:
+   \   00000314   D0039FE5           LDR      R0,??finalDraw_4+0x70  ;; BCFG_Tags_MaxTemperature_Enable
+   \   00000318   000090E5           LDR      R0,[R0, #+0]
+   \   0000031C   000050E3           CMP      R0,#+0
+   \   00000320   2700000A           BEQ      ??finalDraw_10
+    125              temp = returnMask( BCFG_Tags_MaxTemperature_Mask , tempMax , BCFG_Tags_MaxTemperature_Unit , celsiusToFahrenheit );
+   \   00000324   C4039FE5           LDR      R0,??finalDraw_4+0x74  ;; BCFG_Tags_MaxTemperature_Unit
+   \   00000328   0A30A0E1           MOV      R3,R10
+   \   0000032C   000090E5           LDR      R0,[R0, #+0]
+   \   00000330   000050E3           CMP      R0,#+0
+   \   00000334   0000A0E3           MOV      R0,#+0
+   \   00000338   01002DE9           PUSH     {R0}
+   \   0000033C   08109DE5           LDR      R1,[SP, #+8]
+   \   00000340   AC039FE5           LDR      R0,??finalDraw_4+0x78  ;; BCFG_Tags_MaxTemperature_Mask
+   \   00000344   0120A013           MOVNE    R2,#+1
+   \   00000348   0020A003           MOVEQ    R2,#+0
+   \   0000034C   ........           BL       ??returnMask
+   \   00000350   00B0A0E1           MOV      R11,R0
+    126              
+    127              drawForShadow( temp , BCFG_Tags_MaxTemperature_FontSize , BCFG_Tags_MaxTemperature_Align , BCFG_Tags_MaxTemperature_Position_X,
+    128                            BCFG_Tags_MaxTemperature_Position_Y - 16 , BCFG_Tags_MaxTemperature_TextColor , BCFG_Tags_MaxTemperature_ShadowColor,
+    129                            BCFG_Tags_MaxTemperature_EnableShadow );
+   \   00000354   9C039FE5           LDR      R0,??finalDraw_4+0x7C  ;; BCFG_Tags_MaxTemperature_EnableShadow
+   \   00000358   000090E5           LDR      R0,[R0, #+0]
+   \   0000035C   04D08DE2           ADD      SP,SP,#+4
+   \   00000360   000050E3           CMP      R0,#+0
+   \   00000364   0100A013           MOVNE    R0,#+1
+   \   00000368   0000A003           MOVEQ    R0,#+0
+   \   0000036C   01002DE9           PUSH     {R0}
+   \   00000370   84039FE5           LDR      R0,??finalDraw_4+0x80  ;; BCFG_Tags_MaxTemperature_ShadowColor
+   \   00000374   000090E5           LDR      R0,[R0, #+0]
+   \   00000378   01002DE9           PUSH     {R0}
+   \   0000037C   7C039FE5           LDR      R0,??finalDraw_4+0x84  ;; BCFG_Tags_MaxTemperature_TextColor
+   \   00000380   000090E5           LDR      R0,[R0, #+0]
+   \   00000384   01002DE9           PUSH     {R0}
+   \   00000388   74039FE5           LDR      R0,??finalDraw_4+0x88  ;; BCFG_Tags_MaxTemperature_Position_Y
+   \   0000038C   000090E5           LDR      R0,[R0, #+0]
+   \   00000390   100040E2           SUB      R0,R0,#+16
+   \   00000394   01002DE9           PUSH     {R0}
+   \   00000398   68039FE5           LDR      R0,??finalDraw_4+0x8C  ;; BCFG_Tags_MaxTemperature_Position_X
+   \   0000039C   003090E5           LDR      R3,[R0, #+0]
+   \   000003A0   64039FE5           LDR      R0,??finalDraw_4+0x90  ;; BCFG_Tags_MaxTemperature_Align
+   \   000003A4   002090E5           LDR      R2,[R0, #+0]
+   \   000003A8   60039FE5           LDR      R0,??finalDraw_4+0x94  ;; BCFG_Tags_MaxTemperature_FontSize
+   \   000003AC   001090E5           LDR      R1,[R0, #+0]
+   \   000003B0   0B00A0E1           MOV      R0,R11
+   \   000003B4   ........           BL       ??drawForShadow
+    130              delete temp; temp = NULL;
+   \   000003B8   0B00A0E1           MOV      R0,R11
+   \   000003BC   ........           _BLF     `??operator delete`,`??operator delete??rA`
+   \   000003C0   10D08DE2           ADD      SP,SP,#+16
+    131            }
+    132            
+    133            if (BCFG_Tags_WindSpeed_Enable) {// %d KM/H
+   \                     ??finalDraw_10:
+   \   000003C4   48039FE5           LDR      R0,??finalDraw_4+0x98  ;; BCFG_Tags_WindSpeed_Enable
+   \   000003C8   000090E5           LDR      R0,[R0, #+0]
+   \   000003CC   000050E3           CMP      R0,#+0
+   \   000003D0   2D00000A           BEQ      ??finalDraw_11
+    134              if (BCFG_Tags_WindSpeed_Unit == 2)
+   \   000003D4   3C039FE5           LDR      R0,??finalDraw_4+0x9C  ;; BCFG_Tags_WindSpeed_Unit
+   \   000003D8   001090E5           LDR      R1,[R0, #+0]
+   \   000003DC   38039FE5           LDR      R0,??finalDraw_4+0xA0  ;; BCFG_Tags_WindSpeed_Mask
+   \   000003E0   020051E3           CMP      R1,#+2
+   \   000003E4   0400001A           BNE      ??finalDraw_12
+    135                temp = returnMask( BCFG_Tags_WindSpeed_Mask , windSpeed , BCFG_Tags_WindSpeed_Unit , km2meter );
+   \   000003E8   30339FE5           LDR      R3,??finalDraw_4+0xA4  ;; ??km2meter
+   \   000003EC   0010A0E3           MOV      R1,#+0
+   \   000003F0   02002DE9           PUSH     {R1}
+   \   000003F4   0120A0E3           MOV      R2,#+1
+   \   000003F8   050000EA           B        ??finalDraw_13
+    136              else
+    137                temp = returnMask( BCFG_Tags_WindSpeed_Mask , windSpeed , BCFG_Tags_WindSpeed_Unit , km2Mile );
+   \                     ??finalDraw_12:
+   \   000003FC   20339FE5           LDR      R3,??finalDraw_4+0xA8  ;; ??km2Mile
+   \   00000400   000051E3           CMP      R1,#+0
+   \   00000404   0010A0E3           MOV      R1,#+0
+   \   00000408   02002DE9           PUSH     {R1}
+   \   0000040C   0120A013           MOVNE    R2,#+1
+   \   00000410   0020A003           MOVEQ    R2,#+0
+   \                     ??finalDraw_13:
+   \   00000414   0410A0E1           MOV      R1,R4
+   \   00000418   ........           BL       ??returnMask
+   \   0000041C   00B0A0E1           MOV      R11,R0
+    138              
+    139              drawForShadow( temp , BCFG_Tags_WindSpeed_FontSize , BCFG_Tags_WindSpeed_Align , BCFG_Tags_WindSpeed_Position_X,
+    140                            BCFG_Tags_WindSpeed_Position_Y - 16 , BCFG_Tags_WindSpeed_TextColor , BCFG_Tags_WindSpeed_ShadowColor,
+    141                            BCFG_Tags_WindSpeed_EnableShadow );
+   \   00000420   00039FE5           LDR      R0,??finalDraw_4+0xAC  ;; BCFG_Tags_WindSpeed_EnableShadow
+   \   00000424   04D08DE2           ADD      SP,SP,#+4
+   \   00000428   000090E5           LDR      R0,[R0, #+0]
+   \   0000042C   000050E3           CMP      R0,#+0
+   \   00000430   0100A013           MOVNE    R0,#+1
+   \   00000434   01002DE9           PUSH     {R0}
+   \   00000438   EC029FE5           LDR      R0,??finalDraw_4+0xB0  ;; BCFG_Tags_WindSpeed_ShadowColor
+   \   0000043C   000090E5           LDR      R0,[R0, #+0]
+   \   00000440   01002DE9           PUSH     {R0}
+   \   00000444   E4029FE5           LDR      R0,??finalDraw_4+0xB4  ;; BCFG_Tags_WindSpeed_TextColor
+   \   00000448   000090E5           LDR      R0,[R0, #+0]
+   \   0000044C   01002DE9           PUSH     {R0}
+   \   00000450   DC029FE5           LDR      R0,??finalDraw_4+0xB8  ;; BCFG_Tags_WindSpeed_Position_Y
+   \   00000454   000090E5           LDR      R0,[R0, #+0]
+   \   00000458   100040E2           SUB      R0,R0,#+16
+   \   0000045C   01002DE9           PUSH     {R0}
+   \   00000460   D0029FE5           LDR      R0,??finalDraw_4+0xBC  ;; BCFG_Tags_WindSpeed_Position_X
+   \   00000464   003090E5           LDR      R3,[R0, #+0]
+   \   00000468   CC029FE5           LDR      R0,??finalDraw_4+0xC0  ;; BCFG_Tags_WindSpeed_Align
+   \   0000046C   002090E5           LDR      R2,[R0, #+0]
+   \   00000470   C8029FE5           LDR      R0,??finalDraw_4+0xC4  ;; BCFG_Tags_WindSpeed_FontSize
+   \   00000474   001090E5           LDR      R1,[R0, #+0]
+   \   00000478   0B00A0E1           MOV      R0,R11
+   \   0000047C   ........           BL       ??drawForShadow
+    142              delete temp; temp = NULL;
+   \   00000480   0B00A0E1           MOV      R0,R11
+   \   00000484   ........           _BLF     `??operator delete`,`??operator delete??rA`
+   \   00000488   10D08DE2           ADD      SP,SP,#+16
+    143            }
+    144          
+    145            if (BCFG_Tags_AverageTemperature_Enable) {// %d
+   \                     ??finalDraw_11:
+   \   0000048C   B0029FE5           LDR      R0,??finalDraw_4+0xC8  ;; BCFG_Tags_AverageTemperature_Enable
+   \   00000490   000090E5           LDR      R0,[R0, #+0]
+   \   00000494   000050E3           CMP      R0,#+0
+   \   00000498   2700000A           BEQ      ??finalDraw_14
+    146              temp = returnMask( BCFG_Tags_AverageTemperature_Mask , averageTemp , BCFG_Tags_AverageTemperature_Unit , celsiusToFahrenheit );
+   \   0000049C   A4029FE5           LDR      R0,??finalDraw_4+0xCC  ;; BCFG_Tags_AverageTemperature_Unit
+   \   000004A0   0A30A0E1           MOV      R3,R10
+   \   000004A4   000090E5           LDR      R0,[R0, #+0]
+   \   000004A8   000050E3           CMP      R0,#+0
+   \   000004AC   0000A0E3           MOV      R0,#+0
+   \   000004B0   01002DE9           PUSH     {R0}
+   \   000004B4   3C109DE5           LDR      R1,[SP, #+60]
+   \   000004B8   8C029FE5           LDR      R0,??finalDraw_4+0xD0  ;; BCFG_Tags_AverageTemperature_Mask
+   \   000004BC   0120A013           MOVNE    R2,#+1
+   \   000004C0   0020A003           MOVEQ    R2,#+0
+   \   000004C4   ........           BL       ??returnMask
+   \   000004C8   00B0A0E1           MOV      R11,R0
+    147              
+    148              drawForShadow( temp , BCFG_Tags_AverageTemperature_FontSize , BCFG_Tags_AverageTemperature_Align , BCFG_Tags_AverageTemperature_Position_X,
+    149                            BCFG_Tags_AverageTemperature_Position_Y - 16 , BCFG_Tags_AverageTemperature_TextColor , BCFG_Tags_AverageTemperature_ShadowColor,
+    150                            BCFG_Tags_AverageTemperature_EnableShadow );
+   \   000004CC   7C029FE5           LDR      R0,??finalDraw_4+0xD4  ;; BCFG_Tags_AverageTemperature_EnableShadow
+   \   000004D0   000090E5           LDR      R0,[R0, #+0]
+   \   000004D4   04D08DE2           ADD      SP,SP,#+4
+   \   000004D8   000050E3           CMP      R0,#+0
+   \   000004DC   0100A013           MOVNE    R0,#+1
+   \   000004E0   0000A003           MOVEQ    R0,#+0
+   \   000004E4   01002DE9           PUSH     {R0}
+   \   000004E8   64029FE5           LDR      R0,??finalDraw_4+0xD8  ;; BCFG_Tags_AverageTemperature_ShadowColor
+   \   000004EC   000090E5           LDR      R0,[R0, #+0]
+   \   000004F0   01002DE9           PUSH     {R0}
+   \   000004F4   5C029FE5           LDR      R0,??finalDraw_4+0xDC  ;; BCFG_Tags_AverageTemperature_TextColor
+   \   000004F8   000090E5           LDR      R0,[R0, #+0]
+   \   000004FC   01002DE9           PUSH     {R0}
+   \   00000500   54029FE5           LDR      R0,??finalDraw_4+0xE0  ;; BCFG_Tags_AverageTemperature_Position_Y
+   \   00000504   000090E5           LDR      R0,[R0, #+0]
+   \   00000508   100040E2           SUB      R0,R0,#+16
+   \   0000050C   01002DE9           PUSH     {R0}
+   \   00000510   48029FE5           LDR      R0,??finalDraw_4+0xE4  ;; BCFG_Tags_AverageTemperature_Position_X
+   \   00000514   003090E5           LDR      R3,[R0, #+0]
+   \   00000518   44029FE5           LDR      R0,??finalDraw_4+0xE8  ;; BCFG_Tags_AverageTemperature_Align
+   \   0000051C   002090E5           LDR      R2,[R0, #+0]
+   \   00000520   40029FE5           LDR      R0,??finalDraw_4+0xEC  ;; BCFG_Tags_AverageTemperature_FontSize
+   \   00000524   001090E5           LDR      R1,[R0, #+0]
+   \   00000528   0B00A0E1           MOV      R0,R11
+   \   0000052C   ........           BL       ??drawForShadow
+    151              delete temp; temp = NULL;
+   \   00000530   0B00A0E1           MOV      R0,R11
+   \   00000534   ........           _BLF     `??operator delete`,`??operator delete??rA`
+   \   00000538   10D08DE2           ADD      SP,SP,#+16
+    152            }
+    153            
+    154            if (BCFG_Tags_DayState_Enable)
+   \                     ??finalDraw_14:
+   \   0000053C   28029FE5           LDR      R0,??finalDraw_4+0xF0  ;; BCFG_Tags_DayState_Enable
+   \   00000540   000090E5           LDR      R0,[R0, #+0]
+   \   00000544   000050E3           CMP      R0,#+0
+   \   00000548   1700000A           BEQ      ??finalDraw_15
+    155              drawForShadow( state , BCFG_Tags_DayState_FontSize , BCFG_Tags_DayState_Align , BCFG_Tags_DayState_Position_X,
+    156                            BCFG_Tags_DayState_Position_Y - 16 , BCFG_Tags_DayState_TextColor , BCFG_Tags_DayState_ShadowColor,
+    157                            BCFG_Tags_DayState_EnableShadow );
+   \   0000054C   1C029FE5           LDR      R0,??finalDraw_4+0xF4  ;; BCFG_Tags_DayState_EnableShadow
+   \   00000550   000090E5           LDR      R0,[R0, #+0]
+   \   00000554   000050E3           CMP      R0,#+0
+   \   00000558   0100A013           MOVNE    R0,#+1
+   \   0000055C   01002DE9           PUSH     {R0}
+   \   00000560   0C029FE5           LDR      R0,??finalDraw_4+0xF8  ;; BCFG_Tags_DayState_ShadowColor
+   \   00000564   000090E5           LDR      R0,[R0, #+0]
+   \   00000568   01002DE9           PUSH     {R0}
+   \   0000056C   04029FE5           LDR      R0,??finalDraw_4+0xFC  ;; BCFG_Tags_DayState_TextColor
+   \   00000570   000090E5           LDR      R0,[R0, #+0]
+   \   00000574   01002DE9           PUSH     {R0}
+   \   00000578   FC019FE5           LDR      R0,??finalDraw_4+0x100  ;; BCFG_Tags_DayState_Position_Y
+   \   0000057C   000090E5           LDR      R0,[R0, #+0]
+   \   00000580   100040E2           SUB      R0,R0,#+16
+   \   00000584   01002DE9           PUSH     {R0}
+   \   00000588   F0019FE5           LDR      R0,??finalDraw_4+0x104  ;; BCFG_Tags_DayState_Position_X
+   \   0000058C   003090E5           LDR      R3,[R0, #+0]
+   \   00000590   EC019FE5           LDR      R0,??finalDraw_4+0x108  ;; BCFG_Tags_DayState_Align
+   \   00000594   002090E5           LDR      R2,[R0, #+0]
+   \   00000598   E8019FE5           LDR      R0,??finalDraw_4+0x10C  ;; BCFG_Tags_DayState_FontSize
+   \   0000059C   001090E5           LDR      R1,[R0, #+0]
+   \   000005A0   40009DE5           LDR      R0,[SP, #+64]
+   \   000005A4   ........           BL       ??drawForShadow
+   \   000005A8   10D08DE2           ADD      SP,SP,#+16
+    158            
+    159            if (BCFG_Tags_WindDirection_Enable)
+   \                     ??finalDraw_15:
+   \   000005AC   D8019FE5           LDR      R0,??finalDraw_4+0x110  ;; BCFG_Tags_WindDirection_Enable
+   \   000005B0   000090E5           LDR      R0,[R0, #+0]
+   \   000005B4   000050E3           CMP      R0,#+0
+   \   000005B8   1700000A           BEQ      ??finalDraw_16
+    160              drawForShadow( windDirection , BCFG_Tags_WindDirection_FontSize , BCFG_Tags_WindDirection_Align , BCFG_Tags_WindDirection_Position_X,
+    161                            BCFG_Tags_WindDirection_Position_Y - 16 , BCFG_Tags_WindDirection_TextColor , BCFG_Tags_WindDirection_ShadowColor,
+    162                            BCFG_Tags_WindDirection_EnableShadow );
+   \   000005BC   CC019FE5           LDR      R0,??finalDraw_4+0x114  ;; BCFG_Tags_WindDirection_EnableShadow
+   \   000005C0   000090E5           LDR      R0,[R0, #+0]
+   \   000005C4   000050E3           CMP      R0,#+0
+   \   000005C8   C4019FE5           LDR      R0,??finalDraw_4+0x118  ;; BCFG_Tags_WindDirection_ShadowColor
+   \   000005CC   0080A003           MOVEQ    R8,#+0
+   \   000005D0   00012DE9           PUSH     {R8}
+   \   000005D4   000090E5           LDR      R0,[R0, #+0]
+   \   000005D8   01002DE9           PUSH     {R0}
+   \   000005DC   B4019FE5           LDR      R0,??finalDraw_4+0x11C  ;; BCFG_Tags_WindDirection_TextColor
+   \   000005E0   000090E5           LDR      R0,[R0, #+0]
+   \   000005E4   01002DE9           PUSH     {R0}
+   \   000005E8   AC019FE5           LDR      R0,??finalDraw_4+0x120  ;; BCFG_Tags_WindDirection_Position_Y
+   \   000005EC   000090E5           LDR      R0,[R0, #+0]
+   \   000005F0   100040E2           SUB      R0,R0,#+16
+   \   000005F4   01002DE9           PUSH     {R0}
+   \   000005F8   A0019FE5           LDR      R0,??finalDraw_4+0x124  ;; BCFG_Tags_WindDirection_Position_X
+   \   000005FC   003090E5           LDR      R3,[R0, #+0]
+   \   00000600   9C019FE5           LDR      R0,??finalDraw_4+0x128  ;; BCFG_Tags_WindDirection_Align
+   \   00000604   002090E5           LDR      R2,[R0, #+0]
+   \   00000608   98019FE5           LDR      R0,??finalDraw_4+0x12C  ;; BCFG_Tags_WindDirection_FontSize
+   \   0000060C   001090E5           LDR      R1,[R0, #+0]
+   \   00000610   44009DE5           LDR      R0,[SP, #+68]
+   \   00000614   ........           BL       ??drawForShadow
+   \   00000618   10D08DE2           ADD      SP,SP,#+16
+    163            //-->
+    164            //<!--image again
+    165            if (BCFG_Images_ImageOnTop && BCFG_Images_DayState_Enable)
+   \                     ??finalDraw_16:
+   \   0000061C   000057E3           CMP      R7,#+0
+   \   00000620   00005613           CMPNE    R6,#+0
+   \   00000624   F38FBD08           POPEQ    {R0,R1,R4-R11,PC}
+    166              DrawImage(mybook->getGC(), BCFG_Images_DayState_Position_X , BCFG_Images_DayState_Position_Y , statesID[dayState+0x3] );
+   \   00000628   680295E5           LDR      R0,[R5, #+616]
+   \   0000062C   ........           LDR      R4,??DataTable16  ;; BCFG_WidgetPosition_X
+   \   00000630   ........           _BLF     ??getGC,??getGC??rA
+   \   00000634   00109DE5           LDR      R1,[SP, #+0]
+   \   00000638   ........           LDR      R2,??DataTable17  ;; BCFG_WidgetPosition_Y
+   \   0000063C   B610D1E1           LDRH     R1,[R1, #+6]
+   \   00000640   0030A0E3           MOV      R3,#+0
+   \   00000644   02002DE9           PUSH     {R1}
+   \   00000648   0010A0E3           MOV      R1,#+0
+   \   0000064C   02002DE9           PUSH     {R1}
+   \   00000650   002092E5           LDR      R2,[R2, #+0]
+   \   00000654   004094E5           LDR      R4,[R4, #+0]
+   \   00000658   38109FE5           LDR      R1,??finalDraw_4+0x1C  ;; BCFG_Images_DayState_Position_Y
+   \   0000065C   001091E5           LDR      R1,[R1, #+0]
+   \   00000660   012082E0           ADD      R2,R2,R1
+   \   00000664   30109FE5           LDR      R1,??finalDraw_4+0x20  ;; BCFG_Images_DayState_Position_X
+   \   00000668   001091E5           LDR      R1,[R1, #+0]
+   \   0000066C   011084E0           ADD      R1,R4,R1
+   \   00000670   400100EF           SWI      +320
+   \   00000674   08D08DE2           ADD      SP,SP,#+8
+    167            //-->
+    168          
+    169          }
+   \   00000678   F38FBDE8           POP      {R0,R1,R4-R11,PC}  ;; return
+   \                     ??finalDraw_4:
+   \   0000067C   ........           DC32     BCFG_Images_Background_Position_Y
+   \   00000680   ........           DC32     BCFG_Images_Background_Position_X
+   \   00000684   ........           DC32     BCFG_Images_AccuWeatherLogo_Enable
+   \   00000688   ........           DC32     BCFG_Images_AccuWeatherLogo_Position_Y
+   \   0000068C   ........           DC32     BCFG_Images_AccuWeatherLogo_Position_X
+   \   00000690   ........           DC32     BCFG_Images_DayState_Enable
+   \   00000694   ........           DC32     BCFG_Images_ImageOnTop
+   \   00000698   ........           DC32     BCFG_Images_DayState_Position_Y
+   \   0000069C   ........           DC32     BCFG_Images_DayState_Position_X
+   \   000006A0   ........           DC32     BCFG_Tags_Location_Enable
+   \   000006A4   ........           DC32     BCFG_Tags_Location_EnableShadow
+   \   000006A8   ........           DC32     BCFG_Tags_Location_ShadowColor
+   \   000006AC   ........           DC32     BCFG_Tags_Location_TextColor
+   \   000006B0   ........           DC32     BCFG_Tags_Location_Position_Y
+   \   000006B4   ........           DC32     BCFG_Tags_Location_Position_X
+   \   000006B8   ........           DC32     BCFG_Tags_Location_Align
+   \   000006BC   ........           DC32     BCFG_Tags_Location_FontSize
+   \   000006C0   ........           DC32     BCFG_Tags_MinTemperature_Enable
+   \   000006C4   ........           DC32     ??celsiusToFahrenheit
+   \   000006C8   ........           DC32     BCFG_Tags_MinTemperature_Unit
+   \   000006CC   ........           DC32     BCFG_Tags_MinTemperature_Mask
+   \   000006D0   ........           DC32     BCFG_Tags_MinTemperature_EnableShadow
+   \   000006D4   ........           DC32     BCFG_Tags_MinTemperature_ShadowColor
+   \   000006D8   ........           DC32     BCFG_Tags_MinTemperature_TextColor
+   \   000006DC   ........           DC32     BCFG_Tags_MinTemperature_Position_Y
+   \   000006E0   ........           DC32     BCFG_Tags_MinTemperature_Position_X
+   \   000006E4   ........           DC32     BCFG_Tags_MinTemperature_Align
+   \   000006E8   ........           DC32     BCFG_Tags_MinTemperature_FontSize
+   \   000006EC   ........           DC32     BCFG_Tags_MaxTemperature_Enable
+   \   000006F0   ........           DC32     BCFG_Tags_MaxTemperature_Unit
+   \   000006F4   ........           DC32     BCFG_Tags_MaxTemperature_Mask
+   \   000006F8   ........           DC32     BCFG_Tags_MaxTemperature_EnableShadow
+   \   000006FC   ........           DC32     BCFG_Tags_MaxTemperature_ShadowColor
+   \   00000700   ........           DC32     BCFG_Tags_MaxTemperature_TextColor
+   \   00000704   ........           DC32     BCFG_Tags_MaxTemperature_Position_Y
+   \   00000708   ........           DC32     BCFG_Tags_MaxTemperature_Position_X
+   \   0000070C   ........           DC32     BCFG_Tags_MaxTemperature_Align
+   \   00000710   ........           DC32     BCFG_Tags_MaxTemperature_FontSize
+   \   00000714   ........           DC32     BCFG_Tags_WindSpeed_Enable
+   \   00000718   ........           DC32     BCFG_Tags_WindSpeed_Unit
+   \   0000071C   ........           DC32     BCFG_Tags_WindSpeed_Mask
+   \   00000720   ........           DC32     ??km2meter
+   \   00000724   ........           DC32     ??km2Mile
+   \   00000728   ........           DC32     BCFG_Tags_WindSpeed_EnableShadow
+   \   0000072C   ........           DC32     BCFG_Tags_WindSpeed_ShadowColor
+   \   00000730   ........           DC32     BCFG_Tags_WindSpeed_TextColor
+   \   00000734   ........           DC32     BCFG_Tags_WindSpeed_Position_Y
+   \   00000738   ........           DC32     BCFG_Tags_WindSpeed_Position_X
+   \   0000073C   ........           DC32     BCFG_Tags_WindSpeed_Align
+   \   00000740   ........           DC32     BCFG_Tags_WindSpeed_FontSize
+   \   00000744   ........           DC32     BCFG_Tags_AverageTemperature_Enable
+   \   00000748   ........           DC32     BCFG_Tags_AverageTemperature_Unit
+   \   0000074C   ........           DC32     BCFG_Tags_AverageTemperature_Mask
+   \   00000750   ........           DC32     BCFG_Tags_AverageTemperature_EnableShadow
+   \   00000754   ........           DC32     BCFG_Tags_AverageTemperature_ShadowColor
+   \   00000758   ........           DC32     BCFG_Tags_AverageTemperature_TextColor
+   \   0000075C   ........           DC32     BCFG_Tags_AverageTemperature_Position_Y
+   \   00000760   ........           DC32     BCFG_Tags_AverageTemperature_Position_X
+   \   00000764   ........           DC32     BCFG_Tags_AverageTemperature_Align
+   \   00000768   ........           DC32     BCFG_Tags_AverageTemperature_FontSize
+   \   0000076C   ........           DC32     BCFG_Tags_DayState_Enable
+   \   00000770   ........           DC32     BCFG_Tags_DayState_EnableShadow
+   \   00000774   ........           DC32     BCFG_Tags_DayState_ShadowColor
+   \   00000778   ........           DC32     BCFG_Tags_DayState_TextColor
+   \   0000077C   ........           DC32     BCFG_Tags_DayState_Position_Y
+   \   00000780   ........           DC32     BCFG_Tags_DayState_Position_X
+   \   00000784   ........           DC32     BCFG_Tags_DayState_Align
+   \   00000788   ........           DC32     BCFG_Tags_DayState_FontSize
+   \   0000078C   ........           DC32     BCFG_Tags_WindDirection_Enable
+   \   00000790   ........           DC32     BCFG_Tags_WindDirection_EnableShadow
+   \   00000794   ........           DC32     BCFG_Tags_WindDirection_ShadowColor
+   \   00000798   ........           DC32     BCFG_Tags_WindDirection_TextColor
+   \   0000079C   ........           DC32     BCFG_Tags_WindDirection_Position_Y
+   \   000007A0   ........           DC32     BCFG_Tags_WindDirection_Position_X
+   \   000007A4   ........           DC32     BCFG_Tags_WindDirection_Align
+   \   000007A8   ........           DC32     BCFG_Tags_WindDirection_FontSize
+    170          
+
+   \                                 In segment CODE, align 4, keep-with-next
+    171          void onfTimer (u16 tmr , LPARAM) {
+   \                     ??onfTimer:
+   \   00000000   30402DE9           PUSH     {R4,R5,LR}
+    172            DispObject_InvalidateRect(StatusIndication,0);
+   \   00000004   ........           LDR      R4,??DataTable29  ;; statesID
+   \   00000008   04D04DE2           SUB      SP,SP,#+4
+   \   0000000C   D40094E5           LDR      R0,[R4, #+212]
+   \   00000010   0010A0E3           MOV      R1,#+0
+   \   00000014   EF0100EF           SWI      +495
+    173            int refresh;
+    174            (BCFG_Images_Background_Method == 2 && BCFG_Images_Background_Enable && mybook->changeWallpaper) ? refresh = BCFG_RefreshTime : refresh = 1000;
+   \   00000018   ........           LDR      R0,??DataTable36  ;; BCFG_Images_Background_Method
+   \   0000001C   000090E5           LDR      R0,[R0, #+0]
+   \   00000020   020050E3           CMP      R0,#+2
+   \   00000024   0900001A           BNE      ??onfTimer_1
+   \   00000028   ........           LDR      R0,??DataTable37  ;; BCFG_Images_Background_Enable
+   \   0000002C   000090E5           LDR      R0,[R0, #+0]
+   \   00000030   000050E3           CMP      R0,#+0
+   \   00000034   0500000A           BEQ      ??onfTimer_1
+   \   00000038   680294E5           LDR      R0,[R4, #+616]
+   \   0000003C   2800D0E5           LDRB     R0,[R0, #+40]
+   \   00000040   000050E3           CMP      R0,#+0
+   \   00000044   ........           LDRNE    R0,??DataTable38  ;; BCFG_RefreshTime
+   \   00000048   00509015           LDRNE    R5,[R0, #+0]
+   \   0000004C   0000001A           BNE      ??onfTimer_2
+   \                     ??onfTimer_1:
+   \   00000050   FA5FA0E3           MOV      R5,#+1000
+    175            Timer_ReSet(&mybook->ftimer,refresh,onfTimer,0);
+   \                     ??onfTimer_2:
+   \   00000054   0010A0E3           MOV      R1,#+0
+   \   00000058   0D00A0E1           MOV      R0,SP
+   \   0000005C   ........           _BLF     ??LPARAM,??LPARAM??rA
+   \   00000060   680294E5           LDR      R0,[R4, #+616]
+   \   00000064   00309DE5           LDR      R3,[SP, #+0]
+   \   00000068   ........           LDR      R2,??DataTable39  ;; ??onfTimer
+   \   0000006C   0510A0E1           MOV      R1,R5
+   \   00000070   2A0080E2           ADD      R0,R0,#+42
+   \   00000074   280100EF           SWI      +296
+    176          }
+   \   00000078   3180BDE8           POP      {R0,R4,R5,PC}    ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+    177          void checkWallpaper(int type) { //1 = dia, 2 = noite
+   \                     ??checkWallpaper:
+   \   00000000   30402DE9           PUSH     {R4,R5,LR}
+    178            if (mybook->wallpaperType != type && BCFG_Images_Background_Method == 2) {
+   \   00000004   ........           LDR      R5,??DataTable29  ;; statesID
+   \   00000008   0040A0E1           MOV      R4,R0
+   \   0000000C   680295E5           LDR      R0,[R5, #+616]
+   \   00000010   241090E5           LDR      R1,[R0, #+36]
+   \   00000014   040051E1           CMP      R1,R4
+   \   00000018   3080BD08           POPEQ    {R4,R5,PC}
+   \   0000001C   ........           LDR      R1,??DataTable36  ;; BCFG_Images_Background_Method
+   \   00000020   001091E5           LDR      R1,[R1, #+0]
+   \   00000024   020051E3           CMP      R1,#+2
+   \   00000028   3080BD18           POPNE    {R4,R5,PC}
+    179              (type == 1) ? mybook->setCursor(19) : mybook->setCursor(0);
+   \   0000002C   010054E3           CMP      R4,#+1
+   \   00000030   1310A003           MOVEQ    R1,#+19
+   \   00000034   0010A013           MOVNE    R1,#+0
+   \   00000038   ........           _BLF     ??setCursor,??setCursor??rA
+    180              mybook->changeWallpaper = true;
+   \   0000003C   680295E5           LDR      R0,[R5, #+616]
+   \   00000040   0110A0E3           MOV      R1,#+1
+   \   00000044   2810C0E5           STRB     R1,[R0, #+40]
+    181              mybook->wallpaperType = type;
+   \   00000048   244080E5           STR      R4,[R0, #+36]
+    182            }
+    183          }
+   \   0000004C   3080BDE8           POP      {R4,R5,PC}       ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+    184          void drawWeatherContents() {
+   \                     ??drawWeatherContents:
+   \   00000000   F04F2DE9           PUSH     {R4-R11,LR}
+    185            //18 ~ 06: night, 06 ~ 18: day
+    186            DATETIME now = getDateTime();
+    187            if (mybook->getHourSeted() == -1) {
+   \   00000004   ........           LDR      R4,??DataTable29  ;; statesID
+   \   00000008   08D04DE2           SUB      SP,SP,#+8
+   \   0000000C   0D00A0E1           MOV      R0,SP
+   \   00000010   ........           _BLF     ??getDateTime,??getDateTime??rA
+   \   00000014   680294E5           LDR      R0,[R4, #+616]
+   \   00000018   ........           _BLF     ??getHourSeted,??getHourSeted??rA
+   \   0000001C   010070E3           CMN      R0,#+1
+   \   00000020   1A00001A           BNE      ??drawWeatherContents_1
+    188              if (mybook->getWeatherToDraw() != NULL) mybook->freeWDraw();
+   \   00000024   680294E5           LDR      R0,[R4, #+616]
+   \   00000028   ........           _BLF     ??getWeatherToDraw,??getWeatherToDraw??rA
+   \   0000002C   000050E3           CMP      R0,#+0
+   \   00000030   0100000A           BEQ      ??drawWeatherContents_2
+   \   00000034   680294E5           LDR      R0,[R4, #+616]
+   \   00000038   ........           _BLF     ??freeWDraw,??freeWDraw??rA
+    189              mybook->setHour(now.time.hour);
+   \                     ??drawWeatherContents_2:
+   \   0000003C   0410DDE5           LDRB     R1,[SP, #+4]
+   \   00000040   680294E5           LDR      R0,[R4, #+616]
+   \   00000044   ........           _BLF     ??setHour,??setHour??rA
+    190          
+    191              if (now.time.hour >= BCFG_Tags_Time_Night || now.time.hour < BCFG_Tags_Time_Day) {//need to check that later, midnight weather!
+   \   00000048   0400DDE5           LDRB     R0,[SP, #+4]
+   \   0000004C   40119FE5           LDR      R1,??drawWeatherContents_3  ;; BCFG_Tags_Time_Night
+   \   00000050   001091E5           LDR      R1,[R1, #+0]
+   \   00000054   010050E1           CMP      R0,R1
+   \   00000058   0300002A           BCS      ??drawWeatherContents_4
+   \   0000005C   34119FE5           LDR      R1,??drawWeatherContents_3+0x4  ;; BCFG_Tags_Time_Day
+   \   00000060   001091E5           LDR      R1,[R1, #+0]
+   \   00000064   010050E1           CMP      R0,R1
+   \   00000068   0300002A           BCS      ??drawWeatherContents_5
+    192                checkWallpaper(2);
+   \                     ??drawWeatherContents_4:
+   \   0000006C   0200A0E3           MOV      R0,#+2
+   \   00000070   ........           BL       ??checkWallpaper
+    193                mybook->setWDraw(2);
+   \   00000074   0210A0E3           MOV      R1,#+2
+   \   00000078   020000EA           B        ??drawWeatherContents_6
+    194              }
+    195              else {
+    196                checkWallpaper(1);
+   \                     ??drawWeatherContents_5:
+   \   0000007C   0100A0E3           MOV      R0,#+1
+   \   00000080   ........           BL       ??checkWallpaper
+    197                mybook->setWDraw(1);
+   \   00000084   0110A0E3           MOV      R1,#+1
+   \                     ??drawWeatherContents_6:
+   \   00000088   680294E5           LDR      R0,[R4, #+616]
+   \   0000008C   ........           _BLF     ??setWDraw,??setWDraw??rA
+    198              }
+    199            }
+    200            
+    201            if (mybook->getHourSeted() != now.time.hour) mybook->setHour(-1);
+   \                     ??drawWeatherContents_1:
+   \   00000090   680294E5           LDR      R0,[R4, #+616]
+   \   00000094   ........           _BLF     ??getHourSeted,??getHourSeted??rA
+   \   00000098   0410DDE5           LDRB     R1,[SP, #+4]
+   \   0000009C   010050E1           CMP      R0,R1
+   \   000000A0   0200000A           BEQ      ??drawWeatherContents_7
+   \   000000A4   680294E5           LDR      R0,[R4, #+616]
+   \   000000A8   0010E0E3           MVN      R1,#+0
+   \   000000AC   ........           _BLF     ??setHour,??setHour??rA
+    202            
+    203            finalDraw(mybook->getLocation(), mybook->getWeatherToDraw()->getState() , mybook->getWeatherToDraw()->getTempMin(), mybook->getWeatherToDraw()->getTempMax(), 
+    204                      mybook->getWeatherToDraw()->getWindSpeed(), mybook->getWeatherToDraw()->getState_(), 
+    205                      ((BCFG_Tags_WindDirection_Format == 0) ? mybook->getWeatherToDraw()->getWindDirection() : mybook->getWeatherToDraw()->getLongWind()),
+    206                      mybook->getWeatherToDraw()->getAverageTemp());
+   \                     ??drawWeatherContents_7:
+   \   000000B0   680294E5           LDR      R0,[R4, #+616]
+   \   000000B4   ........           _BLF     ??getWeatherToDraw,??getWeatherToDraw??rA
+   \   000000B8   ........           _BLF     ??getAverageTemp,??getAverageTemp??rA
+   \   000000BC   0050A0E1           MOV      R5,R0
+   \   000000C0   D4009FE5           LDR      R0,??drawWeatherContents_3+0x8  ;; BCFG_Tags_WindDirection_Format
+   \   000000C4   000090E5           LDR      R0,[R0, #+0]
+   \   000000C8   000050E3           CMP      R0,#+0
+   \   000000CC   680294E5           LDR      R0,[R4, #+616]
+   \   000000D0   0200001A           BNE      ??drawWeatherContents_8
+   \   000000D4   ........           _BLF     ??getWeatherToDraw,??getWeatherToDraw??rA
+   \   000000D8   ........           _BLF     ??getWindDirection,??getWindDirection??rA
+   \   000000DC   010000EA           B        ??drawWeatherContents_9
+   \                     ??drawWeatherContents_8:
+   \   000000E0   ........           _BLF     ??getWeatherToDraw,??getWeatherToDraw??rA
+   \   000000E4   ........           _BLF     ??getLongWind,??getLongWind??rA
+   \                     ??drawWeatherContents_9:
+   \   000000E8   0060A0E1           MOV      R6,R0
+   \   000000EC   680294E5           LDR      R0,[R4, #+616]
+   \   000000F0   ........           _BLF     ??getWeatherToDraw,??getWeatherToDraw??rA
+   \   000000F4   ........           _BLF     ??getState_,??getState_??rA
+   \   000000F8   0070A0E1           MOV      R7,R0
+   \   000000FC   680294E5           LDR      R0,[R4, #+616]
+   \   00000100   ........           _BLF     ??getWeatherToDraw,??getWeatherToDraw??rA
+   \   00000104   ........           _BLF     ??getWindSpeed,??getWindSpeed??rA
+   \   00000108   0080A0E1           MOV      R8,R0
+   \   0000010C   680294E5           LDR      R0,[R4, #+616]
+   \   00000110   ........           _BLF     ??getWeatherToDraw,??getWeatherToDraw??rA
+   \   00000114   ........           _BLF     ??getTempMax,??getTempMax??rA
+   \   00000118   0090A0E1           MOV      R9,R0
+   \   0000011C   680294E5           LDR      R0,[R4, #+616]
+   \   00000120   ........           _BLF     ??getWeatherToDraw,??getWeatherToDraw??rA
+   \   00000124   ........           _BLF     ??getTempMin,??getTempMin??rA
+   \   00000128   00A0A0E1           MOV      R10,R0
+   \   0000012C   680294E5           LDR      R0,[R4, #+616]
+   \   00000130   ........           _BLF     ??getWeatherToDraw,??getWeatherToDraw??rA
+   \   00000134   ........           _BLF     ??getState,??getState??rA
+   \   00000138   00B0A0E1           MOV      R11,R0
+   \   0000013C   680294E5           LDR      R0,[R4, #+616]
+   \   00000140   ........           _BLF     ??getLocation,??getLocation??rA
+   \   00000144   20002DE9           PUSH     {R5}
+   \   00000148   40002DE9           PUSH     {R6}
+   \   0000014C   80002DE9           PUSH     {R7}
+   \   00000150   00012DE9           PUSH     {R8}
+   \   00000154   0930A0E1           MOV      R3,R9
+   \   00000158   0A20A0E1           MOV      R2,R10
+   \   0000015C   0B10A0E1           MOV      R1,R11
+   \   00000160   ........           BL       ??finalDraw
+    207          
+    208            if (isDateEqual(&now,&mybook->dateOfWeather) != 0) {
+   \   00000164   680294E5           LDR      R0,[R4, #+616]
+   \   00000168   2C1080E2           ADD      R1,R0,#+44
+   \   0000016C   10008DE2           ADD      R0,SP,#+16
+   \   00000170   ........           _BLF     ??isDateEqual,??isDateEqual??rA
+   \   00000174   000050E3           CMP      R0,#+0
+   \   00000178   10D08DE2           ADD      SP,SP,#+16
+   \   0000017C   F38FBD08           POPEQ    {R0,R1,R4-R11,PC}
+    209              mybook->setHour(-1);
+   \   00000180   680294E5           LDR      R0,[R4, #+616]
+   \   00000184   0010E0E3           MVN      R1,#+0
+   \   00000188   ........           _BLF     ??setHour,??setHour??rA
+    210              beginFile();
+   \   0000018C   ........           BL       ??beginFile
+    211            }  
+    212          }
+   \   00000190   F38FBDE8           POP      {R0,R1,R4-R11,PC}  ;; return
+   \                     ??drawWeatherContents_3:
+   \   00000194   ........           DC32     BCFG_Tags_Time_Night
+   \   00000198   ........           DC32     BCFG_Tags_Time_Day
+   \   0000019C   ........           DC32     BCFG_Tags_WindDirection_Format
+    213          
+
+   \                                 In segment CODE, align 4, keep-with-next
+    214          void errorInFile(wchar_t* message) {
+   \                     ??errorInFile:
+   \   00000000   10402DE9           PUSH     {R4,LR}
+   \   00000004   0040A0E1           MOV      R4,R0
+    215            MessageBox(0x6FFFFFFF,TextID_Create(message,ENC_UCS2 , wstrlen(message)), NOIMAGE, 1, 0,0);
+   \   00000008   570100EF           SWI      +343
+   \   0000000C   0020A0E1           MOV      R2,R0
+   \   00000010   0010A0E3           MOV      R1,#+0
+   \   00000014   0400A0E1           MOV      R0,R4
+    216            mybook->setError(true);
+   \   00000018   ........           LDR      R4,??DataTable29  ;; statesID
+   \   0000001C   5D0100EF           SWI      +349
+   \   00000020   0010A0E3           MOV      R1,#+0
+   \   00000024   02002DE9           PUSH     {R1}
+   \   00000028   02002DE9           PUSH     {R1}
+   \   0000002C   0130A0E3           MOV      R3,#+1
+   \   00000030   FF20A0E3           MOV      R2,#+255
+   \   00000034   FF2C82E3           ORR      R2,R2,#0xFF00
+   \   00000038   0010A0E1           MOV      R1,R0
+   \   0000003C   9004E0E3           MVN      R0,#-1879048192
+   \   00000040   570200EF           SWI      +599
+   \   00000044   680294E5           LDR      R0,[R4, #+616]
+   \   00000048   0110A0E3           MOV      R1,#+1
+   \   0000004C   ........           _BLF     ??setError,??setError??rA
+    217            message = NULL;
+    218            FreeBook(mybook->getBook());
+   \   00000050   680294E5           LDR      R0,[R4, #+616]
+   \   00000054   ........           _BLF     ??getBook,??getBook??rA
+   \   00000058   2F0100EF           SWI      +303
+    219          }
+   \   0000005C   1380BDE8           POP      {R0,R1,R4,PC}    ;; return
+    220          
+
+   \                                 In segment CODE, align 4, keep-with-next
+    221          void beginFile() {
+   \                     ??beginFile:
+   \   00000000   F0402DE9           PUSH     {R4-R7,LR}
+    222            wchar_t* fileContent = openFile(BCFG_XMLBGLogoFolder,L"weather.txt");
+   \   00000004   ........           LDR      R5,??DataTable32  ;; BCFG_XMLBGLogoFolder
+   \   00000008   28619FE5           LDR      R6,??beginFile_1  ;; `?<Constant L"\\x45\\x72\\x72\\x6f\\x72\\x20\\x69\\x6e\\`
+   \   0000000C   0CD04DE2           SUB      SP,SP,#+12
+   \   00000010   681F86E2           ADD      R1,R6,#+416
+   \   00000014   0500A0E1           MOV      R0,R5
+   \   00000018   ........           _BLF     ??openFile,??openFile??rA
+   \   0000001C   0040A0E1           MOV      R4,R0
+    223            wchar_t* conditionXml = openFile(BCFG_XMLBGLogoFolder, L"condition.xml");
+   \   00000020   6E1F86E2           ADD      R1,R6,#+440
+   \   00000024   0500A0E1           MOV      R0,R5
+   \   00000028   ........           _BLF     ??openFile,??openFile??rA
+   \   0000002C   0050A0E1           MOV      R5,R0
+    224            if (fileContent != NULL && conditionXml != NULL) {
+   \   00000030   000054E3           CMP      R4,#+0
+   \   00000034   00005513           CMPNE    R5,#+0
+   \   00000038   3B00000A           BEQ      ??beginFile_2
+    225              int pos = 0;
+    226              mybook->freeMyVars();
+   \   0000003C   ........           LDR      R7,??DataTable29  ;; statesID
+   \   00000040   0010A0E3           MOV      R1,#+0
+   \   00000044   00108DE5           STR      R1,[SP, #+0]
+   \   00000048   680297E5           LDR      R0,[R7, #+616]
+   \   0000004C   ........           _BLF     ??freeMyVars,??freeMyVars??rA
+    227              mybook->setLocation(getLocation(fileContent, pos));
+   \   00000050   0D10A0E1           MOV      R1,SP
+   \   00000054   0400A0E1           MOV      R0,R4
+   \   00000058   ........           _BLF     ??getLocation_1,??getLocation??rA_1
+   \   0000005C   0010A0E1           MOV      R1,R0
+   \   00000060   680297E5           LDR      R0,[R7, #+616]
+   \   00000064   ........           _BLF     ??setLocation,??setLocation??rA
+    228          
+    229              if (mybook->getLocation() == NULL) 
+   \   00000068   680297E5           LDR      R0,[R7, #+616]
+   \   0000006C   ........           _BLF     ??getLocation,??getLocation??rA
+   \   00000070   000050E3           CMP      R0,#+0
+   \   00000074   0200001A           BNE      ??beginFile_3
+    230                errorInFile(L"Error in location! Update your file weather.txt and run the elf again!");
+   \   00000078   750F86E2           ADD      R0,R6,#+468
+   \                     ??beginFile_4:
+   \   0000007C   ........           BL       ??errorInFile
+   \   00000080   240000EA           B        ??beginFile_5
+    231              else {
+    232                mybook->setDayWeather(getDayWeather(fileContent, pos, conditionXml));
+   \                     ??beginFile_3:
+   \   00000084   0520A0E1           MOV      R2,R5
+   \   00000088   0D10A0E1           MOV      R1,SP
+   \   0000008C   0400A0E1           MOV      R0,R4
+   \   00000090   ........           _BLF     ??getDayWeather,??getDayWeather??rA
+   \   00000094   0010A0E1           MOV      R1,R0
+   \   00000098   680297E5           LDR      R0,[R7, #+616]
+   \   0000009C   ........           _BLF     ??setDayWeather,??setDayWeather??rA
+    233          
+    234                if (mybook->getDayWeather() == NULL) errorInFile(L"Error in Day Weather! Update your file weather.txt and run the elf again!");
+   \   000000A0   680297E5           LDR      R0,[R7, #+616]
+   \   000000A4   ........           _BLF     ??getDayWeather_1,??getDayWeather??rA_1
+   \   000000A8   000050E3           CMP      R0,#+0
+   \   000000AC   0600A001           MOVEQ    R0,R6
+   \   000000B0   F1FFFF0A           BEQ      ??beginFile_4
+    235                else {
+    236                  mybook->setNightWeather(getWeather(fileContent,pos, conditionXml));
+   \   000000B4   0520A0E1           MOV      R2,R5
+   \   000000B8   0D10A0E1           MOV      R1,SP
+   \   000000BC   0400A0E1           MOV      R0,R4
+   \   000000C0   ........           _BLF     ??getWeather,??getWeather??rA
+   \   000000C4   0010A0E1           MOV      R1,R0
+   \   000000C8   680297E5           LDR      R0,[R7, #+616]
+   \   000000CC   ........           _BLF     ??setNightWeather,??setNightWeather??rA
+    237                  if (mybook->getNightWeather() == NULL) errorInFile(L"Error in Night Weather! Update your file weather.txt and run the elf again!");
+   \   000000D0   680297E5           LDR      R0,[R7, #+616]
+   \   000000D4   ........           _BLF     ??getNightWeather,??getNightWeather??rA
+   \   000000D8   000050E3           CMP      R0,#+0
+   \   000000DC   0100001A           BNE      ??beginFile_6
+   \   000000E0   940086E2           ADD      R0,R6,#+148
+   \   000000E4   E4FFFFEA           B        ??beginFile_4
+    238                  else mybook->dateOfWeather = getDateTime();
+   \                     ??beginFile_6:
+   \   000000E8   04008DE2           ADD      R0,SP,#+4
+   \   000000EC   ........           _BLF     ??getDateTime,??getDateTime??rA
+   \   000000F0   680297E5           LDR      R0,[R7, #+616]
+   \   000000F4   04108DE2           ADD      R1,SP,#+4
+   \   000000F8   B020D1E1           LDRH     R2,[R1, #0]
+   \   000000FC   BC22E0E1           STRH     R2,[R0, #+44]!
+   \   00000100   B220D1E1           LDRH     R2,[R1, #+2]
+   \   00000104   B220C0E1           STRH     R2,[R0, #+2]
+   \   00000108   B420D1E1           LDRH     R2,[R1, #+4]
+   \   0000010C   B420C0E1           STRH     R2,[R0, #+4]
+   \   00000110   B620D1E1           LDRH     R2,[R1, #+6]
+   \   00000114   B620C0E1           STRH     R2,[R0, #+6]
+    239                }
+    240              }
+    241              delete fileContent;
+   \                     ??beginFile_5:
+   \   00000118   0400A0E1           MOV      R0,R4
+   \   0000011C   ........           _BLF     `??operator delete`,`??operator delete??rA`
+    242              delete conditionXml;
+   \   00000120   0500A0E1           MOV      R0,R5
+   \   00000124   ........           _BLF     `??operator delete`,`??operator delete??rA`
+   \   00000128   F780BDE8           POP      {R0-R2,R4-R7,PC}
+    243            } 
+    244            else
+    245              errorInFile(L"Error while trying to open weather.txt and condition.xml!");
+   \                     ??beginFile_2:
+   \   0000012C   4B0F86E2           ADD      R0,R6,#+300
+   \   00000130   ........           BL       ??errorInFile
+    246          }
+   \   00000134   F780BDE8           POP      {R0-R2,R4-R7,PC}  ;; return
+   \                     ??beginFile_1:
+   \   00000138   ........           DC32     `?<Constant L"\\x45\\x72\\x72\\x6f\\x72\\x20\\x69\\x6e\\`
+    247          
+
+   \                                 In segment CODE, align 4, keep-with-next
+    248          int SB_ELF_Killed(void *mess ,BOOK* book) {
+   \                     ??SB_ELF_Killed:
+   \   00000000   F0402DE9           PUSH     {R4-R7,LR}
+    249            REDRAW_RELEASE_MESSAGE* sbm=(REDRAW_RELEASE_MESSAGE*)mess;
+    250            REDRAW_RELEASE_MESSAGE* res = 0;
+    251            if (sbm->SB_NewOnRedraw==SIonRedraw) {
+   \   00000004   ........           LDR      R5,??DataTable29  ;; statesID
+   \   00000008   0040A0E1           MOV      R4,R0
+   \   0000000C   040094E5           LDR      R0,[R4, #+4]
+   \   00000010   D01095E5           LDR      R1,[R5, #+208]
+   \   00000014   010050E1           CMP      R0,R1
+   \   00000018   1B00001A           BNE      ??SB_ELF_Killed_1
+    252              res=new REDRAW_RELEASE_MESSAGE;
+   \   0000001C   1800A0E3           MOV      R0,#+24
+   \   00000020   ........           _BLF     `??operator new`,`??operator new??rA`
+   \   00000024   0060A0E1           MOV      R6,R0
+    253              memcpy(res,sbm,sizeof(REDRAW_RELEASE_MESSAGE));
+   \   00000028   1820A0E3           MOV      R2,#+24
+   \   0000002C   0410A0E1           MOV      R1,R4
+   \   00000030   130100EF           SWI      +275
+    254              if (sbm->SB_OldOnRedraw!=EMPTY_REDRAW_METHOD) SIonRedraw=sbm->SB_OldOnRedraw;
+   \   00000034   000094E5           LDR      R0,[R4, #+0]
+    255              DISP_DESC_SetOnRedraw(DispObject_GetDESC(StatusIndication),Draw);
+   \   00000038   ........           LDR      R4,??DataTable35  ;; ??Draw
+   \   0000003C   0070E0E3           MVN      R7,#+0
+   \   00000040   070050E1           CMP      R0,R7
+   \   00000044   D0008515           STRNE    R0,[R5, #+208]
+   \   00000048   D40095E5           LDR      R0,[R5, #+212]
+   \   0000004C   1F0200EF           SWI      +543
+   \   00000050   0410A0E1           MOV      R1,R4
+   \   00000054   280200EF           SWI      +552
+    256              res->SB_OldOnRedraw=EMPTY_REDRAW_METHOD;
+   \   00000058   007086E5           STR      R7,[R6, #+0]
+    257              res->SB_NewOnRedraw=Draw;
+   \   0000005C   044086E5           STR      R4,[R6, #+4]
+    258            }
+    259            if (res) {
+   \   00000060   000056E3           CMP      R6,#+0
+   \   00000064   0800000A           BEQ      ??SB_ELF_Killed_1
+    260              UI_Event_wData(SBY_REDRAW_RELEASE_EVENT ,res,(void (*)(void*))mfree_adr());
+   \   00000068   048100EF           SWI      +33028
+   \   0000006C   0020A0E1           MOV      R2,R0
+   \   00000070   0610A0E1           MOV      R1,R6
+   \   00000074   E300A0E3           MOV      R0,#+227
+   \   00000078   C00F80E3           ORR      R0,R0,#0x300
+   \   0000007C   A90100EF           SWI      +425
+    261              return BLOCK_EVENT_GLOBALLY;
+   \   00000080   9A00A0E3           MOV      R0,#+154
+   \   00000084   800F80E3           ORR      R0,R0,#0x200
+   \   00000088   F080BDE8           POP      {R4-R7,PC}
+    262            }
+    263            return 0;
+   \                     ??SB_ELF_Killed_1:
+   \   0000008C   0000A0E3           MOV      R0,#+0
+   \   00000090   F080BDE8           POP      {R4-R7,PC}       ;; return
+    264          }
+    265          
+
+   \                                 In segment CODE, align 4, keep-with-next
+    266          void InitImages(void) {
+    267            ImageID_Get(BCFG_Path_Background_StaticBackground,L"background.png",&statesID[0x0]);
+   \                     ??InitImages:
+   \   00000000   9C009FE5           LDR      R0,??InitImages_1  ;; BCFG_Path_Background_StaticBackground
+   \   00000004   70402DE9           PUSH     {R4-R6,LR}
+   \   00000008   ........           LDR      R4,??DataTable33  ;; statesID
+   \   0000000C   94509FE5           LDR      R5,??InitImages_1+0x4  ;; `?<Constant L"\\x62\\x61\\x63\\x6b\\x67\\x72\\x6f\\x75\\`
+    268            ImageID_Get(BCFG_XMLBGLogoFolder,L"logo.png",&statesID[0x1]);
+    269            ImageID_Get(BCFG_Path_Background_DayAndNightBG,L"day.png",&statesID[0x2]);
+   \   00000010   94609FE5           LDR      R6,??InitImages_1+0x8  ;; BCFG_Path_Background_DayAndNightBG
+   \   00000014   0420A0E1           MOV      R2,R4
+   \   00000018   0510A0E1           MOV      R1,R5
+   \   0000001C   CC0200EF           SWI      +716
+   \   00000020   ........           LDR      R0,??DataTable32  ;; BCFG_XMLBGLogoFolder
+   \   00000024   022084E2           ADD      R2,R4,#+2
+   \   00000028   201085E2           ADD      R1,R5,#+32
+   \   0000002C   CC0200EF           SWI      +716
+   \   00000030   042084E2           ADD      R2,R4,#+4
+   \   00000034   341085E2           ADD      R1,R5,#+52
+   \   00000038   0600A0E1           MOV      R0,R6
+   \   0000003C   CC0200EF           SWI      +716
+    270            ImageID_Get(BCFG_Path_Background_DayAndNightBG,L"night.png",&statesID[0x3]);
+   \   00000040   062084E2           ADD      R2,R4,#+6
+   \   00000044   441085E2           ADD      R1,R5,#+68
+   \   00000048   0600A0E1           MOV      R0,R6
+   \   0000004C   CC0200EF           SWI      +716
+    271            
+    272            for (int i = 0 ; i < 44 ; i++) ImageID_Get(BCFG_StatesFolder,stateImages[i],&statesID[i+0x4]);
+   \   00000050   0050A0E3           MOV      R5,#+0
+   \                     ??InitImages_2:
+   \   00000054   850084E0           ADD      R0,R4,R5, LSL #+1
+   \   00000058   082080E2           ADD      R2,R0,#+8
+   \   0000005C   050184E0           ADD      R0,R4,R5, LSL #+2
+   \   00000060   D81090E5           LDR      R1,[R0, #+216]
+   \   00000064   44009FE5           LDR      R0,??InitImages_1+0xC  ;; BCFG_StatesFolder
+   \   00000068   015085E2           ADD      R5,R5,#+1
+   \   0000006C   CC0200EF           SWI      +716
+   \   00000070   2C0055E3           CMP      R5,#+44
+   \   00000074   F6FFFFBA           BLT      ??InitImages_2
+    273            for (int i = 0 ; i < 20 ; i++) ImageID_Get(BCFG_Path_Background,bgImages[i],&bgID[i]);
+   \   00000078   0050A0E3           MOV      R5,#+0
+   \                     ??InitImages_3:
+   \   0000007C   850084E0           ADD      R0,R4,R5, LSL #+1
+   \   00000080   902080E2           ADD      R2,R0,#+144
+   \   00000084   050184E0           ADD      R0,R4,R5, LSL #+2
+   \   00000088   E81190E5           LDR      R1,[R0, #+488]
+   \   0000008C   20009FE5           LDR      R0,??InitImages_1+0x10  ;; BCFG_Path_Background
+   \   00000090   015085E2           ADD      R5,R5,#+1
+   \   00000094   CC0200EF           SWI      +716
+   \   00000098   140055E3           CMP      R5,#+20
+   \   0000009C   F6FFFFBA           BLT      ??InitImages_3
+    274           
+    275          }
+   \   000000A0   7080BDE8           POP      {R4-R6,PC}       ;; return
+   \                     ??InitImages_1:
+   \   000000A4   ........           DC32     BCFG_Path_Background_StaticBackground
+   \   000000A8   ........           DC32     `?<Constant L"\\x62\\x61\\x63\\x6b\\x67\\x72\\x6f\\x75\\`
+   \   000000AC   ........           DC32     BCFG_Path_Background_DayAndNightBG
+   \   000000B0   ........           DC32     BCFG_StatesFolder
+   \   000000B4   ........           DC32     BCFG_Path_Background
+    276          
+
+   \                                 In segment CODE, align 4, keep-with-next
+    277          void DestroyImages(void) {
+   \                     ??DestroyImages:
+   \   00000000   30402DE9           PUSH     {R4,R5,LR}
+    278            for (int i = 0 ; i < 48 ; i++) ImageID_Free(statesID[i]);
+   \   00000004   ........           LDR      R5,??DataTable33  ;; statesID
+   \   00000008   0040A0E3           MOV      R4,#+0
+   \                     ??DestroyImages_1:
+   \   0000000C   840085E0           ADD      R0,R5,R4, LSL #+1
+   \   00000010   B000D0E1           LDRH     R0,[R0, #+0]
+   \   00000014   014084E2           ADD      R4,R4,#+1
+   \   00000018   CD0200EF           SWI      +717
+   \   0000001C   300054E3           CMP      R4,#+48
+   \   00000020   F9FFFFBA           BLT      ??DestroyImages_1
+    279            for (int i = 0 ; i < 20 ; i++) ImageID_Free(bgID[i]);  
+   \   00000024   0040A0E3           MOV      R4,#+0
+   \                     ??DestroyImages_2:
+   \   00000028   840085E0           ADD      R0,R5,R4, LSL #+1
+   \   0000002C   B009D0E1           LDRH     R0,[R0, #+144]
+   \   00000030   014084E2           ADD      R4,R4,#+1
+   \   00000034   CD0200EF           SWI      +717
+   \   00000038   140054E3           CMP      R4,#+20
+   \   0000003C   F9FFFFBA           BLT      ??DestroyImages_2
+    280          }
+   \   00000040   3080BDE8           POP      {R4,R5,PC}       ;; return
+    281          
+
+   \                                 In segment CODE, align 4, keep-with-next
+    282          void drawWeatherInfo(MyBook* book) {
+   \                     ??drawWeatherInfo:
+   \   00000000   30402DE9           PUSH     {R4,R5,LR}
+    283            
+    284            mybook = book;
+   \   00000004   ........           LDR      R4,??DataTable40  ;; statesID
+   \   00000008   04D04DE2           SUB      SP,SP,#+4
+   \   0000000C   680284E5           STR      R0,[R4, #+616]
+    285          
+    286            beginFile();
+   \   00000010   ........           BL       ??beginFile
+    287          
+    288            if (!mybook->getError()) {
+   \   00000014   680294E5           LDR      R0,[R4, #+616]
+   \   00000018   ........           _BLF     ??getError,??getError??rA
+   \   0000001C   000050E3           CMP      R0,#+0
+   \   00000020   3180BD18           POPNE    {R0,R4,R5,PC}
+    289              InitImages();
+   \   00000024   ........           BL       ??InitImages
+    290              StatusIndication = GUIObject_GetDispObject( (GUI*)List_Get(Find_StandbyBook()->xguilist->guilist,0) );
+   \   00000028   310100EF           SWI      +305
+   \   0000002C   140090E5           LDR      R0,[R0, #+20]
+   \   00000030   0010A0E3           MOV      R1,#+0
+   \   00000034   040090E5           LDR      R0,[R0, #+4]
+   \   00000038   AD0100EF           SWI      +429
+   \   0000003C   680100EF           SWI      +360
+   \   00000040   D40084E5           STR      R0,[R4, #+212]
+    291              SIonRedraw=DispObject_GetOnRedraw(StatusIndication);
+   \   00000044   290200EF           SWI      +553
+   \   00000048   D00084E5           STR      R0,[R4, #+208]
+    292              DISP_DESC_SetOnRedraw(DispObject_GetDESC(StatusIndication),Draw);
+   \   0000004C   D40094E5           LDR      R0,[R4, #+212]
+   \   00000050   1F0200EF           SWI      +543
+   \   00000054   ........           LDR      R1,??DataTable35  ;; ??Draw
+   \   00000058   280200EF           SWI      +552
+    293              int refresh;
+    294              (BCFG_Images_Background_Method == 2 && BCFG_Images_Background_Enable) ? refresh = BCFG_RefreshTime : refresh = 1000;    
+   \   0000005C   ........           LDR      R0,??DataTable36  ;; BCFG_Images_Background_Method
+   \   00000060   000090E5           LDR      R0,[R0, #+0]
+   \   00000064   020050E3           CMP      R0,#+2
+   \   00000068   0500001A           BNE      ??drawWeatherInfo_1
+   \   0000006C   ........           LDR      R0,??DataTable37  ;; BCFG_Images_Background_Enable
+   \   00000070   000090E5           LDR      R0,[R0, #+0]
+   \   00000074   000050E3           CMP      R0,#+0
+   \   00000078   ........           LDRNE    R0,??DataTable38  ;; BCFG_RefreshTime
+   \   0000007C   00509015           LDRNE    R5,[R0, #+0]
+   \   00000080   0000001A           BNE      ??drawWeatherInfo_2
+   \                     ??drawWeatherInfo_1:
+   \   00000084   FA5FA0E3           MOV      R5,#+1000
+    295              mybook->ftimer=Timer_Set(refresh,onfTimer,0);
+   \                     ??drawWeatherInfo_2:
+   \   00000088   0010A0E3           MOV      R1,#+0
+   \   0000008C   0D00A0E1           MOV      R0,SP
+   \   00000090   ........           _BLF     ??LPARAM,??LPARAM??rA
+   \   00000094   00209DE5           LDR      R2,[SP, #+0]
+   \   00000098   ........           LDR      R1,??DataTable39  ;; ??onfTimer
+   \   0000009C   0500A0E1           MOV      R0,R5
+   \   000000A0   290100EF           SWI      +297
+   \   000000A4   681294E5           LDR      R1,[R4, #+616]
+   \   000000A8   BA02C1E1           STRH     R0,[R1, #+42]
+    296            }
+    297          }
+   \   000000AC   3180BDE8           POP      {R0,R4,R5,PC}    ;; return
+    298          
+
+   \                                 In segment CODE, align 4, keep-with-next
+    299          void onCloseBEBook(BOOK* book) {
+   \                     ??onCloseBEBook:
+   \   00000000   10402DE9           PUSH     {R4,LR}
+    300            if (book)  {
+   \   00000004   000050E3           CMP      R0,#+0
+   \   00000008   1080BD08           POPEQ    {R4,PC}
+    301              if (StatusIndication) {
+   \   0000000C   ........           LDR      R4,??DataTable40  ;; statesID
+   \   00000010   D40094E5           LDR      R0,[R4, #+212]
+   \   00000014   000050E3           CMP      R0,#+0
+   \   00000018   0B00000A           BEQ      ??onCloseBEBook_1
+    302                Timer_Kill(&mybook->ftimer);
+   \   0000001C   680294E5           LDR      R0,[R4, #+616]
+   \   00000020   2A0080E2           ADD      R0,R0,#+42
+   \   00000024   2A0100EF           SWI      +298
+    303                DestroyImages();
+   \   00000028   ........           BL       ??DestroyImages
+    304                DISP_DESC_SetOnRedraw(DispObject_GetDESC(StatusIndication),SIonRedraw);
+   \   0000002C   D40094E5           LDR      R0,[R4, #+212]
+   \   00000030   1F0200EF           SWI      +543
+   \   00000034   D01094E5           LDR      R1,[R4, #+208]
+   \   00000038   280200EF           SWI      +552
+    305                DispObject_InvalidateRect(StatusIndication,0);
+   \   0000003C   D40094E5           LDR      R0,[R4, #+212]
+   \   00000040   0010A0E3           MOV      R1,#+0
+   \   00000044   EF0100EF           SWI      +495
+    306                Send_REDRAW_RELEASE();
+   \   00000048   ........           BL       ??Send_REDRAW_RELEASE
+    307              }
+    308              mybook->freeMyVars();
+   \                     ??onCloseBEBook_1:
+   \   0000004C   680294E5           LDR      R0,[R4, #+616]
+   \   00000050   ........           _BLF     ??freeMyVars,??freeMyVars??rA
+    309              delete mybook;
+   \   00000054   680294E5           LDR      R0,[R4, #+616]
+   \   00000058   ........           _BLF     `??operator delete`,`??operator delete??rA`
+    310              SUBPROC(elf_exit);
+   \   0000005C   04009FE5           LDR      R0,??onCloseBEBook_2  ;; ??elf_exit
+   \   00000060   080100EF           SWI      +264
+    311            }
+    312          }
+   \   00000064   1080BDE8           POP      {R4,PC}          ;; return
+   \                     ??onCloseBEBook_2:
+   \   00000068   ........           DC32     ??elf_exit
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable0:
+   \   00000000   ........           DC32     ??Draw
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable16:
+   \   00000000   ........           DC32     BCFG_WidgetPosition_X
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable17:
+   \   00000000   ........           DC32     BCFG_WidgetPosition_Y
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable29:
+   \   00000000   ........           DC32     statesID
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable32:
+   \   00000000   ........           DC32     BCFG_XMLBGLogoFolder
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable33:
+   \   00000000   ........           DC32     statesID
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable35:
+   \   00000000   ........           DC32     ??Draw
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable36:
+   \   00000000   ........           DC32     BCFG_Images_Background_Method
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable37:
+   \   00000000   ........           DC32     BCFG_Images_Background_Enable
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable38:
+   \   00000000   ........           DC32     BCFG_RefreshTime
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable39:
+   \   00000000   ........           DC32     ??onfTimer
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable40:
+   \   00000000   ........           DC32     statesID
+
+   \                                 In segment DATA_ID, align 4, align-sorted
+   \                     `?<Initializer for statesID>`:
+   \   00000000   FFFFFFFFFFFF       DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+   \              FFFFFFFFFFFF
+   \              FFFFFFFFFFFF
+   \   00000012   FFFFFFFFFFFF       DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+   \              FFFFFFFFFFFF
+   \              FFFFFFFFFFFF
+   \   00000024   FFFFFFFFFFFF       DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+   \              FFFFFFFFFFFF
+   \              FFFFFFFFFFFF
+   \   00000036   FFFFFFFFFFFF       DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+   \              FFFFFFFFFFFF
+   \              FFFFFFFFFFFF
+   \   00000048   FFFFFFFFFFFF       DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+   \              FFFFFFFFFFFF
+   \              FFFFFFFFFFFF
+   \   0000005A   FFFFFFFFFFFF       DC16 65535, 65535, 65535
+   \   00000060   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000070   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000080   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \                     `?<Initializer for bgID>`:
+   \   00000090   FFFFFFFFFFFF       DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+   \              FFFFFFFFFFFF
+   \              FFFFFFFFFFFF
+   \   000000A2   FFFFFFFFFFFF       DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+   \              FFFFFFFFFFFF
+   \              FFFFFFFFFFFF
+   \   000000B4   FFFFFFFF           DC16 65535, 65535
+   \   000000B8   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   000000C8   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0
+   \              0000        
+   \                     `?<Initializer for SIonRedraw>`:
+   \   000000D0   00000000           DC8 0, 0, 0, 0
+   \                     `?<Initializer for StatusIndication>`:
+   \   000000D4   00000000           DC8 0, 0, 0, 0
+   \                     `?<Initializer for stateImages>`:
+   \   000000D8   ........           DC32 `?<Constant L"\\x31\\x2e\\x70\\x6e\\x67">`
+   \   000000DC   ........           DC32 `?<Constant L"\\x32\\x2e\\x70\\x6e\\x67">`
+   \   000000E0   ........           DC32 `?<Constant L"\\x33\\x2e\\x70\\x6e\\x67">`
+   \   000000E4   ........           DC32 `?<Constant L"\\x34\\x2e\\x70\\x6e\\x67">`
+   \   000000E8   ........           DC32 `?<Constant L"\\x35\\x2e\\x70\\x6e\\x67">`
+   \   000000EC   ........           DC32 `?<Constant L"\\x36\\x2e\\x70\\x6e\\x67">`
+   \   000000F0   ........           DC32 `?<Constant L"\\x37\\x2e\\x70\\x6e\\x67">`
+   \   000000F4   ........           DC32 `?<Constant L"\\x38\\x2e\\x70\\x6e\\x67">`
+   \   000000F8   ........           DC32 `?<Constant L"\\x31\\x2e\\x70\\x6e\\x67">`
+   \   000000FC   ........           DC32 `?<Constant L"\\x31\\x2e\\x70\\x6e\\x67">`
+   \   00000100   ........           DC32 `?<Constant L"\\x39\\x2e\\x70\\x6e\\x67">`
+   \   00000104   ........           DC32 `?<Constant L"\\x31\\x30\\x2e\\x70\\x6e\\x67">`
+   \   00000108   ........           DC32 `?<Constant L"\\x31\\x31\\x2e\\x70\\x6e\\x67">`
+   \   0000010C   ........           DC32 `?<Constant L"\\x31\\x32\\x2e\\x70\\x6e\\x67">`
+   \   00000110   ........           DC32 `?<Constant L"\\x31\\x33\\x2e\\x70\\x6e\\x67">`
+   \   00000114   ........           DC32 `?<Constant L"\\x31\\x34\\x2e\\x70\\x6e\\x67">`
+   \   00000118   ........           DC32 `?<Constant L"\\x31\\x35\\x2e\\x70\\x6e\\x67">`
+   \   0000011C   ........           DC32 `?<Constant L"\\x31\\x36\\x2e\\x70\\x6e\\x67">`
+   \   00000120   ........           DC32 `?<Constant L"\\x31\\x37\\x2e\\x70\\x6e\\x67">`
+   \   00000124   ........           DC32 `?<Constant L"\\x31\\x38\\x2e\\x70\\x6e\\x67">`
+   \   00000128   ........           DC32 `?<Constant L"\\x31\\x39\\x2e\\x70\\x6e\\x67">`
+   \   0000012C   ........           DC32 `?<Constant L"\\x32\\x30\\x2e\\x70\\x6e\\x67">`
+   \   00000130   ........           DC32 `?<Constant L"\\x32\\x31\\x2e\\x70\\x6e\\x67">`
+   \   00000134   ........           DC32 `?<Constant L"\\x32\\x32\\x2e\\x70\\x6e\\x67">`
+   \   00000138   ........           DC32 `?<Constant L"\\x32\\x33\\x2e\\x70\\x6e\\x67">`
+   \   0000013C   ........           DC32 `?<Constant L"\\x32\\x34\\x2e\\x70\\x6e\\x67">`
+   \   00000140   ........           DC32 `?<Constant L"\\x31\\x2e\\x70\\x6e\\x67">`
+   \   00000144   ........           DC32 `?<Constant L"\\x31\\x2e\\x70\\x6e\\x67">`
+   \   00000148   ........           DC32 `?<Constant L"\\x32\\x35\\x2e\\x70\\x6e\\x67">`
+   \   0000014C   ........           DC32 `?<Constant L"\\x32\\x36\\x2e\\x70\\x6e\\x67">`
+   \   00000150   ........           DC32 `?<Constant L"\\x32\\x37\\x2e\\x70\\x6e\\x67">`
+   \   00000154   ........           DC32 `?<Constant L"\\x32\\x38\\x2e\\x70\\x6e\\x67">`
+   \   00000158   ........           DC32 `?<Constant L"\\x32\\x39\\x2e\\x70\\x6e\\x67">`
+   \   0000015C   ........           DC32 `?<Constant L"\\x33\\x30\\x2e\\x70\\x6e\\x67">`
+   \   00000160   ........           DC32 `?<Constant L"\\x33\\x31\\x2e\\x70\\x6e\\x67">`
+   \   00000164   ........           DC32 `?<Constant L"\\x33\\x32\\x2e\\x70\\x6e\\x67">`
+   \   00000168   ........           DC32 `?<Constant L"\\x33\\x33\\x2e\\x70\\x6e\\x67">`
+   \   0000016C   ........           DC32 `?<Constant L"\\x33\\x34\\x2e\\x70\\x6e\\x67">`
+   \   00000170   ........           DC32 `?<Constant L"\\x33\\x35\\x2e\\x70\\x6e\\x67">`
+   \   00000174   ........           DC32 `?<Constant L"\\x33\\x36\\x2e\\x70\\x6e\\x67">`
+   \   00000178   ........           DC32 `?<Constant L"\\x33\\x37\\x2e\\x70\\x6e\\x67">`
+   \   0000017C   ........           DC32 `?<Constant L"\\x33\\x38\\x2e\\x70\\x6e\\x67">`
+   \   00000180   ........           DC32 `?<Constant L"\\x33\\x39\\x2e\\x70\\x6e\\x67">`
+   \   00000184   ........           DC32 `?<Constant L"\\x33\\x39\\x2e\\x70\\x6e\\x67">`
+   \   00000188   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000198   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   000001A8   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   000001B8   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   000001C8   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   000001D8   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \                     `?<Initializer for bgImages>`:
+   \   000001E8   ........           DC32 `?<Constant L"\\x31\\x2e\\x70\\x6e\\x67">`
+   \   000001EC   ........           DC32 `?<Constant L"\\x32\\x2e\\x70\\x6e\\x67">`
+   \   000001F0   ........           DC32 `?<Constant L"\\x33\\x2e\\x70\\x6e\\x67">`
+   \   000001F4   ........           DC32 `?<Constant L"\\x34\\x2e\\x70\\x6e\\x67">`
+   \   000001F8   ........           DC32 `?<Constant L"\\x35\\x2e\\x70\\x6e\\x67">`
+   \   000001FC   ........           DC32 `?<Constant L"\\x36\\x2e\\x70\\x6e\\x67">`
+   \   00000200   ........           DC32 `?<Constant L"\\x37\\x2e\\x70\\x6e\\x67">`
+   \   00000204   ........           DC32 `?<Constant L"\\x38\\x2e\\x70\\x6e\\x67">`
+   \   00000208   ........           DC32 `?<Constant L"\\x39\\x2e\\x70\\x6e\\x67">`
+   \   0000020C   ........           DC32 `?<Constant L"\\x31\\x30\\x2e\\x70\\x6e\\x67">`
+   \   00000210   ........           DC32 `?<Constant L"\\x31\\x31\\x2e\\x70\\x6e\\x67">`
+   \   00000214   ........           DC32 `?<Constant L"\\x31\\x32\\x2e\\x70\\x6e\\x67">`
+   \   00000218   ........           DC32 `?<Constant L"\\x31\\x33\\x2e\\x70\\x6e\\x67">`
+   \   0000021C   ........           DC32 `?<Constant L"\\x31\\x34\\x2e\\x70\\x6e\\x67">`
+   \   00000220   ........           DC32 `?<Constant L"\\x31\\x35\\x2e\\x70\\x6e\\x67">`
+   \   00000224   ........           DC32 `?<Constant L"\\x31\\x36\\x2e\\x70\\x6e\\x67">`
+   \   00000228   ........           DC32 `?<Constant L"\\x31\\x37\\x2e\\x70\\x6e\\x67">`
+   \   0000022C   ........           DC32 `?<Constant L"\\x31\\x38\\x2e\\x70\\x6e\\x67">`
+   \   00000230   ........           DC32 `?<Constant L"\\x31\\x39\\x2e\\x70\\x6e\\x67">`
+   \   00000234   ........           DC32 `?<Constant L"\\x32\\x30\\x2e\\x70\\x6e\\x67">`
+   \   00000238   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000248   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000258   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \                     `?<Initializer for mybook>`:
+   \   00000268   00000000           DC8 0, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x31\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   31002E007000       DC8 31H, 0, 2EH, 0, 70H, 0, 6EH, 0
+   \              6E00        
+   \   00000008   67000000           DC8 67H, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x45\\x72\\x72\\x6f\\x72\\x20\\x69\\x6e\\`:
+   \   00000000   450072007200       DC8 45H, 0, 72H, 0, 72H, 0, 6FH, 0
+   \              6F00        
+   \   00000008   720020006900       DC8 72H, 0, 20H, 0, 69H, 0, 6EH, 0
+   \              6E00        
+   \   00000010   200044006100       DC8 20H, 0, 44H, 0, 61H, 0, 79H, 0
+   \              7900        
+   \   00000018   200057006500       DC8 20H, 0, 57H, 0, 65H, 0, 61H, 0
+   \              6100        
+   \   00000020   740068006500       DC8 74H, 0, 68H, 0, 65H, 0, 72H, 0
+   \              7200        
+   \   00000028   210020005500       DC8 21H, 0, 20H, 0, 55H, 0, 70H, 0
+   \              7000        
+   \   00000030   640061007400       DC8 64H, 0, 61H, 0, 74H, 0, 65H, 0
+   \              6500        
+   \   00000038   200079006F00       DC8 20H, 0, 79H, 0, 6FH, 0, 75H, 0
+   \              7500        
+   \   00000040   720020006600       DC8 72H, 0, 20H, 0, 66H, 0, 69H, 0
+   \              6900        
+   \   00000048   6C0065002000       DC8 6CH, 0, 65H, 0, 20H, 0, 77H, 0
+   \              7700        
+   \   00000050   650061007400       DC8 65H, 0, 61H, 0, 74H, 0, 68H, 0
+   \              6800        
+   \   00000058   650072002E00       DC8 65H, 0, 72H, 0, 2EH, 0, 74H, 0
+   \              7400        
+   \   00000060   780074002000       DC8 78H, 0, 74H, 0, 20H, 0, 61H, 0
+   \              6100        
+   \   00000068   6E0064002000       DC8 6EH, 0, 64H, 0, 20H, 0, 72H, 0
+   \              7200        
+   \   00000070   75006E002000       DC8 75H, 0, 6EH, 0, 20H, 0, 74H, 0
+   \              7400        
+   \   00000078   680065002000       DC8 68H, 0, 65H, 0, 20H, 0, 65H, 0
+   \              6500        
+   \   00000080   6C0066002000       DC8 6CH, 0, 66H, 0, 20H, 0, 61H, 0
+   \              6100        
+   \   00000088   670061006900       DC8 67H, 0, 61H, 0, 69H, 0, 6EH, 0
+   \              6E00        
+   \   00000090   21000000           DC8 21H, 0, 0, 0
+   \   00000094   450072007200       DC8 45H, 0, 72H, 0, 72H, 0, 6FH, 0
+   \              6F00        
+   \   0000009C   720020006900       DC8 72H, 0, 20H, 0, 69H, 0, 6EH, 0
+   \              6E00        
+   \   000000A4   20004E006900       DC8 20H, 0, 4EH, 0, 69H, 0, 67H, 0
+   \              6700        
+   \   000000AC   680074002000       DC8 68H, 0, 74H, 0, 20H, 0, 57H, 0
+   \              5700        
+   \   000000B4   650061007400       DC8 65H, 0, 61H, 0, 74H, 0, 68H, 0
+   \              6800        
+   \   000000BC   650072002100       DC8 65H, 0, 72H, 0, 21H, 0, 20H, 0
+   \              2000        
+   \   000000C4   550070006400       DC8 55H, 0, 70H, 0, 64H, 0, 61H, 0
+   \              6100        
+   \   000000CC   740065002000       DC8 74H, 0, 65H, 0, 20H, 0, 79H, 0
+   \              7900        
+   \   000000D4   6F0075007200       DC8 6FH, 0, 75H, 0, 72H, 0, 20H, 0
+   \              2000        
+   \   000000DC   660069006C00       DC8 66H, 0, 69H, 0, 6CH, 0, 65H, 0
+   \              6500        
+   \   000000E4   200077006500       DC8 20H, 0, 77H, 0, 65H, 0, 61H, 0
+   \              6100        
+   \   000000EC   740068006500       DC8 74H, 0, 68H, 0, 65H, 0, 72H, 0
+   \              7200        
+   \   000000F4   2E0074007800       DC8 2EH, 0, 74H, 0, 78H, 0, 74H, 0
+   \              7400        
+   \   000000FC   200061006E00       DC8 20H, 0, 61H, 0, 6EH, 0, 64H, 0
+   \              6400        
+   \   00000104   200072007500       DC8 20H, 0, 72H, 0, 75H, 0, 6EH, 0
+   \              6E00        
+   \   0000010C   200074006800       DC8 20H, 0, 74H, 0, 68H, 0, 65H, 0
+   \              6500        
+   \   00000114   200065006C00       DC8 20H, 0, 65H, 0, 6CH, 0, 66H, 0
+   \              6600        
+   \   0000011C   200061006700       DC8 20H, 0, 61H, 0, 67H, 0, 61H, 0
+   \              6100        
+   \   00000124   69006E002100       DC8 69H, 0, 6EH, 0, 21H, 0, 0, 0
+   \              0000        
+   \   0000012C   450072007200       DC8 45H, 0, 72H, 0, 72H, 0, 6FH, 0
+   \              6F00        
+   \   00000134   720020007700       DC8 72H, 0, 20H, 0, 77H, 0, 68H, 0
+   \              6800        
+   \   0000013C   69006C006500       DC8 69H, 0, 6CH, 0, 65H, 0, 20H, 0
+   \              2000        
+   \   00000144   740072007900       DC8 74H, 0, 72H, 0, 79H, 0, 69H, 0
+   \              6900        
+   \   0000014C   6E0067002000       DC8 6EH, 0, 67H, 0, 20H, 0, 74H, 0
+   \              7400        
+   \   00000154   6F0020006F00       DC8 6FH, 0, 20H, 0, 6FH, 0, 70H, 0
+   \              7000        
+   \   0000015C   65006E002000       DC8 65H, 0, 6EH, 0, 20H, 0, 77H, 0
+   \              7700        
+   \   00000164   650061007400       DC8 65H, 0, 61H, 0, 74H, 0, 68H, 0
+   \              6800        
+   \   0000016C   650072002E00       DC8 65H, 0, 72H, 0, 2EH, 0, 74H, 0
+   \              7400        
+   \   00000174   780074002000       DC8 78H, 0, 74H, 0, 20H, 0, 61H, 0
+   \              6100        
+   \   0000017C   6E0064002000       DC8 6EH, 0, 64H, 0, 20H, 0, 63H, 0
+   \              6300        
+   \   00000184   6F006E006400       DC8 6FH, 0, 6EH, 0, 64H, 0, 69H, 0
+   \              6900        
+   \   0000018C   740069006F00       DC8 74H, 0, 69H, 0, 6FH, 0, 6EH, 0
+   \              6E00        
+   \   00000194   2E0078006D00       DC8 2EH, 0, 78H, 0, 6DH, 0, 6CH, 0
+   \              6C00        
+   \   0000019C   21000000           DC8 21H, 0, 0, 0
+   \   000001A0   770065006100       DC8 77H, 0, 65H, 0, 61H, 0, 74H, 0
+   \              7400        
+   \   000001A8   680065007200       DC8 68H, 0, 65H, 0, 72H, 0, 2EH, 0
+   \              2E00        
+   \   000001B0   740078007400       DC8 74H, 0, 78H, 0, 74H, 0, 0, 0
+   \              0000        
+   \   000001B8   63006F006E00       DC8 63H, 0, 6FH, 0, 6EH, 0, 64H, 0
+   \              6400        
+   \   000001C0   690074006900       DC8 69H, 0, 74H, 0, 69H, 0, 6FH, 0
+   \              6F00        
+   \   000001C8   6E002E007800       DC8 6EH, 0, 2EH, 0, 78H, 0, 6DH, 0
+   \              6D00        
+   \   000001D0   6C000000           DC8 6CH, 0, 0, 0
+   \   000001D4   450072007200       DC8 45H, 0, 72H, 0, 72H, 0, 6FH, 0
+   \              6F00        
+   \   000001DC   720020006900       DC8 72H, 0, 20H, 0, 69H, 0, 6EH, 0
+   \              6E00        
+   \   000001E4   20006C006F00       DC8 20H, 0, 6CH, 0, 6FH, 0, 63H, 0
+   \              6300        
+   \   000001EC   610074006900       DC8 61H, 0, 74H, 0, 69H, 0, 6FH, 0
+   \              6F00        
+   \   000001F4   6E0021002000       DC8 6EH, 0, 21H, 0, 20H, 0, 55H, 0
+   \              5500        
+   \   000001FC   700064006100       DC8 70H, 0, 64H, 0, 61H, 0, 74H, 0
+   \              7400        
+   \   00000204   650020007900       DC8 65H, 0, 20H, 0, 79H, 0, 6FH, 0
+   \              6F00        
+   \   0000020C   750072002000       DC8 75H, 0, 72H, 0, 20H, 0, 66H, 0
+   \              6600        
+   \   00000214   69006C006500       DC8 69H, 0, 6CH, 0, 65H, 0, 20H, 0
+   \              2000        
+   \   0000021C   770065006100       DC8 77H, 0, 65H, 0, 61H, 0, 74H, 0
+   \              7400        
+   \   00000224   680065007200       DC8 68H, 0, 65H, 0, 72H, 0, 2EH, 0
+   \              2E00        
+   \   0000022C   740078007400       DC8 74H, 0, 78H, 0, 74H, 0, 20H, 0
+   \              2000        
+   \   00000234   61006E006400       DC8 61H, 0, 6EH, 0, 64H, 0, 20H, 0
+   \              2000        
+   \   0000023C   720075006E00       DC8 72H, 0, 75H, 0, 6EH, 0, 20H, 0
+   \              2000        
+   \   00000244   740068006500       DC8 74H, 0, 68H, 0, 65H, 0, 20H, 0
+   \              2000        
+   \   0000024C   65006C006600       DC8 65H, 0, 6CH, 0, 66H, 0, 20H, 0
+   \              2000        
+   \   00000254   610067006100       DC8 61H, 0, 67H, 0, 61H, 0, 69H, 0
+   \              6900        
+   \   0000025C   6E0021000000       DC8 6EH, 0, 21H, 0, 0, 0
+   \   00000262   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x62\\x61\\x63\\x6b\\x67\\x72\\x6f\\x75\\`:
+   \   00000000   620061006300       DC8 62H, 0, 61H, 0, 63H, 0, 6BH, 0
+   \              6B00        
+   \   00000008   670072006F00       DC8 67H, 0, 72H, 0, 6FH, 0, 75H, 0
+   \              7500        
+   \   00000010   6E0064002E00       DC8 6EH, 0, 64H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000018   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000001E   0000               DC8 0, 0
+   \   00000020   6C006F006700       DC8 6CH, 0, 6FH, 0, 67H, 0, 6FH, 0
+   \              6F00        
+   \   00000028   2E0070006E00       DC8 2EH, 0, 70H, 0, 6EH, 0, 67H, 0
+   \              6700        
+   \   00000030   0000               DC8 0, 0
+   \   00000032   0000               DC8 0, 0
+   \   00000034   640061007900       DC8 64H, 0, 61H, 0, 79H, 0, 2EH, 0
+   \              2E00        
+   \   0000003C   70006E006700       DC8 70H, 0, 6EH, 0, 67H, 0, 0, 0
+   \              0000        
+   \   00000044   6E0069006700       DC8 6EH, 0, 69H, 0, 67H, 0, 68H, 0
+   \              6800        
+   \   0000004C   74002E007000       DC8 74H, 0, 2EH, 0, 70H, 0, 6EH, 0
+   \              6E00        
+   \   00000054   67000000           DC8 67H, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x38\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   38002E007000       DC8 38H, 0, 2EH, 0, 70H, 0, 6EH, 0
+   \              6E00        
+   \   00000008   67000000           DC8 67H, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x32\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   32002E007000       DC8 32H, 0, 2EH, 0, 70H, 0, 6EH, 0
+   \              6E00        
+   \   00000008   67000000           DC8 67H, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x33\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   33002E007000       DC8 33H, 0, 2EH, 0, 70H, 0, 6EH, 0
+   \              6E00        
+   \   00000008   67000000           DC8 67H, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x34\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   34002E007000       DC8 34H, 0, 2EH, 0, 70H, 0, 6EH, 0
+   \              6E00        
+   \   00000008   67000000           DC8 67H, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x35\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   35002E007000       DC8 35H, 0, 2EH, 0, 70H, 0, 6EH, 0
+   \              6E00        
+   \   00000008   67000000           DC8 67H, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x36\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   36002E007000       DC8 36H, 0, 2EH, 0, 70H, 0, 6EH, 0
+   \              6E00        
+   \   00000008   67000000           DC8 67H, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x37\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   37002E007000       DC8 37H, 0, 2EH, 0, 70H, 0, 6EH, 0
+   \              6E00        
+   \   00000008   67000000           DC8 67H, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x39\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   39002E007000       DC8 39H, 0, 2EH, 0, 70H, 0, 6EH, 0
+   \              6E00        
+   \   00000008   67000000           DC8 67H, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x31\\x30\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   310030002E00       DC8 31H, 0, 30H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x31\\x31\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   310031002E00       DC8 31H, 0, 31H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x31\\x32\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   310032002E00       DC8 31H, 0, 32H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x31\\x33\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   310033002E00       DC8 31H, 0, 33H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x31\\x34\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   310034002E00       DC8 31H, 0, 34H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x31\\x35\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   310035002E00       DC8 31H, 0, 35H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x31\\x36\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   310036002E00       DC8 31H, 0, 36H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x31\\x37\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   310037002E00       DC8 31H, 0, 37H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x31\\x38\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   310038002E00       DC8 31H, 0, 38H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x31\\x39\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   310039002E00       DC8 31H, 0, 39H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x32\\x30\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   320030002E00       DC8 32H, 0, 30H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x32\\x31\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   320031002E00       DC8 32H, 0, 31H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x32\\x32\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   320032002E00       DC8 32H, 0, 32H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x32\\x33\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   320033002E00       DC8 32H, 0, 33H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x32\\x34\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   320034002E00       DC8 32H, 0, 34H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x32\\x35\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   320035002E00       DC8 32H, 0, 35H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x32\\x36\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   320036002E00       DC8 32H, 0, 36H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x32\\x37\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   320037002E00       DC8 32H, 0, 37H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x32\\x38\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   320038002E00       DC8 32H, 0, 38H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x32\\x39\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   320039002E00       DC8 32H, 0, 39H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x33\\x30\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   330030002E00       DC8 33H, 0, 30H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x33\\x31\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   330031002E00       DC8 33H, 0, 31H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x33\\x32\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   330032002E00       DC8 33H, 0, 32H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x33\\x33\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   330033002E00       DC8 33H, 0, 33H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x33\\x34\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   330034002E00       DC8 33H, 0, 34H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x33\\x35\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   330035002E00       DC8 33H, 0, 35H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x33\\x36\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   330036002E00       DC8 33H, 0, 36H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x33\\x37\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   330037002E00       DC8 33H, 0, 37H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x33\\x38\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   330038002E00       DC8 33H, 0, 38H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x33\\x39\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   330039002E00       DC8 33H, 0, 39H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   Maximum stack usage in bytes:
+
+     Function                       CSTACK
+     --------                       ------
+     DestroyImages()                   12
+     Draw(DISP_OBJ *, int, int, int)
+                                        8
+     InitImages()                      16
+     LPARAM::LPARAM(int)                0
+     SB_ELF_Killed(void *, BOOK *)     20
+     Send_REDRAW_RELEASE()              8
+     beginFile()                       32
+     checkWallpaper(int)               12
+     drawForShadow(wchar_t *, int, int, int, int, unsigned int, unsigned int, bool)
+                                       36
+     drawOnStby(wchar_t *, int, int, int, int, int)
+                                       64
+     drawWeatherContents()             60
+     drawWeatherInfo(MyBook *)         16
+     errorInFile(wchar_t *)            16
+     finalDraw(wchar_t *, int, int, int, int, wchar_t *, wchar_t *, int)
+                                       60
+     manageCursor()                    12
+     onCloseBEBook(BOOK *)              8
+     onfTimer(u16, LPARAM)             16
+     returnMask(wchar_t const *, int, bool, float (*)(int), int)
+                                       40
+
+
+   Segment part sizes:
+
+     Function/Label                 Bytes
+     --------------                 -----
+     LPARAM::LPARAM(int)               8
+     statesID                        620
+     Send_REDRAW_RELEASE()            80
+     drawOnStby(wchar_t *, int, int, int, int, int)
+                                     348
+     Draw(DISP_OBJ *, int, int, int)
+                                      80
+     drawForShadow(wchar_t *, int, int, int, int, unsigned int, unsigned int, bool)
+                                     132
+     returnMask(wchar_t const *, int, bool, float (*)(int), int)
+                                     132
+     manageCursor()                  104
+     finalDraw(wchar_t *, int, int, int, int, wchar_t *, wchar_t *, int)
+                                    1964
+     onfTimer(u16, LPARAM)           124
+     checkWallpaper(int)              80
+     drawWeatherContents()           416
+     errorInFile(wchar_t *)           96
+     beginFile()                     316
+     SB_ELF_Killed(void *, BOOK *)   148
+     InitImages()                    184
+     DestroyImages()                  68
+     drawWeatherInfo(MyBook *)       176
+     onCloseBEBook(BOOK *)           108
+     ??DataTable0                      4
+     ??DataTable16                     4
+     ??DataTable17                     4
+     ??DataTable29                     4
+     ??DataTable32                     4
+     ??DataTable33                     4
+     ??DataTable35                     4
+     ??DataTable36                     4
+     ??DataTable37                     4
+     ??DataTable38                     4
+     ??DataTable39                     4
+     ??DataTable40                     4
+     ?<Initializer for statesID>     620
+     ?<Constant L"\x31\x2e\x70\x6e\x67">
+                                      12
+     ?<Constant L"\x45\x72\x72\x6f\x72\x20\x69\x6e\
+                                     612
+     ?<Constant L"\x62\x61\x63\x6b\x67\x72\x6f\x75\
+                                      88
+     ?<Constant L"\x38\x2e\x70\x6e\x67">
+                                      12
+     ?<Constant L"\x32\x2e\x70\x6e\x67">
+                                      12
+     ?<Constant L"\x33\x2e\x70\x6e\x67">
+                                      12
+     ?<Constant L"\x34\x2e\x70\x6e\x67">
+                                      12
+     ?<Constant L"\x35\x2e\x70\x6e\x67">
+                                      12
+     ?<Constant L"\x36\x2e\x70\x6e\x67">
+                                      12
+     ?<Constant L"\x37\x2e\x70\x6e\x67">
+                                      12
+     ?<Constant L"\x39\x2e\x70\x6e\x67">
+                                      12
+     ?<Constant L"\x31\x30\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x31\x31\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x31\x32\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x31\x33\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x31\x34\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x31\x35\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x31\x36\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x31\x37\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x31\x38\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x31\x39\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x32\x30\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x32\x31\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x32\x32\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x32\x33\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x32\x34\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x32\x35\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x32\x36\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x32\x37\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x32\x38\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x32\x39\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x33\x30\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x33\x31\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x33\x32\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x33\x33\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x33\x34\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x33\x35\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x33\x36\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x33\x37\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x33\x38\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x33\x39\x2e\x70\x6e\x67">
+                                      16
+      Others                         608
+
+ 
+ 5 208 bytes in segment CODE
+ 1 288 bytes in segment DATA_C
+   620 bytes in segment DATA_I
+   620 bytes in segment DATA_ID
+    12 bytes in segment INITTAB
+ 
+ 4 604 bytes of CODE  memory (+ 616 bytes shared)
+ 1 908 bytes of CONST memory
+   620 bytes of DATA  memory
+
+Errors: none
+Warnings: none

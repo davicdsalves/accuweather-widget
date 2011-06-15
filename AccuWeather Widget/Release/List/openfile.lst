@@ -1,0 +1,145 @@
+##############################################################################
+#                                                                            #
+# IAR ARM ANSI C/C++ Compiler V4.42A/W32 EVALUATION    06/Jun/2011  22:25:08 #
+# Copyright 1999-2005 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Cpu mode        =  interwork                                            #
+#    Endian          =  little                                               #
+#    Stack alignment =  4                                                    #
+#    Source file     =  C:\Documents and Settings\Davi\Desktop\StudyElf\Accu #
+#                       Weather Widget\file\openfile.cpp                     #
+#    Command line    =  "C:\Documents and Settings\Davi\Desktop\StudyElf\Acc #
+#                       uWeather Widget\file\openfile.cpp" -lC               #
+#                       "C:\Documents and Settings\Davi\Desktop\StudyElf\Acc #
+#                       uWeather Widget\Release\List\" -lA "C:\Documents     #
+#                       and Settings\Davi\Desktop\StudyElf\AccuWeather       #
+#                       Widget\Release\List\" -o "C:\Documents and           #
+#                       Settings\Davi\Desktop\StudyElf\AccuWeather           #
+#                       Widget\Release\Obj\" -s9 --no_unroll --no_inline     #
+#                       --cpu_mode arm --endian little --cpu ARM926EJ-S      #
+#                       --stack_align 4 --interwork -e --fpu None --eec++    #
+#                       --dlib_config "C:\Documents and                      #
+#                       Settings\Davi\Desktop\IAR\Embedded Workbench 4.0     #
+#                       Evaluation\ARM\LIB\dl5tpainl8n.h" -I "C:\Documents   #
+#                       and Settings\Davi\Desktop\IAR\Embedded Workbench     #
+#                       4.0 Evaluation\ARM\INC\"                             #
+#    List file       =  C:\Documents and Settings\Davi\Desktop\StudyElf\Accu #
+#                       Weather Widget\Release\List\openfile.lst             #
+#    Object file     =  C:\Documents and Settings\Davi\Desktop\StudyElf\Accu #
+#                       Weather Widget\Release\Obj\openfile.r79              #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Davi\Desktop\StudyElf\AccuWeather Widget\file\openfile.cpp
+      1          #include "..\..\include\Lib_Clara.h"
+      2          #include "..\..\include\Dir.h"
+      3          #include "..\bcfg\config_data.h"
+      4          #include "openfile.h"
+      5          
+
+   \                                 In segment CODE, align 4, keep-with-next
+      6          wchar_t* openFile(const wchar_t* path, wchar_t* fileName) {
+   \                     ??openFile:
+   \   00000000   70402DE9           PUSH     {R4-R6,LR}
+   \   00000004   1CD04DE2           SUB      SP,SP,#+28
+   \   00000008   0050A0E1           MOV      R5,R0
+   \   0000000C   0160A0E1           MOV      R6,R1
+      7            int file;
+      8            FSTAT fstat_;
+      9          
+     10            //w_chdir(BCFG_XMLBGLogoFolder);
+     11            w_chdir(path);
+   \   00000010   F70200EF           SWI      +759
+     12            
+     13            /*file = w_fopen(L"weather.txt", WA_Read ,0x1FF,0 );
+     14            int stat = fstat(path,(wchar_t*)L"weather.txt",&fstat_);*/
+     15            file = w_fopen(fileName, WA_Read ,0x1FF,0 );
+   \   00000014   0030A0E3           MOV      R3,#+0
+   \   00000018   FF20A0E3           MOV      R2,#+255
+   \   0000001C   402F82E3           ORR      R2,R2,#0x100
+   \   00000020   0110A0E3           MOV      R1,#+1
+   \   00000024   0600A0E1           MOV      R0,R6
+   \   00000028   F80200EF           SWI      +760
+   \   0000002C   0040A0E1           MOV      R4,R0
+     16            int stat = fstat(path,fileName,&fstat_);
+   \   00000030   0D20A0E1           MOV      R2,SP
+   \   00000034   0610A0E1           MOV      R1,R6
+   \   00000038   0500A0E1           MOV      R0,R5
+   \   0000003C   1C0100EF           SWI      +284
+     17          
+     18            if ( file > -1 && stat == 0 ) {
+   \   00000040   000054E3           CMP      R4,#+0
+   \   00000044   1B00004A           BMI      ??openFile_1
+   \   00000048   000050E3           CMP      R0,#+0
+   \   0000004C   1900001A           BNE      ??openFile_1
+     19          
+     20             char* fileContent = new char[fstat_.fsize + 0x1];
+   \   00000050   08009DE5           LDR      R0,[SP, #+8]
+   \   00000054   010080E2           ADD      R0,R0,#+1
+   \   00000058   ........           _BLF     `??operator new[]`,`??operator new[]??rA`
+   \   0000005C   0050A0E1           MOV      R5,R0
+     21             wchar_t* wFileContent = new wchar_t[fstat_.fsize + 0x1];
+   \   00000060   08009DE5           LDR      R0,[SP, #+8]
+   \   00000064   010080E2           ADD      R0,R0,#+1
+   \   00000068   8000A0E1           LSL      R0,R0,#+1
+   \   0000006C   ........           _BLF     `??operator new[]`,`??operator new[]??rA`
+     22          
+     23             w_fread(file,fileContent,fstat_.fsize);
+   \   00000070   08209DE5           LDR      R2,[SP, #+8]
+   \   00000074   0060A0E1           MOV      R6,R0
+   \   00000078   0510A0E1           MOV      R1,R5
+   \   0000007C   0400A0E1           MOV      R0,R4
+   \   00000080   FB0200EF           SWI      +763
+     24             fileContent[fstat_.fsize]=0;
+   \   00000084   08009DE5           LDR      R0,[SP, #+8]
+   \   00000088   0010A0E3           MOV      R1,#+0
+   \   0000008C   0510C0E7           STRB     R1,[R0, +R5]
+     25             str2wstr(wFileContent,fileContent);
+   \   00000090   0510A0E1           MOV      R1,R5
+   \   00000094   0600A0E1           MOV      R0,R6
+   \   00000098   580100EF           SWI      +344
+     26             delete fileContent;
+   \   0000009C   0500A0E1           MOV      R0,R5
+   \   000000A0   ........           _BLF     `??operator delete`,`??operator delete??rA`
+     27             fileContent = NULL;
+     28             
+     29             w_fclose(file);   
+   \   000000A4   0400A0E1           MOV      R0,R4
+   \   000000A8   FD0200EF           SWI      +765
+     30             return wFileContent;
+   \   000000AC   0600A0E1           MOV      R0,R6
+   \   000000B0   1CD08DE2           ADD      SP,SP,#+28
+   \   000000B4   7080BDE8           POP      {R4-R6,PC}
+     31            }
+     32            return NULL;
+   \                     ??openFile_1:
+   \   000000B8   0000A0E3           MOV      R0,#+0
+   \   000000BC   1CD08DE2           ADD      SP,SP,#+28
+   \   000000C0   7080BDE8           POP      {R4-R6,PC}       ;; return
+     33          }
+     34          
+
+   Maximum stack usage in bytes:
+
+     Function                       CSTACK
+     --------                       ------
+     openFile(wchar_t const *, wchar_t *)
+                                       44
+
+
+   Segment part sizes:
+
+     Function/Label                 Bytes
+     --------------                 -----
+     openFile(wchar_t const *, wchar_t *)
+                                     196
+      Others                          28
+
+ 
+ 224 bytes in segment CODE
+ 
+ 196 bytes of CODE memory (+ 28 bytes shared)
+
+Errors: none
+Warnings: none

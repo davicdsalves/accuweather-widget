@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>AccuWeatherWidget/Release</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>213</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+        <PreferedWindows>
+          
+          
+          
+          
+        <Position>1</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows><Window><Factory>SourceBrowser</Factory></Window></Windows></PreferedWindows>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>819</ColumnWidth1><ColumnWidth2>218</ColumnWidth2><ColumnWidth3>54</ColumnWidth3></Build>
+    <Debug-Log><PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows></Debug-Log><SourceBrowser><PreferedWindows><Position>1</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows><Window><Factory>Workspace</Factory></Window></Windows></PreferedWindows></SourceBrowser></Static>
+    <Windows>
+      
+      
+    <Wnd0><Tabs><Tab>
+            <Identity>TabID-9793-1378</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab></Tabs><SelectedTab>0</SelectedTab></Wnd0><Wnd2><Tabs><Tab><Identity>TabID-6433-25642</Identity><TabName>Workspace</TabName><Factory>Workspace</Factory><Session><NodeDict><ExpandedNode>AccuWeatherWidget</ExpandedNode><ExpandedNode>AccuWeatherWidget/main.cpp</ExpandedNode><ExpandedNode>AccuWeatherWidget/main.cpp/Output</ExpandedNode></NodeDict></Session></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd2></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>C:\Documents and Settings\Davi\Desktop\StudyElf\AccuWeather Widget\mybook.h</Filename><XPos>0</XPos><YPos>6</YPos><SelStart>726</SelStart><SelEnd>735</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Documents and Settings\Davi\Desktop\StudyElf\AccuWeather Widget\standby\stdby.h</Filename><XPos>12</XPos><YPos>0</YPos><SelStart>125</SelStart><SelEnd>125</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Documents and Settings\Davi\Desktop\StudyElf\AccuWeather Widget\bcfg\config_data.h</Filename><XPos>0</XPos><YPos>137</YPos><SelStart>6385</SelStart><SelEnd>6405</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Documents and Settings\Davi\Desktop\StudyElf\AccuWeather Widget\bcfg\config_data.c</Filename><XPos>0</XPos><YPos>30</YPos><SelStart>36312</SelStart><SelEnd>36312</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Documents and Settings\Davi\Desktop\StudyElf\AccuWeather Widget\mybook.cpp</Filename><XPos>0</XPos><YPos>12</YPos><SelStart>1533</SelStart><SelEnd>1533</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Documents and Settings\Davi\Desktop\StudyElf\AccuWeather Widget\main.cpp</Filename><XPos>0</XPos><YPos>49</YPos><SelStart>1440</SelStart><SelEnd>1440</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Documents and Settings\Davi\Desktop\StudyElf\AccuWeather Widget\debug.cpp</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>425</SelStart><SelEnd>425</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Documents and Settings\Davi\Desktop\StudyElf\AccuWeather Widget\file\fileAnaliser.cpp</Filename><XPos>0</XPos><YPos>55</YPos><SelStart>2303</SelStart><SelEnd>2303</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Documents and Settings\Davi\Desktop\StudyElf\AccuWeather Widget\utils\Utils.cpp</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>1299</SelStart><SelEnd>1299</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Documents and Settings\Davi\Desktop\StudyElf\AccuWeather Widget\file\openfile.cpp</Filename><XPos>0</XPos><YPos>18</YPos><SelStart>566</SelStart><SelEnd>622</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Documents and Settings\Davi\Desktop\StudyElf\include\Types.h</Filename><XPos>0</XPos><YPos>322</YPos><SelStart>7276</SelStart><SelEnd>7276</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Documents and Settings\Davi\Desktop\StudyElf\include\cfg_items.h</Filename><XPos>0</XPos><YPos>124</YPos><SelStart>1639</SelStart><SelEnd>1639</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Documents and Settings\Davi\Desktop\StudyElf\AccuWeather Widget\standby\standbyDraw.cpp</Filename><XPos>0</XPos><YPos>24</YPos><SelStart>1509</SelStart><SelEnd>1509</SelEnd></Tab><ActiveTab>12</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-0088ea70><key>iaridepm.enu1</key></Toolbar-0088ea70></Sizes></Row0></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>458</Bottom><Right>303</Right><x>-2</x><y>-2</y><xscreen>200</xscreen><yscreen>200</yscreen><sizeHorzCX>195313</sizeHorzCX><sizeHorzCY>285714</sizeHorzCY><sizeVertCX>297852</sizeVertCX><sizeVertCY>657143</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>198</Bottom><Right>1026</Right><x>-2</x><y>-2</y><xscreen>1028</xscreen><yscreen>200</yscreen><sizeHorzCX>1003906</sizeHorzCX><sizeHorzCY>285714</sizeHorzCY><sizeVertCX>173828</sizeVertCX><sizeVertCY>251429</sizeVertCY></Rect></Wnd0></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

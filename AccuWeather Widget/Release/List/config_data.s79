@@ -1,0 +1,2354 @@
+//////////////////////////////////////////////////////////////////////////////
+//                                                                           /
+// IAR ARM ANSI C/C++ Compiler V4.42A/W32 EVALUATION   06/Jun/2011  22:25:07 /
+// Copyright 1999-2005 IAR Systems. All rights reserved.                     /
+//                                                                           /
+//    Cpu mode        =  interwork                                           /
+//    Endian          =  little                                              /
+//    Stack alignment =  4                                                   /
+//    Source file     =  C:\Documents and Settings\Davi\Desktop\StudyElf\Acc /
+//                       uWeather Widget\bcfg\config_data.c                  /
+//    Command line    =  "C:\Documents and Settings\Davi\Desktop\StudyElf\Ac /
+//                       cuWeather Widget\bcfg\config_data.c" -lC            /
+//                       "C:\Documents and Settings\Davi\Desktop\StudyElf\Ac /
+//                       cuWeather Widget\Release\List\" -lA "C:\Documents   /
+//                       and Settings\Davi\Desktop\StudyElf\AccuWeather      /
+//                       Widget\Release\List\" -o "C:\Documents and          /
+//                       Settings\Davi\Desktop\StudyElf\AccuWeather          /
+//                       Widget\Release\Obj\" -s9 --no_unroll --no_inline    /
+//                       --cpu_mode arm --endian little --cpu ARM926EJ-S     /
+//                       --stack_align 4 --interwork -e --fpu None --eec++   /
+//                       --dlib_config "C:\Documents and                     /
+//                       Settings\Davi\Desktop\IAR\Embedded Workbench 4.0    /
+//                       Evaluation\ARM\LIB\dl5tpainl8n.h" -I "C:\Documents  /
+//                       and Settings\Davi\Desktop\IAR\Embedded Workbench    /
+//                       4.0 Evaluation\ARM\INC\"                            /
+//    List file       =  C:\Documents and Settings\Davi\Desktop\StudyElf\Acc /
+//                       uWeather Widget\Release\List\config_data.s79        /
+//                                                                           /
+//                                                                           /
+//////////////////////////////////////////////////////////////////////////////
+
+        NAME config_data
+
+        RTMODEL "StackAlign4", "USED"
+        RTMODEL "__cpu_mode", "__pcs__interwork"
+        RTMODEL "__data_model", "absolute"
+        RTMODEL "__endian", "little"
+        RTMODEL "__rt_version", "6"
+
+        RSEG CSTACK:DATA:NOROOT(2)
+
+        PUBLIC BCFG_HideOnMusic
+        PUBLIC BCFG_Images_AccuWeatherLogo_Enable
+        PUBLIC BCFG_Images_AccuWeatherLogo_Position_X
+        PUBLIC BCFG_Images_AccuWeatherLogo_Position_Y
+        PUBLIC BCFG_Images_Background_Enable
+        PUBLIC BCFG_Images_Background_Method
+        PUBLIC BCFG_Images_Background_Position_X
+        PUBLIC BCFG_Images_Background_Position_Y
+        PUBLIC BCFG_Images_DayState_Enable
+        PUBLIC BCFG_Images_DayState_Position_X
+        PUBLIC BCFG_Images_DayState_Position_Y
+        PUBLIC BCFG_Images_ImageOnTop
+        PUBLIC BCFG_Images_WindDirection_Enable
+        PUBLIC BCFG_Images_WindDirection_Position_X
+        PUBLIC BCFG_Images_WindDirection_Position_Y
+        PUBLIC BCFG_Path_Background
+        PUBLIC BCFG_Path_Background_DayAndNightBG
+        PUBLIC BCFG_Path_Background_StaticBackground
+        PUBLIC BCFG_RefreshTime
+        PUBLIC BCFG_StatesFolder
+        PUBLIC BCFG_Tags_AverageTemperature_Align
+        PUBLIC BCFG_Tags_AverageTemperature_Enable
+        PUBLIC BCFG_Tags_AverageTemperature_EnableShadow
+        PUBLIC BCFG_Tags_AverageTemperature_FontSize
+        PUBLIC BCFG_Tags_AverageTemperature_Mask
+        PUBLIC BCFG_Tags_AverageTemperature_Position_X
+        PUBLIC BCFG_Tags_AverageTemperature_Position_Y
+        PUBLIC BCFG_Tags_AverageTemperature_ShadowColor
+        PUBLIC BCFG_Tags_AverageTemperature_TextColor
+        PUBLIC BCFG_Tags_AverageTemperature_Unit
+        PUBLIC BCFG_Tags_DayState_Align
+        PUBLIC BCFG_Tags_DayState_Enable
+        PUBLIC BCFG_Tags_DayState_EnableShadow
+        PUBLIC BCFG_Tags_DayState_FontSize
+        PUBLIC BCFG_Tags_DayState_LineSpacing
+        PUBLIC BCFG_Tags_DayState_Position_X
+        PUBLIC BCFG_Tags_DayState_Position_Y
+        PUBLIC BCFG_Tags_DayState_ShadowColor
+        PUBLIC BCFG_Tags_DayState_TextColor
+        PUBLIC BCFG_Tags_Location_Align
+        PUBLIC BCFG_Tags_Location_Enable
+        PUBLIC BCFG_Tags_Location_EnableShadow
+        PUBLIC BCFG_Tags_Location_FontSize
+        PUBLIC BCFG_Tags_Location_Position_X
+        PUBLIC BCFG_Tags_Location_Position_Y
+        PUBLIC BCFG_Tags_Location_ShadowColor
+        PUBLIC BCFG_Tags_Location_TextColor
+        PUBLIC BCFG_Tags_MaxTemperature_Align
+        PUBLIC BCFG_Tags_MaxTemperature_Enable
+        PUBLIC BCFG_Tags_MaxTemperature_EnableShadow
+        PUBLIC BCFG_Tags_MaxTemperature_FontSize
+        PUBLIC BCFG_Tags_MaxTemperature_Mask
+        PUBLIC BCFG_Tags_MaxTemperature_Position_X
+        PUBLIC BCFG_Tags_MaxTemperature_Position_Y
+        PUBLIC BCFG_Tags_MaxTemperature_ShadowColor
+        PUBLIC BCFG_Tags_MaxTemperature_TextColor
+        PUBLIC BCFG_Tags_MaxTemperature_Unit
+        PUBLIC BCFG_Tags_MinTemperature_Align
+        PUBLIC BCFG_Tags_MinTemperature_Enable
+        PUBLIC BCFG_Tags_MinTemperature_EnableShadow
+        PUBLIC BCFG_Tags_MinTemperature_FontSize
+        PUBLIC BCFG_Tags_MinTemperature_Mask
+        PUBLIC BCFG_Tags_MinTemperature_Position_X
+        PUBLIC BCFG_Tags_MinTemperature_Position_Y
+        PUBLIC BCFG_Tags_MinTemperature_ShadowColor
+        PUBLIC BCFG_Tags_MinTemperature_TextColor
+        PUBLIC BCFG_Tags_MinTemperature_Unit
+        PUBLIC BCFG_Tags_Time_Day
+        PUBLIC BCFG_Tags_Time_Night
+        PUBLIC BCFG_Tags_WindDirection_Align
+        PUBLIC BCFG_Tags_WindDirection_Enable
+        PUBLIC BCFG_Tags_WindDirection_EnableShadow
+        PUBLIC BCFG_Tags_WindDirection_FontSize
+        PUBLIC BCFG_Tags_WindDirection_Format
+        PUBLIC BCFG_Tags_WindDirection_Position_X
+        PUBLIC BCFG_Tags_WindDirection_Position_Y
+        PUBLIC BCFG_Tags_WindDirection_ShadowColor
+        PUBLIC BCFG_Tags_WindDirection_TextColor
+        PUBLIC BCFG_Tags_WindSpeed_Align
+        PUBLIC BCFG_Tags_WindSpeed_Enable
+        PUBLIC BCFG_Tags_WindSpeed_EnableShadow
+        PUBLIC BCFG_Tags_WindSpeed_FontSize
+        PUBLIC BCFG_Tags_WindSpeed_Mask
+        PUBLIC BCFG_Tags_WindSpeed_Position_X
+        PUBLIC BCFG_Tags_WindSpeed_Position_Y
+        PUBLIC BCFG_Tags_WindSpeed_ShadowColor
+        PUBLIC BCFG_Tags_WindSpeed_TextColor
+        PUBLIC BCFG_Tags_WindSpeed_Unit
+        PUBLIC BCFG_WidgetPosition_X
+        PUBLIC BCFG_WidgetPosition_Y
+        PUBLIC BCFG_XMLBGLogoFolder
+// C:\Documents and Settings\Davi\Desktop\StudyElf\AccuWeather Widget\bcfg\config_data.c
+//    1 //##################################################################################################
+//    2 //## ******************************************************************************************** ##
+//    3 //## *                       The Code Created by ConfigCodeMaker v1.0                           * ##
+//    4 //## *                       (Copyright) 2009 - Scorpion 16 (X) Richi.                          * ##
+//    5 //## ******************************************************************************************** ##
+//    6 //##################################################################################################
+//    7 
+//    8 
+//    9 #include "..\..\include\cfg_items.h"
+//   10 #include "config_data.h"
+//   11 
+//   12 #pragma diag_suppress = Pe177
+//   13 
+//   14 
+//   15 //
+//   16 //
+//   17 //####################################  Begin Level - Images ########################################################################################
+//   18 //****************************************************************************************************************************************************
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 "Images"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 1, 0
+//   19 CFGVAR CFG_HDR cfghdr1 = { CFG_LEVEL ,"Images" , 1 , 0}; // arg3 = Begin Level >>>LevelName=Images;
+//   20 
+//   21 	
+//   22 	//
+//   23 	//
+//   24 	//####################################  Begin Level - Background ########################################################################################
+//   25 	//****************************************************************************************************************************************************
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 "Background"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 1, 0
+//   26 	CFGVAR CFG_HDR cfghdr2 = { CFG_LEVEL ,"Background" , 1 , 0}; // arg3 = Begin Level >>>LevelName=Background;
+//   27 	
+//   28 		//---[Check Box]----------------------------------------------------------------------------------[Check Box]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 11
+        DC8 "Enable"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//   29 		CFGVAR CFG_HDR cfghdr3 = {CFG_CHECKBOX , "Enable" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//   30 		CFGVAR int BCFG_Images_Background_Enable = 1; // Default (True). 
+BCFG_Images_Background_Enable:
+        DATA
+        DC32 1
+//   31 		
+//   32 		//---[X,Y Position]-------------------------------------------------------------------------------[X,Y Position]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 7
+        DC8 "Position"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//   33 		CFGVAR CFG_HDR cfghdr4 = { CFG_COORDINATES , "Position" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//   34 		CFGVAR int BCFG_Images_Background_Position_X = 0; // Default X position.
+BCFG_Images_Background_Position_X:
+        DATA
+        DC32 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//   35 		CFGVAR int BCFG_Images_Background_Position_Y = 13; // Default Y position.
+BCFG_Images_Background_Position_Y:
+        DATA
+        DC32 13
+//   36 		
+//   37 		//---[Radio Button]-----------------------------------------------------------------------------[Radio Button]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 5
+        DC8 "Method"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 3
+//   38 		CFGVAR CFG_HDR cfghdr5 = { CFG_CBOX , "Method" , 0 , 3 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//   39 		CFGVAR int BCFG_Images_Background_Method = 0; // Default item (Single).
+BCFG_Images_Background_Method:
+        DATA
+        DC32 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC8 "Single"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "Day and Night"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "Animated Day and Night"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0
+//   40 		CFGVAR CFG_CBOX_ITEM cfgRadioBtn5[3] = {"Single" , "Day and Night" , "Animated Day and Night"};
+//   41 		
+//   42 		//---[Number - Unit (Unsigned)]---------------------------------------------------------[Number - Unit (Unsigned)]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 1
+        DC8 "Refresh Time"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 5000
+//   43 		CFGVAR CFG_HDR cfghdr6 = { CFG_UINT , "Refresh Time" , 0 , 5000};
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//   44 		CFGVAR unsigned int BCFG_RefreshTime = 20; // Default
+BCFG_RefreshTime:
+        DATA
+        DC32 20
+//   45 		
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 ""
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//   46 	CFGVAR CFG_HDR cfghdr8 = {CFG_LEVEL , "" , 0 , 0 }; // arg3 = End Level
+//   47 	//****************************************************************************************************************************************************
+//   48 	//####################################  End Level - Background ##########################################################################################
+//   49 	//
+//   50 	//
+//   51 	
+//   52 	//
+//   53 	//
+//   54 	//####################################  Begin Level - Condition ########################################################################################
+//   55 	//****************************************************************************************************************************************************
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 "Condition"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 1, 0
+//   56 	CFGVAR CFG_HDR cfghdr7 = { CFG_LEVEL ,"Condition" , 1 , 0}; // arg3 = Begin Level >>>LevelName=DayState;
+//   57 	
+//   58 		//---[Check Box]----------------------------------------------------------------------------------[Check Box]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 11
+        DC8 "Enable"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//   59 		CFGVAR CFG_HDR cfghdr9 = {CFG_CHECKBOX , "Enable" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//   60 		CFGVAR int BCFG_Images_DayState_Enable = 1; // Default (True). 
+BCFG_Images_DayState_Enable:
+        DATA
+        DC32 1
+//   61 		
+//   62 		//---[X,Y Position]-------------------------------------------------------------------------------[X,Y Position]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 7
+        DC8 "Position"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//   63 		CFGVAR CFG_HDR cfghdr10 = { CFG_COORDINATES , "Position" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//   64 		CFGVAR int BCFG_Images_DayState_Position_X = 0; // Default X position.
+BCFG_Images_DayState_Position_X:
+        DATA
+        DC32 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//   65 		CFGVAR int BCFG_Images_DayState_Position_Y = 0; // Default Y position.
+BCFG_Images_DayState_Position_Y:
+        DATA
+        DC32 0
+//   66 		
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 ""
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//   67 	CFGVAR CFG_HDR cfghdr12 = {CFG_LEVEL , "" , 0 , 0 }; // arg3 = End Level
+//   68 	//****************************************************************************************************************************************************
+//   69 	//####################################  End Level - Condition ##########################################################################################
+//   70 	//
+//   71 	//
+//   72 	
+//   73 	//
+//   74 	//
+//   75 	//####################################  Begin Level - AccuWeather Logo ########################################################################################
+//   76 	//****************************************************************************************************************************************************
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 "AccuWeather Logo"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 1, 0
+//   77 	CFGVAR CFG_HDR cfghdr11 = { CFG_LEVEL ,"AccuWeather Logo" , 1 , 0}; // arg3 = Begin Level >>>LevelName=AccuWeatherLogo;
+//   78 	
+//   79 		//---[Check Box]----------------------------------------------------------------------------------[Check Box]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 11
+        DC8 "Enable"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//   80 		CFGVAR CFG_HDR cfghdr13 = {CFG_CHECKBOX , "Enable" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//   81 		CFGVAR int BCFG_Images_AccuWeatherLogo_Enable = 1; // Default (True). 
+BCFG_Images_AccuWeatherLogo_Enable:
+        DATA
+        DC32 1
+//   82 		
+//   83 		//---[X,Y Position]-------------------------------------------------------------------------------[X,Y Position]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 7
+        DC8 "Position"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//   84 		CFGVAR CFG_HDR cfghdr14 = { CFG_COORDINATES , "Position" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//   85 		CFGVAR int BCFG_Images_AccuWeatherLogo_Position_X = 155; // Default X position.
+BCFG_Images_AccuWeatherLogo_Position_X:
+        DATA
+        DC32 155
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//   86 		CFGVAR int BCFG_Images_AccuWeatherLogo_Position_Y = 79; // Default Y position.
+BCFG_Images_AccuWeatherLogo_Position_Y:
+        DATA
+        DC32 79
+//   87 		
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 ""
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//   88 	CFGVAR CFG_HDR cfghdr16 = {CFG_LEVEL , "" , 0 , 0 }; // arg3 = End Level
+//   89 	//****************************************************************************************************************************************************
+//   90 	//####################################  End Level - AccuWeather Logo ##########################################################################################
+//   91 	//
+//   92 	//
+//   93 	
+//   94 	//
+//   95 	//
+//   96 	//####################################  Begin Level - Wind Direction ########################################################################################
+//   97 	//****************************************************************************************************************************************************
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 "Wind Direction"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 1, 0
+//   98 	CFGVAR CFG_HDR cfghdr15 = { CFG_LEVEL ,"Wind Direction" , 1 , 0}; // arg3 = Begin Level >>>LevelName=WindDirection;
+//   99 	
+//  100 		//---[Check Box]----------------------------------------------------------------------------------[Check Box]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 11
+        DC8 "Enable"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  101 		CFGVAR CFG_HDR cfghdr17 = {CFG_CHECKBOX , "Enable" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  102 		CFGVAR int BCFG_Images_WindDirection_Enable = 0; // Default (False). 
+BCFG_Images_WindDirection_Enable:
+        DATA
+        DC32 0
+//  103 		
+//  104 		//---[X,Y Position]-------------------------------------------------------------------------------[X,Y Position]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 7
+        DC8 "Position"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  105 		CFGVAR CFG_HDR cfghdr18 = { CFG_COORDINATES , "Position" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  106 		CFGVAR int BCFG_Images_WindDirection_Position_X = 195; // Default X position.
+BCFG_Images_WindDirection_Position_X:
+        DATA
+        DC32 195
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  107 		CFGVAR int BCFG_Images_WindDirection_Position_Y = 128; // Default Y position.
+BCFG_Images_WindDirection_Position_Y:
+        DATA
+        DC32 128
+//  108 		
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 ""
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  109 	CFGVAR CFG_HDR cfghdr20 = {CFG_LEVEL , "" , 0 , 0 }; // arg3 = End Level
+//  110 	//****************************************************************************************************************************************************
+//  111 	//####################################  End Level - Wind Direction ##########################################################################################
+//  112 	//
+//  113 	//
+//  114 	//---[Check Box]----------------------------------------------------------------------------------[Check Box]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 11
+        DC8 "Images on Top of Text"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  115 	CFGVAR CFG_HDR cfghdr19 = {CFG_CHECKBOX , "Images on Top of Text" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  116 	CFGVAR int BCFG_Images_ImageOnTop = 0; // Default (False). 
+BCFG_Images_ImageOnTop:
+        DATA
+        DC32 0
+//  117 	
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 ""
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  118 CFGVAR CFG_HDR cfghdr22 = {CFG_LEVEL , "" , 0 , 0 }; // arg3 = End Level
+//  119 //****************************************************************************************************************************************************
+//  120 //####################################  End Level - Images ##########################################################################################
+//  121 //
+//  122 //
+//  123 
+//  124 //
+//  125 //
+//  126 //####################################  Begin Level - Forecast ########################################################################################
+//  127 //****************************************************************************************************************************************************
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 "Forecast"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 1, 0
+//  128 CFGVAR CFG_HDR cfghdr21 = { CFG_LEVEL ,"Forecast" , 1 , 0}; // arg3 = Begin Level >>>LevelName=Tags;
+//  129 
+//  130 	
+//  131 	//
+//  132 	//
+//  133 	//####################################  Begin Level - Min Temperature ########################################################################################
+//  134 	//****************************************************************************************************************************************************
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 "Min Temperature"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 1, 0
+//  135 	CFGVAR CFG_HDR cfghdr23 = { CFG_LEVEL ,"Min Temperature" , 1 , 0}; // arg3 = Begin Level >>>LevelName=MinTemperature;
+//  136 	
+//  137 		//---[Check Box]----------------------------------------------------------------------------------[Check Box]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 11
+        DC8 "Enable"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  138 		CFGVAR CFG_HDR cfghdr24 = {CFG_CHECKBOX , "Enable" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  139 		CFGVAR int BCFG_Tags_MinTemperature_Enable = 1; // Default (True). 
+BCFG_Tags_MinTemperature_Enable:
+        DATA
+        DC32 1
+//  140 		
+//  141 		//---[X,Y Position]-------------------------------------------------------------------------------[X,Y Position]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 7
+        DC8 "Position"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  142 		CFGVAR CFG_HDR cfghdr25 = { CFG_COORDINATES , "Position" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  143 		CFGVAR int BCFG_Tags_MinTemperature_Position_X = 80; // Default X position.
+BCFG_Tags_MinTemperature_Position_X:
+        DATA
+        DC32 80
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  144 		CFGVAR int BCFG_Tags_MinTemperature_Position_Y = 74; // Default Y position.
+BCFG_Tags_MinTemperature_Position_Y:
+        DATA
+        DC32 74
+//  145 		
+//  146 		//---[Font]-------------------------------------------------------------------------------------------[Font]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 16
+        DC8 "Font Size"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  147 		CFGVAR CFG_HDR cfghdr26 = {CFG_FONT , "Font Size" , 0 , 0};
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  148 		CFGVAR int BCFG_Tags_MinTemperature_FontSize = 0x10; // Default (E_14R).
+BCFG_Tags_MinTemperature_FontSize:
+        DATA
+        DC32 16
+//  149 		
+//  150 		//---[Color]-----------------------------------------------------------------------------------------[Color]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 15
+        DC8 "Text Color"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  151 		CFGVAR CFG_HDR cfghdr27 = { CFG_COLOR_INT , "Text Color" , 0 , 0}; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  152 		CFGVAR unsigned int BCFG_Tags_MinTemperature_TextColor = 0xFFFFFFFF; // Default (ffffffff).
+BCFG_Tags_MinTemperature_TextColor:
+        DATA
+        DC32 4294967295
+//  153 		
+//  154 		//---[Check Box]----------------------------------------------------------------------------------[Check Box]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 11
+        DC8 "Enable Shadow"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  155 		CFGVAR CFG_HDR cfghdr28 = {CFG_CHECKBOX , "Enable Shadow" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  156 		CFGVAR int BCFG_Tags_MinTemperature_EnableShadow = 0; // Default (False). 
+BCFG_Tags_MinTemperature_EnableShadow:
+        DATA
+        DC32 0
+//  157 		
+//  158 		//---[Color]-----------------------------------------------------------------------------------------[Color]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 15
+        DC8 "Shadow Color"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  159 		CFGVAR CFG_HDR cfghdr29 = { CFG_COLOR_INT , "Shadow Color" , 0 , 0}; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  160 		CFGVAR unsigned int BCFG_Tags_MinTemperature_ShadowColor = 0xFF000000; // Default (ff000000).
+BCFG_Tags_MinTemperature_ShadowColor:
+        DATA
+        DC32 4278190080
+//  161 		
+//  162 		//---[Radio Button]-----------------------------------------------------------------------------[Radio Button]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 5
+        DC8 "Align"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 3
+//  163 		CFGVAR CFG_HDR cfghdr30 = { CFG_CBOX , "Align" , 0 , 3 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  164 		CFGVAR int BCFG_Tags_MinTemperature_Align = 0; // Default item (Left).
+BCFG_Tags_MinTemperature_Align:
+        DATA
+        DC32 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC8 "Left"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "Right"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "Center"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0
+//  165 		CFGVAR CFG_CBOX_ITEM cfgRadioBtn30[3] = {"Left" , "Right" , "Center"};
+//  166 		
+//  167 		//---[Text - Unicode]----------------------------------------------------------------[Text - Unicode]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 18
+        DC8 "Mask"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 80
+//  168 		CFGVAR CFG_HDR cfghdr31 = { CFG_UTF16_STRING , "Mask" , 0 , 80};
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  169 		CFGVAR wchar_t BCFG_Tags_MinTemperature_Mask[81] = L"%.0f°C /"; // Default. 
+BCFG_Tags_MinTemperature_Mask:
+        DATA
+        DC8 25H, 0, 2EH, 0, 30H, 0, 66H, 0
+        DC8 0B0H, 0, 43H, 0, 20H, 0, 2FH, 0
+        DC8 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+//  170 		
+//  171 		//---[Radio Button]-----------------------------------------------------------------------------[Radio Button]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 5
+        DC8 "Unit"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 2
+//  172 		CFGVAR CFG_HDR cfghdr32 = { CFG_CBOX , "Unit" , 0 , 2 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  173 		CFGVAR int BCFG_Tags_MinTemperature_Unit = 0; // Default item (Celsius).
+BCFG_Tags_MinTemperature_Unit:
+        DATA
+        DC32 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC8 "Celsius"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "Fahrenheit"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+//  174 		CFGVAR CFG_CBOX_ITEM cfgRadioBtn32[2] = {"Celsius" , "Fahrenheit"};
+//  175 		
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 ""
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  176 	CFGVAR CFG_HDR cfghdr34 = {CFG_LEVEL , "" , 0 , 0 }; // arg3 = End Level
+//  177 	//****************************************************************************************************************************************************
+//  178 	//####################################  End Level - Min Temperature ##########################################################################################
+//  179 	//
+//  180 	//
+//  181 	
+//  182 	//
+//  183 	//
+//  184 	//####################################  Begin Level - Average Temperature ########################################################################################
+//  185 	//****************************************************************************************************************************************************
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 "Average Temperature"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 1, 0
+//  186 	CFGVAR CFG_HDR cfghdr33 = { CFG_LEVEL ,"Average Temperature" , 1 , 0}; // arg3 = Begin Level >>>LevelName=AverageTemperature;
+//  187 	
+//  188 		//---[Check Box]----------------------------------------------------------------------------------[Check Box]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 11
+        DC8 "Enable"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  189 		CFGVAR CFG_HDR cfghdr35 = {CFG_CHECKBOX , "Enable" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  190 		CFGVAR int BCFG_Tags_AverageTemperature_Enable = 1; // Default (True). 
+BCFG_Tags_AverageTemperature_Enable:
+        DATA
+        DC32 1
+//  191 		
+//  192 		//---[X,Y Position]-------------------------------------------------------------------------------[X,Y Position]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 7
+        DC8 "Position"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  193 		CFGVAR CFG_HDR cfghdr36 = { CFG_COORDINATES , "Position" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  194 		CFGVAR int BCFG_Tags_AverageTemperature_Position_X = 180; // Default X position.
+BCFG_Tags_AverageTemperature_Position_X:
+        DATA
+        DC32 180
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  195 		CFGVAR int BCFG_Tags_AverageTemperature_Position_Y = 55; // Default Y position.
+BCFG_Tags_AverageTemperature_Position_Y:
+        DATA
+        DC32 55
+//  196 		
+//  197 		//---[Font]-------------------------------------------------------------------------------------------[Font]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 16
+        DC8 "Font Size"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  198 		CFGVAR CFG_HDR cfghdr37 = {CFG_FONT , "Font Size" , 0 , 0};
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  199 		CFGVAR int BCFG_Tags_AverageTemperature_FontSize = 0x17; // Default (E_16R).
+BCFG_Tags_AverageTemperature_FontSize:
+        DATA
+        DC32 23
+//  200 		
+//  201 		//---[Color]-----------------------------------------------------------------------------------------[Color]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 15
+        DC8 "Text Color"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  202 		CFGVAR CFG_HDR cfghdr38 = { CFG_COLOR_INT , "Text Color" , 0 , 0}; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  203 		CFGVAR unsigned int BCFG_Tags_AverageTemperature_TextColor = 0xFFFFFFFF; // Default (ffffffff).
+BCFG_Tags_AverageTemperature_TextColor:
+        DATA
+        DC32 4294967295
+//  204 		
+//  205 		//---[Check Box]----------------------------------------------------------------------------------[Check Box]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 11
+        DC8 "Enable Shadow"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  206 		CFGVAR CFG_HDR cfghdr39 = {CFG_CHECKBOX , "Enable Shadow" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  207 		CFGVAR int BCFG_Tags_AverageTemperature_EnableShadow = 0; // Default (False). 
+BCFG_Tags_AverageTemperature_EnableShadow:
+        DATA
+        DC32 0
+//  208 		
+//  209 		//---[Color]-----------------------------------------------------------------------------------------[Color]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 15
+        DC8 "Shadow Color"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  210 		CFGVAR CFG_HDR cfghdr40 = { CFG_COLOR_INT , "Shadow Color" , 0 , 0}; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  211 		CFGVAR unsigned int BCFG_Tags_AverageTemperature_ShadowColor = 0xFF000000; // Default (ff000000).
+BCFG_Tags_AverageTemperature_ShadowColor:
+        DATA
+        DC32 4278190080
+//  212 		
+//  213 		//---[Radio Button]-----------------------------------------------------------------------------[Radio Button]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 5
+        DC8 "Align"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 3
+//  214 		CFGVAR CFG_HDR cfghdr41 = { CFG_CBOX , "Align" , 0 , 3 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  215 		CFGVAR int BCFG_Tags_AverageTemperature_Align = 0; // Default item (Left).
+BCFG_Tags_AverageTemperature_Align:
+        DATA
+        DC32 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC8 "Left"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "Right"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "Center"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0
+//  216 		CFGVAR CFG_CBOX_ITEM cfgRadioBtn41[3] = {"Left" , "Right" , "Center"};
+//  217 		
+//  218 		//---[Text - Unicode]----------------------------------------------------------------[Text - Unicode]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 18
+        DC8 "Mask"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 80
+//  219 		CFGVAR CFG_HDR cfghdr42 = { CFG_UTF16_STRING , "Mask" , 0 , 80};
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  220 		CFGVAR wchar_t BCFG_Tags_AverageTemperature_Mask[81] = L"%.0f°C"; // Default. 
+BCFG_Tags_AverageTemperature_Mask:
+        DATA
+        DC8 25H, 0, 2EH, 0, 30H, 0, 66H, 0
+        DC8 0B0H, 0, 43H, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+//  221 		
+//  222 		//---[Radio Button]-----------------------------------------------------------------------------[Radio Button]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 5
+        DC8 "Unit"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 2
+//  223 		CFGVAR CFG_HDR cfghdr43 = { CFG_CBOX , "Unit" , 0 , 2 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  224 		CFGVAR int BCFG_Tags_AverageTemperature_Unit = 0; // Default item (Celsius).
+BCFG_Tags_AverageTemperature_Unit:
+        DATA
+        DC32 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC8 "Celsius"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "Fahrenheit"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+//  225 		CFGVAR CFG_CBOX_ITEM cfgRadioBtn43[2] = {"Celsius" , "Fahrenheit"};
+//  226 		
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 ""
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  227 	CFGVAR CFG_HDR cfghdr45 = {CFG_LEVEL , "" , 0 , 0 }; // arg3 = End Level
+//  228 	//****************************************************************************************************************************************************
+//  229 	//####################################  End Level - Average Temperature ##########################################################################################
+//  230 	//
+//  231 	//
+//  232 	
+//  233 	//
+//  234 	//
+//  235 	//####################################  Begin Level - Max Temperature ########################################################################################
+//  236 	//****************************************************************************************************************************************************
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 "Max Temperature"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 1, 0
+//  237 	CFGVAR CFG_HDR cfghdr44 = { CFG_LEVEL ,"Max Temperature" , 1 , 0}; // arg3 = Begin Level >>>LevelName=MaxTemperature;
+//  238 	
+//  239 		//---[Check Box]----------------------------------------------------------------------------------[Check Box]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 11
+        DC8 "Enable"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  240 		CFGVAR CFG_HDR cfghdr46 = {CFG_CHECKBOX , "Enable" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  241 		CFGVAR int BCFG_Tags_MaxTemperature_Enable = 1; // Default (True). 
+BCFG_Tags_MaxTemperature_Enable:
+        DATA
+        DC32 1
+//  242 		
+//  243 		//---[X,Y Position]-------------------------------------------------------------------------------[X,Y Position]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 7
+        DC8 "Position"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  244 		CFGVAR CFG_HDR cfghdr47 = { CFG_COORDINATES , "Position" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  245 		CFGVAR int BCFG_Tags_MaxTemperature_Position_X = 128; // Default X position.
+BCFG_Tags_MaxTemperature_Position_X:
+        DATA
+        DC32 128
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  246 		CFGVAR int BCFG_Tags_MaxTemperature_Position_Y = 74; // Default Y position.
+BCFG_Tags_MaxTemperature_Position_Y:
+        DATA
+        DC32 74
+//  247 		
+//  248 		//---[Font]-------------------------------------------------------------------------------------------[Font]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 16
+        DC8 "Font Size"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  249 		CFGVAR CFG_HDR cfghdr48 = {CFG_FONT , "Font Size" , 0 , 0};
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  250 		CFGVAR int BCFG_Tags_MaxTemperature_FontSize = 0x10; // Default (E_14R).
+BCFG_Tags_MaxTemperature_FontSize:
+        DATA
+        DC32 16
+//  251 		
+//  252 		//---[Color]-----------------------------------------------------------------------------------------[Color]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 15
+        DC8 "Text Color"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  253 		CFGVAR CFG_HDR cfghdr49 = { CFG_COLOR_INT , "Text Color" , 0 , 0}; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  254 		CFGVAR unsigned int BCFG_Tags_MaxTemperature_TextColor = 0xFFFFFFFF; // Default (ffffffff).
+BCFG_Tags_MaxTemperature_TextColor:
+        DATA
+        DC32 4294967295
+//  255 		
+//  256 		//---[Check Box]----------------------------------------------------------------------------------[Check Box]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 11
+        DC8 "Enable Shadow"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  257 		CFGVAR CFG_HDR cfghdr50 = {CFG_CHECKBOX , "Enable Shadow" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  258 		CFGVAR int BCFG_Tags_MaxTemperature_EnableShadow = 0; // Default (False). 
+BCFG_Tags_MaxTemperature_EnableShadow:
+        DATA
+        DC32 0
+//  259 		
+//  260 		//---[Color]-----------------------------------------------------------------------------------------[Color]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 15
+        DC8 "Shadow Color"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  261 		CFGVAR CFG_HDR cfghdr51 = { CFG_COLOR_INT , "Shadow Color" , 0 , 0}; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  262 		CFGVAR unsigned int BCFG_Tags_MaxTemperature_ShadowColor = 0xFF000000; // Default (ff000000).
+BCFG_Tags_MaxTemperature_ShadowColor:
+        DATA
+        DC32 4278190080
+//  263 		
+//  264 		//---[Radio Button]-----------------------------------------------------------------------------[Radio Button]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 5
+        DC8 "Align"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 3
+//  265 		CFGVAR CFG_HDR cfghdr52 = { CFG_CBOX , "Align" , 0 , 3 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  266 		CFGVAR int BCFG_Tags_MaxTemperature_Align = 0; // Default item (Left).
+BCFG_Tags_MaxTemperature_Align:
+        DATA
+        DC32 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC8 "Left"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "Right"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "Center"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0
+//  267 		CFGVAR CFG_CBOX_ITEM cfgRadioBtn52[3] = {"Left" , "Right" , "Center"};
+//  268 		
+//  269 		//---[Text - Unicode]----------------------------------------------------------------[Text - Unicode]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 18
+        DC8 "Mask"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 80
+//  270 		CFGVAR CFG_HDR cfghdr53 = { CFG_UTF16_STRING , "Mask" , 0 , 80};
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  271 		CFGVAR wchar_t BCFG_Tags_MaxTemperature_Mask[81] = L"%.0f°C"; // Default. 
+BCFG_Tags_MaxTemperature_Mask:
+        DATA
+        DC8 25H, 0, 2EH, 0, 30H, 0, 66H, 0
+        DC8 0B0H, 0, 43H, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+//  272 		
+//  273 		//---[Radio Button]-----------------------------------------------------------------------------[Radio Button]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 5
+        DC8 "Unit"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 2
+//  274 		CFGVAR CFG_HDR cfghdr54 = { CFG_CBOX , "Unit" , 0 , 2 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  275 		CFGVAR int BCFG_Tags_MaxTemperature_Unit = 0; // Default item (Celsius).
+BCFG_Tags_MaxTemperature_Unit:
+        DATA
+        DC32 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC8 "Celsius"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "Fahrenheit"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+//  276 		CFGVAR CFG_CBOX_ITEM cfgRadioBtn54[2] = {"Celsius" , "Fahrenheit"};
+//  277 		
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 ""
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  278 	CFGVAR CFG_HDR cfghdr56 = {CFG_LEVEL , "" , 0 , 0 }; // arg3 = End Level
+//  279 	//****************************************************************************************************************************************************
+//  280 	//####################################  End Level - Max Temperature ##########################################################################################
+//  281 	//
+//  282 	//
+//  283 	
+//  284 	//
+//  285 	//
+//  286 	//####################################  Begin Level - Condition ########################################################################################
+//  287 	//****************************************************************************************************************************************************
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 "Condition"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 1, 0
+//  288 	CFGVAR CFG_HDR cfghdr55 = { CFG_LEVEL ,"Condition" , 1 , 0}; // arg3 = Begin Level >>>LevelName=DayState;
+//  289 	
+//  290 		//---[Check Box]----------------------------------------------------------------------------------[Check Box]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 11
+        DC8 "Enable"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  291 		CFGVAR CFG_HDR cfghdr57 = {CFG_CHECKBOX , "Enable" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  292 		CFGVAR int BCFG_Tags_DayState_Enable = 1; // Default (True). 
+BCFG_Tags_DayState_Enable:
+        DATA
+        DC32 1
+//  293 		
+//  294 		//---[X,Y Position]-------------------------------------------------------------------------------[X,Y Position]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 7
+        DC8 "Position"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  295 		CFGVAR CFG_HDR cfghdr58 = { CFG_COORDINATES , "Position" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  296 		CFGVAR int BCFG_Tags_DayState_Position_X = 80; // Default X position.
+BCFG_Tags_DayState_Position_X:
+        DATA
+        DC32 80
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  297 		CFGVAR int BCFG_Tags_DayState_Position_Y = 57; // Default Y position.
+BCFG_Tags_DayState_Position_Y:
+        DATA
+        DC32 57
+//  298 		
+//  299 		//---[Font]-------------------------------------------------------------------------------------------[Font]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 16
+        DC8 "Font Size"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  300 		CFGVAR CFG_HDR cfghdr59 = {CFG_FONT , "Font Size" , 0 , 0};
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  301 		CFGVAR int BCFG_Tags_DayState_FontSize = 0x10; // Default (E_14R).
+BCFG_Tags_DayState_FontSize:
+        DATA
+        DC32 16
+//  302 		
+//  303 		//---[Color]-----------------------------------------------------------------------------------------[Color]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 15
+        DC8 "Text Color"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  304 		CFGVAR CFG_HDR cfghdr60 = { CFG_COLOR_INT , "Text Color" , 0 , 0}; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  305 		CFGVAR unsigned int BCFG_Tags_DayState_TextColor = 0xFFFFFFFF; // Default (ffffffff).
+BCFG_Tags_DayState_TextColor:
+        DATA
+        DC32 4294967295
+//  306 		
+//  307 		//---[Check Box]----------------------------------------------------------------------------------[Check Box]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 11
+        DC8 "Enable Shadow"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  308 		CFGVAR CFG_HDR cfghdr61 = {CFG_CHECKBOX , "Enable Shadow" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  309 		CFGVAR int BCFG_Tags_DayState_EnableShadow = 0; // Default (False). 
+BCFG_Tags_DayState_EnableShadow:
+        DATA
+        DC32 0
+//  310 		
+//  311 		//---[Color]-----------------------------------------------------------------------------------------[Color]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 15
+        DC8 "Shadow Color"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  312 		CFGVAR CFG_HDR cfghdr62 = { CFG_COLOR_INT , "Shadow Color" , 0 , 0}; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  313 		CFGVAR unsigned int BCFG_Tags_DayState_ShadowColor = 0xFF000000; // Default (ff000000).
+BCFG_Tags_DayState_ShadowColor:
+        DATA
+        DC32 4278190080
+//  314 		
+//  315 		//---[Radio Button]-----------------------------------------------------------------------------[Radio Button]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 5
+        DC8 "Align"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 3
+//  316 		CFGVAR CFG_HDR cfghdr63 = { CFG_CBOX , "Align" , 0 , 3 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  317 		CFGVAR int BCFG_Tags_DayState_Align = 0; // Default item (Left).
+BCFG_Tags_DayState_Align:
+        DATA
+        DC32 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC8 "Left"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "Right"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "Center"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0
+//  318 		CFGVAR CFG_CBOX_ITEM cfgRadioBtn63[3] = {"Left" , "Right" , "Center"};
+//  319 		
+//  320 		//---[Number - Unit (Unsigned)]---------------------------------------------------------[Number - Unit (Unsigned)]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 1
+        DC8 "Line Spacing"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 240
+//  321 		CFGVAR CFG_HDR cfghdr64 = { CFG_UINT , "Line Spacing" , 0 , 240};
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  322 		CFGVAR unsigned int BCFG_Tags_DayState_LineSpacing = 20; // Default
+BCFG_Tags_DayState_LineSpacing:
+        DATA
+        DC32 20
+//  323 		
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 ""
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  324 	CFGVAR CFG_HDR cfghdr66 = {CFG_LEVEL , "" , 0 , 0 }; // arg3 = End Level
+//  325 	//****************************************************************************************************************************************************
+//  326 	//####################################  End Level - Condition ##########################################################################################
+//  327 	//
+//  328 	//
+//  329 	
+//  330 	//
+//  331 	//
+//  332 	//####################################  Begin Level - Location ########################################################################################
+//  333 	//****************************************************************************************************************************************************
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 "Location"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 1, 0
+//  334 	CFGVAR CFG_HDR cfghdr65 = { CFG_LEVEL ,"Location" , 1 , 0}; // arg3 = Begin Level >>>LevelName=Location;
+//  335 	
+//  336 		//---[Check Box]----------------------------------------------------------------------------------[Check Box]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 11
+        DC8 "Enable"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  337 		CFGVAR CFG_HDR cfghdr67 = {CFG_CHECKBOX , "Enable" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  338 		CFGVAR int BCFG_Tags_Location_Enable = 1; // Default (True). 
+BCFG_Tags_Location_Enable:
+        DATA
+        DC32 1
+//  339 		
+//  340 		//---[X,Y Position]-------------------------------------------------------------------------------[X,Y Position]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 7
+        DC8 "Position"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  341 		CFGVAR CFG_HDR cfghdr68 = { CFG_COORDINATES , "Position" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  342 		CFGVAR int BCFG_Tags_Location_Position_X = 80; // Default X position.
+BCFG_Tags_Location_Position_X:
+        DATA
+        DC32 80
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  343 		CFGVAR int BCFG_Tags_Location_Position_Y = 43; // Default Y position.
+BCFG_Tags_Location_Position_Y:
+        DATA
+        DC32 43
+//  344 		
+//  345 		//---[Font]-------------------------------------------------------------------------------------------[Font]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 16
+        DC8 "Font Size"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  346 		CFGVAR CFG_HDR cfghdr69 = {CFG_FONT , "Font Size" , 0 , 0};
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  347 		CFGVAR int BCFG_Tags_Location_FontSize = 0x10; // Default (E_14R).
+BCFG_Tags_Location_FontSize:
+        DATA
+        DC32 16
+//  348 		
+//  349 		//---[Color]-----------------------------------------------------------------------------------------[Color]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 15
+        DC8 "Text Color"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  350 		CFGVAR CFG_HDR cfghdr70 = { CFG_COLOR_INT , "Text Color" , 0 , 0}; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  351 		CFGVAR unsigned int BCFG_Tags_Location_TextColor = 0xFFFFFFFF; // Default (ffffffff).
+BCFG_Tags_Location_TextColor:
+        DATA
+        DC32 4294967295
+//  352 		
+//  353 		//---[Check Box]----------------------------------------------------------------------------------[Check Box]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 11
+        DC8 "Enable Shadow"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  354 		CFGVAR CFG_HDR cfghdr71 = {CFG_CHECKBOX , "Enable Shadow" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  355 		CFGVAR int BCFG_Tags_Location_EnableShadow = 0; // Default (False). 
+BCFG_Tags_Location_EnableShadow:
+        DATA
+        DC32 0
+//  356 		
+//  357 		//---[Color]-----------------------------------------------------------------------------------------[Color]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 15
+        DC8 "Shadow Color"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  358 		CFGVAR CFG_HDR cfghdr72 = { CFG_COLOR_INT , "Shadow Color" , 0 , 0}; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  359 		CFGVAR unsigned int BCFG_Tags_Location_ShadowColor = 0xFF000000; // Default (ff000000).
+BCFG_Tags_Location_ShadowColor:
+        DATA
+        DC32 4278190080
+//  360 		
+//  361 		//---[Radio Button]-----------------------------------------------------------------------------[Radio Button]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 5
+        DC8 "Align"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 3
+//  362 		CFGVAR CFG_HDR cfghdr73 = { CFG_CBOX , "Align" , 0 , 3 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  363 		CFGVAR int BCFG_Tags_Location_Align = 0; // Default item (Left).
+BCFG_Tags_Location_Align:
+        DATA
+        DC32 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC8 "Left"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "Right"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "Center"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0
+//  364 		CFGVAR CFG_CBOX_ITEM cfgRadioBtn73[3] = {"Left" , "Right" , "Center"};
+//  365 		
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 ""
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  366 	CFGVAR CFG_HDR cfghdr75 = {CFG_LEVEL , "" , 0 , 0 }; // arg3 = End Level
+//  367 	//****************************************************************************************************************************************************
+//  368 	//####################################  End Level - Location ##########################################################################################
+//  369 	//
+//  370 	//
+//  371 	
+//  372 	//
+//  373 	//
+//  374 	//####################################  Begin Level - Wind Speed ########################################################################################
+//  375 	//****************************************************************************************************************************************************
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 "Wind Speed"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 1, 0
+//  376 	CFGVAR CFG_HDR cfghdr74 = { CFG_LEVEL ,"Wind Speed" , 1 , 0}; // arg3 = Begin Level >>>LevelName=WindSpeed;
+//  377 	
+//  378 		//---[Check Box]----------------------------------------------------------------------------------[Check Box]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 11
+        DC8 "Enable"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  379 		CFGVAR CFG_HDR cfghdr76 = {CFG_CHECKBOX , "Enable" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  380 		CFGVAR int BCFG_Tags_WindSpeed_Enable = 1; // Default (True). 
+BCFG_Tags_WindSpeed_Enable:
+        DATA
+        DC32 1
+//  381 		
+//  382 		//---[X,Y Position]-------------------------------------------------------------------------------[X,Y Position]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 7
+        DC8 "Position"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  383 		CFGVAR CFG_HDR cfghdr77 = { CFG_COORDINATES , "Position" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  384 		CFGVAR int BCFG_Tags_WindSpeed_Position_X = 187; // Default X position.
+BCFG_Tags_WindSpeed_Position_X:
+        DATA
+        DC32 187
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  385 		CFGVAR int BCFG_Tags_WindSpeed_Position_Y = 78; // Default Y position.
+BCFG_Tags_WindSpeed_Position_Y:
+        DATA
+        DC32 78
+//  386 		
+//  387 		//---[Font]-------------------------------------------------------------------------------------------[Font]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 16
+        DC8 "Font Size"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  388 		CFGVAR CFG_HDR cfghdr78 = {CFG_FONT , "Font Size" , 0 , 0};
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  389 		CFGVAR int BCFG_Tags_WindSpeed_FontSize = 0x9; // Default (D_7R).
+BCFG_Tags_WindSpeed_FontSize:
+        DATA
+        DC32 9
+//  390 		
+//  391 		//---[Color]-----------------------------------------------------------------------------------------[Color]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 15
+        DC8 "Text Color"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  392 		CFGVAR CFG_HDR cfghdr79 = { CFG_COLOR_INT , "Text Color" , 0 , 0}; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  393 		CFGVAR unsigned int BCFG_Tags_WindSpeed_TextColor = 0xFFFFFFFF; // Default (ffffffff).
+BCFG_Tags_WindSpeed_TextColor:
+        DATA
+        DC32 4294967295
+//  394 		
+//  395 		//---[Check Box]----------------------------------------------------------------------------------[Check Box]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 11
+        DC8 "Enable Shadow"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  396 		CFGVAR CFG_HDR cfghdr80 = {CFG_CHECKBOX , "Enable Shadow" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  397 		CFGVAR int BCFG_Tags_WindSpeed_EnableShadow = 0; // Default (False). 
+BCFG_Tags_WindSpeed_EnableShadow:
+        DATA
+        DC32 0
+//  398 		
+//  399 		//---[Color]-----------------------------------------------------------------------------------------[Color]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 15
+        DC8 "Shadow Color"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  400 		CFGVAR CFG_HDR cfghdr81 = { CFG_COLOR_INT , "Shadow Color" , 0 , 0}; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  401 		CFGVAR unsigned int BCFG_Tags_WindSpeed_ShadowColor = 0xFF000000; // Default (ff000000).
+BCFG_Tags_WindSpeed_ShadowColor:
+        DATA
+        DC32 4278190080
+//  402 		
+//  403 		//---[Radio Button]-----------------------------------------------------------------------------[Radio Button]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 5
+        DC8 "Align"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 3
+//  404 		CFGVAR CFG_HDR cfghdr82 = { CFG_CBOX , "Align" , 0 , 3 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  405 		CFGVAR int BCFG_Tags_WindSpeed_Align = 0; // Default item (Left).
+BCFG_Tags_WindSpeed_Align:
+        DATA
+        DC32 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC8 "Left"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "Right"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "Center"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0
+//  406 		CFGVAR CFG_CBOX_ITEM cfgRadioBtn82[3] = {"Left" , "Right" , "Center"};
+//  407 		
+//  408 		//---[Text - Unicode]----------------------------------------------------------------[Text - Unicode]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 18
+        DC8 "Mask"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 200
+//  409 		CFGVAR CFG_HDR cfghdr83 = { CFG_UTF16_STRING , "Mask" , 0 , 200};
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  410 		CFGVAR wchar_t BCFG_Tags_WindSpeed_Mask[201] = L"%.1f Km/h"; // Default. 
+BCFG_Tags_WindSpeed_Mask:
+        DATA
+        DC8 25H, 0, 2EH, 0, 31H, 0, 66H, 0
+        DC8 20H, 0, 4BH, 0, 6DH, 0, 2FH, 0
+        DC8 68H, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+//  411 		
+//  412 		//---[Radio Button]-----------------------------------------------------------------------------[Radio Button]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 5
+        DC8 "Unit"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 3
+//  413 		CFGVAR CFG_HDR cfghdr84 = { CFG_CBOX , "Unit" , 0 , 3 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  414 		CFGVAR int BCFG_Tags_WindSpeed_Unit = 0; // Default item (Kilometer).
+BCFG_Tags_WindSpeed_Unit:
+        DATA
+        DC32 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC8 "Kilometer"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "Miles"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "Meter"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+//  415 		CFGVAR CFG_CBOX_ITEM cfgRadioBtn84[3] = {"Kilometer" , "Miles" , "Meter"};
+//  416 		
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 ""
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  417 	CFGVAR CFG_HDR cfghdr86 = {CFG_LEVEL , "" , 0 , 0 }; // arg3 = End Level
+//  418 	//****************************************************************************************************************************************************
+//  419 	//####################################  End Level - Wind Speed ##########################################################################################
+//  420 	//
+//  421 	//
+//  422 	
+//  423 	//
+//  424 	//
+//  425 	//####################################  Begin Level - Wind Direction ########################################################################################
+//  426 	//****************************************************************************************************************************************************
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 "Wind Direction"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 1, 0
+//  427 	CFGVAR CFG_HDR cfghdr85 = { CFG_LEVEL ,"Wind Direction" , 1 , 0}; // arg3 = Begin Level >>>LevelName=WindDirection;
+//  428 	
+//  429 		//---[Check Box]----------------------------------------------------------------------------------[Check Box]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 11
+        DC8 "Enable"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  430 		CFGVAR CFG_HDR cfghdr87 = {CFG_CHECKBOX , "Enable" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  431 		CFGVAR int BCFG_Tags_WindDirection_Enable = 1; // Default (True). 
+BCFG_Tags_WindDirection_Enable:
+        DATA
+        DC32 1
+//  432 		
+//  433 		//---[X,Y Position]-------------------------------------------------------------------------------[X,Y Position]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 7
+        DC8 "Position"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  434 		CFGVAR CFG_HDR cfghdr88 = { CFG_COORDINATES , "Position" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  435 		CFGVAR int BCFG_Tags_WindDirection_Position_X = 194; // Default X position.
+BCFG_Tags_WindDirection_Position_X:
+        DATA
+        DC32 194
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  436 		CFGVAR int BCFG_Tags_WindDirection_Position_Y = 47; // Default Y position.
+BCFG_Tags_WindDirection_Position_Y:
+        DATA
+        DC32 47
+//  437 		
+//  438 		//---[Font]-------------------------------------------------------------------------------------------[Font]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 16
+        DC8 "Font Size"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  439 		CFGVAR CFG_HDR cfghdr89 = {CFG_FONT , "Font Size" , 0 , 0};
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  440 		CFGVAR int BCFG_Tags_WindDirection_FontSize = 0x9; // Default (D_7R).
+BCFG_Tags_WindDirection_FontSize:
+        DATA
+        DC32 9
+//  441 		
+//  442 		//---[Color]-----------------------------------------------------------------------------------------[Color]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 15
+        DC8 "Text Color"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  443 		CFGVAR CFG_HDR cfghdr90 = { CFG_COLOR_INT , "Text Color" , 0 , 0}; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  444 		CFGVAR unsigned int BCFG_Tags_WindDirection_TextColor = 0xFFFFFFFF; // Default (ffffffff).
+BCFG_Tags_WindDirection_TextColor:
+        DATA
+        DC32 4294967295
+//  445 		
+//  446 		//---[Check Box]----------------------------------------------------------------------------------[Check Box]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 11
+        DC8 "Enable Shadow"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  447 		CFGVAR CFG_HDR cfghdr91 = {CFG_CHECKBOX , "Enable Shadow" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  448 		CFGVAR int BCFG_Tags_WindDirection_EnableShadow = 0; // Default (False). 
+BCFG_Tags_WindDirection_EnableShadow:
+        DATA
+        DC32 0
+//  449 		
+//  450 		//---[Color]-----------------------------------------------------------------------------------------[Color]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 15
+        DC8 "Shadow Color"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  451 		CFGVAR CFG_HDR cfghdr92 = { CFG_COLOR_INT , "Shadow Color" , 0 , 0}; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  452 		CFGVAR unsigned int BCFG_Tags_WindDirection_ShadowColor = 0xFF000000; // Default (ff000000).
+BCFG_Tags_WindDirection_ShadowColor:
+        DATA
+        DC32 4278190080
+//  453 		
+//  454 		//---[Radio Button]-----------------------------------------------------------------------------[Radio Button]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 5
+        DC8 "Align"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 3
+//  455 		CFGVAR CFG_HDR cfghdr93 = { CFG_CBOX , "Align" , 0 , 3 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  456 		CFGVAR int BCFG_Tags_WindDirection_Align = 0; // Default item (Left).
+BCFG_Tags_WindDirection_Align:
+        DATA
+        DC32 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC8 "Left"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "Right"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "Center"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0
+//  457 		CFGVAR CFG_CBOX_ITEM cfgRadioBtn93[3] = {"Left" , "Right" , "Center"};
+//  458 		
+//  459 		//---[Radio Button]-----------------------------------------------------------------------------[Radio Button]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 5
+        DC8 "Format"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 2
+//  460 		CFGVAR CFG_HDR cfghdr94 = { CFG_CBOX , "Format" , 0 , 2 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  461 		CFGVAR int BCFG_Tags_WindDirection_Format = 0; // Default item (Short).
+BCFG_Tags_WindDirection_Format:
+        DATA
+        DC32 0
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC8 "Short"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 "Long"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+//  462 		CFGVAR CFG_CBOX_ITEM cfgRadioBtn94[2] = {"Short" , "Long"};
+//  463 		
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 ""
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  464 	CFGVAR CFG_HDR cfghdr96 = {CFG_LEVEL , "" , 0 , 0 }; // arg3 = End Level
+//  465 	//****************************************************************************************************************************************************
+//  466 	//####################################  End Level - Wind Direction ##########################################################################################
+//  467 	//
+//  468 	//
+//  469 	
+//  470 	//
+//  471 	//
+//  472 	//####################################  Begin Level - Time ########################################################################################
+//  473 	//****************************************************************************************************************************************************
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 "Time"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 1, 0
+//  474 	CFGVAR CFG_HDR cfghdr95 = { CFG_LEVEL ,"Time" , 1 , 0}; // arg3 = Begin Level >>>LevelName=Time;
+//  475 	
+//  476 		//---[Number - Unit (Unsigned)]---------------------------------------------------------[Number - Unit (Unsigned)]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 1
+        DC8 "Day"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 23
+//  477 		CFGVAR CFG_HDR cfghdr97 = { CFG_UINT , "Day" , 0 , 23};
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  478 		CFGVAR unsigned int BCFG_Tags_Time_Day = 6; // Default
+BCFG_Tags_Time_Day:
+        DATA
+        DC32 6
+//  479 		
+//  480 		//---[Number - Unit (Unsigned)]---------------------------------------------------------[Number - Unit (Unsigned)]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 1
+        DC8 "Night"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 23
+//  481 		CFGVAR CFG_HDR cfghdr98 = { CFG_UINT , "Night" , 0 , 23};
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  482 		CFGVAR unsigned int BCFG_Tags_Time_Night = 18; // Default
+BCFG_Tags_Time_Night:
+        DATA
+        DC32 18
+//  483 		
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 ""
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  484 	CFGVAR CFG_HDR cfghdr100 = {CFG_LEVEL , "" , 0 , 0 }; // arg3 = End Level
+//  485 	//****************************************************************************************************************************************************
+//  486 	//####################################  End Level - Time ##########################################################################################
+//  487 	//
+//  488 	//
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 ""
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  489 CFGVAR CFG_HDR cfghdr101 = {CFG_LEVEL , "" , 0 , 0 }; // arg3 = End Level
+//  490 //****************************************************************************************************************************************************
+//  491 //####################################  End Level - Forecast ##########################################################################################
+//  492 //
+//  493 //
+//  494 
+//  495 //
+//  496 //
+//  497 //####################################  Begin Level - Folders ########################################################################################
+//  498 //****************************************************************************************************************************************************
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 "Folders"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 1, 0
+//  499 CFGVAR CFG_HDR cfghdr99 = { CFG_LEVEL ,"Folders" , 1 , 0}; // arg3 = Begin Level >>>LevelName=Path;
+//  500 
+//  501 	
+//  502 	//
+//  503 	//
+//  504 	//####################################  Begin Level - Background ########################################################################################
+//  505 	//****************************************************************************************************************************************************
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 "Background"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 1, 0
+//  506 	CFGVAR CFG_HDR cfghdr102 = { CFG_LEVEL ,"Background" , 1 , 0}; // arg3 = Begin Level >>>LevelName=Background;
+//  507 	
+//  508 		//---[Text - Unicode]----------------------------------------------------------------[Text - Unicode]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 18
+        DC8 "Single Background"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 200
+//  509 		CFGVAR CFG_HDR cfghdr103 = { CFG_UTF16_STRING , "Single Background" , 0 , 200};
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  510 		CFGVAR wchar_t BCFG_Path_Background_StaticBackground[201] = L"/usb/other/Zbin/Config/AccuWeather/bg/single/"; // Default. 
+BCFG_Path_Background_StaticBackground:
+        DATA
+        DC8 2FH, 0, 75H, 0, 73H, 0, 62H, 0
+        DC8 2FH, 0, 6FH, 0, 74H, 0, 68H, 0
+        DC8 65H, 0, 72H, 0, 2FH, 0, 5AH, 0
+        DC8 62H, 0, 69H, 0, 6EH, 0, 2FH, 0
+        DC8 43H, 0, 6FH, 0, 6EH, 0, 66H, 0
+        DC8 69H, 0, 67H, 0, 2FH, 0, 41H, 0
+        DC8 63H, 0, 63H, 0, 75H, 0, 57H, 0
+        DC8 65H, 0, 61H, 0, 74H, 0, 68H, 0
+        DC8 65H, 0, 72H, 0, 2FH, 0, 62H, 0
+        DC8 67H, 0, 2FH, 0, 73H, 0, 69H, 0
+        DC8 6EH, 0, 67H, 0, 6CH, 0, 65H, 0
+        DC8 2FH, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0
+//  511 		
+//  512 		//---[Text - Unicode]----------------------------------------------------------------[Text - Unicode]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 18
+        DC8 "Day and Night BG"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 200
+//  513 		CFGVAR CFG_HDR cfghdr104 = { CFG_UTF16_STRING , "Day and Night BG" , 0 , 200};
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  514 		CFGVAR wchar_t BCFG_Path_Background_DayAndNightBG[201] = L"/usb/other/Zbin/Config/AccuWeather/bg/daynight/"; // Default. 
+BCFG_Path_Background_DayAndNightBG:
+        DATA
+        DC8 2FH, 0, 75H, 0, 73H, 0, 62H, 0
+        DC8 2FH, 0, 6FH, 0, 74H, 0, 68H, 0
+        DC8 65H, 0, 72H, 0, 2FH, 0, 5AH, 0
+        DC8 62H, 0, 69H, 0, 6EH, 0, 2FH, 0
+        DC8 43H, 0, 6FH, 0, 6EH, 0, 66H, 0
+        DC8 69H, 0, 67H, 0, 2FH, 0, 41H, 0
+        DC8 63H, 0, 63H, 0, 75H, 0, 57H, 0
+        DC8 65H, 0, 61H, 0, 74H, 0, 68H, 0
+        DC8 65H, 0, 72H, 0, 2FH, 0, 62H, 0
+        DC8 67H, 0, 2FH, 0, 64H, 0, 61H, 0
+        DC8 79H, 0, 6EH, 0, 69H, 0, 67H, 0
+        DC8 68H, 0, 74H, 0, 2FH, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+//  515 		
+//  516 		//---[Text - Unicode]----------------------------------------------------------------[Text - Unicode]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 18
+        DC8 "Animated Background"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 200
+//  517 		CFGVAR CFG_HDR cfghdr105 = { CFG_UTF16_STRING , "Animated Background" , 0 , 200};
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  518 		CFGVAR wchar_t BCFG_Path_Background[201] = L"/usb/other/Zbin/Config/AccuWeather/bg/animated/"; // Default. 
+BCFG_Path_Background:
+        DATA
+        DC8 2FH, 0, 75H, 0, 73H, 0, 62H, 0
+        DC8 2FH, 0, 6FH, 0, 74H, 0, 68H, 0
+        DC8 65H, 0, 72H, 0, 2FH, 0, 5AH, 0
+        DC8 62H, 0, 69H, 0, 6EH, 0, 2FH, 0
+        DC8 43H, 0, 6FH, 0, 6EH, 0, 66H, 0
+        DC8 69H, 0, 67H, 0, 2FH, 0, 41H, 0
+        DC8 63H, 0, 63H, 0, 75H, 0, 57H, 0
+        DC8 65H, 0, 61H, 0, 74H, 0, 68H, 0
+        DC8 65H, 0, 72H, 0, 2FH, 0, 62H, 0
+        DC8 67H, 0, 2FH, 0, 61H, 0, 6EH, 0
+        DC8 69H, 0, 6DH, 0, 61H, 0, 74H, 0
+        DC8 65H, 0, 64H, 0, 2FH, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+//  519 		
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 ""
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  520 	CFGVAR CFG_HDR cfghdr107 = {CFG_LEVEL , "" , 0 , 0 }; // arg3 = End Level
+//  521 	//****************************************************************************************************************************************************
+//  522 	//####################################  End Level - Background ##########################################################################################
+//  523 	//
+//  524 	//
+//  525 	//---[Text - Unicode]----------------------------------------------------------------[Text - Unicode]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 18
+        DC8 "XML & Logo"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 200
+//  526 	CFGVAR CFG_HDR cfghdr106 = { CFG_UTF16_STRING , "XML & Logo" , 0 , 200};
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  527 	CFGVAR wchar_t BCFG_XMLBGLogoFolder[201] = L"/usb/other/Zbin/Config/AccuWeather/"; // Default. 
+BCFG_XMLBGLogoFolder:
+        DATA
+        DC8 2FH, 0, 75H, 0, 73H, 0, 62H, 0
+        DC8 2FH, 0, 6FH, 0, 74H, 0, 68H, 0
+        DC8 65H, 0, 72H, 0, 2FH, 0, 5AH, 0
+        DC8 62H, 0, 69H, 0, 6EH, 0, 2FH, 0
+        DC8 43H, 0, 6FH, 0, 6EH, 0, 66H, 0
+        DC8 69H, 0, 67H, 0, 2FH, 0, 41H, 0
+        DC8 63H, 0, 63H, 0, 75H, 0, 57H, 0
+        DC8 65H, 0, 61H, 0, 74H, 0, 68H, 0
+        DC8 65H, 0, 72H, 0, 2FH, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+//  528 	
+//  529 	//---[Text - Unicode]----------------------------------------------------------------[Text - Unicode]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 18
+        DC8 "States"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 200
+//  530 	CFGVAR CFG_HDR cfghdr108 = { CFG_UTF16_STRING , "States" , 0 , 200};
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  531 	CFGVAR wchar_t BCFG_StatesFolder[201] = L"/usb/other/Zbin/Config/AccuWeather/States/"; // Default. 
+BCFG_StatesFolder:
+        DATA
+        DC8 2FH, 0, 75H, 0, 73H, 0, 62H, 0
+        DC8 2FH, 0, 6FH, 0, 74H, 0, 68H, 0
+        DC8 65H, 0, 72H, 0, 2FH, 0, 5AH, 0
+        DC8 62H, 0, 69H, 0, 6EH, 0, 2FH, 0
+        DC8 43H, 0, 6FH, 0, 6EH, 0, 66H, 0
+        DC8 69H, 0, 67H, 0, 2FH, 0, 41H, 0
+        DC8 63H, 0, 63H, 0, 75H, 0, 57H, 0
+        DC8 65H, 0, 61H, 0, 74H, 0, 68H, 0
+        DC8 65H, 0, 72H, 0, 2FH, 0, 53H, 0
+        DC8 74H, 0, 61H, 0, 74H, 0, 65H, 0
+        DC8 73H, 0, 2FH, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+//  532 	
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 ""
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  533 CFGVAR CFG_HDR cfghdr110 = {CFG_LEVEL , "" , 0 , 0 }; // arg3 = End Level
+//  534 //****************************************************************************************************************************************************
+//  535 //####################################  End Level - Folders ##########################################################################################
+//  536 //
+//  537 //
+//  538 
+//  539 //
+//  540 //
+//  541 //####################################  Begin Level - Widget Position ########################################################################################
+//  542 //****************************************************************************************************************************************************
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 "Widget Position"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 1, 0
+//  543 CFGVAR CFG_HDR cfghdr109 = { CFG_LEVEL ,"Widget Position" , 1 , 0}; // arg3 = Begin Level >>>LevelName=WidgetPosition;
+//  544 
+//  545 	//---[Number - Integer (signed)]---------------------------------------------------------[Number - Integer (signed)]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 3
+        DC8 "X"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 240
+//  546 	CFGVAR CFG_HDR cfghdr111 = { CFG_INT , "X" , 0 , 240};
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  547 	CFGVAR unsigned int BCFG_WidgetPosition_X = 0; // Default
+BCFG_WidgetPosition_X:
+        DATA
+        DC32 0
+//  548 	
+//  549 	//---[Number - Integer (signed)]---------------------------------------------------------[Number - Integer (signed)]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 3
+        DC8 "Y"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 240
+//  550 	CFGVAR CFG_HDR cfghdr112 = { CFG_INT , "Y" , 0 , 240};
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  551 	CFGVAR unsigned int BCFG_WidgetPosition_Y = 0; // Default
+BCFG_WidgetPosition_Y:
+        DATA
+        DC32 0
+//  552 	
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 9
+        DC8 ""
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  553 CFGVAR CFG_HDR cfghdr114 = {CFG_LEVEL , "" , 0 , 0 }; // arg3 = End Level
+//  554 //****************************************************************************************************************************************************
+//  555 //####################################  End Level - Widget Position ##########################################################################################
+//  556 //
+//  557 //
+//  558 //---[Check Box]----------------------------------------------------------------------------------[Check Box]
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+        DATA
+        DC32 11
+        DC8 "Hide on music"
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC32 0, 0
+//  559 CFGVAR CFG_HDR cfghdr113 = {CFG_CHECKBOX , "Hide on music" , 0 , 0 }; 
+
+        RSEG CONFIG_C:CONST:SORT:ROOT(2)
+//  560 CFGVAR int BCFG_HideOnMusic = 0; // Default (False). 
+BCFG_HideOnMusic:
+        DATA
+        DC32 0
+
+        END
+//  561 
+// 
+// 9 380 bytes in segment CONFIG_C
+// 
+// 9 380 bytes of CONST memory
+//
+//Errors: none
+//Warnings: none
