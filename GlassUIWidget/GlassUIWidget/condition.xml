@@ -1,0 +1,49 @@
+<!-- Exclusively to use with AccuWeather Widget Elf for Sony Ericsson by ©tRaDuZ -->
+<Accuweather>
+	<Forecast>
+		<Condition State="1" Text="Plenty of sunshine"/>
+		<Condition State="2" Text="Mostly Sunny"/>
+		<Condition State="3" Text="Partly Sunny"/>
+		<Condition State="4" Text="Intermittent Clouds"/>
+		<Condition State="5" Text="Hazy Sunshine"/>
+		<Condition State="6" Text="Mostly Cloudy"/>
+		<Condition State="7" Text="Cloudy"/>
+		<Condition State="8" Text="Dreary"/>
+		<Condition State="9" Text="NULL"/>
+		<Condition State="10" Text="NULL"/>
+		<Condition State="11" Text="Fog"/>
+		<Condition State="12" Text="Showers"/>
+		<Condition State="13" Text="Mostly Cloudy with\nShowers"/>
+		<Condition State="14" Text="Partly Sunny with\nShowers"/>
+		<Condition State="15" Text="Thunderstorms"/>
+		<Condition State="16" Text="Mostly Cloudy with\nThunder Showers"/>
+		<Condition State="17" Text="Partly Sunny with\nThunder Showers"/>
+		<Condition State="18" Text="Rain"/>
+		<Condition State="19" Text="Flurries"/>
+		<Condition State="20" Text="Mostly Cloudy with\nFlurries"/>
+		<Condition State="21" Text="Partly Sunny with\nFlurries"/>
+		<Condition State="22" Text="Snow"/>
+		<Condition State="23" Text="Mostly Cloudy with\nSnow"/>
+		<Condition State="24" Text="Ice"/>
+		<Condition State="25" Text="Sleet"/>
+		<Condition State="26" Text="Freezing Rain"/>
+		<Condition State="27" Text="NULL"/>
+		<Condition State="28" Text="NULL"/>
+		<Condition State="29" Text="Rain and Snow"/>
+		<Condition State="30" Text="Hot"/>
+		<Condition State="31" Text="Cold"/>
+		<Condition State="32" Text="Windy"/>
+		<Condition State="33" Text="Clear"/>
+		<Condition State="34" Text="Mostly Clear"/>
+		<Condition State="35" Text="Partly Cloudy"/>
+		<Condition State="36" Text="Intermittent Clouds"/>
+		<Condition State="37" Text="Hazy"/>
+		<Condition State="38" Text="Mostly Cloudy"/>
+		<Condition State="39" Text="Partly Cloudy with\nShowers"/>
+		<Condition State="40" Text="Mostly Cloudy with\nShowers"/>
+		<Condition State="41" Text="Partly Cloudy with\nThunder Showers"/>
+		<Condition State="42" Text="Mostly Cloudy with\nThunder Showers"/>
+		<Condition State="43" Text="Mostly Cloudy with\nFlurries"/>
+		<Condition State="44" Text="Mostly Cloudy with\nSnow"/>
+	</Forecast>
+</Accuweather>

@@ -1,0 +1,3207 @@
+##############################################################################
+#                                                                            #
+# IAR ARM ANSI C/C++ Compiler V4.42A/W32 EVALUATION    08/May/2011  19:48:28 #
+# Copyright 1999-2005 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Cpu mode        =  interwork                                            #
+#    Endian          =  little                                               #
+#    Stack alignment =  4                                                    #
+#    Source file     =  C:\Users\Faby\Desktop\StudyElf\GlassUIWidget\standby #
+#                       \standbyDraw.cpp                                     #
+#    Command line    =  C:\Users\Faby\Desktop\StudyElf\GlassUIWidget\standby #
+#                       \standbyDraw.cpp -D OLDFUNCTIONS -lC                 #
+#                       C:\Users\Faby\Desktop\StudyElf\GlassUIWidget\Debug\L #
+#                       ist\ -lA C:\Users\Faby\Desktop\StudyElf\GlassUIWidge #
+#                       t\Debug\List\ -o C:\Users\Faby\Desktop\StudyElf\Glas #
+#                       sUIWidget\Debug\Obj\ -z2 --no_cse --no_unroll        #
+#                       --no_inline --no_code_motion --no_tbaa               #
+#                       --no_clustering --no_scheduling --debug --cpu_mode   #
+#                       arm --endian little --cpu ARM926EJ-S --stack_align   #
+#                       4 --interwork -e --fpu None --eec++ --dlib_config    #
+#                       "C:\Users\Faby\EmbebedIAR\Embedded Workbench 4.0     #
+#                       Evaluation\ARM\LIB\dl5tpainl8n.h" -I                 #
+#                       "C:\Users\Faby\EmbebedIAR\Embedded Workbench 4.0     #
+#                       Evaluation\ARM\INC\"                                 #
+#    List file       =  C:\Users\Faby\Desktop\StudyElf\GlassUIWidget\Debug\L #
+#                       ist\standbyDraw.lst                                  #
+#    Object file     =  C:\Users\Faby\Desktop\StudyElf\GlassUIWidget\Debug\O #
+#                       bj\standbyDraw.r79                                   #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Users\Faby\Desktop\StudyElf\GlassUIWidget\standby\standbyDraw.cpp
+      1          #include "..\..\include\Lib_Clara.h"
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \   __??Code32?? __code __interwork __atpcs LPARAM::LPARAM(int)
+   \                     ??LPARAM:
+   \   00000000   001080E5           STR      R1,[R0, #+0]
+   \   00000004   1EFF2FE1           BX       LR               ;; return
+      2          #include "..\..\include\Dir.h"
+      3          #include "..\..\include\cfg_items.h"
+      4          #include "..\bcfg\config_data.h"
+      5          #include "..\bcfg\conf_loader.h"
+      6          #include "..\file\openfile.h"
+      7          #include "..\file\fileAnaliser.h"
+      8          #include "..\utils\weather.h"
+      9          #include "..\utils\utils.h"
+     10          #include "..\mybook.h"
+     11          #include "..\classes.h"
+
+   \                                 In segment DATA_I, align 4, align-sorted
+   \   UUID __data IID_IFontManager
+   \                     IID_IFontManager:
+   \   00000000                      DS8 16
+   \   00000010                      REQUIRE `?<Initializer for IID_IFontManager>`
+
+   \                                 In segment DATA_I, align 4, align-sorted
+   \   UUID __data CID_CFontManager
+   \                     CID_CFontManager:
+   \   00000000                      DS8 16
+   \   00000010                      REQUIRE `?<Initializer for CID_CFontManager>`
+
+   \                                 In segment DATA_I, align 4, align-sorted
+   \   UUID __data IID_ITextRenderingManager
+   \                     IID_ITextRenderingManager:
+   \   00000000                      DS8 16
+   \   00000010                      REQUIRE `?<Initializer for IID_ITextRenderingManager>`
+
+   \                                 In segment DATA_I, align 4, align-sorted
+   \   UUID __data CID_CTextRenderingManager
+   \                     CID_CTextRenderingManager:
+   \   00000000                      DS8 16
+   \   00000010                      REQUIRE `?<Initializer for CID_CTextRenderingManager>`
+
+   \                                 In segment DATA_I, align 4, align-sorted
+   \   UUID __data IID_IImageManager
+   \                     IID_IImageManager:
+   \   00000000                      DS8 16
+   \   00000010                      REQUIRE `?<Initializer for IID_IImageManager>`
+
+   \                                 In segment DATA_I, align 4, align-sorted
+   \   UUID __data CID_CImageManager
+   \                     CID_CImageManager:
+   \   00000000                      DS8 16
+   \   00000010                      REQUIRE `?<Initializer for CID_CImageManager>`
+
+   \                                 In segment DATA_I, align 4, align-sorted
+   \   UUID __data IID_IMetaData
+   \                     IID_IMetaData:
+   \   00000000                      DS8 16
+   \   00000010                      REQUIRE `?<Initializer for IID_IMetaData>`
+
+   \                                 In segment DATA_I, align 4, align-sorted
+   \   UUID __data CID_CMetaData
+   \                     CID_CMetaData:
+   \   00000000                      DS8 16
+   \   00000010                      REQUIRE `?<Initializer for CID_CMetaData>`
+
+   \                                 In segment DATA_I, align 4, align-sorted
+   \   UUID __data IID_IIndicationDeviceManager
+   \                     IID_IIndicationDeviceManager:
+   \   00000000                      DS8 16
+   \   00000010                      REQUIRE `?<Initializer for IID_IIndicationDeviceManager`
+
+   \                                 In segment DATA_I, align 4, align-sorted
+   \   UUID __data CID_CIndicationDeviceManager
+   \                     CID_CIndicationDeviceManager:
+   \   00000000                      DS8 16
+   \   00000010                      REQUIRE `?<Initializer for CID_CIndicationDeviceManager`
+     12          #include "standbyDraw.h"
+     13          #include "stdby.h" 
+
+   \                                 In segment DATA_Z, align 4, align-sorted
+   \   void (*__data SIonRedraw)(DISP_OBJ *, int, int, int)
+   \                     SIonRedraw:
+   \   00000000                      DS8 4
+
+   \                                 In segment DATA_Z, align 4, align-sorted
+   \   DISP_OBJ *__data StatusIndication
+   \                     StatusIndication:
+   \   00000000                      DS8 4
+
+   \                                 In segment DATA_I, align 4, align-sorted
+   \   wchar_t *__data stateImages[68]
+   \                     stateImages:
+   \   00000000                      DS8 272
+   \   00000110                      REQUIRE `?<Initializer for stateImages>`
+
+   \                                 In segment DATA_I, align 4, align-sorted
+   \   wchar_t __data statesID[70]
+   \                     statesID:
+   \   00000000                      DS8 140
+   \   0000008C                      REQUIRE `?<Initializer for statesID>`
+
+   \                                 In segment DATA_I, align 4, align-sorted
+   \   wchar_t *__data clockImages[89]
+   \                     clockImages:
+   \   00000000                      DS8 356
+   \   00000164                      REQUIRE `?<Initializer for clockImages>`
+
+   \                                 In segment DATA_I, align 4, align-sorted
+   \   wchar_t __data clockID[89]
+   \                     clockID:
+   \   00000000                      DS8 180
+   \   000000B4                      REQUIRE `?<Initializer for clockID>`
+     14          #include "..\debug.h"
+
+   \                                 In segment DATA_Z, align 4, align-sorted
+     15          MyBook* mybook;
+   \                     mybook:
+   \   00000000                      DS8 4
+     16          
+     17          //<!--bookmanager
+
+   \                                 In segment CODE, align 4, keep-with-next
+     18          void Send_REDRAW_RELEASE() {
+   \                     ??Send_REDRAW_RELEASE:
+   \   00000000   10402DE9           PUSH     {R4,LR}
+     19            REDRAW_RELEASE_MESSAGE * sbm= new REDRAW_RELEASE_MESSAGE;
+   \   00000004   1800A0E3           MOV      R0,#+24
+   \   00000008   ........           _BLF     `??operator new`,`??operator new??rA`
+   \   0000000C   0040B0E1           MOVS     R4,R0
+     20            memset(sbm,0,sizeof(REDRAW_RELEASE_MESSAGE));
+   \   00000010   1820A0E3           MOV      R2,#+24
+   \   00000014   0010A0E3           MOV      R1,#+0
+   \   00000018   0400B0E1           MOVS     R0,R4
+   \   0000001C   120100EF           SWI      +274
+     21            sbm->SB_OldOnRedraw=SIonRedraw;
+   \   00000020   ........           LDR      R0,??DataTable5  ;; SIonRedraw
+   \   00000024   000090E5           LDR      R0,[R0, #+0]
+   \   00000028   000084E5           STR      R0,[R4, #+0]
+     22            sbm->SB_NewOnRedraw=Draw;
+   \   0000002C   ........           LDR      R0,??DataTable1  ;; ??Draw
+   \   00000030   040084E5           STR      R0,[R4, #+4]
+     23            UI_Event_wData(SBY_REDRAW_RELEASE_EVENT ,sbm,(void (*)(void*))mfree_adr());
+   \   00000034   048100EF           SWI      +33028
+   \   00000038   0020B0E1           MOVS     R2,R0
+   \   0000003C   0410B0E1           MOVS     R1,R4
+   \   00000040   E300A0E3           MOV      R0,#+227
+   \   00000044   C00F80E3           ORR      R0,R0,#0x300
+   \   00000048   A90100EF           SWI      +425
+     24          }
+   \   0000004C   1080BDE8           POP      {R4,PC}          ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     25          int ReconfigElf(void *mess ,BOOK *book)
+     26          {
+   \                     ??ReconfigElf:
+   \   00000000   F0402DE9           PUSH     {R4-R7,LR}
+   \   00000004   0040B0E1           MOVS     R4,R0
+   \   00000008   0150B0E1           MOVS     R5,R1
+     27            RECONFIG_EVENT_DATA *reconf=(RECONFIG_EVENT_DATA *)mess;
+   \   0000000C   0460B0E1           MOVS     R6,R4
+     28            int result=0;
+   \   00000010   0000A0E3           MOV      R0,#+0
+   \   00000014   0070B0E1           MOVS     R7,R0
+     29            if (wstrcmpi(reconf->path,successed_config_path)==0 && wstrcmpi(reconf->name,successed_config_name)==0)
+   \   00000018   64009FE5           LDR      R0,??ReconfigElf_1  ;; successed_config_path
+   \   0000001C   001090E5           LDR      R1,[R0, #+0]
+   \   00000020   0600B0E1           MOVS     R0,R6
+   \   00000024   9F0200EF           SWI      +671
+   \   00000028   000050E3           CMP      R0,#+0
+   \   0000002C   1200001A           BNE      ??ReconfigElf_2
+   \   00000030   50009FE5           LDR      R0,??ReconfigElf_1+0x4  ;; successed_config_name
+   \   00000034   001090E5           LDR      R1,[R0, #+0]
+   \   00000038   800096E2           ADDS     R0,R6,#+128
+   \   0000003C   9F0200EF           SWI      +671
+   \   00000040   000050E3           CMP      R0,#+0
+   \   00000044   0C00001A           BNE      ??ReconfigElf_2
+     30            {
+     31              InitConfig();
+   \   00000048   ........           _BLF     ??InitConfig,??InitConfig??rA
+     32              mybook->setHour(-1);
+   \   0000004C   0010E0E3           MVN      R1,#+0
+   \   00000050   ........           LDR      R0,??DataTable51  ;; mybook
+   \   00000054   000090E5           LDR      R0,[R0, #+0]
+   \   00000058   ........           _BLF     ??setHour,??setHour??rA
+     33              DestroyImages();
+   \   0000005C   ........           BL       ??DestroyImages
+     34              InitImages();
+   \   00000060   ........           BL       ??InitImages
+     35              mybook->loadDateNames();
+   \   00000064   ........           LDR      R0,??DataTable51  ;; mybook
+   \   00000068   000090E5           LDR      R0,[R0, #+0]
+   \   0000006C   ........           _BLF     ??loadDateNames,??loadDateNames??rA
+     36              makeDateMask();
+   \   00000070   ........           BL       ??makeDateMask
+     37              result=1;
+   \   00000074   0100A0E3           MOV      R0,#+1
+   \   00000078   0070B0E1           MOVS     R7,R0
+     38            }
+     39            return(result);
+   \                     ??ReconfigElf_2:
+   \   0000007C   0700B0E1           MOVS     R0,R7
+   \   00000080   F080BDE8           POP      {R4-R7,PC}       ;; return
+   \                     ??ReconfigElf_1:
+   \   00000084   ........           DC32     successed_config_path
+   \   00000088   ........           DC32     successed_config_name
+     40          }
+     41          
+     42          //-->
+     43          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     44          void drawOnStby(wchar_t* message, int fontSize, int align, int x, int y, int textColor ) {
+   \                     ??drawOnStby:
+   \   00000000   F24F2DE9           PUSH     {R1,R4-R11,LR}
+   \   00000004   10D04DE2           SUB      SP,SP,#+16
+   \   00000008   0040B0E1           MOVS     R4,R0
+   \   0000000C   0250B0E1           MOVS     R5,R2
+   \   00000010   0360B0E1           MOVS     R6,R3
+   \   00000014   38709DE5           LDR      R7,[SP, #+56]
+   \   00000018   3C809DE5           LDR      R8,[SP, #+60]
+     45            int displayWidth = Display_GetWidth( 0 );
+   \   0000001C   0000A0E3           MOV      R0,#+0
+   \   00000020   590200EF           SWI      +601
+   \   00000024   08008DE5           STR      R0,[SP, #+8]
+     46            int displayHeigth = Display_GetHeight( 0 );
+   \   00000028   0000A0E3           MOV      R0,#+0
+   \   0000002C   580200EF           SWI      +600
+   \   00000030   0C008DE5           STR      R0,[SP, #+12]
+     47            int msgSize = wstrlen(message);
+   \   00000034   0400B0E1           MOVS     R0,R4
+   \   00000038   570100EF           SWI      +343
+   \   0000003C   0090B0E1           MOVS     R9,R0
+     48            if (searchLine(message)) {
+   \   00000040   0400B0E1           MOVS     R0,R4
+   \   00000044   ........           _BLF     ??searchLine,??searchLine??rA
+   \   00000048   000050E3           CMP      R0,#+0
+   \   0000004C   4300000A           BEQ      ??drawOnStby_1
+     49              int indexLine = wGetIndexOfLine(message);
+   \   00000050   0400B0E1           MOVS     R0,R4
+   \   00000054   ........           _BLF     ??wGetIndexOfLine,??wGetIndexOfLine??rA
+   \   00000058   00008DE5           STR      R0,[SP, #+0]
+     50              wchar_t* line1 = getWSubStr(message,0,indexLine-1);
+   \   0000005C   00009DE5           LDR      R0,[SP, #+0]
+   \   00000060   012050E2           SUBS     R2,R0,#+1
+   \   00000064   0010A0E3           MOV      R1,#+0
+   \   00000068   0400B0E1           MOVS     R0,R4
+   \   0000006C   ........           _BLF     ??getWSubStr,??getWSubStr??rA
+   \   00000070   00A0B0E1           MOVS     R10,R0
+     51              wchar_t* line2 = getWSubStr(message,indexLine+2,wstrlen(message));
+   \   00000074   0400B0E1           MOVS     R0,R4
+   \   00000078   570100EF           SWI      +343
+   \   0000007C   0020B0E1           MOVS     R2,R0
+   \   00000080   00009DE5           LDR      R0,[SP, #+0]
+   \   00000084   021090E2           ADDS     R1,R0,#+2
+   \   00000088   0400B0E1           MOVS     R0,R4
+   \   0000008C   ........           _BLF     ??getWSubStr,??getWSubStr??rA
+   \   00000090   00B0B0E1           MOVS     R11,R0
+     52              msgSize = wstrlen(line1);
+   \   00000094   0A00B0E1           MOVS     R0,R10
+   \   00000098   570100EF           SWI      +343
+   \   0000009C   0090B0E1           MOVS     R9,R0
+     53              
+     54              TEXTID drawText = TextID_Create(line1, ENC_UCS2 , msgSize);
+   \   000000A0   0920B0E1           MOVS     R2,R9
+   \   000000A4   0010A0E3           MOV      R1,#+0
+   \   000000A8   0A00B0E1           MOVS     R0,R10
+   \   000000AC   5D0100EF           SWI      +349
+   \   000000B0   04008DE5           STR      R0,[SP, #+4]
+     55              SetFont(fontSize);
+   \   000000B4   10009DE5           LDR      R0,[SP, #+16]
+   \   000000B8   F10100EF           SWI      +497
+     56              DrawString( drawText , align , x , y , displayWidth, displayHeigth , 60 , 0x05 , textColor , textColor );
+   \   000000BC   0800B0E1           MOVS     R0,R8
+   \   000000C0   01002DE9           PUSH     {R0}
+   \   000000C4   0800B0E1           MOVS     R0,R8
+   \   000000C8   01002DE9           PUSH     {R0}
+   \   000000CC   0500A0E3           MOV      R0,#+5
+   \   000000D0   01002DE9           PUSH     {R0}
+   \   000000D4   3C00A0E3           MOV      R0,#+60
+   \   000000D8   01002DE9           PUSH     {R0}
+   \   000000DC   1C009DE5           LDR      R0,[SP, #+28]
+   \   000000E0   01002DE9           PUSH     {R0}
+   \   000000E4   1C009DE5           LDR      R0,[SP, #+28]
+   \   000000E8   01002DE9           PUSH     {R0}
+   \   000000EC   0730B0E1           MOVS     R3,R7
+   \   000000F0   0620B0E1           MOVS     R2,R6
+   \   000000F4   0510B0E1           MOVS     R1,R5
+   \   000000F8   1C009DE5           LDR      R0,[SP, #+28]
+   \   000000FC   ED0100EF           SWI      +493
+   \   00000100   18D08DE2           ADD      SP,SP,#+24       ;; stack cleaning
+     57              TextID_Destroy( drawText );
+   \   00000104   04009DE5           LDR      R0,[SP, #+4]
+   \   00000108   610100EF           SWI      +353
+     58          
+     59              delete line1; 
+   \   0000010C   0A00B0E1           MOVS     R0,R10
+   \   00000110   ........           _BLF     `??operator delete`,`??operator delete??rA`
+     60              line1 = NULL;
+   \   00000114   0000A0E3           MOV      R0,#+0
+   \   00000118   00A0B0E1           MOVS     R10,R0
+     61              drawOnStby(line2, fontSize, align, x, y + BCFG_Tags_DayState_LineSpacing, textColor );
+   \   0000011C   0800B0E1           MOVS     R0,R8
+   \   00000120   01002DE9           PUSH     {R0}
+   \   00000124   A8009FE5           LDR      R0,??drawOnStby_2  ;; BCFG_Tags_DayState_LineSpacing
+   \   00000128   000090E5           LDR      R0,[R0, #+0]
+   \   0000012C   070090E0           ADDS     R0,R0,R7
+   \   00000130   01002DE9           PUSH     {R0}
+   \   00000134   0630B0E1           MOVS     R3,R6
+   \   00000138   0520B0E1           MOVS     R2,R5
+   \   0000013C   18109DE5           LDR      R1,[SP, #+24]
+   \   00000140   0B00B0E1           MOVS     R0,R11
+   \   00000144   ADFFFFEB           BL       ??drawOnStby
+   \   00000148   08D08DE2           ADD      SP,SP,#+8        ;; stack cleaning
+     62              delete line2;
+   \   0000014C   0B00B0E1           MOVS     R0,R11
+   \   00000150   ........           _BLF     `??operator delete`,`??operator delete??rA`
+     63              line2 = NULL;
+   \   00000154   0000A0E3           MOV      R0,#+0
+   \   00000158   00B0B0E1           MOVS     R11,R0
+   \   0000015C   1A0000EA           B        ??drawOnStby_3
+     64            }
+     65            else {
+     66              TEXTID drawText = TextID_Create(message, ENC_UCS2 , msgSize);
+   \                     ??drawOnStby_1:
+   \   00000160   0920B0E1           MOVS     R2,R9
+   \   00000164   0010A0E3           MOV      R1,#+0
+   \   00000168   0400B0E1           MOVS     R0,R4
+   \   0000016C   5D0100EF           SWI      +349
+   \   00000170   00A0B0E1           MOVS     R10,R0
+     67              SetFont(fontSize);
+   \   00000174   10009DE5           LDR      R0,[SP, #+16]
+   \   00000178   F10100EF           SWI      +497
+     68              DrawString( drawText , align , x , y , displayWidth, displayHeigth , 60 , 0x05 , textColor , textColor );
+   \   0000017C   0800B0E1           MOVS     R0,R8
+   \   00000180   01002DE9           PUSH     {R0}
+   \   00000184   0800B0E1           MOVS     R0,R8
+   \   00000188   01002DE9           PUSH     {R0}
+   \   0000018C   0500A0E3           MOV      R0,#+5
+   \   00000190   01002DE9           PUSH     {R0}
+   \   00000194   3C00A0E3           MOV      R0,#+60
+   \   00000198   01002DE9           PUSH     {R0}
+   \   0000019C   1C009DE5           LDR      R0,[SP, #+28]
+   \   000001A0   01002DE9           PUSH     {R0}
+   \   000001A4   1C009DE5           LDR      R0,[SP, #+28]
+   \   000001A8   01002DE9           PUSH     {R0}
+   \   000001AC   0730B0E1           MOVS     R3,R7
+   \   000001B0   0620B0E1           MOVS     R2,R6
+   \   000001B4   0510B0E1           MOVS     R1,R5
+   \   000001B8   0A00B0E1           MOVS     R0,R10
+   \   000001BC   ED0100EF           SWI      +493
+   \   000001C0   18D08DE2           ADD      SP,SP,#+24       ;; stack cleaning
+     69              TextID_Destroy( drawText );
+   \   000001C4   0A00B0E1           MOVS     R0,R10
+   \   000001C8   610100EF           SWI      +353
+     70            }
+     71          }
+   \                     ??drawOnStby_3:
+   \   000001CC   14D08DE2           ADD      SP,SP,#+20       ;; stack cleaning
+   \   000001D0   F08FBDE8           POP      {R4-R11,PC}      ;; return
+   \                     ??drawOnStby_2:
+   \   000001D4   ........           DC32     BCFG_Tags_DayState_LineSpacing
+     72          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     73          void Draw(DISP_OBJ* db,int r1, int r2,int r3) { //change lines for w800
+   \                     ??Draw:
+   \   00000000   F0402DE9           PUSH     {R4-R7,LR}
+   \   00000004   0040B0E1           MOVS     R4,R0
+   \   00000008   0150B0E1           MOVS     R5,R1
+   \   0000000C   0260B0E1           MOVS     R6,R2
+   \   00000010   0370B0E1           MOVS     R7,R3
+     74            if (SIonRedraw) SIonRedraw(db,r1,r2,r3);
+   \   00000014   ........           LDR      R0,??DataTable5  ;; SIonRedraw
+   \   00000018   000090E5           LDR      R0,[R0, #+0]
+   \   0000001C   000050E3           CMP      R0,#+0
+   \   00000020   0600000A           BEQ      ??Draw_1
+   \   00000024   0730B0E1           MOVS     R3,R7
+   \   00000028   0620B0E1           MOVS     R2,R6
+   \   0000002C   0510B0E1           MOVS     R1,R5
+   \   00000030   0400B0E1           MOVS     R0,R4
+   \   00000034   ........           LDR      R12,??DataTable5  ;; SIonRedraw
+   \   00000038   00C09CE5           LDR      R12,[R12, #+0]
+   \   0000003C   3CFF2FE1           BLX      R12
+     75            (!FindBook(get_IsAudioPlayerBook()) ? drawWeatherContents() : mybook->donothing());
+   \                     ??Draw_1:
+   \   00000040   8B8200EF           SWI      +33419
+   \   00000044   300100EF           SWI      +304
+   \   00000048   000050E3           CMP      R0,#+0
+   \   0000004C   0100001A           BNE      ??Draw_2
+   \   00000050   ........           BL       ??drawWeatherContents
+   \   00000054   020000EA           B        ??Draw_3
+   \                     ??Draw_2:
+   \   00000058   ........           LDR      R0,??DataTable51  ;; mybook
+   \   0000005C   000090E5           LDR      R0,[R0, #+0]
+   \   00000060   ........           _BLF     ??donothing,??donothing??rA
+     76          
+     77          } 
+   \                     ??Draw_3:
+   \   00000064   F080BDE8           POP      {R4-R7,PC}       ;; return
+     78          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     79          wchar_t* returnMask(const wchar_t* mask, int tag, bool contentIf, float (*func)(int) , int cond=0) {
+   \                     ??returnMask:
+   \   00000000   F04F2DE9           PUSH     {R4-R11,LR}
+   \   00000004   0040B0E1           MOVS     R4,R0
+   \   00000008   0150B0E1           MOVS     R5,R1
+   \   0000000C   02A0B0E1           MOVS     R10,R2
+   \   00000010   0360B0E1           MOVS     R6,R3
+   \   00000014   24709DE5           LDR      R7,[SP, #+36]
+     80            int sizeOfTemp = wstrlen(mask) + intlen(tag);
+   \   00000018   0400B0E1           MOVS     R0,R4
+   \   0000001C   570100EF           SWI      +343
+   \   00000020   00B0B0E1           MOVS     R11,R0
+   \   00000024   0500B0E1           MOVS     R0,R5
+   \   00000028   ........           _BLF     ??intlen,??intlen??rA
+   \   0000002C   0B0090E0           ADDS     R0,R0,R11
+   \   00000030   0080B0E1           MOVS     R8,R0
+     81            wchar_t* newMask = new wchar_t[ sizeOfTemp + 0x1 ];
+   \   00000034   010098E2           ADDS     R0,R8,#+1
+   \   00000038   0210A0E3           MOV      R1,#+2
+   \   0000003C   910010E0           MULS     R0,R1,R0
+   \   00000040   ........           _BLF     `??operator new[]`,`??operator new[]??rA`
+   \   00000044   0090B0E1           MOVS     R9,R0
+     82            snwprintf( newMask, sizeOfTemp, mask, ( contentIf == cond ? tag : (*func)(tag) ) );
+   \   00000048   0A00B0E1           MOVS     R0,R10
+   \   0000004C   070050E1           CMP      R0,R7
+   \   00000050   0200001A           BNE      ??returnMask_1
+   \   00000054   0500B0E1           MOVS     R0,R5
+   \   00000058   ........           _BLF     __longToFloat,??__longToFloat??rA
+   \   0000005C   020000EA           B        ??returnMask_2
+   \                     ??returnMask_1:
+   \   00000060   0500B0E1           MOVS     R0,R5
+   \   00000064   0610B0E1           MOVS     R1,R6
+   \   00000068   31FF2FE1           BLX      R1
+   \                     ??returnMask_2:
+   \   0000006C   ........           _BLF     __floatToDouble,??__floatToDouble??rA
+   \   00000070   03002DE9           PUSH     {R0,R1}
+   \   00000074   0420B0E1           MOVS     R2,R4
+   \   00000078   0810B0E1           MOVS     R1,R8
+   \   0000007C   0900B0E1           MOVS     R0,R9
+   \   00000080   0800BDE8           POP      {R3}
+   \   00000084   150100EF           SWI      +277
+   \   00000088   04D08DE2           ADD      SP,SP,#+4        ;; stack cleaning
+     83            newMask[sizeOfTemp] = 0;
+   \   0000008C   0200A0E3           MOV      R0,#+2
+   \   00000090   909821E0           MLA      R1,R0,R8,R9
+   \   00000094   0000A0E3           MOV      R0,#+0
+   \   00000098   B000C1E1           STRH     R0,[R1, #+0]
+     84            return newMask;
+   \   0000009C   0900B0E1           MOVS     R0,R9
+   \   000000A0   F08FBDE8           POP      {R4-R11,PC}      ;; return
+     85          }
+     86          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     87          void ifDrawNoMask(bool contentIf, wchar_t* message, int fontSize, int align, int x, int y, unsigned int color) {
+   \                     ??ifDrawNoMask:
+   \   00000000   F0472DE9           PUSH     {R4-R10,LR}
+   \   00000004   0040B0E1           MOVS     R4,R0
+   \   00000008   0150B0E1           MOVS     R5,R1
+   \   0000000C   0260B0E1           MOVS     R6,R2
+   \   00000010   0370B0E1           MOVS     R7,R3
+   \   00000014   20809DE5           LDR      R8,[SP, #+32]
+   \   00000018   24909DE5           LDR      R9,[SP, #+36]
+   \   0000001C   28A09DE5           LDR      R10,[SP, #+40]
+     88            if (contentIf)
+   \   00000020   000054E3           CMP      R4,#+0
+   \   00000024   0900000A           BEQ      ??ifDrawNoMask_1
+     89              drawOnStby( message, fontSize, align, x, y, color);
+   \   00000028   0A00B0E1           MOVS     R0,R10
+   \   0000002C   01002DE9           PUSH     {R0}
+   \   00000030   0900B0E1           MOVS     R0,R9
+   \   00000034   01002DE9           PUSH     {R0}
+   \   00000038   0830B0E1           MOVS     R3,R8
+   \   0000003C   0720B0E1           MOVS     R2,R7
+   \   00000040   0610B0E1           MOVS     R1,R6
+   \   00000044   0500B0E1           MOVS     R0,R5
+   \   00000048   ........           BL       ??drawOnStby
+   \   0000004C   08D08DE2           ADD      SP,SP,#+8        ;; stack cleaning
+     90          }
+   \                     ??ifDrawNoMask_1:
+   \   00000050   F087BDE8           POP      {R4-R10,PC}      ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     91          void ifDrawImage( bool _drawImage, int x, int y, const wchar_t& imgID) {
+   \                     ??ifDrawImage:
+   \   00000000   F0402DE9           PUSH     {R4-R7,LR}
+   \   00000004   0040B0E1           MOVS     R4,R0
+   \   00000008   0150B0E1           MOVS     R5,R1
+   \   0000000C   0260B0E1           MOVS     R6,R2
+   \   00000010   0370B0E1           MOVS     R7,R3
+     92            if (_drawImage)
+   \   00000014   000054E3           CMP      R4,#+0
+   \   00000018   0B00000A           BEQ      ??ifDrawImage_1
+     93              DrawImage(mybook->getGC(), x , y, imgID );
+   \   0000001C   ........           LDR      R0,??DataTable51  ;; mybook
+   \   00000020   000090E5           LDR      R0,[R0, #+0]
+   \   00000024   ........           _BLF     ??getGC,??getGC??rA
+   \   00000028   B010D7E1           LDRH     R1,[R7, #+0]
+   \   0000002C   02002DE9           PUSH     {R1}
+   \   00000030   0010A0E3           MOV      R1,#+0
+   \   00000034   02002DE9           PUSH     {R1}
+   \   00000038   0030A0E3           MOV      R3,#+0
+   \   0000003C   0620B0E1           MOVS     R2,R6
+   \   00000040   0510B0E1           MOVS     R1,R5
+   \   00000044   400100EF           SWI      +320
+   \   00000048   08D08DE2           ADD      SP,SP,#+8        ;; stack cleaning
+     94          }
+   \                     ??ifDrawImage_1:
+   \   0000004C   F080BDE8           POP      {R4-R7,PC}       ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     95          wchar_t* getStateByHour(int hour) {
+   \                     ??getStateByHour:
+   \   00000000   28D04DE2           SUB      SP,SP,#+40
+   \   00000004   0010B0E1           MOVS     R1,R0
+     96            wchar_t* states[0x5] = { L"Morning", L"Noon", L"Afternoon", L"Evening", L"Night" };
+   \   00000008   0D00B0E1           MOVS     R0,SP
+   \   0000000C   94209FE5           LDR      R2,??getStateByHour_1  ;; `?<Constant {&L"\\x4d\\x6f\\x72\\x6e\\x69\\x6e\\x67", `
+   \   00000010   14C0A0E3           MOV      R12,#+20
+   \                     ??getStateByHour_2:
+   \   00000014   04C05CE2           SUBS     R12,R12,#+4
+   \   00000018   0C3092E7           LDR      R3,[R2, R12]
+   \   0000001C   0C3080E7           STR      R3,[R0, R12]
+   \   00000020   FBFFFF1A           BNE      ??getStateByHour_2
+     97            int hourState[0x5] = { 0, 12, 13, 16, 18 };
+   \   00000024   14008DE2           ADD      R0,SP,#+20
+   \   00000028   7C209FE5           LDR      R2,??getStateByHour_1+0x4  ;; `?<Constant {0, 12, 13, 16, 18}>`
+   \   0000002C   14C0A0E3           MOV      R12,#+20
+   \                     ??getStateByHour_3:
+   \   00000030   04C05CE2           SUBS     R12,R12,#+4
+   \   00000034   0C3092E7           LDR      R3,[R2, R12]
+   \   00000038   0C3080E7           STR      R3,[R0, R12]
+   \   0000003C   FBFFFF1A           BNE      ??getStateByHour_3
+     98            for (int i=0;i<4;i++)
+   \   00000040   0020A0E3           MOV      R2,#+0
+   \   00000044   0200B0E1           MOVS     R0,R2
+   \                     ??getStateByHour_4:
+   \   00000048   040050E3           CMP      R0,#+4
+   \   0000004C   120000AA           BGE      ??getStateByHour_5
+     99              if (hour >= hourState[i] && hour < hourState[i + 0x1])
+   \   00000050   0420A0E3           MOV      R2,#+4
+   \   00000054   14308DE2           ADD      R3,SP,#+20
+   \   00000058   923023E0           MLA      R3,R2,R0,R3
+   \   0000005C   002093E5           LDR      R2,[R3, #+0]
+   \   00000060   020051E1           CMP      R1,R2
+   \   00000064   0A0000BA           BLT      ??getStateByHour_6
+   \   00000068   0420A0E3           MOV      R2,#+4
+   \   0000006C   14308DE2           ADD      R3,SP,#+20
+   \   00000070   923023E0           MLA      R3,R2,R0,R3
+   \   00000074   042093E5           LDR      R2,[R3, #+4]
+   \   00000078   020051E1           CMP      R1,R2
+   \   0000007C   040000AA           BGE      ??getStateByHour_6
+    100                return states[i];
+   \   00000080   0420A0E3           MOV      R2,#+4
+   \   00000084   0D30B0E1           MOVS     R3,SP
+   \   00000088   923020E0           MLA      R0,R2,R0,R3
+   \   0000008C   000090E5           LDR      R0,[R0, #+0]
+   \   00000090   020000EA           B        ??getStateByHour_7
+   \                     ??getStateByHour_6:
+   \   00000094   010090E2           ADDS     R0,R0,#+1
+   \   00000098   EAFFFFEA           B        ??getStateByHour_4
+    101            return states[0x4];
+   \                     ??getStateByHour_5:
+   \   0000009C   10009DE5           LDR      R0,[SP, #+16]
+   \                     ??getStateByHour_7:
+   \   000000A0   28D08DE2           ADD      SP,SP,#+40       ;; stack cleaning
+   \   000000A4   1EFF2FE1           BX       LR               ;; return
+   \                     ??getStateByHour_1:
+   \   000000A8   ........           DC32     `?<Constant {&L"\\x4d\\x6f\\x72\\x6e\\x69\\x6e\\x67", `
+   \   000000AC   ........           DC32     `?<Constant {0, 12, 13, 16, 18}>`
+    102          }
+
+   \                                 In segment CODE, align 4, keep-with-next
+    103          void drawClock(int hour, int min) {
+   \                     ??drawClock:
+   \   00000000   F0402DE9           PUSH     {R4-R7,LR}
+   \   00000004   0050B0E1           MOVS     R5,R0
+   \   00000008   0160B0E1           MOVS     R6,R1
+    104            ifDrawImage( BCFG_Images_Clock_Enable, BCFG_Images_Clock_Position_X, BCFG_Images_Clock_Position_Y,
+    105                        clockID[(min < 1 && min > 59 ? 0x0 : min-0x1)] );
+   \   0000000C   010056E3           CMP      R6,#+1
+   \   00000010   030000AA           BGE      ??drawClock_1
+   \   00000014   3C0056E3           CMP      R6,#+60
+   \   00000018   010000BA           BLT      ??drawClock_1
+   \   0000001C   0010A0E3           MOV      R1,#+0
+   \   00000020   000000EA           B        ??drawClock_2
+   \                     ??drawClock_1:
+   \   00000024   011056E2           SUBS     R1,R6,#+1
+   \                     ??drawClock_2:
+   \   00000028   10029FE5           LDR      R0,??drawClock_3+0x4  ;; BCFG_Images_Clock_Enable
+   \   0000002C   000090E5           LDR      R0,[R0, #+0]
+   \   00000030   000050E3           CMP      R0,#+0
+   \   00000034   0100000A           BEQ      ??drawClock_4
+   \   00000038   0100A0E3           MOV      R0,#+1
+   \   0000003C   000000EA           B        ??drawClock_5
+   \                     ??drawClock_4:
+   \   00000040   0000A0E3           MOV      R0,#+0
+   \                     ??drawClock_5:
+   \   00000044   0220A0E3           MOV      R2,#+2
+   \   00000048   ........           LDR      R3,??DataTable80  ;; clockID
+   \   0000004C   923123E0           MLA      R3,R2,R1,R3
+   \   00000050   EC119FE5           LDR      R1,??drawClock_3+0x8  ;; BCFG_Images_Clock_Position_Y
+   \   00000054   002091E5           LDR      R2,[R1, #+0]
+   \   00000058   E8119FE5           LDR      R1,??drawClock_3+0xC  ;; BCFG_Images_Clock_Position_X
+   \   0000005C   001091E5           LDR      R1,[R1, #+0]
+   \   00000060   ........           BL       ??ifDrawImage
+    106          
+    107            wchar_t* tempHour = new wchar_t[0x3];
+   \   00000064   0600A0E3           MOV      R0,#+6
+   \   00000068   ........           _BLF     `??operator new[]`,`??operator new[]??rA`
+   \   0000006C   0070B0E1           MOVS     R7,R0
+    108            memset( tempHour, 0, sizeof(wchar_t)*0x3);
+   \   00000070   0620A0E3           MOV      R2,#+6
+   \   00000074   0010A0E3           MOV      R1,#+0
+   \   00000078   0700B0E1           MOVS     R0,R7
+   \   0000007C   120100EF           SWI      +274
+    109            snwprintf( tempHour, 3, L"%d", hour);
+   \   00000080   0530B0E1           MOVS     R3,R5
+   \   00000084   C0219FE5           LDR      R2,??drawClock_3+0x10  ;; `?<Constant L"\\x25\\x64">`
+   \   00000088   0310A0E3           MOV      R1,#+3
+   \   0000008C   0700B0E1           MOVS     R0,R7
+   \   00000090   150100EF           SWI      +277
+    110            ifDrawNoMask( BCFG_Time_Hour_Enable, tempHour, BCFG_Time_Hour_FontSize, BCFG_Time_Hour_Align,
+    111                         BCFG_Time_Hour_Position_X, BCFG_Time_Hour_Position_Y - 16, BCFG_Time_Hour_TextColor );
+   \   00000094   B4019FE5           LDR      R0,??drawClock_3+0x14  ;; BCFG_Time_Hour_Enable
+   \   00000098   000090E5           LDR      R0,[R0, #+0]
+   \   0000009C   000050E3           CMP      R0,#+0
+   \   000000A0   0100000A           BEQ      ??drawClock_6
+   \   000000A4   0100A0E3           MOV      R0,#+1
+   \   000000A8   000000EA           B        ??drawClock_7
+   \                     ??drawClock_6:
+   \   000000AC   0000A0E3           MOV      R0,#+0
+   \                     ??drawClock_7:
+   \   000000B0   9C119FE5           LDR      R1,??drawClock_3+0x18  ;; BCFG_Time_Hour_TextColor
+   \   000000B4   001091E5           LDR      R1,[R1, #+0]
+   \   000000B8   02002DE9           PUSH     {R1}
+   \   000000BC   94119FE5           LDR      R1,??drawClock_3+0x1C  ;; BCFG_Time_Hour_Position_Y
+   \   000000C0   001091E5           LDR      R1,[R1, #+0]
+   \   000000C4   101051E2           SUBS     R1,R1,#+16
+   \   000000C8   02002DE9           PUSH     {R1}
+   \   000000CC   88119FE5           LDR      R1,??drawClock_3+0x20  ;; BCFG_Time_Hour_Position_X
+   \   000000D0   001091E5           LDR      R1,[R1, #+0]
+   \   000000D4   02002DE9           PUSH     {R1}
+   \   000000D8   80119FE5           LDR      R1,??drawClock_3+0x24  ;; BCFG_Time_Hour_Align
+   \   000000DC   003091E5           LDR      R3,[R1, #+0]
+   \   000000E0   7C119FE5           LDR      R1,??drawClock_3+0x28  ;; BCFG_Time_Hour_FontSize
+   \   000000E4   002091E5           LDR      R2,[R1, #+0]
+   \   000000E8   0710B0E1           MOVS     R1,R7
+   \   000000EC   ........           BL       ??ifDrawNoMask
+   \   000000F0   0CD08DE2           ADD      SP,SP,#+12       ;; stack cleaning
+    112            ifDrawNoMask( BCFG_Time_State_Enable, getStateByHour(hour) , BCFG_Time_State_FontSize, BCFG_Time_State_Align,
+    113                         BCFG_Time_State_Position_X, BCFG_Time_State_Position_Y - 16, BCFG_Time_State_TextColor );
+   \   000000F4   0500B0E1           MOVS     R0,R5
+   \   000000F8   ........           BL       ??getStateByHour
+   \   000000FC   0010B0E1           MOVS     R1,R0
+   \   00000100   60019FE5           LDR      R0,??drawClock_3+0x2C  ;; BCFG_Time_State_Enable
+   \   00000104   000090E5           LDR      R0,[R0, #+0]
+   \   00000108   000050E3           CMP      R0,#+0
+   \   0000010C   0100000A           BEQ      ??drawClock_8
+   \   00000110   0100A0E3           MOV      R0,#+1
+   \   00000114   000000EA           B        ??drawClock_9
+   \                     ??drawClock_8:
+   \   00000118   0000A0E3           MOV      R0,#+0
+   \                     ??drawClock_9:
+   \   0000011C   48219FE5           LDR      R2,??drawClock_3+0x30  ;; BCFG_Time_State_TextColor
+   \   00000120   002092E5           LDR      R2,[R2, #+0]
+   \   00000124   04002DE9           PUSH     {R2}
+   \   00000128   40219FE5           LDR      R2,??drawClock_3+0x34  ;; BCFG_Time_State_Position_Y
+   \   0000012C   002092E5           LDR      R2,[R2, #+0]
+   \   00000130   102052E2           SUBS     R2,R2,#+16
+   \   00000134   04002DE9           PUSH     {R2}
+   \   00000138   34219FE5           LDR      R2,??drawClock_3+0x38  ;; BCFG_Time_State_Position_X
+   \   0000013C   002092E5           LDR      R2,[R2, #+0]
+   \   00000140   04002DE9           PUSH     {R2}
+   \   00000144   2C219FE5           LDR      R2,??drawClock_3+0x3C  ;; BCFG_Time_State_Align
+   \   00000148   003092E5           LDR      R3,[R2, #+0]
+   \   0000014C   28219FE5           LDR      R2,??drawClock_3+0x40  ;; BCFG_Time_State_FontSize
+   \   00000150   002092E5           LDR      R2,[R2, #+0]
+   \   00000154   ........           BL       ??ifDrawNoMask
+   \   00000158   0CD08DE2           ADD      SP,SP,#+12       ;; stack cleaning
+    114            delete tempHour;  tempHour = NULL;
+   \   0000015C   0700B0E1           MOVS     R0,R7
+   \   00000160   ........           _BLF     `??operator delete`,`??operator delete??rA`
+   \   00000164   0000A0E3           MOV      R0,#+0
+   \   00000168   0070B0E1           MOVS     R7,R0
+    115            
+    116            tempHour = new wchar_t[0x7];
+   \   0000016C   0E00A0E3           MOV      R0,#+14
+   \   00000170   ........           _BLF     `??operator new[]`,`??operator new[]??rA`
+   \   00000174   0070B0E1           MOVS     R7,R0
+    117            memset( tempHour, 0, sizeof(wchar_t)*0x7 );
+   \   00000178   0E20A0E3           MOV      R2,#+14
+   \   0000017C   0010A0E3           MOV      R1,#+0
+   \   00000180   0700B0E1           MOVS     R0,R7
+   \   00000184   120100EF           SWI      +274
+    118            wchar_t* hourMask = L"";
+   \   00000188   2B0F8FE2           ADR      R0,??drawClock_3  ;; 0x00, 0x00
+   \   0000018C   0040B0E1           MOVS     R4,R0
+    119            (min > 10 ? hourMask = L"%d:%d" : L"%d:0%d" );
+   \   00000190   0B0056E3           CMP      R6,#+11
+   \   00000194   020000BA           BLT      ??drawClock_10
+   \   00000198   E0009FE5           LDR      R0,??drawClock_3+0x44  ;; `?<Constant L"\\x25\\x64\\x3a\\x25\\x64">`
+   \   0000019C   0040B0E1           MOVS     R4,R0
+   \   000001A0   000000EA           B        ??drawClock_11
+   \                     ??drawClock_10:
+   \   000001A4   D8009FE5           LDR      R0,??drawClock_3+0x48  ;; `?<Constant L"\\x25\\x64\\x3a\\x30\\x25\\x64">`
+    120            snwprintf( tempHour, 7, hourMask, hour, min);
+   \                     ??drawClock_11:
+   \   000001A8   0600B0E1           MOVS     R0,R6
+   \   000001AC   01002DE9           PUSH     {R0}
+   \   000001B0   0530B0E1           MOVS     R3,R5
+   \   000001B4   0420B0E1           MOVS     R2,R4
+   \   000001B8   0710A0E3           MOV      R1,#+7
+   \   000001BC   0700B0E1           MOVS     R0,R7
+   \   000001C0   150100EF           SWI      +277
+   \   000001C4   04D08DE2           ADD      SP,SP,#+4        ;; stack cleaning
+    121            
+    122            ifDrawNoMask( BCFG_Time_DigitalClock_Enable, tempHour, BCFG_Time_DigitalClock_FontSize, BCFG_Time_DigitalClock_Align,
+    123                         BCFG_Time_DigitalClock_Position_X, BCFG_Time_DigitalClock_Position_Y - 16, BCFG_Time_DigitalClock_TextColor );
+   \   000001C8   B8009FE5           LDR      R0,??drawClock_3+0x4C  ;; BCFG_Time_DigitalClock_Enable
+   \   000001CC   000090E5           LDR      R0,[R0, #+0]
+   \   000001D0   000050E3           CMP      R0,#+0
+   \   000001D4   0100000A           BEQ      ??drawClock_12
+   \   000001D8   0100A0E3           MOV      R0,#+1
+   \   000001DC   000000EA           B        ??drawClock_13
+   \                     ??drawClock_12:
+   \   000001E0   0000A0E3           MOV      R0,#+0
+   \                     ??drawClock_13:
+   \   000001E4   A0109FE5           LDR      R1,??drawClock_3+0x50  ;; BCFG_Time_DigitalClock_TextColor
+   \   000001E8   001091E5           LDR      R1,[R1, #+0]
+   \   000001EC   02002DE9           PUSH     {R1}
+   \   000001F0   98109FE5           LDR      R1,??drawClock_3+0x54  ;; BCFG_Time_DigitalClock_Position_Y
+   \   000001F4   001091E5           LDR      R1,[R1, #+0]
+   \   000001F8   101051E2           SUBS     R1,R1,#+16
+   \   000001FC   02002DE9           PUSH     {R1}
+   \   00000200   8C109FE5           LDR      R1,??drawClock_3+0x58  ;; BCFG_Time_DigitalClock_Position_X
+   \   00000204   001091E5           LDR      R1,[R1, #+0]
+   \   00000208   02002DE9           PUSH     {R1}
+   \   0000020C   84109FE5           LDR      R1,??drawClock_3+0x5C  ;; BCFG_Time_DigitalClock_Align
+   \   00000210   003091E5           LDR      R3,[R1, #+0]
+   \   00000214   80109FE5           LDR      R1,??drawClock_3+0x60  ;; BCFG_Time_DigitalClock_FontSize
+   \   00000218   002091E5           LDR      R2,[R1, #+0]
+   \   0000021C   0710B0E1           MOVS     R1,R7
+   \   00000220   ........           BL       ??ifDrawNoMask
+   \   00000224   0CD08DE2           ADD      SP,SP,#+12       ;; stack cleaning
+    124            delete tempHour; tempHour = NULL;
+   \   00000228   0700B0E1           MOVS     R0,R7
+   \   0000022C   ........           _BLF     `??operator delete`,`??operator delete??rA`
+   \   00000230   0000A0E3           MOV      R0,#+0
+   \   00000234   0070B0E1           MOVS     R7,R0
+    125          }
+   \   00000238   F080BDE8           POP      {R4-R7,PC}       ;; return
+   \                     ??drawClock_3:
+   \   0000023C   00000000           DC8      0x00, 0x00,+0,+0
+   \   00000240   ........           DC32     BCFG_Images_Clock_Enable
+   \   00000244   ........           DC32     BCFG_Images_Clock_Position_Y
+   \   00000248   ........           DC32     BCFG_Images_Clock_Position_X
+   \   0000024C   ........           DC32     `?<Constant L"\\x25\\x64">`
+   \   00000250   ........           DC32     BCFG_Time_Hour_Enable
+   \   00000254   ........           DC32     BCFG_Time_Hour_TextColor
+   \   00000258   ........           DC32     BCFG_Time_Hour_Position_Y
+   \   0000025C   ........           DC32     BCFG_Time_Hour_Position_X
+   \   00000260   ........           DC32     BCFG_Time_Hour_Align
+   \   00000264   ........           DC32     BCFG_Time_Hour_FontSize
+   \   00000268   ........           DC32     BCFG_Time_State_Enable
+   \   0000026C   ........           DC32     BCFG_Time_State_TextColor
+   \   00000270   ........           DC32     BCFG_Time_State_Position_Y
+   \   00000274   ........           DC32     BCFG_Time_State_Position_X
+   \   00000278   ........           DC32     BCFG_Time_State_Align
+   \   0000027C   ........           DC32     BCFG_Time_State_FontSize
+   \   00000280   ........           DC32     `?<Constant L"\\x25\\x64\\x3a\\x25\\x64">`
+   \   00000284   ........           DC32     `?<Constant L"\\x25\\x64\\x3a\\x30\\x25\\x64">`
+   \   00000288   ........           DC32     BCFG_Time_DigitalClock_Enable
+   \   0000028C   ........           DC32     BCFG_Time_DigitalClock_TextColor
+   \   00000290   ........           DC32     BCFG_Time_DigitalClock_Position_Y
+   \   00000294   ........           DC32     BCFG_Time_DigitalClock_Position_X
+   \   00000298   ........           DC32     BCFG_Time_DigitalClock_Align
+   \   0000029C   ........           DC32     BCFG_Time_DigitalClock_FontSize
+
+   \                                 In segment CODE, align 4, keep-with-next
+    126          void finalDraw(wchar_t* location, wchar_t* state, int dayState, int averageTemp) {
+   \                     ??finalDraw:
+   \   00000000   F0432DE9           PUSH     {R4-R9,LR}
+   \   00000004   0040B0E1           MOVS     R4,R0
+   \   00000008   0150B0E1           MOVS     R5,R1
+   \   0000000C   0260B0E1           MOVS     R6,R2
+   \   00000010   0370B0E1           MOVS     R7,R3
+    127            wchar_t* temp = NULL;
+   \   00000014   0000A0E3           MOV      R0,#+0
+   \   00000018   0080B0E1           MOVS     R8,R0
+    128            //<!--images
+    129            ifDrawImage( BCFG_Images_Background_Enable, BCFG_Images_Background_Position_X, BCFG_Images_Background_Position_Y,
+    130                        statesID[0x0] );
+   \   0000001C   E4029FE5           LDR      R0,??finalDraw_1  ;; BCFG_Images_Background_Enable
+   \   00000020   000090E5           LDR      R0,[R0, #+0]
+   \   00000024   000050E3           CMP      R0,#+0
+   \   00000028   0100000A           BEQ      ??finalDraw_2
+   \   0000002C   0100A0E3           MOV      R0,#+1
+   \   00000030   000000EA           B        ??finalDraw_3
+   \                     ??finalDraw_2:
+   \   00000034   0000A0E3           MOV      R0,#+0
+   \                     ??finalDraw_3:
+   \   00000038   ........           LDR      R3,??DataTable79  ;; statesID
+   \   0000003C   C8129FE5           LDR      R1,??finalDraw_1+0x4  ;; BCFG_Images_Background_Position_Y
+   \   00000040   002091E5           LDR      R2,[R1, #+0]
+   \   00000044   C4129FE5           LDR      R1,??finalDraw_1+0x8  ;; BCFG_Images_Background_Position_X
+   \   00000048   001091E5           LDR      R1,[R1, #+0]
+   \   0000004C   ........           BL       ??ifDrawImage
+    131            ifDrawImage( BCFG_Images_AccuWeatherLogo_Enable, BCFG_Images_AccuWeatherLogo_Position_X, BCFG_Images_AccuWeatherLogo_Position_Y,
+    132                        statesID[0x1] );
+   \   00000050   BC029FE5           LDR      R0,??finalDraw_1+0xC  ;; BCFG_Images_AccuWeatherLogo_Enable
+   \   00000054   000090E5           LDR      R0,[R0, #+0]
+   \   00000058   000050E3           CMP      R0,#+0
+   \   0000005C   0100000A           BEQ      ??finalDraw_4
+   \   00000060   0100A0E3           MOV      R0,#+1
+   \   00000064   000000EA           B        ??finalDraw_5
+   \                     ??finalDraw_4:
+   \   00000068   0000A0E3           MOV      R0,#+0
+   \                     ??finalDraw_5:
+   \   0000006C   ........           LDR      R3,??DataTable75  ;; statesID + 2
+   \   00000070   A0129FE5           LDR      R1,??finalDraw_1+0x10  ;; BCFG_Images_AccuWeatherLogo_Position_Y
+   \   00000074   002091E5           LDR      R2,[R1, #+0]
+   \   00000078   9C129FE5           LDR      R1,??finalDraw_1+0x14  ;; BCFG_Images_AccuWeatherLogo_Position_X
+   \   0000007C   001091E5           LDR      R1,[R1, #+0]
+   \   00000080   ........           BL       ??ifDrawImage
+    133            ifDrawImage( BCFG_Images_DayState_Enable, BCFG_Images_DayState_Position_X, BCFG_Images_DayState_Position_Y,
+    134                        statesID[dayState+0x1] );
+   \   00000084   94029FE5           LDR      R0,??finalDraw_1+0x18  ;; BCFG_Images_DayState_Enable
+   \   00000088   000090E5           LDR      R0,[R0, #+0]
+   \   0000008C   000050E3           CMP      R0,#+0
+   \   00000090   0100000A           BEQ      ??finalDraw_6
+   \   00000094   0100A0E3           MOV      R0,#+1
+   \   00000098   000000EA           B        ??finalDraw_7
+   \                     ??finalDraw_6:
+   \   0000009C   0000A0E3           MOV      R0,#+0
+   \                     ??finalDraw_7:
+   \   000000A0   0210A0E3           MOV      R1,#+2
+   \   000000A4   ........           LDR      R2,??DataTable79  ;; statesID
+   \   000000A8   912622E0           MLA      R2,R1,R6,R2
+   \   000000AC   023092E2           ADDS     R3,R2,#+2
+   \   000000B0   6C129FE5           LDR      R1,??finalDraw_1+0x1C  ;; BCFG_Images_DayState_Position_Y
+   \   000000B4   002091E5           LDR      R2,[R1, #+0]
+   \   000000B8   68129FE5           LDR      R1,??finalDraw_1+0x20  ;; BCFG_Images_DayState_Position_X
+   \   000000BC   001091E5           LDR      R1,[R1, #+0]
+   \   000000C0   ........           BL       ??ifDrawImage
+    135            //-->
+    136            //<!--text
+    137            ifDrawNoMask(BCFG_Tags_Location_Enable , location, BCFG_Tags_Location_FontSize , BCFG_Tags_Location_Align , 
+    138                         BCFG_Tags_Location_Position_X , BCFG_Tags_Location_Position_Y - 16 , BCFG_Tags_Location_TextColor);
+   \   000000C4   60029FE5           LDR      R0,??finalDraw_1+0x24  ;; BCFG_Tags_Location_Enable
+   \   000000C8   000090E5           LDR      R0,[R0, #+0]
+   \   000000CC   000050E3           CMP      R0,#+0
+   \   000000D0   0100000A           BEQ      ??finalDraw_8
+   \   000000D4   0100A0E3           MOV      R0,#+1
+   \   000000D8   000000EA           B        ??finalDraw_9
+   \                     ??finalDraw_8:
+   \   000000DC   0000A0E3           MOV      R0,#+0
+   \                     ??finalDraw_9:
+   \   000000E0   48129FE5           LDR      R1,??finalDraw_1+0x28  ;; BCFG_Tags_Location_TextColor
+   \   000000E4   001091E5           LDR      R1,[R1, #+0]
+   \   000000E8   02002DE9           PUSH     {R1}
+   \   000000EC   40129FE5           LDR      R1,??finalDraw_1+0x2C  ;; BCFG_Tags_Location_Position_Y
+   \   000000F0   001091E5           LDR      R1,[R1, #+0]
+   \   000000F4   101051E2           SUBS     R1,R1,#+16
+   \   000000F8   02002DE9           PUSH     {R1}
+   \   000000FC   34129FE5           LDR      R1,??finalDraw_1+0x30  ;; BCFG_Tags_Location_Position_X
+   \   00000100   001091E5           LDR      R1,[R1, #+0]
+   \   00000104   02002DE9           PUSH     {R1}
+   \   00000108   2C129FE5           LDR      R1,??finalDraw_1+0x34  ;; BCFG_Tags_Location_Align
+   \   0000010C   003091E5           LDR      R3,[R1, #+0]
+   \   00000110   28129FE5           LDR      R1,??finalDraw_1+0x38  ;; BCFG_Tags_Location_FontSize
+   \   00000114   002091E5           LDR      R2,[R1, #+0]
+   \   00000118   0410B0E1           MOVS     R1,R4
+   \   0000011C   ........           BL       ??ifDrawNoMask
+   \   00000120   0CD08DE2           ADD      SP,SP,#+12       ;; stack cleaning
+    139            
+    140            if (BCFG_Tags_AverageTemperature_Enable) {// %d
+   \   00000124   18029FE5           LDR      R0,??finalDraw_1+0x3C  ;; BCFG_Tags_AverageTemperature_Enable
+   \   00000128   000090E5           LDR      R0,[R0, #+0]
+   \   0000012C   000050E3           CMP      R0,#+0
+   \   00000130   4100000A           BEQ      ??finalDraw_10
+    141              temp = returnMask( BCFG_Tags_AverageTemperature_Mask , averageTemp , BCFG_Tags_AverageTemperature_Unit , celsiusToFahrenheit );
+   \   00000134   0C029FE5           LDR      R0,??finalDraw_1+0x40  ;; BCFG_Tags_AverageTemperature_Unit
+   \   00000138   000090E5           LDR      R0,[R0, #+0]
+   \   0000013C   000050E3           CMP      R0,#+0
+   \   00000140   0100000A           BEQ      ??finalDraw_11
+   \   00000144   0120A0E3           MOV      R2,#+1
+   \   00000148   000000EA           B        ??finalDraw_12
+   \                     ??finalDraw_11:
+   \   0000014C   0020A0E3           MOV      R2,#+0
+   \                     ??finalDraw_12:
+   \   00000150   0000A0E3           MOV      R0,#+0
+   \   00000154   01002DE9           PUSH     {R0}
+   \   00000158   EC319FE5           LDR      R3,??finalDraw_1+0x44  ;; ??celsiusToFahrenheit
+   \   0000015C   0710B0E1           MOVS     R1,R7
+   \   00000160   E8019FE5           LDR      R0,??finalDraw_1+0x48  ;; BCFG_Tags_AverageTemperature_Mask
+   \   00000164   ........           BL       ??returnMask
+   \   00000168   04D08DE2           ADD      SP,SP,#+4        ;; stack cleaning
+   \   0000016C   0080B0E1           MOVS     R8,R0
+    142              wchar_t* stateAvg = new wchar_t[0x256];
+   \   00000170   AC00A0E3           MOV      R0,#+172
+   \   00000174   400E80E3           ORR      R0,R0,#0x400
+   \   00000178   ........           _BLF     `??operator new[]`,`??operator new[]??rA`
+   \   0000017C   0090B0E1           MOVS     R9,R0
+    143              memset( stateAvg, 0, sizeof(wchar_t)*0x256 );
+   \   00000180   AC20A0E3           MOV      R2,#+172
+   \   00000184   402E82E3           ORR      R2,R2,#0x400
+   \   00000188   0010A0E3           MOV      R1,#+0
+   \   0000018C   0900B0E1           MOVS     R0,R9
+   \   00000190   120100EF           SWI      +274
+    144              
+    145              wstrcpy(stateAvg,state);
+   \   00000194   0510B0E1           MOVS     R1,R5
+   \   00000198   0900B0E1           MOVS     R0,R9
+   \   0000019C   520100EF           SWI      +338
+    146              wstrcat(stateAvg, L"\\n");
+   \   000001A0   AC119FE5           LDR      R1,??finalDraw_1+0x4C  ;; `?<Constant L"\\x5c\\x6e">`
+   \   000001A4   0900B0E1           MOVS     R0,R9
+   \   000001A8   540100EF           SWI      +340
+    147              wstrcat(stateAvg, temp );
+   \   000001AC   0810B0E1           MOVS     R1,R8
+   \   000001B0   0900B0E1           MOVS     R0,R9
+   \   000001B4   540100EF           SWI      +340
+    148          
+    149              ifDrawNoMask( BCFG_Tags_AverageTemperature_Enable, stateAvg, BCFG_Tags_DayState_FontSize, BCFG_Tags_DayState_Align,
+    150                           BCFG_Tags_DayState_Position_X, BCFG_Tags_DayState_Position_Y - 16, BCFG_Tags_DayState_TextColor );
+   \   000001B8   84019FE5           LDR      R0,??finalDraw_1+0x3C  ;; BCFG_Tags_AverageTemperature_Enable
+   \   000001BC   000090E5           LDR      R0,[R0, #+0]
+   \   000001C0   000050E3           CMP      R0,#+0
+   \   000001C4   0100000A           BEQ      ??finalDraw_13
+   \   000001C8   0100A0E3           MOV      R0,#+1
+   \   000001CC   000000EA           B        ??finalDraw_14
+   \                     ??finalDraw_13:
+   \   000001D0   0000A0E3           MOV      R0,#+0
+   \                     ??finalDraw_14:
+   \   000001D4   7C119FE5           LDR      R1,??finalDraw_1+0x50  ;; BCFG_Tags_DayState_TextColor
+   \   000001D8   001091E5           LDR      R1,[R1, #+0]
+   \   000001DC   02002DE9           PUSH     {R1}
+   \   000001E0   74119FE5           LDR      R1,??finalDraw_1+0x54  ;; BCFG_Tags_DayState_Position_Y
+   \   000001E4   001091E5           LDR      R1,[R1, #+0]
+   \   000001E8   101051E2           SUBS     R1,R1,#+16
+   \   000001EC   02002DE9           PUSH     {R1}
+   \   000001F0   68119FE5           LDR      R1,??finalDraw_1+0x58  ;; BCFG_Tags_DayState_Position_X
+   \   000001F4   001091E5           LDR      R1,[R1, #+0]
+   \   000001F8   02002DE9           PUSH     {R1}
+   \   000001FC   60119FE5           LDR      R1,??finalDraw_1+0x5C  ;; BCFG_Tags_DayState_Align
+   \   00000200   003091E5           LDR      R3,[R1, #+0]
+   \   00000204   5C119FE5           LDR      R1,??finalDraw_1+0x60  ;; BCFG_Tags_DayState_FontSize
+   \   00000208   002091E5           LDR      R2,[R1, #+0]
+   \   0000020C   0910B0E1           MOVS     R1,R9
+   \   00000210   ........           BL       ??ifDrawNoMask
+   \   00000214   0CD08DE2           ADD      SP,SP,#+12       ;; stack cleaning
+    151              delete temp; temp = NULL;
+   \   00000218   0800B0E1           MOVS     R0,R8
+   \   0000021C   ........           _BLF     `??operator delete`,`??operator delete??rA`
+   \   00000220   0000A0E3           MOV      R0,#+0
+   \   00000224   0080B0E1           MOVS     R8,R0
+    152              delete stateAvg; stateAvg = NULL;
+   \   00000228   0900B0E1           MOVS     R0,R9
+   \   0000022C   ........           _BLF     `??operator delete`,`??operator delete??rA`
+   \   00000230   0000A0E3           MOV      R0,#+0
+   \   00000234   0090B0E1           MOVS     R9,R0
+   \   00000238   170000EA           B        ??finalDraw_15
+    153            }
+    154            else {
+    155              ifDrawNoMask( BCFG_Tags_DayState_Enable , state , BCFG_Tags_DayState_FontSize , BCFG_Tags_DayState_Align ,
+    156                           BCFG_Tags_DayState_Position_X, BCFG_Tags_DayState_Position_Y - 16 , BCFG_Tags_DayState_TextColor );
+   \                     ??finalDraw_10:
+   \   0000023C   28019FE5           LDR      R0,??finalDraw_1+0x64  ;; BCFG_Tags_DayState_Enable
+   \   00000240   000090E5           LDR      R0,[R0, #+0]
+   \   00000244   000050E3           CMP      R0,#+0
+   \   00000248   0100000A           BEQ      ??finalDraw_16
+   \   0000024C   0100A0E3           MOV      R0,#+1
+   \   00000250   000000EA           B        ??finalDraw_17
+   \                     ??finalDraw_16:
+   \   00000254   0000A0E3           MOV      R0,#+0
+   \                     ??finalDraw_17:
+   \   00000258   F8109FE5           LDR      R1,??finalDraw_1+0x50  ;; BCFG_Tags_DayState_TextColor
+   \   0000025C   001091E5           LDR      R1,[R1, #+0]
+   \   00000260   02002DE9           PUSH     {R1}
+   \   00000264   F0109FE5           LDR      R1,??finalDraw_1+0x54  ;; BCFG_Tags_DayState_Position_Y
+   \   00000268   001091E5           LDR      R1,[R1, #+0]
+   \   0000026C   101051E2           SUBS     R1,R1,#+16
+   \   00000270   02002DE9           PUSH     {R1}
+   \   00000274   E4109FE5           LDR      R1,??finalDraw_1+0x58  ;; BCFG_Tags_DayState_Position_X
+   \   00000278   001091E5           LDR      R1,[R1, #+0]
+   \   0000027C   02002DE9           PUSH     {R1}
+   \   00000280   DC109FE5           LDR      R1,??finalDraw_1+0x5C  ;; BCFG_Tags_DayState_Align
+   \   00000284   003091E5           LDR      R3,[R1, #+0]
+   \   00000288   D8109FE5           LDR      R1,??finalDraw_1+0x60  ;; BCFG_Tags_DayState_FontSize
+   \   0000028C   002091E5           LDR      R2,[R1, #+0]
+   \   00000290   0510B0E1           MOVS     R1,R5
+   \   00000294   ........           BL       ??ifDrawNoMask
+   \   00000298   0CD08DE2           ADD      SP,SP,#+12       ;; stack cleaning
+    157            }
+    158            ifDrawNoMask( BCFG_Date_Enable , mybook->dateToDraw , BCFG_Date_FontSize, BCFG_Date_Align ,
+    159                         BCFG_Date_Position_X , BCFG_Date_Position_Y - 16, BCFG_Date_TextColor );
+   \                     ??finalDraw_15:
+   \   0000029C   CC009FE5           LDR      R0,??finalDraw_1+0x68  ;; BCFG_Date_Enable
+   \   000002A0   000090E5           LDR      R0,[R0, #+0]
+   \   000002A4   000050E3           CMP      R0,#+0
+   \   000002A8   0100000A           BEQ      ??finalDraw_18
+   \   000002AC   0100A0E3           MOV      R0,#+1
+   \   000002B0   000000EA           B        ??finalDraw_19
+   \                     ??finalDraw_18:
+   \   000002B4   0000A0E3           MOV      R0,#+0
+   \                     ??finalDraw_19:
+   \   000002B8   B4109FE5           LDR      R1,??finalDraw_1+0x6C  ;; BCFG_Date_TextColor
+   \   000002BC   001091E5           LDR      R1,[R1, #+0]
+   \   000002C0   02002DE9           PUSH     {R1}
+   \   000002C4   AC109FE5           LDR      R1,??finalDraw_1+0x70  ;; BCFG_Date_Position_Y
+   \   000002C8   001091E5           LDR      R1,[R1, #+0]
+   \   000002CC   101051E2           SUBS     R1,R1,#+16
+   \   000002D0   02002DE9           PUSH     {R1}
+   \   000002D4   A0109FE5           LDR      R1,??finalDraw_1+0x74  ;; BCFG_Date_Position_X
+   \   000002D8   001091E5           LDR      R1,[R1, #+0]
+   \   000002DC   02002DE9           PUSH     {R1}
+   \   000002E0   98109FE5           LDR      R1,??finalDraw_1+0x78  ;; BCFG_Date_Align
+   \   000002E4   003091E5           LDR      R3,[R1, #+0]
+   \   000002E8   94109FE5           LDR      R1,??finalDraw_1+0x7C  ;; BCFG_Date_FontSize
+   \   000002EC   002091E5           LDR      R2,[R1, #+0]
+   \   000002F0   ........           LDR      R1,??DataTable51  ;; mybook
+   \   000002F4   001091E5           LDR      R1,[R1, #+0]
+   \   000002F8   901091E5           LDR      R1,[R1, #+144]
+   \   000002FC   ........           BL       ??ifDrawNoMask
+   \   00000300   0CD08DE2           ADD      SP,SP,#+12       ;; stack cleaning
+    160            
+    161            //-->
+    162          }
+   \   00000304   F083BDE8           POP      {R4-R9,PC}       ;; return
+   \                     ??finalDraw_1:
+   \   00000308   ........           DC32     BCFG_Images_Background_Enable
+   \   0000030C   ........           DC32     BCFG_Images_Background_Position_Y
+   \   00000310   ........           DC32     BCFG_Images_Background_Position_X
+   \   00000314   ........           DC32     BCFG_Images_AccuWeatherLogo_Enable
+   \   00000318   ........           DC32     BCFG_Images_AccuWeatherLogo_Position_Y
+   \   0000031C   ........           DC32     BCFG_Images_AccuWeatherLogo_Position_X
+   \   00000320   ........           DC32     BCFG_Images_DayState_Enable
+   \   00000324   ........           DC32     BCFG_Images_DayState_Position_Y
+   \   00000328   ........           DC32     BCFG_Images_DayState_Position_X
+   \   0000032C   ........           DC32     BCFG_Tags_Location_Enable
+   \   00000330   ........           DC32     BCFG_Tags_Location_TextColor
+   \   00000334   ........           DC32     BCFG_Tags_Location_Position_Y
+   \   00000338   ........           DC32     BCFG_Tags_Location_Position_X
+   \   0000033C   ........           DC32     BCFG_Tags_Location_Align
+   \   00000340   ........           DC32     BCFG_Tags_Location_FontSize
+   \   00000344   ........           DC32     BCFG_Tags_AverageTemperature_Enable
+   \   00000348   ........           DC32     BCFG_Tags_AverageTemperature_Unit
+   \   0000034C   ........           DC32     ??celsiusToFahrenheit
+   \   00000350   ........           DC32     BCFG_Tags_AverageTemperature_Mask
+   \   00000354   ........           DC32     `?<Constant L"\\x5c\\x6e">`
+   \   00000358   ........           DC32     BCFG_Tags_DayState_TextColor
+   \   0000035C   ........           DC32     BCFG_Tags_DayState_Position_Y
+   \   00000360   ........           DC32     BCFG_Tags_DayState_Position_X
+   \   00000364   ........           DC32     BCFG_Tags_DayState_Align
+   \   00000368   ........           DC32     BCFG_Tags_DayState_FontSize
+   \   0000036C   ........           DC32     BCFG_Tags_DayState_Enable
+   \   00000370   ........           DC32     BCFG_Date_Enable
+   \   00000374   ........           DC32     BCFG_Date_TextColor
+   \   00000378   ........           DC32     BCFG_Date_Position_Y
+   \   0000037C   ........           DC32     BCFG_Date_Position_X
+   \   00000380   ........           DC32     BCFG_Date_Align
+   \   00000384   ........           DC32     BCFG_Date_FontSize
+    163          
+
+   \                                 In segment CODE, align 4, keep-with-next
+    164          void onfTimer (u16 tmr , LPARAM) {
+   \                     ??onfTimer:
+   \   00000000   30402DE9           PUSH     {R4,R5,LR}
+   \   00000004   04D04DE2           SUB      SP,SP,#+4
+   \   00000008   0040B0E1           MOVS     R4,R0
+   \   0000000C   0150B0E1           MOVS     R5,R1
+    165            DispObject_InvalidateRect(StatusIndication,0);
+   \   00000010   0010A0E3           MOV      R1,#+0
+   \   00000014   ........           LDR      R0,??DataTable94  ;; StatusIndication
+   \   00000018   000090E5           LDR      R0,[R0, #+0]
+   \   0000001C   EF0100EF           SWI      +495
+    166            Timer_ReSet(&mybook->ftimer,1000,onfTimer,0);
+   \   00000020   0010A0E3           MOV      R1,#+0
+   \   00000024   0D00B0E1           MOVS     R0,SP
+   \   00000028   ........           _BLF     ??LPARAM,??LPARAM??rA
+   \   0000002C   00309DE5           LDR      R3,[SP, #+0]
+   \   00000030   ........           LDR      R2,??DataTable88  ;; ??onfTimer
+   \   00000034   FA1FA0E3           MOV      R1,#+1000
+   \   00000038   ........           LDR      R0,??DataTable51  ;; mybook
+   \   0000003C   000090E5           LDR      R0,[R0, #+0]
+   \   00000040   9C0090E2           ADDS     R0,R0,#+156
+   \   00000044   280100EF           SWI      +296
+    167          }
+   \   00000048   04D08DE2           ADD      SP,SP,#+4        ;; stack cleaning
+   \   0000004C   3080BDE8           POP      {R4,R5,PC}       ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+    168          void makeDateMask() { //0 = segunda, 1 = terça, ... , 6 = domingo
+   \                     ??makeDateMask:
+   \   00000000   F0472DE9           PUSH     {R4-R10,LR}
+   \   00000004   04D04DE2           SUB      SP,SP,#+4
+    169            char _weekDay;
+    170            DATE_GetWeekDay(&mybook->now.date, &_weekDay);
+   \   00000008   0D10B0E1           MOVS     R1,SP
+   \   0000000C   ........           LDR      R0,??DataTable51  ;; mybook
+   \   00000010   000090E5           LDR      R0,[R0, #+0]
+   \   00000014   940090E2           ADDS     R0,R0,#+148
+   \   00000018   9C0200EF           SWI      +668
+    171            int weekday = _weekDay;
+   \   0000001C   0000DDE5           LDRB     R0,[SP, #+0]
+   \   00000020   0040B0E1           MOVS     R4,R0
+    172            if (weekday < 1 && weekday > 6)
+   \   00000024   010054E3           CMP      R4,#+1
+   \   00000028   030000AA           BGE      ??makeDateMask_1
+   \   0000002C   070054E3           CMP      R4,#+7
+   \   00000030   010000BA           BLT      ??makeDateMask_1
+    173              weekday = 0;
+   \   00000034   0000A0E3           MOV      R0,#+0
+   \   00000038   0040B0E1           MOVS     R4,R0
+    174            mybook->weekToDraw = mybook->weekNames[weekday];
+   \                     ??makeDateMask_1:
+   \   0000003C   ........           LDR      R0,??DataTable51  ;; mybook
+   \   00000040   000090E5           LDR      R0,[R0, #+0]
+   \   00000044   0410A0E3           MOV      R1,#+4
+   \   00000048   ........           LDR      R2,??DataTable51  ;; mybook
+   \   0000004C   002092E5           LDR      R2,[R2, #+0]
+   \   00000050   912422E0           MLA      R2,R1,R4,R2
+   \   00000054   201092E5           LDR      R1,[R2, #+32]
+   \   00000058   3C1080E5           STR      R1,[R0, #+60]
+    175            int month = mybook->now.date.mon;
+   \   0000005C   ........           LDR      R0,??DataTable51  ;; mybook
+   \   00000060   000090E5           LDR      R0,[R0, #+0]
+   \   00000064   9600D0E5           LDRB     R0,[R0, #+150]
+   \   00000068   0050B0E1           MOVS     R5,R0
+    176            mybook->monthToDraw = mybook->monthNames[ (month > 0 ? month - 0x1 : 0x0) ];
+   \   0000006C   010055E3           CMP      R5,#+1
+   \   00000070   010000BA           BLT      ??makeDateMask_2
+   \   00000074   010055E2           SUBS     R0,R5,#+1
+   \   00000078   000000EA           B        ??makeDateMask_3
+   \                     ??makeDateMask_2:
+   \   0000007C   0000A0E3           MOV      R0,#+0
+   \                     ??makeDateMask_3:
+   \   00000080   ........           LDR      R1,??DataTable51  ;; mybook
+   \   00000084   001091E5           LDR      R1,[R1, #+0]
+   \   00000088   0420A0E3           MOV      R2,#+4
+   \   0000008C   ........           LDR      R3,??DataTable51  ;; mybook
+   \   00000090   003093E5           LDR      R3,[R3, #+0]
+   \   00000094   923020E0           MLA      R0,R2,R0,R3
+   \   00000098   400090E5           LDR      R0,[R0, #+64]
+   \   0000009C   880081E5           STR      R0,[R1, #+136]
+    177            int dateLength = wstrlen(mybook->weekToDraw) + wstrlen(mybook->monthToDraw) + 5;
+   \   000000A0   ........           LDR      R0,??DataTable51  ;; mybook
+   \   000000A4   000090E5           LDR      R0,[R0, #+0]
+   \   000000A8   3C0090E5           LDR      R0,[R0, #+60]
+   \   000000AC   570100EF           SWI      +343
+   \   000000B0   00A0B0E1           MOVS     R10,R0
+   \   000000B4   ........           LDR      R0,??DataTable51  ;; mybook
+   \   000000B8   000090E5           LDR      R0,[R0, #+0]
+   \   000000BC   880090E5           LDR      R0,[R0, #+136]
+   \   000000C0   570100EF           SWI      +343
+   \   000000C4   0A0090E0           ADDS     R0,R0,R10
+   \   000000C8   050090E2           ADDS     R0,R0,#+5
+   \   000000CC   0060B0E1           MOVS     R6,R0
+    178            wchar_t* dateToDraw = new wchar_t[ dateLength ];
+   \   000000D0   0210A0E3           MOV      R1,#+2
+   \   000000D4   910610E0           MULS     R0,R1,R6
+   \   000000D8   ........           _BLF     `??operator new[]`,`??operator new[]??rA`
+   \   000000DC   0070B0E1           MOVS     R7,R0
+    179            memset( dateToDraw, 0, sizeof(wchar_t)*dateLength );
+   \   000000E0   0200A0E3           MOV      R0,#+2
+   \   000000E4   900612E0           MULS     R2,R0,R6
+   \   000000E8   0010A0E3           MOV      R1,#+0
+   \   000000EC   0700B0E1           MOVS     R0,R7
+   \   000000F0   120100EF           SWI      +274
+    180            wstrcpy(dateToDraw, mybook->weekToDraw);
+   \   000000F4   ........           LDR      R0,??DataTable51  ;; mybook
+   \   000000F8   000090E5           LDR      R0,[R0, #+0]
+   \   000000FC   3C1090E5           LDR      R1,[R0, #+60]
+   \   00000100   0700B0E1           MOVS     R0,R7
+   \   00000104   520100EF           SWI      +338
+    181            wstrcat(dateToDraw, L", ");
+   \   00000108   80109FE5           LDR      R1,??makeDateMask_4  ;; `?<Constant L"\\x2c\\x20">`
+   \   0000010C   0700B0E1           MOVS     R0,R7
+   \   00000110   540100EF           SWI      +340
+    182            wstrcat(dateToDraw, mybook->monthToDraw);
+   \   00000114   ........           LDR      R0,??DataTable51  ;; mybook
+   \   00000118   000090E5           LDR      R0,[R0, #+0]
+   \   0000011C   881090E5           LDR      R1,[R0, #+136]
+   \   00000120   0700B0E1           MOVS     R0,R7
+   \   00000124   540100EF           SWI      +340
+    183            wchar_t* day = new wchar_t[0x4];
+   \   00000128   0800A0E3           MOV      R0,#+8
+   \   0000012C   ........           _BLF     `??operator new[]`,`??operator new[]??rA`
+   \   00000130   0080B0E1           MOVS     R8,R0
+    184            memset( day, 0, sizeof(wchar_t)*0x4 );
+   \   00000134   0820A0E3           MOV      R2,#+8
+   \   00000138   0010A0E3           MOV      R1,#+0
+   \   0000013C   0800B0E1           MOVS     R0,R8
+   \   00000140   120100EF           SWI      +274
+    185            int intDay = mybook->now.date.day;
+   \   00000144   ........           LDR      R0,??DataTable51  ;; mybook
+   \   00000148   000090E5           LDR      R0,[R0, #+0]
+   \   0000014C   9700D0E5           LDRB     R0,[R0, #+151]
+   \   00000150   0090B0E1           MOVS     R9,R0
+    186            snwprintf( day, 4, L" %d", intDay);
+   \   00000154   0930B0E1           MOVS     R3,R9
+   \   00000158   34209FE5           LDR      R2,??makeDateMask_4+0x4  ;; `?<Constant L"\\x20\\x25\\x64">`
+   \   0000015C   0410A0E3           MOV      R1,#+4
+   \   00000160   0800B0E1           MOVS     R0,R8
+   \   00000164   150100EF           SWI      +277
+    187            wstrcat(dateToDraw, day);
+   \   00000168   0810B0E1           MOVS     R1,R8
+   \   0000016C   0700B0E1           MOVS     R0,R7
+   \   00000170   540100EF           SWI      +340
+    188            mybook->dateToDraw = dateToDraw;
+   \   00000174   ........           LDR      R0,??DataTable51  ;; mybook
+   \   00000178   000090E5           LDR      R0,[R0, #+0]
+   \   0000017C   907080E5           STR      R7,[R0, #+144]
+    189            delete day;
+   \   00000180   0800B0E1           MOVS     R0,R8
+   \   00000184   ........           _BLF     `??operator delete`,`??operator delete??rA`
+    190          }
+   \   00000188   04D08DE2           ADD      SP,SP,#+4        ;; stack cleaning
+   \   0000018C   F087BDE8           POP      {R4-R10,PC}      ;; return
+   \                     ??makeDateMask_4:
+   \   00000190   ........           DC32     `?<Constant L"\\x2c\\x20">`
+   \   00000194   ........           DC32     `?<Constant L"\\x20\\x25\\x64">`
+
+   \                                 In segment CODE, align 4, keep-with-next
+    191          void drawWeatherContents() {
+   \                     ??drawWeatherContents:
+   \   00000000   70402DE9           PUSH     {R4-R6,LR}
+   \   00000004   08D04DE2           SUB      SP,SP,#+8
+    192            //18 ~ 06: night, 06 ~ 18: day
+    193            mybook->now = getDateTime();
+   \   00000008   0D00B0E1           MOVS     R0,SP
+   \   0000000C   ........           _BLF     ??getDateTime,??getDateTime??rA
+   \   00000010   ........           LDR      R0,??DataTable51  ;; mybook
+   \   00000014   000090E5           LDR      R0,[R0, #+0]
+   \   00000018   940090E2           ADDS     R0,R0,#+148
+   \   0000001C   0D10B0E1           MOVS     R1,SP
+   \   00000020   0830A0E3           MOV      R3,#+8
+   \                     ??drawWeatherContents_1:
+   \   00000024   023053E2           SUBS     R3,R3,#+2
+   \   00000028   B32091E1           LDRH     R2,[R1, R3]
+   \   0000002C   B32080E1           STRH     R2,[R0, R3]
+   \   00000030   FBFFFF1A           BNE      ??drawWeatherContents_1
+    194          
+    195            if (mybook->getHourSeted() == -1) {
+   \   00000034   ........           LDR      R0,??DataTable51  ;; mybook
+   \   00000038   000090E5           LDR      R0,[R0, #+0]
+   \   0000003C   ........           _BLF     ??getHourSeted,??getHourSeted??rA
+   \   00000040   010070E3           CMN      R0,#+1
+   \   00000044   2400001A           BNE      ??drawWeatherContents_2
+    196              if (mybook->getWeatherToDraw() != NULL) mybook->freeWDraw();
+   \   00000048   ........           LDR      R0,??DataTable51  ;; mybook
+   \   0000004C   000090E5           LDR      R0,[R0, #+0]
+   \   00000050   ........           _BLF     ??getWeatherToDraw,??getWeatherToDraw??rA
+   \   00000054   000050E3           CMP      R0,#+0
+   \   00000058   0200000A           BEQ      ??drawWeatherContents_3
+   \   0000005C   ........           LDR      R0,??DataTable51  ;; mybook
+   \   00000060   000090E5           LDR      R0,[R0, #+0]
+   \   00000064   ........           _BLF     ??freeWDraw,??freeWDraw??rA
+    197              mybook->setHour(mybook->now.time.hour);
+   \                     ??drawWeatherContents_3:
+   \   00000068   ........           LDR      R0,??DataTable51  ;; mybook
+   \   0000006C   000090E5           LDR      R0,[R0, #+0]
+   \   00000070   9810D0E5           LDRB     R1,[R0, #+152]
+   \   00000074   ........           LDR      R0,??DataTable51  ;; mybook
+   \   00000078   000090E5           LDR      R0,[R0, #+0]
+   \   0000007C   ........           _BLF     ??setHour,??setHour??rA
+    198          
+    199              if (mybook->now.time.hour >= BCFG_Tags_Time_Night || mybook->now.time.hour < BCFG_Tags_Time_Day) //need to check that later, midnight weather!
+   \   00000080   ........           LDR      R0,??DataTable51  ;; mybook
+   \   00000084   000090E5           LDR      R0,[R0, #+0]
+   \   00000088   9800D0E5           LDRB     R0,[R0, #+152]
+   \   0000008C   48119FE5           LDR      R1,??drawWeatherContents_4  ;; BCFG_Tags_Time_Night
+   \   00000090   001091E5           LDR      R1,[R1, #+0]
+   \   00000094   010050E1           CMP      R0,R1
+   \   00000098   0600002A           BCS      ??drawWeatherContents_5
+   \   0000009C   ........           LDR      R0,??DataTable51  ;; mybook
+   \   000000A0   000090E5           LDR      R0,[R0, #+0]
+   \   000000A4   9800D0E5           LDRB     R0,[R0, #+152]
+   \   000000A8   30119FE5           LDR      R1,??drawWeatherContents_4+0x4  ;; BCFG_Tags_Time_Day
+   \   000000AC   001091E5           LDR      R1,[R1, #+0]
+   \   000000B0   010050E1           CMP      R0,R1
+   \   000000B4   0400002A           BCS      ??drawWeatherContents_6
+    200                mybook->setWDraw(2);
+   \                     ??drawWeatherContents_5:
+   \   000000B8   0210A0E3           MOV      R1,#+2
+   \   000000BC   ........           LDR      R0,??DataTable51  ;; mybook
+   \   000000C0   000090E5           LDR      R0,[R0, #+0]
+   \   000000C4   ........           _BLF     ??setWDraw,??setWDraw??rA
+   \   000000C8   030000EA           B        ??drawWeatherContents_2
+    201              else
+    202                mybook->setWDraw(1);
+   \                     ??drawWeatherContents_6:
+   \   000000CC   0110A0E3           MOV      R1,#+1
+   \   000000D0   ........           LDR      R0,??DataTable51  ;; mybook
+   \   000000D4   000090E5           LDR      R0,[R0, #+0]
+   \   000000D8   ........           _BLF     ??setWDraw,??setWDraw??rA
+    203            }
+    204            
+    205            if (mybook->getHourSeted() != mybook->now.time.hour) {
+   \                     ??drawWeatherContents_2:
+   \   000000DC   ........           LDR      R0,??DataTable51  ;; mybook
+   \   000000E0   000090E5           LDR      R0,[R0, #+0]
+   \   000000E4   ........           _BLF     ??getHourSeted,??getHourSeted??rA
+   \   000000E8   ........           LDR      R1,??DataTable51  ;; mybook
+   \   000000EC   001091E5           LDR      R1,[R1, #+0]
+   \   000000F0   9810D1E5           LDRB     R1,[R1, #+152]
+   \   000000F4   010050E1           CMP      R0,R1
+   \   000000F8   0A00000A           BEQ      ??drawWeatherContents_7
+    206              mybook->setHour(-1);
+   \   000000FC   0010E0E3           MVN      R1,#+0
+   \   00000100   ........           LDR      R0,??DataTable51  ;; mybook
+   \   00000104   000090E5           LDR      R0,[R0, #+0]
+   \   00000108   ........           _BLF     ??setHour,??setHour??rA
+    207              mybook->hourState = getStateByHour(mybook->now.time.hour);
+   \   0000010C   ........           LDR      R0,??DataTable51  ;; mybook
+   \   00000110   000090E5           LDR      R0,[R0, #+0]
+   \   00000114   9800D0E5           LDRB     R0,[R0, #+152]
+   \   00000118   ........           BL       ??getStateByHour
+   \   0000011C   ........           LDR      R1,??DataTable51  ;; mybook
+   \   00000120   001091E5           LDR      R1,[R1, #+0]
+   \   00000124   8C0081E5           STR      R0,[R1, #+140]
+    208            }
+    209          
+    210            finalDraw(mybook->getLocation(), mybook->getWeatherToDraw()->getState_(),
+    211                      mybook->getWeatherToDraw()->getState(), mybook->getWeatherToDraw()->getAverageTemp());
+   \                     ??drawWeatherContents_7:
+   \   00000128   ........           LDR      R0,??DataTable51  ;; mybook
+   \   0000012C   000090E5           LDR      R0,[R0, #+0]
+   \   00000130   ........           _BLF     ??getWeatherToDraw,??getWeatherToDraw??rA
+   \   00000134   ........           _BLF     ??getAverageTemp,??getAverageTemp??rA
+   \   00000138   0040B0E1           MOVS     R4,R0
+   \   0000013C   ........           LDR      R0,??DataTable51  ;; mybook
+   \   00000140   000090E5           LDR      R0,[R0, #+0]
+   \   00000144   ........           _BLF     ??getWeatherToDraw,??getWeatherToDraw??rA
+   \   00000148   ........           _BLF     ??getState,??getState??rA
+   \   0000014C   0050B0E1           MOVS     R5,R0
+   \   00000150   ........           LDR      R0,??DataTable51  ;; mybook
+   \   00000154   000090E5           LDR      R0,[R0, #+0]
+   \   00000158   ........           _BLF     ??getWeatherToDraw,??getWeatherToDraw??rA
+   \   0000015C   ........           _BLF     ??getState_,??getState_??rA
+   \   00000160   0060B0E1           MOVS     R6,R0
+   \   00000164   ........           LDR      R0,??DataTable51  ;; mybook
+   \   00000168   000090E5           LDR      R0,[R0, #+0]
+   \   0000016C   ........           _BLF     ??getLocation,??getLocation??rA
+   \   00000170   0430B0E1           MOVS     R3,R4
+   \   00000174   0520B0E1           MOVS     R2,R5
+   \   00000178   0610B0E1           MOVS     R1,R6
+   \   0000017C   ........           BL       ??finalDraw
+    212            drawClock(mybook->now.time.hour, mybook->now.time.min);
+   \   00000180   ........           LDR      R0,??DataTable51  ;; mybook
+   \   00000184   000090E5           LDR      R0,[R0, #+0]
+   \   00000188   9910D0E5           LDRB     R1,[R0, #+153]
+   \   0000018C   ........           LDR      R0,??DataTable51  ;; mybook
+   \   00000190   000090E5           LDR      R0,[R0, #+0]
+   \   00000194   9800D0E5           LDRB     R0,[R0, #+152]
+   \   00000198   ........           BL       ??drawClock
+    213            if (isDateEqual(&mybook->now,&mybook->dateOfWeather) != 0) {
+   \   0000019C   ........           LDR      R0,??DataTable51  ;; mybook
+   \   000001A0   000090E5           LDR      R0,[R0, #+0]
+   \   000001A4   9E1090E2           ADDS     R1,R0,#+158
+   \   000001A8   ........           LDR      R0,??DataTable51  ;; mybook
+   \   000001AC   000090E5           LDR      R0,[R0, #+0]
+   \   000001B0   940090E2           ADDS     R0,R0,#+148
+   \   000001B4   ........           _BLF     ??isDateEqual,??isDateEqual??rA
+   \   000001B8   000050E3           CMP      R0,#+0
+   \   000001BC   0400000A           BEQ      ??drawWeatherContents_8
+    214              mybook->setHour(-1);
+   \   000001C0   0010E0E3           MVN      R1,#+0
+   \   000001C4   ........           LDR      R0,??DataTable51  ;; mybook
+   \   000001C8   000090E5           LDR      R0,[R0, #+0]
+   \   000001CC   ........           _BLF     ??setHour,??setHour??rA
+    215              beginFile();
+   \   000001D0   ........           BL       ??beginFile
+    216            }  
+    217          }
+   \                     ??drawWeatherContents_8:
+   \   000001D4   08D08DE2           ADD      SP,SP,#+8        ;; stack cleaning
+   \   000001D8   7080BDE8           POP      {R4-R6,PC}       ;; return
+   \                     ??drawWeatherContents_4:
+   \   000001DC   ........           DC32     BCFG_Tags_Time_Night
+   \   000001E0   ........           DC32     BCFG_Tags_Time_Day
+    218          
+
+   \                                 In segment CODE, align 4, keep-with-next
+    219          void errorInFile(wchar_t* message) {
+   \                     ??errorInFile:
+   \   00000000   10402DE9           PUSH     {R4,LR}
+   \   00000004   0040B0E1           MOVS     R4,R0
+    220            MessageBox(0x6FFFFFFF,TextID_Create(message,ENC_UCS2 , wstrlen(message)), NOIMAGE, 1, 0,0);
+   \   00000008   0400B0E1           MOVS     R0,R4
+   \   0000000C   570100EF           SWI      +343
+   \   00000010   0020B0E1           MOVS     R2,R0
+   \   00000014   0010A0E3           MOV      R1,#+0
+   \   00000018   0400B0E1           MOVS     R0,R4
+   \   0000001C   5D0100EF           SWI      +349
+   \   00000020   0010B0E1           MOVS     R1,R0
+   \   00000024   0000A0E3           MOV      R0,#+0
+   \   00000028   01002DE9           PUSH     {R0}
+   \   0000002C   0000A0E3           MOV      R0,#+0
+   \   00000030   01002DE9           PUSH     {R0}
+   \   00000034   0130A0E3           MOV      R3,#+1
+   \   00000038   FF20A0E3           MOV      R2,#+255
+   \   0000003C   FF2C82E3           ORR      R2,R2,#0xFF00
+   \   00000040   9004E0E3           MVN      R0,#-1879048192
+   \   00000044   570200EF           SWI      +599
+   \   00000048   08D08DE2           ADD      SP,SP,#+8        ;; stack cleaning
+    221            mybook->setError(true);
+   \   0000004C   0110A0E3           MOV      R1,#+1
+   \   00000050   ........           LDR      R0,??DataTable96  ;; mybook
+   \   00000054   000090E5           LDR      R0,[R0, #+0]
+   \   00000058   ........           _BLF     ??setError,??setError??rA
+    222            message = NULL;
+   \   0000005C   0000A0E3           MOV      R0,#+0
+   \   00000060   0040B0E1           MOVS     R4,R0
+    223            FreeBook(mybook->getBook());
+   \   00000064   ........           LDR      R0,??DataTable96  ;; mybook
+   \   00000068   000090E5           LDR      R0,[R0, #+0]
+   \   0000006C   ........           _BLF     ??getBook,??getBook??rA
+   \   00000070   2F0100EF           SWI      +303
+    224          }
+   \   00000074   1080BDE8           POP      {R4,PC}          ;; return
+    225          
+
+   \                                 In segment CODE, align 4, keep-with-next
+    226          void beginFile() {
+   \                     ??beginFile:
+   \   00000000   30402DE9           PUSH     {R4,R5,LR}
+   \   00000004   0CD04DE2           SUB      SP,SP,#+12
+    227            dbtf("loading file");
+   \   00000008   9C019FE5           LDR      R0,??beginFile_1  ;; `?<Constant "loading file">`
+   \   0000000C   ........           _BLF     ??dbtf,??dbtf??rA
+    228            wchar_t* fileContent = openFile(BCFG_XMLBGLogoFolder,L"weather.txt");
+   \   00000010   98119FE5           LDR      R1,??beginFile_1+0x4  ;; `?<Constant L"\\x77\\x65\\x61\\x74\\x68\\x65\\x72\\x2e\\`
+   \   00000014   ........           LDR      R0,??DataTable76  ;; BCFG_XMLBGLogoFolder
+   \   00000018   ........           _BLF     ??openFile,??openFile??rA
+   \   0000001C   0040B0E1           MOVS     R4,R0
+    229            wchar_t* conditionXml = openFile(BCFG_XMLBGLogoFolder, L"condition.xml");
+   \   00000020   8C119FE5           LDR      R1,??beginFile_1+0x8  ;; `?<Constant L"\\x63\\x6f\\x6e\\x64\\x69\\x74\\x69\\x6f\\`
+   \   00000024   ........           LDR      R0,??DataTable76  ;; BCFG_XMLBGLogoFolder
+   \   00000028   ........           _BLF     ??openFile,??openFile??rA
+   \   0000002C   0050B0E1           MOVS     R5,R0
+    230            if (fileContent != NULL && conditionXml != NULL) {
+   \   00000030   000054E3           CMP      R4,#+0
+   \   00000034   5800000A           BEQ      ??beginFile_2
+   \   00000038   000055E3           CMP      R5,#+0
+   \   0000003C   5600000A           BEQ      ??beginFile_2
+    231              int pos = 0;
+   \   00000040   0010A0E3           MOV      R1,#+0
+   \   00000044   00108DE5           STR      R1,[SP, #+0]
+    232              mybook->freeMyVars();
+   \   00000048   ........           LDR      R0,??DataTable96  ;; mybook
+   \   0000004C   000090E5           LDR      R0,[R0, #+0]
+   \   00000050   ........           _BLF     ??freeMyVars,??freeMyVars??rA
+    233              mybook->setLocation(getLocation(fileContent, pos));
+   \   00000054   0D10B0E1           MOVS     R1,SP
+   \   00000058   0400B0E1           MOVS     R0,R4
+   \   0000005C   ........           _BLF     ??getLocation_1,??getLocation??rA_1
+   \   00000060   0010B0E1           MOVS     R1,R0
+   \   00000064   ........           LDR      R0,??DataTable96  ;; mybook
+   \   00000068   000090E5           LDR      R0,[R0, #+0]
+   \   0000006C   ........           _BLF     ??setLocation,??setLocation??rA
+    234          
+    235              if (mybook->getLocation() == NULL) 
+   \   00000070   ........           LDR      R0,??DataTable96  ;; mybook
+   \   00000074   000090E5           LDR      R0,[R0, #+0]
+   \   00000078   ........           _BLF     ??getLocation,??getLocation??rA
+   \   0000007C   000050E3           CMP      R0,#+0
+   \   00000080   0200001A           BNE      ??beginFile_3
+    236                errorInFile(L"Error in location! Update your file weather.txt and run the elf again!");
+   \   00000084   2C019FE5           LDR      R0,??beginFile_1+0xC  ;; `?<Constant L"\\x45\\x72\\x72\\x6f\\x72\\x20\\x69\\x6e\\`
+   \   00000088   ........           BL       ??errorInFile
+   \   0000008C   3D0000EA           B        ??beginFile_4
+    237              else {
+    238                mybook->setDayWeather(getDayWeather(fileContent, pos, conditionXml));
+   \                     ??beginFile_3:
+   \   00000090   0520B0E1           MOVS     R2,R5
+   \   00000094   0D10B0E1           MOVS     R1,SP
+   \   00000098   0400B0E1           MOVS     R0,R4
+   \   0000009C   ........           _BLF     ??getDayWeather,??getDayWeather??rA
+   \   000000A0   0010B0E1           MOVS     R1,R0
+   \   000000A4   ........           LDR      R0,??DataTable96  ;; mybook
+   \   000000A8   000090E5           LDR      R0,[R0, #+0]
+   \   000000AC   ........           _BLF     ??setDayWeather,??setDayWeather??rA
+    239          
+    240                if (mybook->getDayWeather() == NULL) errorInFile(L"Error in Day Weather! Update your file weather.txt and run the elf again!");
+   \   000000B0   ........           LDR      R0,??DataTable96  ;; mybook
+   \   000000B4   000090E5           LDR      R0,[R0, #+0]
+   \   000000B8   ........           _BLF     ??getDayWeather_1,??getDayWeather??rA_1
+   \   000000BC   000050E3           CMP      R0,#+0
+   \   000000C0   0200001A           BNE      ??beginFile_5
+   \   000000C4   F0009FE5           LDR      R0,??beginFile_1+0x10  ;; `?<Constant L"\\x45\\x72\\x72\\x6f\\x72\\x20\\x69\\x6e\\_1`
+   \   000000C8   ........           BL       ??errorInFile
+   \   000000CC   2D0000EA           B        ??beginFile_4
+    241                else {
+    242                  mybook->setNightWeather(getWeather(fileContent,pos, conditionXml));
+   \                     ??beginFile_5:
+   \   000000D0   0520B0E1           MOVS     R2,R5
+   \   000000D4   0D10B0E1           MOVS     R1,SP
+   \   000000D8   0400B0E1           MOVS     R0,R4
+   \   000000DC   ........           _BLF     ??getWeather,??getWeather??rA
+   \   000000E0   0010B0E1           MOVS     R1,R0
+   \   000000E4   ........           LDR      R0,??DataTable96  ;; mybook
+   \   000000E8   000090E5           LDR      R0,[R0, #+0]
+   \   000000EC   ........           _BLF     ??setNightWeather,??setNightWeather??rA
+    243                  if (mybook->getNightWeather() == NULL) errorInFile(L"Error in Night Weather! Update your file weather.txt and run the elf again!");
+   \   000000F0   ........           LDR      R0,??DataTable96  ;; mybook
+   \   000000F4   000090E5           LDR      R0,[R0, #+0]
+   \   000000F8   ........           _BLF     ??getNightWeather,??getNightWeather??rA
+   \   000000FC   000050E3           CMP      R0,#+0
+   \   00000100   0200001A           BNE      ??beginFile_6
+   \   00000104   B4009FE5           LDR      R0,??beginFile_1+0x14  ;; `?<Constant L"\\x45\\x72\\x72\\x6f\\x72\\x20\\x69\\x6e\\_2`
+   \   00000108   ........           BL       ??errorInFile
+   \   0000010C   1D0000EA           B        ??beginFile_4
+    244                  else { mybook->dateOfWeather = getDateTime(); mybook->now = mybook->dateOfWeather; makeDateMask(); 
+   \                     ??beginFile_6:
+   \   00000110   04008DE2           ADD      R0,SP,#+4
+   \   00000114   ........           _BLF     ??getDateTime,??getDateTime??rA
+   \   00000118   ........           LDR      R0,??DataTable96  ;; mybook
+   \   0000011C   000090E5           LDR      R0,[R0, #+0]
+   \   00000120   9E0090E2           ADDS     R0,R0,#+158
+   \   00000124   04108DE2           ADD      R1,SP,#+4
+   \   00000128   0830A0E3           MOV      R3,#+8
+   \                     ??beginFile_7:
+   \   0000012C   023053E2           SUBS     R3,R3,#+2
+   \   00000130   B32091E1           LDRH     R2,[R1, R3]
+   \   00000134   B32080E1           STRH     R2,[R0, R3]
+   \   00000138   FBFFFF1A           BNE      ??beginFile_7
+   \   0000013C   ........           LDR      R0,??DataTable96  ;; mybook
+   \   00000140   000090E5           LDR      R0,[R0, #+0]
+   \   00000144   940090E2           ADDS     R0,R0,#+148
+   \   00000148   ........           LDR      R1,??DataTable96  ;; mybook
+   \   0000014C   001091E5           LDR      R1,[R1, #+0]
+   \   00000150   9E1091E2           ADDS     R1,R1,#+158
+   \   00000154   0830A0E3           MOV      R3,#+8
+   \                     ??beginFile_8:
+   \   00000158   023053E2           SUBS     R3,R3,#+2
+   \   0000015C   B32091E1           LDRH     R2,[R1, R3]
+   \   00000160   B32080E1           STRH     R2,[R0, R3]
+   \   00000164   FBFFFF1A           BNE      ??beginFile_8
+   \   00000168   ........           BL       ??makeDateMask
+    245                    mybook->hourState = getStateByHour(mybook->now.time.hour); }
+   \   0000016C   ........           LDR      R0,??DataTable96  ;; mybook
+   \   00000170   000090E5           LDR      R0,[R0, #+0]
+   \   00000174   9800D0E5           LDRB     R0,[R0, #+152]
+   \   00000178   ........           BL       ??getStateByHour
+   \   0000017C   ........           LDR      R1,??DataTable96  ;; mybook
+   \   00000180   001091E5           LDR      R1,[R1, #+0]
+   \   00000184   8C0081E5           STR      R0,[R1, #+140]
+    246                }
+    247              }
+    248              delete fileContent;
+   \                     ??beginFile_4:
+   \   00000188   0400B0E1           MOVS     R0,R4
+   \   0000018C   ........           _BLF     `??operator delete`,`??operator delete??rA`
+    249              delete conditionXml;
+   \   00000190   0500B0E1           MOVS     R0,R5
+   \   00000194   ........           _BLF     `??operator delete`,`??operator delete??rA`
+   \   00000198   010000EA           B        ??beginFile_9
+    250            } 
+    251            else
+    252              errorInFile(L"Error while trying to open weather.txt and condition.xml!");
+   \                     ??beginFile_2:
+   \   0000019C   20009FE5           LDR      R0,??beginFile_1+0x18  ;; `?<Constant L"\\x45\\x72\\x72\\x6f\\x72\\x20\\x77\\x68\\`
+   \   000001A0   ........           BL       ??errorInFile
+    253          }
+   \                     ??beginFile_9:
+   \   000001A4   0CD08DE2           ADD      SP,SP,#+12       ;; stack cleaning
+   \   000001A8   3080BDE8           POP      {R4,R5,PC}       ;; return
+   \                     ??beginFile_1:
+   \   000001AC   ........           DC32     `?<Constant "loading file">`
+   \   000001B0   ........           DC32     `?<Constant L"\\x77\\x65\\x61\\x74\\x68\\x65\\x72\\x2e\\`
+   \   000001B4   ........           DC32     `?<Constant L"\\x63\\x6f\\x6e\\x64\\x69\\x74\\x69\\x6f\\`
+   \   000001B8   ........           DC32     `?<Constant L"\\x45\\x72\\x72\\x6f\\x72\\x20\\x69\\x6e\\`
+   \   000001BC   ........           DC32     `?<Constant L"\\x45\\x72\\x72\\x6f\\x72\\x20\\x69\\x6e\\_1`
+   \   000001C0   ........           DC32     `?<Constant L"\\x45\\x72\\x72\\x6f\\x72\\x20\\x69\\x6e\\_2`
+   \   000001C4   ........           DC32     `?<Constant L"\\x45\\x72\\x72\\x6f\\x72\\x20\\x77\\x68\\`
+    254          
+
+   \                                 In segment CODE, align 4, keep-with-next
+    255          int SB_ELF_Killed(void *mess ,BOOK* book) {
+   \                     ??SB_ELF_Killed:
+   \   00000000   F0402DE9           PUSH     {R4-R7,LR}
+   \   00000004   0040B0E1           MOVS     R4,R0
+   \   00000008   0150B0E1           MOVS     R5,R1
+    256            REDRAW_RELEASE_MESSAGE* sbm=(REDRAW_RELEASE_MESSAGE*)mess;
+   \   0000000C   0460B0E1           MOVS     R6,R4
+    257            REDRAW_RELEASE_MESSAGE* res = 0;
+   \   00000010   0000A0E3           MOV      R0,#+0
+   \   00000014   0070B0E1           MOVS     R7,R0
+    258            if (sbm->SB_NewOnRedraw==SIonRedraw) {
+   \   00000018   040096E5           LDR      R0,[R6, #+4]
+   \   0000001C   ........           LDR      R1,??DataTable93  ;; SIonRedraw
+   \   00000020   001091E5           LDR      R1,[R1, #+0]
+   \   00000024   010050E1           CMP      R0,R1
+   \   00000028   1600001A           BNE      ??SB_ELF_Killed_1
+    259              res=new REDRAW_RELEASE_MESSAGE;
+   \   0000002C   1800A0E3           MOV      R0,#+24
+   \   00000030   ........           _BLF     `??operator new`,`??operator new??rA`
+   \   00000034   0070B0E1           MOVS     R7,R0
+    260              memcpy(res,sbm,sizeof(REDRAW_RELEASE_MESSAGE));
+   \   00000038   1820A0E3           MOV      R2,#+24
+   \   0000003C   0610B0E1           MOVS     R1,R6
+   \   00000040   0700B0E1           MOVS     R0,R7
+   \   00000044   130100EF           SWI      +275
+    261              if (sbm->SB_OldOnRedraw!=EMPTY_REDRAW_METHOD) SIonRedraw=sbm->SB_OldOnRedraw;
+   \   00000048   000096E5           LDR      R0,[R6, #+0]
+   \   0000004C   0010E0E3           MVN      R1,#+0
+   \   00000050   010050E1           CMP      R0,R1
+   \   00000054   0200000A           BEQ      ??SB_ELF_Killed_2
+   \   00000058   ........           LDR      R0,??DataTable93  ;; SIonRedraw
+   \   0000005C   001096E5           LDR      R1,[R6, #+0]
+   \   00000060   001080E5           STR      R1,[R0, #+0]
+    262              DISP_DESC_SetOnRedraw(DispObject_GetDESC(StatusIndication),Draw);
+   \                     ??SB_ELF_Killed_2:
+   \   00000064   ........           LDR      R0,??DataTable94  ;; StatusIndication
+   \   00000068   000090E5           LDR      R0,[R0, #+0]
+   \   0000006C   1F0200EF           SWI      +543
+   \   00000070   ........           LDR      R1,??DataTable87  ;; ??Draw
+   \   00000074   280200EF           SWI      +552
+    263              res->SB_OldOnRedraw=EMPTY_REDRAW_METHOD;
+   \   00000078   0000E0E3           MVN      R0,#+0
+   \   0000007C   000087E5           STR      R0,[R7, #+0]
+    264              res->SB_NewOnRedraw=Draw;
+   \   00000080   ........           LDR      R0,??DataTable87  ;; ??Draw
+   \   00000084   040087E5           STR      R0,[R7, #+4]
+    265            }
+    266            if (res) {
+   \                     ??SB_ELF_Killed_1:
+   \   00000088   000057E3           CMP      R7,#+0
+   \   0000008C   0800000A           BEQ      ??SB_ELF_Killed_3
+    267              UI_Event_wData(SBY_REDRAW_RELEASE_EVENT ,res,(void (*)(void*))mfree_adr());
+   \   00000090   048100EF           SWI      +33028
+   \   00000094   0020B0E1           MOVS     R2,R0
+   \   00000098   0710B0E1           MOVS     R1,R7
+   \   0000009C   E300A0E3           MOV      R0,#+227
+   \   000000A0   C00F80E3           ORR      R0,R0,#0x300
+   \   000000A4   A90100EF           SWI      +425
+    268              return BLOCK_EVENT_GLOBALLY;
+   \   000000A8   9A00A0E3           MOV      R0,#+154
+   \   000000AC   800F80E3           ORR      R0,R0,#0x200
+   \   000000B0   000000EA           B        ??SB_ELF_Killed_4
+    269            }
+    270            return 0;
+   \                     ??SB_ELF_Killed_3:
+   \   000000B4   0000A0E3           MOV      R0,#+0
+   \                     ??SB_ELF_Killed_4:
+   \   000000B8   F080BDE8           POP      {R4-R7,PC}       ;; return
+    271          }
+    272          
+
+   \                                 In segment CODE, align 4, keep-with-next
+    273          void InitImages(void) {
+   \                     ??InitImages:
+   \   00000000   10402DE9           PUSH     {R4,LR}
+    274            ImageID_Get(BCFG_XMLBGLogoFolder,L"background.png",&statesID[0x0]);
+   \   00000004   ........           LDR      R2,??DataTable79  ;; statesID
+   \   00000008   94109FE5           LDR      R1,??InitImages_1  ;; `?<Constant L"\\x62\\x61\\x63\\x6b\\x67\\x72\\x6f\\x75\\`
+   \   0000000C   ........           LDR      R0,??DataTable76  ;; BCFG_XMLBGLogoFolder
+   \   00000010   CC0200EF           SWI      +716
+    275            ImageID_Get(BCFG_XMLBGLogoFolder,L"logo.png",&statesID[0x1]);
+   \   00000014   ........           LDR      R2,??DataTable75  ;; statesID + 2
+   \   00000018   88109FE5           LDR      R1,??InitImages_1+0x4  ;; `?<Constant L"\\x6c\\x6f\\x67\\x6f\\x2e\\x70\\x6e\\x67"`
+   \   0000001C   ........           LDR      R0,??DataTable76  ;; BCFG_XMLBGLogoFolder
+   \   00000020   CC0200EF           SWI      +716
+    276            for (int i = 0 ; i < 44 ; i++) ImageID_Get(BCFG_StatesFolder,stateImages[i],&statesID[i+0x2]);
+   \   00000024   0000A0E3           MOV      R0,#+0
+   \   00000028   0040B0E1           MOVS     R4,R0
+   \                     ??InitImages_2:
+   \   0000002C   2C0054E3           CMP      R4,#+44
+   \   00000030   0B0000AA           BGE      ??InitImages_3
+   \   00000034   0200A0E3           MOV      R0,#+2
+   \   00000038   ........           LDR      R1,??DataTable79  ;; statesID
+   \   0000003C   901421E0           MLA      R1,R0,R4,R1
+   \   00000040   042091E2           ADDS     R2,R1,#+4
+   \   00000044   0400A0E3           MOV      R0,#+4
+   \   00000048   5C109FE5           LDR      R1,??InitImages_1+0x8  ;; stateImages
+   \   0000004C   901421E0           MLA      R1,R0,R4,R1
+   \   00000050   001091E5           LDR      R1,[R1, #+0]
+   \   00000054   54009FE5           LDR      R0,??InitImages_1+0xC  ;; BCFG_StatesFolder
+   \   00000058   CC0200EF           SWI      +716
+   \   0000005C   014094E2           ADDS     R4,R4,#+1
+   \   00000060   F1FFFFEA           B        ??InitImages_2
+    277            for (int i = 0 ; i < 59 ; i++)ImageID_Get(BCFG_Path_Clock,clockImages[i],&clockID[i]);
+   \                     ??InitImages_3:
+   \   00000064   0000A0E3           MOV      R0,#+0
+   \   00000068   0040B0E1           MOVS     R4,R0
+   \                     ??InitImages_4:
+   \   0000006C   3B0054E3           CMP      R4,#+59
+   \   00000070   0A0000AA           BGE      ??InitImages_5
+   \   00000074   0200A0E3           MOV      R0,#+2
+   \   00000078   ........           LDR      R1,??DataTable80  ;; clockID
+   \   0000007C   901422E0           MLA      R2,R0,R4,R1
+   \   00000080   0400A0E3           MOV      R0,#+4
+   \   00000084   28109FE5           LDR      R1,??InitImages_1+0x10  ;; clockImages
+   \   00000088   901421E0           MLA      R1,R0,R4,R1
+   \   0000008C   001091E5           LDR      R1,[R1, #+0]
+   \   00000090   20009FE5           LDR      R0,??InitImages_1+0x14  ;; BCFG_Path_Clock
+   \   00000094   CC0200EF           SWI      +716
+   \   00000098   014094E2           ADDS     R4,R4,#+1
+   \   0000009C   F2FFFFEA           B        ??InitImages_4
+    278          }
+   \                     ??InitImages_5:
+   \   000000A0   1080BDE8           POP      {R4,PC}          ;; return
+   \                     ??InitImages_1:
+   \   000000A4   ........           DC32     `?<Constant L"\\x62\\x61\\x63\\x6b\\x67\\x72\\x6f\\x75\\`
+   \   000000A8   ........           DC32     `?<Constant L"\\x6c\\x6f\\x67\\x6f\\x2e\\x70\\x6e\\x67"`
+   \   000000AC   ........           DC32     stateImages
+   \   000000B0   ........           DC32     BCFG_StatesFolder
+   \   000000B4   ........           DC32     clockImages
+   \   000000B8   ........           DC32     BCFG_Path_Clock
+    279          
+
+   \                                 In segment CODE, align 4, keep-with-next
+    280          void DestroyImages(void) {
+   \                     ??DestroyImages:
+   \   00000000   10402DE9           PUSH     {R4,LR}
+    281            for (int i = 0 ; i < 46 ; i++) ImageID_Free(statesID[i]);
+   \   00000004   0000A0E3           MOV      R0,#+0
+   \   00000008   0040B0E1           MOVS     R4,R0
+   \                     ??DestroyImages_1:
+   \   0000000C   2E0054E3           CMP      R4,#+46
+   \   00000010   060000AA           BGE      ??DestroyImages_2
+   \   00000014   0200A0E3           MOV      R0,#+2
+   \   00000018   ........           LDR      R1,??DataTable79  ;; statesID
+   \   0000001C   901421E0           MLA      R1,R0,R4,R1
+   \   00000020   B000D1E1           LDRH     R0,[R1, #+0]
+   \   00000024   CD0200EF           SWI      +717
+   \   00000028   014094E2           ADDS     R4,R4,#+1
+   \   0000002C   F6FFFFEA           B        ??DestroyImages_1
+    282            for (int i = 0 ; i < 59 ; i++) ImageID_Free(clockID[i]);
+   \                     ??DestroyImages_2:
+   \   00000030   0000A0E3           MOV      R0,#+0
+   \   00000034   0040B0E1           MOVS     R4,R0
+   \                     ??DestroyImages_3:
+   \   00000038   3B0054E3           CMP      R4,#+59
+   \   0000003C   060000AA           BGE      ??DestroyImages_4
+   \   00000040   0200A0E3           MOV      R0,#+2
+   \   00000044   ........           LDR      R1,??DataTable80  ;; clockID
+   \   00000048   901421E0           MLA      R1,R0,R4,R1
+   \   0000004C   B000D1E1           LDRH     R0,[R1, #+0]
+   \   00000050   CD0200EF           SWI      +717
+   \   00000054   014094E2           ADDS     R4,R4,#+1
+   \   00000058   F6FFFFEA           B        ??DestroyImages_3
+    283          }
+   \                     ??DestroyImages_4:
+   \   0000005C   1080BDE8           POP      {R4,PC}          ;; return
+    284          
+
+   \                                 In segment CODE, align 4, keep-with-next
+    285          void drawWeatherInfo(MyBook* book) {
+   \                     ??drawWeatherInfo:
+   \   00000000   10402DE9           PUSH     {R4,LR}
+   \   00000004   04D04DE2           SUB      SP,SP,#+4
+   \   00000008   0040B0E1           MOVS     R4,R0
+    286            mybook = book;
+   \   0000000C   ........           LDR      R0,??DataTable96  ;; mybook
+   \   00000010   004080E5           STR      R4,[R0, #+0]
+    287            beginFile();
+   \   00000014   ........           BL       ??beginFile
+    288          
+    289            if (!mybook->getError()) {
+   \   00000018   ........           LDR      R0,??DataTable96  ;; mybook
+   \   0000001C   000090E5           LDR      R0,[R0, #+0]
+   \   00000020   ........           _BLF     ??getError,??getError??rA
+   \   00000024   000050E3           CMP      R0,#+0
+   \   00000028   1C00001A           BNE      ??drawWeatherInfo_1
+    290              InitImages();
+   \   0000002C   ........           BL       ??InitImages
+    291              StatusIndication = GUIObject_GetDispObject( (GUI*)List_Get(Find_StandbyBook()->xguilist->guilist,0) );
+   \   00000030   310100EF           SWI      +305
+   \   00000034   0010A0E3           MOV      R1,#+0
+   \   00000038   140090E5           LDR      R0,[R0, #+20]
+   \   0000003C   040090E5           LDR      R0,[R0, #+4]
+   \   00000040   AD0100EF           SWI      +429
+   \   00000044   680100EF           SWI      +360
+   \   00000048   ........           LDR      R1,??DataTable94  ;; StatusIndication
+   \   0000004C   000081E5           STR      R0,[R1, #+0]
+    292              SIonRedraw=DispObject_GetOnRedraw(StatusIndication);
+   \   00000050   ........           LDR      R0,??DataTable94  ;; StatusIndication
+   \   00000054   000090E5           LDR      R0,[R0, #+0]
+   \   00000058   290200EF           SWI      +553
+   \   0000005C   ........           LDR      R1,??DataTable93  ;; SIonRedraw
+   \   00000060   000081E5           STR      R0,[R1, #+0]
+    293              DISP_DESC_SetOnRedraw(DispObject_GetDESC(StatusIndication),Draw);
+   \   00000064   ........           LDR      R0,??DataTable94  ;; StatusIndication
+   \   00000068   000090E5           LDR      R0,[R0, #+0]
+   \   0000006C   1F0200EF           SWI      +543
+   \   00000070   ........           LDR      R1,??DataTable87  ;; ??Draw
+   \   00000074   280200EF           SWI      +552
+    294              mybook->ftimer=Timer_Set(1000,onfTimer,0);
+   \   00000078   0010A0E3           MOV      R1,#+0
+   \   0000007C   0D00B0E1           MOVS     R0,SP
+   \   00000080   ........           _BLF     ??LPARAM,??LPARAM??rA
+   \   00000084   00209DE5           LDR      R2,[SP, #+0]
+   \   00000088   ........           LDR      R1,??DataTable88  ;; ??onfTimer
+   \   0000008C   FA0FA0E3           MOV      R0,#+1000
+   \   00000090   290100EF           SWI      +297
+   \   00000094   ........           LDR      R1,??DataTable96  ;; mybook
+   \   00000098   001091E5           LDR      R1,[R1, #+0]
+   \   0000009C   BC09C1E1           STRH     R0,[R1, #+156]
+    295            }
+    296          }
+   \                     ??drawWeatherInfo_1:
+   \   000000A0   04D08DE2           ADD      SP,SP,#+4        ;; stack cleaning
+   \   000000A4   1080BDE8           POP      {R4,PC}          ;; return
+    297          
+
+   \                                 In segment CODE, align 4, keep-with-next
+    298          void onCloseBEBook(BOOK* book) {
+   \                     ??onCloseBEBook:
+   \   00000000   10402DE9           PUSH     {R4,LR}
+   \   00000004   0040B0E1           MOVS     R4,R0
+    299            if (book)  {
+   \   00000008   000054E3           CMP      R4,#+0
+   \   0000000C   1B00000A           BEQ      ??onCloseBEBook_1
+    300              if (StatusIndication) {
+   \   00000010   ........           LDR      R0,??DataTable94  ;; StatusIndication
+   \   00000014   000090E5           LDR      R0,[R0, #+0]
+   \   00000018   000050E3           CMP      R0,#+0
+   \   0000001C   0F00000A           BEQ      ??onCloseBEBook_2
+    301                Timer_Kill(&mybook->ftimer);
+   \   00000020   ........           LDR      R0,??DataTable96  ;; mybook
+   \   00000024   000090E5           LDR      R0,[R0, #+0]
+   \   00000028   9C0090E2           ADDS     R0,R0,#+156
+   \   0000002C   2A0100EF           SWI      +298
+    302                DestroyImages();
+   \   00000030   ........           BL       ??DestroyImages
+    303                DISP_DESC_SetOnRedraw(DispObject_GetDESC(StatusIndication),SIonRedraw);
+   \   00000034   ........           LDR      R0,??DataTable94  ;; StatusIndication
+   \   00000038   000090E5           LDR      R0,[R0, #+0]
+   \   0000003C   1F0200EF           SWI      +543
+   \   00000040   ........           LDR      R1,??DataTable93  ;; SIonRedraw
+   \   00000044   001091E5           LDR      R1,[R1, #+0]
+   \   00000048   280200EF           SWI      +552
+    304                DispObject_InvalidateRect(StatusIndication,0);
+   \   0000004C   0010A0E3           MOV      R1,#+0
+   \   00000050   ........           LDR      R0,??DataTable94  ;; StatusIndication
+   \   00000054   000090E5           LDR      R0,[R0, #+0]
+   \   00000058   EF0100EF           SWI      +495
+    305                Send_REDRAW_RELEASE();
+   \   0000005C   ........           BL       ??Send_REDRAW_RELEASE
+    306              }
+    307              mybook->freeMyVars();
+   \                     ??onCloseBEBook_2:
+   \   00000060   ........           LDR      R0,??DataTable96  ;; mybook
+   \   00000064   000090E5           LDR      R0,[R0, #+0]
+   \   00000068   ........           _BLF     ??freeMyVars,??freeMyVars??rA
+    308              delete mybook;
+   \   0000006C   ........           LDR      R0,??DataTable96  ;; mybook
+   \   00000070   000090E5           LDR      R0,[R0, #+0]
+   \   00000074   ........           _BLF     `??operator delete`,`??operator delete??rA`
+    309              SUBPROC(elf_exit);
+   \   00000078   04009FE5           LDR      R0,??onCloseBEBook_3  ;; ??elf_exit
+   \   0000007C   080100EF           SWI      +264
+    310            }
+    311          }
+   \                     ??onCloseBEBook_1:
+   \   00000080   1080BDE8           POP      {R4,PC}          ;; return
+   \                     ??onCloseBEBook_3:
+   \   00000084   ........           DC32     ??elf_exit
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable1:
+   \   00000000   ........           DC32     ??Draw
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable5:
+   \   00000000   ........           DC32     SIonRedraw
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable51:
+   \   00000000   ........           DC32     mybook
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable75:
+   \   00000000   ........           DC32     statesID + 2
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable76:
+   \   00000000   ........           DC32     BCFG_XMLBGLogoFolder
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable79:
+   \   00000000   ........           DC32     statesID
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable80:
+   \   00000000   ........           DC32     clockID
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable87:
+   \   00000000   ........           DC32     ??Draw
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable88:
+   \   00000000   ........           DC32     ??onfTimer
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable93:
+   \   00000000   ........           DC32     SIonRedraw
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable94:
+   \   00000000   ........           DC32     StatusIndication
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable96:
+   \   00000000   ........           DC32     mybook
+
+   \                                 In segment DATA_ID, align 4, align-sorted
+   \                     `?<Initializer for IID_IFontManager>`:
+   \   00000000   95D05FCA0F30       DC8 149, 208, 95, 202, 15, 48, 79, 146, 148, 59, 19, 137, 33, 47, 9
+   \              4F92943B1389
+   \              212F09      
+   \   0000000F   D7                 DC8 215
+
+   \                                 In segment DATA_ID, align 4, align-sorted
+   \                     `?<Initializer for CID_CFontManager>`:
+   \   00000000   82AC979B5844       DC8 130, 172, 151, 155, 88, 68, 65, 57, 160, 211, 230, 207, 114, 181
+   \              4139A0D3E6CF
+   \              72B5        
+   \   0000000E   8069               DC8 128, 105
+
+   \                                 In segment DATA_ID, align 4, align-sorted
+   \                     `?<Initializer for IID_ITextRenderingManager>`:
+   \   00000000   CE917B62E33A       DC8 206, 145, 123, 98, 227, 58, 77, 199, 133, 36, 121, 30, 111, 1, 3, 9
+   \              4DC78524791E
+   \              6F010309    
+
+   \                                 In segment DATA_ID, align 4, align-sorted
+   \                     `?<Initializer for CID_CTextRenderingManager>`:
+   \   00000000   CFDCCD9DAE6D       DC8 207, 220, 205, 157, 174, 109, 64, 174, 179, 151, 56, 176, 93, 45
+   \              40AEB39738B0
+   \              5D2D        
+   \   0000000E   359D               DC8 53, 157
+
+   \                                 In segment DATA_ID, align 4, align-sorted
+   \                     `?<Initializer for IID_IImageManager>`:
+   \   00000000   63EFA531FFD1       DC8 99, 239, 165, 49, 255, 209, 78, 37, 166, 36, 96, 10, 150, 129, 63
+   \              4E25A624600A
+   \              96813F      
+   \   0000000F   C5                 DC8 197
+
+   \                                 In segment DATA_ID, align 4, align-sorted
+   \                     `?<Initializer for CID_CImageManager>`:
+   \   00000000   862DF9951C3B       DC8 134, 45, 249, 149, 28, 59, 75, 36, 183, 77, 143, 152, 112, 30, 93
+   \              4B24B74D8F98
+   \              701E5D      
+   \   0000000F   14                 DC8 20
+
+   \                                 In segment DATA_ID, align 4, align-sorted
+   \                     `?<Initializer for IID_IMetaData>`:
+   \   00000000   B1EB4F97B0DD       DC8 177, 235, 79, 151, 176, 221, 66, 9, 182, 150, 206, 17, 45, 94, 216
+   \              4209B696CE11
+   \              2D5ED8      
+   \   0000000F   E8                 DC8 232
+
+   \                                 In segment DATA_ID, align 4, align-sorted
+   \                     `?<Initializer for CID_CMetaData>`:
+   \   00000000   0BCD950F9FB6       DC8 11, 205, 149, 15, 159, 182, 78, 122, 167, 205, 202, 29, 135, 186
+   \              4E7AA7CDCA1D
+   \              87BA        
+   \   0000000E   9A27               DC8 154, 39
+
+   \                                 In segment DATA_ID, align 4, align-sorted
+   \                     `?<Initializer for IID_IIndicationDeviceManager`:
+   \   00000000   0D44BF8686EA       DC8 13, 68, 191, 134, 134, 234, 76, 138, 174, 123, 186, 38, 64, 200, 99
+   \              4C8AAE7BBA26
+   \              40C863      
+   \   0000000F   10                 DC8 16
+
+   \                                 In segment DATA_ID, align 4, align-sorted
+   \                     `?<Initializer for CID_CIndicationDeviceManager`:
+   \   00000000   3F48FE2764F8       DC8 63, 72, 254, 39, 100, 248, 73, 7, 160, 230, 234, 43, 192, 224, 204
+   \              4907A0E6EA2B
+   \              C0E0CC      
+   \   0000000F   C8                 DC8 200
+
+   \                                 In segment DATA_ID, align 4, align-sorted
+   \                     `?<Initializer for stateImages>`:
+   \   00000000   ........           DC32 `?<Constant L"\\x31\\x2e\\x70\\x6e\\x67">`
+   \   00000004   ........           DC32 `?<Constant L"\\x32\\x2e\\x70\\x6e\\x67">`
+   \   00000008   ........           DC32 `?<Constant L"\\x33\\x2e\\x70\\x6e\\x67">`
+   \   0000000C   ........           DC32 `?<Constant L"\\x34\\x2e\\x70\\x6e\\x67">`
+   \   00000010   ........           DC32 `?<Constant L"\\x35\\x2e\\x70\\x6e\\x67">`
+   \   00000014   ........           DC32 `?<Constant L"\\x36\\x2e\\x70\\x6e\\x67">`
+   \   00000018   ........           DC32 `?<Constant L"\\x37\\x2e\\x70\\x6e\\x67">`
+   \   0000001C   ........           DC32 `?<Constant L"\\x38\\x2e\\x70\\x6e\\x67">`
+   \   00000020   ........           DC32 `?<Constant L"\\x31\\x2e\\x70\\x6e\\x67">`
+   \   00000024   ........           DC32 `?<Constant L"\\x31\\x2e\\x70\\x6e\\x67">`
+   \   00000028   ........           DC32 `?<Constant L"\\x39\\x2e\\x70\\x6e\\x67">`
+   \   0000002C   ........           DC32 `?<Constant L"\\x31\\x30\\x2e\\x70\\x6e\\x67">`
+   \   00000030   ........           DC32 `?<Constant L"\\x31\\x31\\x2e\\x70\\x6e\\x67">`
+   \   00000034   ........           DC32 `?<Constant L"\\x31\\x32\\x2e\\x70\\x6e\\x67">`
+   \   00000038   ........           DC32 `?<Constant L"\\x31\\x33\\x2e\\x70\\x6e\\x67">`
+   \   0000003C   ........           DC32 `?<Constant L"\\x31\\x34\\x2e\\x70\\x6e\\x67">`
+   \   00000040   ........           DC32 `?<Constant L"\\x31\\x35\\x2e\\x70\\x6e\\x67">`
+   \   00000044   ........           DC32 `?<Constant L"\\x31\\x36\\x2e\\x70\\x6e\\x67">`
+   \   00000048   ........           DC32 `?<Constant L"\\x31\\x37\\x2e\\x70\\x6e\\x67">`
+   \   0000004C   ........           DC32 `?<Constant L"\\x31\\x38\\x2e\\x70\\x6e\\x67">`
+   \   00000050   ........           DC32 `?<Constant L"\\x31\\x39\\x2e\\x70\\x6e\\x67">`
+   \   00000054   ........           DC32 `?<Constant L"\\x32\\x30\\x2e\\x70\\x6e\\x67">`
+   \   00000058   ........           DC32 `?<Constant L"\\x32\\x31\\x2e\\x70\\x6e\\x67">`
+   \   0000005C   ........           DC32 `?<Constant L"\\x32\\x32\\x2e\\x70\\x6e\\x67">`
+   \   00000060   ........           DC32 `?<Constant L"\\x32\\x33\\x2e\\x70\\x6e\\x67">`
+   \   00000064   ........           DC32 `?<Constant L"\\x32\\x34\\x2e\\x70\\x6e\\x67">`
+   \   00000068   ........           DC32 `?<Constant L"\\x31\\x2e\\x70\\x6e\\x67">`
+   \   0000006C   ........           DC32 `?<Constant L"\\x31\\x2e\\x70\\x6e\\x67">`
+   \   00000070   ........           DC32 `?<Constant L"\\x32\\x35\\x2e\\x70\\x6e\\x67">`
+   \   00000074   ........           DC32 `?<Constant L"\\x32\\x36\\x2e\\x70\\x6e\\x67">`
+   \   00000078   ........           DC32 `?<Constant L"\\x32\\x37\\x2e\\x70\\x6e\\x67">`
+   \   0000007C   ........           DC32 `?<Constant L"\\x32\\x38\\x2e\\x70\\x6e\\x67">`
+   \   00000080   ........           DC32 `?<Constant L"\\x32\\x39\\x2e\\x70\\x6e\\x67">`
+   \   00000084   ........           DC32 `?<Constant L"\\x33\\x30\\x2e\\x70\\x6e\\x67">`
+   \   00000088   ........           DC32 `?<Constant L"\\x33\\x31\\x2e\\x70\\x6e\\x67">`
+   \   0000008C   ........           DC32 `?<Constant L"\\x33\\x32\\x2e\\x70\\x6e\\x67">`
+   \   00000090   ........           DC32 `?<Constant L"\\x33\\x33\\x2e\\x70\\x6e\\x67">`
+   \   00000094   ........           DC32 `?<Constant L"\\x33\\x34\\x2e\\x70\\x6e\\x67">`
+   \   00000098   ........           DC32 `?<Constant L"\\x33\\x35\\x2e\\x70\\x6e\\x67">`
+   \   0000009C   ........           DC32 `?<Constant L"\\x33\\x36\\x2e\\x70\\x6e\\x67">`
+   \   000000A0   ........           DC32 `?<Constant L"\\x33\\x37\\x2e\\x70\\x6e\\x67">`
+   \   000000A4   ........           DC32 `?<Constant L"\\x33\\x37\\x2e\\x70\\x6e\\x67">`
+   \   000000A8   ........           DC32 `?<Constant L"\\x33\\x38\\x2e\\x70\\x6e\\x67">`
+   \   000000AC   ........           DC32 `?<Constant L"\\x33\\x39\\x2e\\x70\\x6e\\x67">`
+   \   000000B0   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   000000C0   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   000000D0   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   000000E0   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   000000F0   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000100   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+
+   \                                 In segment DATA_ID, align 4, align-sorted
+   \                     `?<Initializer for statesID>`:
+   \   00000000   FFFFFFFFFFFF       DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+   \              FFFFFFFFFFFF
+   \              FFFFFFFFFFFF
+   \   00000012   FFFFFFFFFFFF       DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+   \              FFFFFFFFFFFF
+   \              FFFFFFFFFFFF
+   \   00000024   FFFFFFFFFFFF       DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+   \              FFFFFFFFFFFF
+   \              FFFFFFFFFFFF
+   \   00000036   FFFFFFFFFFFF       DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+   \              FFFFFFFFFFFF
+   \              FFFFFFFFFFFF
+   \   00000048   FFFFFFFFFFFF       DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+   \              FFFFFFFFFFFF
+   \              FFFFFFFFFFFF
+   \   0000005A   FFFF               DC16 65535
+   \   0000005C   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   0000006C   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   0000007C   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+
+   \                                 In segment DATA_ID, align 4, align-sorted
+   \                     `?<Initializer for clockImages>`:
+   \   00000000   ........           DC32 `?<Constant L"\\x31\\x2e\\x70\\x6e\\x67">`
+   \   00000004   ........           DC32 `?<Constant L"\\x32\\x2e\\x70\\x6e\\x67">`
+   \   00000008   ........           DC32 `?<Constant L"\\x33\\x2e\\x70\\x6e\\x67">`
+   \   0000000C   ........           DC32 `?<Constant L"\\x34\\x2e\\x70\\x6e\\x67">`
+   \   00000010   ........           DC32 `?<Constant L"\\x35\\x2e\\x70\\x6e\\x67">`
+   \   00000014   ........           DC32 `?<Constant L"\\x36\\x2e\\x70\\x6e\\x67">`
+   \   00000018   ........           DC32 `?<Constant L"\\x37\\x2e\\x70\\x6e\\x67">`
+   \   0000001C   ........           DC32 `?<Constant L"\\x38\\x2e\\x70\\x6e\\x67">`
+   \   00000020   ........           DC32 `?<Constant L"\\x39\\x2e\\x70\\x6e\\x67">`
+   \   00000024   ........           DC32 `?<Constant L"\\x31\\x30\\x2e\\x70\\x6e\\x67">`
+   \   00000028   ........           DC32 `?<Constant L"\\x31\\x31\\x2e\\x70\\x6e\\x67">`
+   \   0000002C   ........           DC32 `?<Constant L"\\x31\\x32\\x2e\\x70\\x6e\\x67">`
+   \   00000030   ........           DC32 `?<Constant L"\\x31\\x33\\x2e\\x70\\x6e\\x67">`
+   \   00000034   ........           DC32 `?<Constant L"\\x31\\x34\\x2e\\x70\\x6e\\x67">`
+   \   00000038   ........           DC32 `?<Constant L"\\x31\\x35\\x2e\\x70\\x6e\\x67">`
+   \   0000003C   ........           DC32 `?<Constant L"\\x31\\x36\\x2e\\x70\\x6e\\x67">`
+   \   00000040   ........           DC32 `?<Constant L"\\x31\\x37\\x2e\\x70\\x6e\\x67">`
+   \   00000044   ........           DC32 `?<Constant L"\\x31\\x38\\x2e\\x70\\x6e\\x67">`
+   \   00000048   ........           DC32 `?<Constant L"\\x31\\x39\\x2e\\x70\\x6e\\x67">`
+   \   0000004C   ........           DC32 `?<Constant L"\\x32\\x30\\x2e\\x70\\x6e\\x67">`
+   \   00000050   ........           DC32 `?<Constant L"\\x32\\x31\\x2e\\x70\\x6e\\x67">`
+   \   00000054   ........           DC32 `?<Constant L"\\x32\\x32\\x2e\\x70\\x6e\\x67">`
+   \   00000058   ........           DC32 `?<Constant L"\\x32\\x33\\x2e\\x70\\x6e\\x67">`
+   \   0000005C   ........           DC32 `?<Constant L"\\x32\\x34\\x2e\\x70\\x6e\\x67">`
+   \   00000060   ........           DC32 `?<Constant L"\\x32\\x35\\x2e\\x70\\x6e\\x67">`
+   \   00000064   ........           DC32 `?<Constant L"\\x32\\x36\\x2e\\x70\\x6e\\x67">`
+   \   00000068   ........           DC32 `?<Constant L"\\x32\\x37\\x2e\\x70\\x6e\\x67">`
+   \   0000006C   ........           DC32 `?<Constant L"\\x32\\x38\\x2e\\x70\\x6e\\x67">`
+   \   00000070   ........           DC32 `?<Constant L"\\x32\\x39\\x2e\\x70\\x6e\\x67">`
+   \   00000074   ........           DC32 `?<Constant L"\\x33\\x30\\x2e\\x70\\x6e\\x67">`
+   \   00000078   ........           DC32 `?<Constant L"\\x33\\x31\\x2e\\x70\\x6e\\x67">`
+   \   0000007C   ........           DC32 `?<Constant L"\\x33\\x32\\x2e\\x70\\x6e\\x67">`
+   \   00000080   ........           DC32 `?<Constant L"\\x33\\x33\\x2e\\x70\\x6e\\x67">`
+   \   00000084   ........           DC32 `?<Constant L"\\x33\\x34\\x2e\\x70\\x6e\\x67">`
+   \   00000088   ........           DC32 `?<Constant L"\\x33\\x35\\x2e\\x70\\x6e\\x67">`
+   \   0000008C   ........           DC32 `?<Constant L"\\x33\\x36\\x2e\\x70\\x6e\\x67">`
+   \   00000090   ........           DC32 `?<Constant L"\\x33\\x37\\x2e\\x70\\x6e\\x67">`
+   \   00000094   ........           DC32 `?<Constant L"\\x33\\x38\\x2e\\x70\\x6e\\x67">`
+   \   00000098   ........           DC32 `?<Constant L"\\x33\\x39\\x2e\\x70\\x6e\\x67">`
+   \   0000009C   ........           DC32 `?<Constant L"\\x34\\x30\\x2e\\x70\\x6e\\x67">`
+   \   000000A0   ........           DC32 `?<Constant L"\\x34\\x31\\x2e\\x70\\x6e\\x67">`
+   \   000000A4   ........           DC32 `?<Constant L"\\x34\\x32\\x2e\\x70\\x6e\\x67">`
+   \   000000A8   ........           DC32 `?<Constant L"\\x34\\x33\\x2e\\x70\\x6e\\x67">`
+   \   000000AC   ........           DC32 `?<Constant L"\\x34\\x34\\x2e\\x70\\x6e\\x67">`
+   \   000000B0   ........           DC32 `?<Constant L"\\x34\\x35\\x2e\\x70\\x6e\\x67">`
+   \   000000B4   ........           DC32 `?<Constant L"\\x34\\x36\\x2e\\x70\\x6e\\x67">`
+   \   000000B8   ........           DC32 `?<Constant L"\\x34\\x37\\x2e\\x70\\x6e\\x67">`
+   \   000000BC   ........           DC32 `?<Constant L"\\x34\\x38\\x2e\\x70\\x6e\\x67">`
+   \   000000C0   ........           DC32 `?<Constant L"\\x34\\x39\\x2e\\x70\\x6e\\x67">`
+   \   000000C4   ........           DC32 `?<Constant L"\\x35\\x30\\x2e\\x70\\x6e\\x67">`
+   \   000000C8   ........           DC32 `?<Constant L"\\x35\\x31\\x2e\\x70\\x6e\\x67">`
+   \   000000CC   ........           DC32 `?<Constant L"\\x35\\x32\\x2e\\x70\\x6e\\x67">`
+   \   000000D0   ........           DC32 `?<Constant L"\\x35\\x33\\x2e\\x70\\x6e\\x67">`
+   \   000000D4   ........           DC32 `?<Constant L"\\x35\\x34\\x2e\\x70\\x6e\\x67">`
+   \   000000D8   ........           DC32 `?<Constant L"\\x35\\x35\\x2e\\x70\\x6e\\x67">`
+   \   000000DC   ........           DC32 `?<Constant L"\\x35\\x36\\x2e\\x70\\x6e\\x67">`
+   \   000000E0   ........           DC32 `?<Constant L"\\x35\\x37\\x2e\\x70\\x6e\\x67">`
+   \   000000E4   ........           DC32 `?<Constant L"\\x35\\x38\\x2e\\x70\\x6e\\x67">`
+   \   000000E8   ........           DC32 `?<Constant L"\\x35\\x39\\x2e\\x70\\x6e\\x67">`
+   \   000000EC   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   000000FC   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   0000010C   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   0000011C   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   0000012C   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   0000013C   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   0000014C   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   0000015C   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0
+   \              0000        
+
+   \                                 In segment DATA_ID, align 4, align-sorted
+   \                     `?<Initializer for clockID>`:
+   \   00000000   FFFFFFFFFFFF       DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+   \              FFFFFFFFFFFF
+   \              FFFFFFFFFFFF
+   \   00000012   FFFFFFFFFFFF       DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+   \              FFFFFFFFFFFF
+   \              FFFFFFFFFFFF
+   \   00000024   FFFFFFFFFFFF       DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+   \              FFFFFFFFFFFF
+   \              FFFFFFFFFFFF
+   \   00000036   FFFFFFFFFFFF       DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+   \              FFFFFFFFFFFF
+   \              FFFFFFFFFFFF
+   \   00000048   FFFFFFFFFFFF       DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+   \              FFFFFFFFFFFF
+   \              FFFFFFFFFFFF
+   \   0000005A   FFFFFFFFFFFF       DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+   \              FFFFFFFFFFFF
+   \              FFFFFFFFFFFF
+   \   0000006C   FFFFFFFFFFFF       DC16 65535, 65535, 65535, 65535, 65535
+   \              FFFFFFFF    
+   \   00000076   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000086   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   00000096   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              00000000    
+   \   000000A6   000000000000       DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              000000000000
+   \              0000        
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x38\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   38002E007000       DC8 38H, 0, 2EH, 0, 70H, 0, 6EH, 0
+   \              6E00        
+   \   00000008   67000000           DC8 67H, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant {0, 12, 13, 16, 18}>`:
+   \   00000000   000000000C00       DC32 0, 12, 13, 16, 18
+   \              00000D000000
+   \              100000001200
+   \              0000        
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x25\\x64">`:
+   \   00000000   250064000000       DC8 25H, 0, 64H, 0, 0, 0
+   \   00000006   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 2, align-sorted
+   \   00000000   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x25\\x64\\x3a\\x25\\x64">`:
+   \   00000000   250064003A00       DC8 25H, 0, 64H, 0, 3AH, 0, 25H, 0
+   \              2500        
+   \   00000008   64000000           DC8 64H, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x5c\\x6e">`:
+   \   00000000   5C006E000000       DC8 5CH, 0, 6EH, 0, 0, 0
+   \   00000006   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x2c\\x20">`:
+   \   00000000   2C0020000000       DC8 2CH, 0, 20H, 0, 0, 0
+   \   00000006   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x20\\x25\\x64">`:
+   \   00000000   200025006400       DC8 20H, 0, 25H, 0, 64H, 0, 0, 0
+   \              0000        
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant "loading file">`:
+   \   00000000   6C6F6164696E       DC8 "loading file"
+   \              672066696C65
+   \              00          
+   \   0000000D   000000             DC8 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x77\\x65\\x61\\x74\\x68\\x65\\x72\\x2e\\`:
+   \   00000000   770065006100       DC8 77H, 0, 65H, 0, 61H, 0, 74H, 0
+   \              7400        
+   \   00000008   680065007200       DC8 68H, 0, 65H, 0, 72H, 0, 2EH, 0
+   \              2E00        
+   \   00000010   740078007400       DC8 74H, 0, 78H, 0, 74H, 0, 0, 0
+   \              0000        
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x63\\x6f\\x6e\\x64\\x69\\x74\\x69\\x6f\\`:
+   \   00000000   63006F006E00       DC8 63H, 0, 6FH, 0, 6EH, 0, 64H, 0
+   \              6400        
+   \   00000008   690074006900       DC8 69H, 0, 74H, 0, 69H, 0, 6FH, 0
+   \              6F00        
+   \   00000010   6E002E007800       DC8 6EH, 0, 2EH, 0, 78H, 0, 6DH, 0
+   \              6D00        
+   \   00000018   6C000000           DC8 6CH, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x45\\x72\\x72\\x6f\\x72\\x20\\x69\\x6e\\`:
+   \   00000000   450072007200       DC8 45H, 0, 72H, 0, 72H, 0, 6FH, 0
+   \              6F00        
+   \   00000008   720020006900       DC8 72H, 0, 20H, 0, 69H, 0, 6EH, 0
+   \              6E00        
+   \   00000010   20006C006F00       DC8 20H, 0, 6CH, 0, 6FH, 0, 63H, 0
+   \              6300        
+   \   00000018   610074006900       DC8 61H, 0, 74H, 0, 69H, 0, 6FH, 0
+   \              6F00        
+   \   00000020   6E0021002000       DC8 6EH, 0, 21H, 0, 20H, 0, 55H, 0
+   \              5500        
+   \   00000028   700064006100       DC8 70H, 0, 64H, 0, 61H, 0, 74H, 0
+   \              7400        
+   \   00000030   650020007900       DC8 65H, 0, 20H, 0, 79H, 0, 6FH, 0
+   \              6F00        
+   \   00000038   750072002000       DC8 75H, 0, 72H, 0, 20H, 0, 66H, 0
+   \              6600        
+   \   00000040   69006C006500       DC8 69H, 0, 6CH, 0, 65H, 0, 20H, 0
+   \              2000        
+   \   00000048   770065006100       DC8 77H, 0, 65H, 0, 61H, 0, 74H, 0
+   \              7400        
+   \   00000050   680065007200       DC8 68H, 0, 65H, 0, 72H, 0, 2EH, 0
+   \              2E00        
+   \   00000058   740078007400       DC8 74H, 0, 78H, 0, 74H, 0, 20H, 0
+   \              2000        
+   \   00000060   61006E006400       DC8 61H, 0, 6EH, 0, 64H, 0, 20H, 0
+   \              2000        
+   \   00000068   720075006E00       DC8 72H, 0, 75H, 0, 6EH, 0, 20H, 0
+   \              2000        
+   \   00000070   740068006500       DC8 74H, 0, 68H, 0, 65H, 0, 20H, 0
+   \              2000        
+   \   00000078   65006C006600       DC8 65H, 0, 6CH, 0, 66H, 0, 20H, 0
+   \              2000        
+   \   00000080   610067006100       DC8 61H, 0, 67H, 0, 61H, 0, 69H, 0
+   \              6900        
+   \   00000088   6E0021000000       DC8 6EH, 0, 21H, 0, 0, 0
+   \   0000008E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x33\\x33\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   330033002E00       DC8 33H, 0, 33H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x45\\x72\\x72\\x6f\\x72\\x20\\x69\\x6e\\_1`:
+   \   00000000   450072007200       DC8 45H, 0, 72H, 0, 72H, 0, 6FH, 0
+   \              6F00        
+   \   00000008   720020006900       DC8 72H, 0, 20H, 0, 69H, 0, 6EH, 0
+   \              6E00        
+   \   00000010   200044006100       DC8 20H, 0, 44H, 0, 61H, 0, 79H, 0
+   \              7900        
+   \   00000018   200057006500       DC8 20H, 0, 57H, 0, 65H, 0, 61H, 0
+   \              6100        
+   \   00000020   740068006500       DC8 74H, 0, 68H, 0, 65H, 0, 72H, 0
+   \              7200        
+   \   00000028   210020005500       DC8 21H, 0, 20H, 0, 55H, 0, 70H, 0
+   \              7000        
+   \   00000030   640061007400       DC8 64H, 0, 61H, 0, 74H, 0, 65H, 0
+   \              6500        
+   \   00000038   200079006F00       DC8 20H, 0, 79H, 0, 6FH, 0, 75H, 0
+   \              7500        
+   \   00000040   720020006600       DC8 72H, 0, 20H, 0, 66H, 0, 69H, 0
+   \              6900        
+   \   00000048   6C0065002000       DC8 6CH, 0, 65H, 0, 20H, 0, 77H, 0
+   \              7700        
+   \   00000050   650061007400       DC8 65H, 0, 61H, 0, 74H, 0, 68H, 0
+   \              6800        
+   \   00000058   650072002E00       DC8 65H, 0, 72H, 0, 2EH, 0, 74H, 0
+   \              7400        
+   \   00000060   780074002000       DC8 78H, 0, 74H, 0, 20H, 0, 61H, 0
+   \              6100        
+   \   00000068   6E0064002000       DC8 6EH, 0, 64H, 0, 20H, 0, 72H, 0
+   \              7200        
+   \   00000070   75006E002000       DC8 75H, 0, 6EH, 0, 20H, 0, 74H, 0
+   \              7400        
+   \   00000078   680065002000       DC8 68H, 0, 65H, 0, 20H, 0, 65H, 0
+   \              6500        
+   \   00000080   6C0066002000       DC8 6CH, 0, 66H, 0, 20H, 0, 61H, 0
+   \              6100        
+   \   00000088   670061006900       DC8 67H, 0, 61H, 0, 69H, 0, 6EH, 0
+   \              6E00        
+   \   00000090   21000000           DC8 21H, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x45\\x72\\x72\\x6f\\x72\\x20\\x69\\x6e\\_2`:
+   \   00000000   450072007200       DC8 45H, 0, 72H, 0, 72H, 0, 6FH, 0
+   \              6F00        
+   \   00000008   720020006900       DC8 72H, 0, 20H, 0, 69H, 0, 6EH, 0
+   \              6E00        
+   \   00000010   20004E006900       DC8 20H, 0, 4EH, 0, 69H, 0, 67H, 0
+   \              6700        
+   \   00000018   680074002000       DC8 68H, 0, 74H, 0, 20H, 0, 57H, 0
+   \              5700        
+   \   00000020   650061007400       DC8 65H, 0, 61H, 0, 74H, 0, 68H, 0
+   \              6800        
+   \   00000028   650072002100       DC8 65H, 0, 72H, 0, 21H, 0, 20H, 0
+   \              2000        
+   \   00000030   550070006400       DC8 55H, 0, 70H, 0, 64H, 0, 61H, 0
+   \              6100        
+   \   00000038   740065002000       DC8 74H, 0, 65H, 0, 20H, 0, 79H, 0
+   \              7900        
+   \   00000040   6F0075007200       DC8 6FH, 0, 75H, 0, 72H, 0, 20H, 0
+   \              2000        
+   \   00000048   660069006C00       DC8 66H, 0, 69H, 0, 6CH, 0, 65H, 0
+   \              6500        
+   \   00000050   200077006500       DC8 20H, 0, 77H, 0, 65H, 0, 61H, 0
+   \              6100        
+   \   00000058   740068006500       DC8 74H, 0, 68H, 0, 65H, 0, 72H, 0
+   \              7200        
+   \   00000060   2E0074007800       DC8 2EH, 0, 74H, 0, 78H, 0, 74H, 0
+   \              7400        
+   \   00000068   200061006E00       DC8 20H, 0, 61H, 0, 6EH, 0, 64H, 0
+   \              6400        
+   \   00000070   200072007500       DC8 20H, 0, 72H, 0, 75H, 0, 6EH, 0
+   \              6E00        
+   \   00000078   200074006800       DC8 20H, 0, 74H, 0, 68H, 0, 65H, 0
+   \              6500        
+   \   00000080   200065006C00       DC8 20H, 0, 65H, 0, 6CH, 0, 66H, 0
+   \              6600        
+   \   00000088   200061006700       DC8 20H, 0, 61H, 0, 67H, 0, 61H, 0
+   \              6100        
+   \   00000090   69006E002100       DC8 69H, 0, 6EH, 0, 21H, 0, 0, 0
+   \              0000        
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x45\\x72\\x72\\x6f\\x72\\x20\\x77\\x68\\`:
+   \   00000000   450072007200       DC8 45H, 0, 72H, 0, 72H, 0, 6FH, 0
+   \              6F00        
+   \   00000008   720020007700       DC8 72H, 0, 20H, 0, 77H, 0, 68H, 0
+   \              6800        
+   \   00000010   69006C006500       DC8 69H, 0, 6CH, 0, 65H, 0, 20H, 0
+   \              2000        
+   \   00000018   740072007900       DC8 74H, 0, 72H, 0, 79H, 0, 69H, 0
+   \              6900        
+   \   00000020   6E0067002000       DC8 6EH, 0, 67H, 0, 20H, 0, 74H, 0
+   \              7400        
+   \   00000028   6F0020006F00       DC8 6FH, 0, 20H, 0, 6FH, 0, 70H, 0
+   \              7000        
+   \   00000030   65006E002000       DC8 65H, 0, 6EH, 0, 20H, 0, 77H, 0
+   \              7700        
+   \   00000038   650061007400       DC8 65H, 0, 61H, 0, 74H, 0, 68H, 0
+   \              6800        
+   \   00000040   650072002E00       DC8 65H, 0, 72H, 0, 2EH, 0, 74H, 0
+   \              7400        
+   \   00000048   780074002000       DC8 78H, 0, 74H, 0, 20H, 0, 61H, 0
+   \              6100        
+   \   00000050   6E0064002000       DC8 6EH, 0, 64H, 0, 20H, 0, 63H, 0
+   \              6300        
+   \   00000058   6F006E006400       DC8 6FH, 0, 6EH, 0, 64H, 0, 69H, 0
+   \              6900        
+   \   00000060   740069006F00       DC8 74H, 0, 69H, 0, 6FH, 0, 6EH, 0
+   \              6E00        
+   \   00000068   2E0078006D00       DC8 2EH, 0, 78H, 0, 6DH, 0, 6CH, 0
+   \              6C00        
+   \   00000070   21000000           DC8 21H, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x62\\x61\\x63\\x6b\\x67\\x72\\x6f\\x75\\`:
+   \   00000000   620061006300       DC8 62H, 0, 61H, 0, 63H, 0, 6BH, 0
+   \              6B00        
+   \   00000008   670072006F00       DC8 67H, 0, 72H, 0, 6FH, 0, 75H, 0
+   \              7500        
+   \   00000010   6E0064002E00       DC8 6EH, 0, 64H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000018   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000001E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x31\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   31002E007000       DC8 31H, 0, 2EH, 0, 70H, 0, 6EH, 0
+   \              6E00        
+   \   00000008   67000000           DC8 67H, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x32\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   32002E007000       DC8 32H, 0, 2EH, 0, 70H, 0, 6EH, 0
+   \              6E00        
+   \   00000008   67000000           DC8 67H, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x33\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   33002E007000       DC8 33H, 0, 2EH, 0, 70H, 0, 6EH, 0
+   \              6E00        
+   \   00000008   67000000           DC8 67H, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x34\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   34002E007000       DC8 34H, 0, 2EH, 0, 70H, 0, 6EH, 0
+   \              6E00        
+   \   00000008   67000000           DC8 67H, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x35\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   35002E007000       DC8 35H, 0, 2EH, 0, 70H, 0, 6EH, 0
+   \              6E00        
+   \   00000008   67000000           DC8 67H, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x36\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   36002E007000       DC8 36H, 0, 2EH, 0, 70H, 0, 6EH, 0
+   \              6E00        
+   \   00000008   67000000           DC8 67H, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x37\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   37002E007000       DC8 37H, 0, 2EH, 0, 70H, 0, 6EH, 0
+   \              6E00        
+   \   00000008   67000000           DC8 67H, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x6c\\x6f\\x67\\x6f\\x2e\\x70\\x6e\\x67"`:
+   \   00000000   6C006F006700       DC8 6CH, 0, 6FH, 0, 67H, 0, 6FH, 0
+   \              6F00        
+   \   00000008   2E0070006E00       DC8 2EH, 0, 70H, 0, 6EH, 0, 67H, 0
+   \              6700        
+   \   00000010   0000               DC8 0, 0
+   \   00000012   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x39\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   39002E007000       DC8 39H, 0, 2EH, 0, 70H, 0, 6EH, 0
+   \              6E00        
+   \   00000008   67000000           DC8 67H, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x31\\x30\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   310030002E00       DC8 31H, 0, 30H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x31\\x31\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   310031002E00       DC8 31H, 0, 31H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x31\\x32\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   310032002E00       DC8 31H, 0, 32H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x31\\x33\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   310033002E00       DC8 31H, 0, 33H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x31\\x34\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   310034002E00       DC8 31H, 0, 34H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x31\\x35\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   310035002E00       DC8 31H, 0, 35H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x31\\x36\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   310036002E00       DC8 31H, 0, 36H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x31\\x37\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   310037002E00       DC8 31H, 0, 37H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x31\\x38\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   310038002E00       DC8 31H, 0, 38H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x31\\x39\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   310039002E00       DC8 31H, 0, 39H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x32\\x30\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   320030002E00       DC8 32H, 0, 30H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x32\\x31\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   320031002E00       DC8 32H, 0, 31H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x32\\x32\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   320032002E00       DC8 32H, 0, 32H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x32\\x33\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   320033002E00       DC8 32H, 0, 33H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x32\\x34\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   320034002E00       DC8 32H, 0, 34H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x32\\x35\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   320035002E00       DC8 32H, 0, 35H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x32\\x36\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   320036002E00       DC8 32H, 0, 36H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x32\\x37\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   320037002E00       DC8 32H, 0, 37H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x32\\x38\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   320038002E00       DC8 32H, 0, 38H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x32\\x39\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   320039002E00       DC8 32H, 0, 39H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x33\\x30\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   330030002E00       DC8 33H, 0, 30H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x33\\x31\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   330031002E00       DC8 33H, 0, 31H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x33\\x32\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   330032002E00       DC8 33H, 0, 32H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x25\\x64\\x3a\\x30\\x25\\x64">`:
+   \   00000000   250064003A00       DC8 25H, 0, 64H, 0, 3AH, 0, 30H, 0
+   \              3000        
+   \   00000008   250064000000       DC8 25H, 0, 64H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x33\\x34\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   330034002E00       DC8 33H, 0, 34H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x33\\x35\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   330035002E00       DC8 33H, 0, 35H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x33\\x36\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   330036002E00       DC8 33H, 0, 36H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x33\\x37\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   330037002E00       DC8 33H, 0, 37H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x33\\x38\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   330038002E00       DC8 33H, 0, 38H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x33\\x39\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   330039002E00       DC8 33H, 0, 39H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x34\\x30\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   340030002E00       DC8 34H, 0, 30H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x34\\x31\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   340031002E00       DC8 34H, 0, 31H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x34\\x32\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   340032002E00       DC8 34H, 0, 32H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x34\\x33\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   340033002E00       DC8 34H, 0, 33H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x34\\x34\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   340034002E00       DC8 34H, 0, 34H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x34\\x35\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   340035002E00       DC8 34H, 0, 35H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x34\\x36\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   340036002E00       DC8 34H, 0, 36H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x34\\x37\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   340037002E00       DC8 34H, 0, 37H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x34\\x38\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   340038002E00       DC8 34H, 0, 38H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x34\\x39\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   340039002E00       DC8 34H, 0, 39H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x35\\x30\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   350030002E00       DC8 35H, 0, 30H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x35\\x31\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   350031002E00       DC8 35H, 0, 31H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x35\\x32\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   350032002E00       DC8 35H, 0, 32H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x35\\x33\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   350033002E00       DC8 35H, 0, 33H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x35\\x34\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   350034002E00       DC8 35H, 0, 34H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x35\\x35\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   350035002E00       DC8 35H, 0, 35H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x35\\x36\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   350036002E00       DC8 35H, 0, 36H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x35\\x37\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   350037002E00       DC8 35H, 0, 37H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x35\\x38\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   350038002E00       DC8 35H, 0, 38H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x35\\x39\\x2e\\x70\\x6e\\x67">`:
+   \   00000000   350039002E00       DC8 35H, 0, 39H, 0, 2EH, 0, 70H, 0
+   \              7000        
+   \   00000008   6E0067000000       DC8 6EH, 0, 67H, 0, 0, 0
+   \   0000000E   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x4d\\x6f\\x72\\x6e\\x69\\x6e\\x67">`:
+   \   00000000   4D006F007200       DC8 4DH, 0, 6FH, 0, 72H, 0, 6EH, 0
+   \              6E00        
+   \   00000008   69006E006700       DC8 69H, 0, 6EH, 0, 67H, 0, 0, 0
+   \              0000        
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x4e\\x6f\\x6f\\x6e">`:
+   \   00000000   4E006F006F00       DC8 4EH, 0, 6FH, 0, 6FH, 0, 6EH, 0
+   \              6E00        
+   \   00000008   0000               DC8 0, 0
+   \   0000000A   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x41\\x66\\x74\\x65\\x72\\x6e\\x6f\\x6f\\`:
+   \   00000000   410066007400       DC8 41H, 0, 66H, 0, 74H, 0, 65H, 0
+   \              6500        
+   \   00000008   72006E006F00       DC8 72H, 0, 6EH, 0, 6FH, 0, 6FH, 0
+   \              6F00        
+   \   00000010   6E000000           DC8 6EH, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x45\\x76\\x65\\x6e\\x69\\x6e\\x67">`:
+   \   00000000   450076006500       DC8 45H, 0, 76H, 0, 65H, 0, 6EH, 0
+   \              6E00        
+   \   00000008   69006E006700       DC8 69H, 0, 6EH, 0, 67H, 0, 0, 0
+   \              0000        
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x4e\\x69\\x67\\x68\\x74">`:
+   \   00000000   4E0069006700       DC8 4EH, 0, 69H, 0, 67H, 0, 68H, 0
+   \              6800        
+   \   00000008   74000000           DC8 74H, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant {&L"\\x4d\\x6f\\x72\\x6e\\x69\\x6e\\x67", `:
+   \   00000000   ........           DC32 `?<Constant L"\\x4d\\x6f\\x72\\x6e\\x69\\x6e\\x67">`
+   \   00000004   ........           DC32 `?<Constant L"\\x4e\\x6f\\x6f\\x6e">`
+   \   00000008   ........           DC32 `?<Constant L"\\x41\\x66\\x74\\x65\\x72\\x6e\\x6f\\x6f\\`
+   \   0000000C   ........           DC32 `?<Constant L"\\x45\\x76\\x65\\x6e\\x69\\x6e\\x67">`
+   \   00000010   ........           DC32 `?<Constant L"\\x4e\\x69\\x67\\x68\\x74">`
+
+   Maximum stack usage in bytes:
+
+     Function                       CSTACK
+     --------                       ------
+     DestroyImages()                    8
+     Draw(DISP_OBJ *, int, int, int)
+                                       20
+     InitImages()                       8
+     LPARAM::LPARAM(int)                0
+     ReconfigElf(void *, BOOK *)       20
+     SB_ELF_Killed(void *, BOOK *)     20
+     Send_REDRAW_RELEASE()              8
+     beginFile()                       24
+     drawClock(int, int)               32
+     drawOnStby(wchar_t *, int, int, int, int, int)
+                                       80
+     drawWeatherContents()             24
+     drawWeatherInfo(MyBook *)         12
+     errorInFile(wchar_t *)            16
+     finalDraw(wchar_t *, wchar_t *, int, int)
+                                       40
+     getStateByHour(int)               40
+     ifDrawImage(bool, int, int, wchar_t const &)
+                                       28
+     ifDrawNoMask(bool, wchar_t *, int, int, int, int, unsigned int)
+                                       40
+     makeDateMask()                    36
+     onCloseBEBook(BOOK *)              8
+     onfTimer(u16, LPARAM)             16
+     returnMask(wchar_t const *, int, bool, float (*)(int), int)
+                                       44
+
+
+   Segment part sizes:
+
+     Function/Label                 Bytes
+     --------------                 -----
+     LPARAM::LPARAM(int)               8
+     IID_IFontManager                 16
+     CID_CFontManager                 16
+     IID_ITextRenderingManager        16
+     CID_CTextRenderingManager        16
+     IID_IImageManager                16
+     CID_CImageManager                16
+     IID_IMetaData                    16
+     CID_CMetaData                    16
+     IID_IIndicationDeviceManager     16
+     CID_CIndicationDeviceManager     16
+     SIonRedraw                        4
+     StatusIndication                  4
+     stateImages                     272
+     statesID                        140
+     clockImages                     356
+     clockID                         180
+     mybook                            4
+     Send_REDRAW_RELEASE()            80
+     ReconfigElf(void *, BOOK *)     140
+     drawOnStby(wchar_t *, int, int, int, int, int)
+                                     472
+     Draw(DISP_OBJ *, int, int, int)
+                                     104
+     returnMask(wchar_t const *, int, bool, float (*)(int), int)
+                                     164
+     ifDrawNoMask(bool, wchar_t *, int, int, int, int, unsigned int)
+                                      84
+     ifDrawImage(bool, int, int, wchar_t const &)
+                                      80
+     getStateByHour(int)             176
+     drawClock(int, int)             672
+     finalDraw(wchar_t *, wchar_t *, int, int)
+                                     904
+     onfTimer(u16, LPARAM)            80
+     makeDateMask()                  408
+     drawWeatherContents()           484
+     errorInFile(wchar_t *)          120
+     beginFile()                     456
+     SB_ELF_Killed(void *, BOOK *)   188
+     InitImages()                    188
+     DestroyImages()                  96
+     drawWeatherInfo(MyBook *)       168
+     onCloseBEBook(BOOK *)           136
+     ??DataTable1                      4
+     ??DataTable5                      4
+     ??DataTable51                     4
+     ??DataTable75                     4
+     ??DataTable76                     4
+     ??DataTable79                     4
+     ??DataTable80                     4
+     ??DataTable87                     4
+     ??DataTable88                     4
+     ??DataTable93                     4
+     ??DataTable94                     4
+     ??DataTable96                     4
+     ?<Initializer for IID_IFontManager>
+                                      16
+     ?<Initializer for CID_CFontManager>
+                                      16
+     ?<Initializer for IID_ITextRenderingManager>
+                                      16
+     ?<Initializer for CID_CTextRenderingManager>
+                                      16
+     ?<Initializer for IID_IImageManager>
+                                      16
+     ?<Initializer for CID_CImageManager>
+                                      16
+     ?<Initializer for IID_IMetaData>
+                                      16
+     ?<Initializer for CID_CMetaData>
+                                      16
+     ?<Initializer for IID_IIndicationDeviceManager
+                                      16
+     ?<Initializer for CID_CIndicationDeviceManager
+                                      16
+     ?<Initializer for stateImages>  272
+     ?<Initializer for statesID>     140
+     ?<Initializer for clockImages>  356
+     ?<Initializer for clockID>      180
+     ?<Constant L"\x38\x2e\x70\x6e\x67">
+                                      12
+     ?<Constant {0, 12, 13, 16, 18}>
+                                      20
+     ?<Constant L"\x25\x64">           8
+     ?<Constant L"">                   2
+     ?<Constant L"\x25\x64\x3a\x25\x64">
+                                      12
+     ?<Constant L"\x5c\x6e">           8
+     ?<Constant L"\x2c\x20">           8
+     ?<Constant L"\x20\x25\x64">       8
+     ?<Constant "loading file">       16
+     ?<Constant L"\x77\x65\x61\x74\x68\x65\x72\x2e\
+                                      24
+     ?<Constant L"\x63\x6f\x6e\x64\x69\x74\x69\x6f\
+                                      28
+     ?<Constant L"\x45\x72\x72\x6f\x72\x20\x69\x6e\
+                                     144
+     ?<Constant L"\x33\x33\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x45\x72\x72\x6f\x72\x20\x69\x6e\_1
+                                     148
+     ?<Constant L"\x45\x72\x72\x6f\x72\x20\x69\x6e\_2
+                                     152
+     ?<Constant L"\x45\x72\x72\x6f\x72\x20\x77\x68\
+                                     116
+     ?<Constant L"\x62\x61\x63\x6b\x67\x72\x6f\x75\
+                                      32
+     ?<Constant L"\x31\x2e\x70\x6e\x67">
+                                      12
+     ?<Constant L"\x32\x2e\x70\x6e\x67">
+                                      12
+     ?<Constant L"\x33\x2e\x70\x6e\x67">
+                                      12
+     ?<Constant L"\x34\x2e\x70\x6e\x67">
+                                      12
+     ?<Constant L"\x35\x2e\x70\x6e\x67">
+                                      12
+     ?<Constant L"\x36\x2e\x70\x6e\x67">
+                                      12
+     ?<Constant L"\x37\x2e\x70\x6e\x67">
+                                      12
+     ?<Constant L"\x6c\x6f\x67\x6f\x2e\x70\x6e\x67"
+                                      20
+     ?<Constant L"\x39\x2e\x70\x6e\x67">
+                                      12
+     ?<Constant L"\x31\x30\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x31\x31\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x31\x32\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x31\x33\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x31\x34\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x31\x35\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x31\x36\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x31\x37\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x31\x38\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x31\x39\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x32\x30\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x32\x31\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x32\x32\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x32\x33\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x32\x34\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x32\x35\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x32\x36\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x32\x37\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x32\x38\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x32\x39\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x33\x30\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x33\x31\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x33\x32\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x25\x64\x3a\x30\x25\x64">
+                                      16
+     ?<Constant L"\x33\x34\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x33\x35\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x33\x36\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x33\x37\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x33\x38\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x33\x39\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x34\x30\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x34\x31\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x34\x32\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x34\x33\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x34\x34\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x34\x35\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x34\x36\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x34\x37\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x34\x38\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x34\x39\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x35\x30\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x35\x31\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x35\x32\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x35\x33\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x35\x34\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x35\x35\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x35\x36\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x35\x37\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x35\x38\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x35\x39\x2e\x70\x6e\x67">
+                                      16
+     ?<Constant L"\x4d\x6f\x72\x6e\x69\x6e\x67">
+                                      16
+     ?<Constant L"\x4e\x6f\x6f\x6e">
+                                      12
+     ?<Constant L"\x41\x66\x74\x65\x72\x6e\x6f\x6f\
+                                      20
+     ?<Constant L"\x45\x76\x65\x6e\x69\x6e\x67">
+                                      16
+     ?<Constant L"\x4e\x69\x67\x68\x74">
+                                      12
+     ?<Constant {&L"\x4d\x6f\x72\x6e\x69\x6e\x67",
+                                      20
+      Others                         572
+
+ 
+ 5 804 bytes in segment CODE
+ 1 766 bytes in segment DATA_C
+ 1 108 bytes in segment DATA_I
+ 1 108 bytes in segment DATA_ID
+    12 bytes in segment DATA_Z
+    24 bytes in segment INITTAB
+ 
+ 5 248 bytes of CODE  memory (+ 580 bytes shared)
+ 2 874 bytes of CONST memory
+ 1 120 bytes of DATA  memory
+
+Errors: none
+Warnings: none

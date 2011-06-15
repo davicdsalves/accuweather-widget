@@ -1,0 +1,269 @@
+//////////////////////////////////////////////////////////////////////////////
+//                                                                           /
+// IAR ARM ANSI C/C++ Compiler V4.42A/W32 EVALUATION   08/May/2011  19:48:27 /
+// Copyright 1999-2005 IAR Systems. All rights reserved.                     /
+//                                                                           /
+//    Cpu mode        =  interwork                                           /
+//    Endian          =  little                                              /
+//    Stack alignment =  4                                                   /
+//    Source file     =  C:\Users\Faby\Desktop\StudyElf\GlassUIWidget\file\o /
+//                       penfile.cpp                                         /
+//    Command line    =  C:\Users\Faby\Desktop\StudyElf\GlassUIWidget\file\o /
+//                       penfile.cpp -D OLDFUNCTIONS -lC                     /
+//                       C:\Users\Faby\Desktop\StudyElf\GlassUIWidget\Debug\ /
+//                       List\ -lA C:\Users\Faby\Desktop\StudyElf\GlassUIWid /
+//                       get\Debug\List\ -o C:\Users\Faby\Desktop\StudyElf\G /
+//                       lassUIWidget\Debug\Obj\ -z2 --no_cse --no_unroll    /
+//                       --no_inline --no_code_motion --no_tbaa              /
+//                       --no_clustering --no_scheduling --debug --cpu_mode  /
+//                       arm --endian little --cpu ARM926EJ-S --stack_align  /
+//                       4 --interwork -e --fpu None --eec++ --dlib_config   /
+//                       "C:\Users\Faby\EmbebedIAR\Embedded Workbench 4.0    /
+//                       Evaluation\ARM\LIB\dl5tpainl8n.h" -I                /
+//                       "C:\Users\Faby\EmbebedIAR\Embedded Workbench 4.0    /
+//                       Evaluation\ARM\INC\"                                /
+//    List file       =  C:\Users\Faby\Desktop\StudyElf\GlassUIWidget\Debug\ /
+//                       List\openfile.s79                                   /
+//                                                                           /
+//                                                                           /
+//////////////////////////////////////////////////////////////////////////////
+
+        NAME openfile
+
+        RTMODEL "StackAlign4", "USED"
+        RTMODEL "__cpu_mode", "__pcs__interwork"
+        RTMODEL "__data_model", "absolute"
+        RTMODEL "__endian", "little"
+        RTMODEL "__rt_version", "6"
+
+        RSEG CSTACK:DATA:NOROOT(2)
+
+        ERROR
+//NOTE: This module defines or uses C++ features that are not
+//      accessible from assembler code. Assembling this file will
+//      not produce an equivalent object file to the one produced
+//      by the C++ compiler.
+
+        PUBLIC ??openFile
+        FUNCTION ??openFile,0203H
+        LOCFRAME CSTACK, 56, STACK
+        MULTWEAK ??openFile??rT
+        MULTWEAK `??operator delete??rA`
+        MULTWEAK `??operator new[]??rA`
+        
+        CFI Names cfiNames0
+        CFI StackFrame CFA R13 HUGEDATA
+        CFI Resource R0:32, R1:32, R2:32, R3:32, R4:32, R5:32, R6:32, R7:32
+        CFI Resource R8:32, R9:32, R10:32, R11:32, R12:32, CPSR:32, R13:32
+        CFI Resource R14:32, SPSR:32
+        CFI VirtualResource ?RET:32
+        CFI EndNames cfiNames0
+        
+        CFI Common cfiCommon0 Using cfiNames0
+        CFI CodeAlign 2
+        CFI DataAlign 4
+        CFI ReturnAddress ?RET CODE
+        CFI CFA R13+0
+        CFI R0 Undefined
+        CFI R1 Undefined
+        CFI R2 Undefined
+        CFI R3 Undefined
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI R8 SameValue
+        CFI R9 SameValue
+        CFI R10 SameValue
+        CFI R11 SameValue
+        CFI R12 Undefined
+        CFI CPSR SameValue
+        CFI R14 Undefined
+        CFI SPSR SameValue
+        CFI ?RET R14
+        CFI EndCommon cfiCommon0
+        
+        
+        CFI Common cfiCommon1 Using cfiNames0
+        CFI CodeAlign 4
+        CFI DataAlign 4
+        CFI ReturnAddress ?RET CODE
+        CFI CFA R13+0
+        CFI R0 Undefined
+        CFI R1 Undefined
+        CFI R2 Undefined
+        CFI R3 Undefined
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI R8 SameValue
+        CFI R9 SameValue
+        CFI R10 SameValue
+        CFI R11 SameValue
+        CFI R12 Undefined
+        CFI CPSR SameValue
+        CFI R14 Undefined
+        CFI SPSR SameValue
+        CFI ?RET R14
+        CFI EndCommon cfiCommon1
+        
+
+
+
+??openFile??rT      SYMBOL "??rT", ??openFile
+`??operator delete??rA` SYMBOL "??rA", `??operator delete`
+`??operator new[]??rA` SYMBOL "??rA", `??operator new[]`
+
+        EXTERN `??operator delete`
+        FUNCTION `??operator delete`,0202H
+        EXTERN `??operator new[]`
+        FUNCTION `??operator new[]`,0202H
+
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock0 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??openFile??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock0
+        REQUIRE ??openFile
+// C:\Users\Faby\Desktop\StudyElf\GlassUIWidget\file\openfile.cpp
+//    1 #include "..\..\include\Lib_Clara.h"
+//    2 #include "..\..\include\Dir.h"
+//    3 #include "..\bcfg\config_data.h"
+//    4 #include "openfile.h"
+//    5 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock1 Using cfiCommon1
+        CFI Function ??openFile
+        ARM
+//    6 wchar_t* openFile(const wchar_t* path, wchar_t* fileName) {
+??openFile:
+        PUSH     {R4-R9,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R9 Frame(CFA, -8)
+        CFI R8 Frame(CFA, -12)
+        CFI R7 Frame(CFA, -16)
+        CFI R6 Frame(CFA, -20)
+        CFI R5 Frame(CFA, -24)
+        CFI R4 Frame(CFA, -28)
+        CFI CFA R13+28
+        SUB      SP,SP,#+28
+        CFI CFA R13+56
+        MOVS     R4,R0
+        MOVS     R5,R1
+//    7   int file;
+//    8   FSTAT fstat_;
+//    9 
+//   10   w_chdir(path);
+        MOVS     R0,R4
+        SWI      +759
+//   11   
+//   12   file = w_fopen(fileName, WA_Read ,0x1FF,0 );
+        MOV      R3,#+0
+        MOV      R2,#+255
+        ORR      R2,R2,#0x100
+        MOV      R1,#+1
+        MOVS     R0,R5
+        SWI      +760
+        MOVS     R6,R0
+//   13   int stat = fstat(path,fileName,&fstat_);
+        MOVS     R2,SP
+        MOVS     R1,R5
+        MOVS     R0,R4
+        SWI      +284
+        MOVS     R7,R0
+//   14 
+//   15   if ( file > -1 && stat == 0 ) {
+        CMP      R6,#+0
+        BMI      ??openFile_1
+        CMP      R7,#+0
+        BNE      ??openFile_1
+//   16 
+//   17    char* fileContent = new char[fstat_.fsize + 0x1];
+        LDR      R0,[SP, #+8]
+        ADDS     R0,R0,#+1
+        _BLF     `??operator new[]`,`??operator new[]??rA`
+        MOVS     R8,R0
+//   18    wchar_t* wFileContent = new wchar_t[fstat_.fsize + 0x1];
+        LDR      R0,[SP, #+8]
+        ADDS     R0,R0,#+1
+        MOV      R1,#+2
+        MULS     R0,R1,R0
+        _BLF     `??operator new[]`,`??operator new[]??rA`
+        MOVS     R9,R0
+//   19 
+//   20    w_fread(file,fileContent,fstat_.fsize);
+        LDR      R2,[SP, #+8]
+        MOVS     R1,R8
+        MOVS     R0,R6
+        SWI      +763
+//   21    fileContent[fstat_.fsize]=0;
+        LDR      R0,[SP, #+8]
+        MOV      R1,#+0
+        STRB     R1,[R0, +R8]
+//   22    str2wstr(wFileContent,fileContent);
+        MOVS     R1,R8
+        MOVS     R0,R9
+        SWI      +344
+//   23    delete fileContent;
+        MOVS     R0,R8
+        _BLF     `??operator delete`,`??operator delete??rA`
+//   24    fileContent = NULL;
+        MOV      R0,#+0
+        MOVS     R8,R0
+//   25    
+//   26    w_fclose(file);   
+        MOVS     R0,R6
+        SWI      +765
+//   27    return wFileContent;
+        MOVS     R0,R9
+        B        ??openFile_2
+//   28   }
+//   29   return NULL;
+??openFile_1:
+        MOV      R0,#+0
+??openFile_2:
+        ADD      SP,SP,#+28       ;; stack cleaning
+        CFI CFA R13+28
+        POP      {R4-R9,PC}       ;; return
+        CFI EndBlock cfiBlock1
+//   30 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock2 Using cfiCommon1
+        CFI NoFunction
+        ARM
+`??operator new[]??rA`:
+        LDR      R12,??Subroutine1_0  ;; `??operator new[]`
+        BX       R12
+        DATA
+??Subroutine1_0:
+        DC32     `??operator new[]`
+        CFI EndBlock cfiBlock2
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock3 Using cfiCommon1
+        CFI NoFunction
+        ARM
+`??operator delete??rA`:
+        LDR      R12,??Subroutine2_0  ;; `??operator delete`
+        BX       R12
+        DATA
+??Subroutine2_0:
+        DC32     `??operator delete`
+        CFI EndBlock cfiBlock3
+
+        END
+//   31 
+// 
+// 240 bytes in segment CODE
+// 
+// 212 bytes of CODE memory (+ 28 bytes shared)
+//
+//Errors: none
+//Warnings: none

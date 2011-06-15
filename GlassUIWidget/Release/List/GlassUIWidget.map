@@ -1,0 +1,3089 @@
+################################################################################
+#                                                                              #
+#      IAR Universal Linker V4.60I/386                                         #
+#                                                                              #
+#           Link time     =  07/Jun/2011  23:13:18                             #
+#           Target CPU    =  ARM                                               #
+#           List file     =  "C:\Documents and Settings\Davi\Desktop\StudyElf\ #
+#                            GlassUIWidget\Release\List\GlassUIWidget.map"     #
+#           Output file 1 =  "C:\Documents and Settings\Davi\Desktop\StudyElf\ #
+#                            GlassUIWidget\Release\Exe\GlassUIWidget.elf"      #
+#                            Format: elf, variant: -ynpra                      #
+#           Command line  =  "C:\Documents and Settings\Davi\Desktop\StudyElf\ #
+#                            GlassUIWidget\Release\Obj\Utils.r79"              #
+#                            "C:\Documents and Settings\Davi\Desktop\StudyElf\ #
+#                            GlassUIWidget\Release\Obj\_cpp2.r79"              #
+#                            "C:\Documents and Settings\Davi\Desktop\StudyElf\ #
+#                            GlassUIWidget\Release\Obj\conf_loader.r79"        #
+#                            "C:\Documents and Settings\Davi\Desktop\StudyElf\ #
+#                            GlassUIWidget\Release\Obj\config_data.r79"        #
+#                            "C:\Documents and Settings\Davi\Desktop\StudyElf\ #
+#                            GlassUIWidget\Release\Obj\debug.r79"              #
+#                            "C:\Documents and Settings\Davi\Desktop\StudyElf\ #
+#                            GlassUIWidget\Release\Obj\fileAnaliser.r79"       #
+#                            "C:\Documents and Settings\Davi\Desktop\StudyElf\ #
+#                            GlassUIWidget\Release\Obj\func.r79"               #
+#                            "C:\Documents and Settings\Davi\Desktop\StudyElf\ #
+#                            GlassUIWidget\Release\Obj\id3.r79"                #
+#                            "C:\Documents and Settings\Davi\Desktop\StudyElf\ #
+#                            GlassUIWidget\Release\Obj\main.r79"               #
+#                            "C:\Documents and Settings\Davi\Desktop\StudyElf\ #
+#                            GlassUIWidget\Release\Obj\mybook.r79"             #
+#                            "C:\Documents and Settings\Davi\Desktop\StudyElf\ #
+#                            GlassUIWidget\Release\Obj\openfile.r79"           #
+#                            "C:\Documents and Settings\Davi\Desktop\StudyElf\ #
+#                            GlassUIWidget\Release\Obj\standbyDraw.r79"        #
+#                            "C:\Documents and Settings\Davi\Desktop\StudyElf\ #
+#                            GlassUIWidget\Release\Obj\weather.r79"            #
+#                            -o                                                #
+#                            "C:\Documents and Settings\Davi\Desktop\StudyElf\ #
+#                            GlassUIWidget\Release\Exe\GlassUIWidget.elf"      #
+#                            -Felf -l                                          #
+#                            "C:\Documents and Settings\Davi\Desktop\StudyElf\ #
+#                            GlassUIWidget\Release\List\GlassUIWidget.map"     #
+#                            -xms -f                                           #
+#                            "C:\Documents and Settings\Davi\Desktop\StudyElf\ #
+#                            GlassUIWidget\..\include\1.xcl"                   #
+#                            (-carm -ynpra -V(CODE)CODE_AREA,12                #
+#                            -V(DATA)DATA_AREA,12                              #
+#                            -Z(CODE_AREA)ELFBEGIN,DATA_ID,START,CODE,DATA_C,I #
+#                            NITTAB,DATA_Z,DATA_N,CONFIG_C,DYN_CONST,DYN_CONST #
+#                            _DESC,DYN_PAGE,DYN_PAGE_DESC=0-FFFFFFFF           #
+#                            -Z(DATA_AREA)DATA_I=0-FFFFFFFF)                   #
+#                            "C:\Documents and Settings\Davi\Desktop\IAR\Embed #
+#                            ded Workbench 4.0 Evaluation\ARM\LIB\dl5tpainl8n. #
+#                            r79"                                              #
+#                            -s main                                           #
+#                                                                              #
+#                        Copyright 1987-2007 IAR Systems. All rights reserved. #
+################################################################################
+
+
+
+
+
+                ****************************************
+                *                                      *
+                *           CROSS REFERENCE            *
+                *                                      *
+                ****************************************
+
+       Program entry at : CODE_AREA 00001298  Relocatable, from module : main
+
+
+
+
+                ****************************************
+                *                                      *
+                *            RUNTIME MODEL             *
+                *                                      *
+                ****************************************
+
+  ARMv4M                 = USED
+  ARMv4T                 = USED
+  ARMv5T                 = USED
+  StackAlign4            = USED
+  __cpu_mode             = __pcs__interwork
+  __data_model           = absolute
+  __dlib_file_descriptor = 1
+  __endian               = little
+  __rt_version           = 6
+  __thumb_aware          = enabled
+
+
+
+                ****************************************
+                *                                      *
+                *              MODULE MAP              *
+                *                                      *
+                ****************************************
+
+
+  DEFINED ABSOLUTE ENTRIES
+    *************************************************************************
+
+  DEFINED ABSOLUTE ENTRIES
+    *************************************************************************
+
+  FILE NAME : C:\Documents and Settings\Davi\Desktop\StudyElf\GlassUIWidget\Release\Obj\Utils.r79
+  PROGRAM MODULE, NAME : Utils
+
+  SEGMENTS IN THE MODULE
+  ======================
+CODE
+  Relative segment, address: CODE_AREA 000003FC - 00000457 (0x5c bytes), align: 2
+  Segment part 12.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           getWSubStr(wchar_t *, int, int)
+                                   000003FC        drawOnStby(wchar_t *, int, int, int, int, int) (standbyDraw)
+                                                   getEqualContent(wchar_t *, int &) (fileAnaliser)
+                                                   getWeatherConditions(wchar_t *, wchar_t *) (fileAnaliser)
+               stack 1 = 00000000 ( 00000010 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000458 - 000004A3 (0x4c bytes), align: 2
+  Segment part 14.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           wGetIndexOfLine(wchar_t *)
+                                   00000458        drawOnStby(wchar_t *, int, int, int, int, int) (standbyDraw)
+               stack 1 = 00000000 ( 0000000C )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000004A4 - 000004EF (0x4c bytes), align: 2
+  Segment part 16.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           searchLine(wchar_t *)   000004A4        drawOnStby(wchar_t *, int, int, int, int, int) (standbyDraw)
+               stack 1 = 00000000 ( 0000000C )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000004F0 - 0000054B (0x5c bytes), align: 2
+  Segment part 18.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           wGetIndexOf(wchar_t *, char, int, int)
+                                   000004F0        getEqualContent(wchar_t *, int &) (fileAnaliser)
+                                                   getTag(wchar_t *, int, int &) (fileAnaliser)
+                                                   getWeatherConditions(wchar_t *, wchar_t *) (fileAnaliser)
+               stack 1 = 00000000 ( 0000001C )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 0000054C - 000005AB (0x60 bytes), align: 2
+  Segment part 20.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           compareWchar(wchar_t *, wchar_t *)
+                                   0000054C        getDayWeather(wchar_t *, int &, wchar_t *) (fileAnaliser)
+                                                   getWeatherConditions(wchar_t *, wchar_t *) (fileAnaliser)
+               stack 1 = 00000000 ( 00000010 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000005AC - 000005DB (0x30 bytes), align: 2
+  Segment part 22.            Intra module refs:   int2wstr(int)
+                                                   returnMask(wchar_t const *, int, bool, float (__atpcs __interwork *)(int), int)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           intlen(int)             000005AC 
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000005DC - 00000627 (0x4c bytes), align: 2
+  Segment part 24.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           getDateTime()           000005DC        beginFile() (standbyDraw)
+                                                   drawWeatherContents() (standbyDraw)
+               stack 1 = 00000000 ( 00000010 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000628 - 00000663 (0x3c bytes), align: 2
+  Segment part 26.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           int2wstr(int)           00000628        getWeather(wchar_t *, int &, wchar_t *) (fileAnaliser)
+               stack 1 = 00000000 ( 0000000C )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000664 - 0000069F (0x3c bytes), align: 2
+  Segment part 28.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           isDateEqual(DATETIME *, DATETIME *)
+                                   00000664        drawWeatherContents() (standbyDraw)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000006A0 - 000006BB (0x1c bytes), align: 2
+  Segment part 30.            Intra module refs:   makeAvgState(wchar_t *, int)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           celsiusToFahrenheit(int)
+                                   000006A0 
+               stack 1 = 00000000 ( 00000004 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000006BC - 000006BF (0x4 bytes), align: 2
+  Segment part 31.            Intra module refs:   celsiusToFahrenheit(int)
+                                                   intlen(int)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000006C0 - 00000737 (0x78 bytes), align: 2
+  Segment part 39.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           getStateByHour(int)     000006C0        beginFile() (standbyDraw)
+                                                   drawWeatherContents() (standbyDraw)
+               stack 1 = 00000000 ( 00000034 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000738 - 000007AB (0x74 bytes), align: 2
+  Segment part 41.            Intra module refs:   makeAvgState(wchar_t *, int)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           returnMask(wchar_t const *, int, bool, float (__atpcs __interwork *)(int), int)
+                                   00000738 
+               stack 1 = 00000000 ( 00000028 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000007AC - 0000082B (0x80 bytes), align: 2
+  Segment part 43.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           makeAvgState(wchar_t *, int)
+                                   000007AC        finalDraw(wchar_t *, wchar_t *, int, int) (standbyDraw)
+               stack 1 = 00000000 ( 00000014 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 0000082C - 00000853 (0x28 bytes), align: 2
+  Segment part 45.            Intra module refs:   getWSubStr(wchar_t *, int, int)
+                                                   int2wstr(int)
+                                                   makeAvgState(wchar_t *, int)
+                                                   returnMask(wchar_t const *, int, bool, float (__atpcs __interwork *)(int), int)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           makeNullWchar(int)      0000082C        drawClock(int, int) (standbyDraw)
+                                                   makeDateMask() (standbyDraw)
+               stack 1 = 00000000 ( 0000000C )
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00002D68 - 00002D6F (0x8 bytes), align: 2
+  Segment part 2.             Intra module refs:   int2wstr(int)
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00002D70 - 00002D7F (0x10 bytes), align: 2
+  Segment part 3.             Intra module refs:   Segment part 8
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00002D80 - 00002D8B (0xc bytes), align: 2
+  Segment part 4.             Intra module refs:   Segment part 8
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00002D8C - 00002D9F (0x14 bytes), align: 2
+  Segment part 5.             Intra module refs:   Segment part 8
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00002DA0 - 00002DAF (0x10 bytes), align: 2
+  Segment part 6.             Intra module refs:   Segment part 8
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00002DB0 - 00002DBB (0xc bytes), align: 2
+  Segment part 7.             Intra module refs:   Segment part 8
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00002DBC - 00002DCF (0x14 bytes), align: 2
+  Segment part 8.             Intra module refs:   getStateByHour(int)
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00002DD0 - 00002DE3 (0x14 bytes), align: 2
+  Segment part 9.             Intra module refs:   getStateByHour(int)
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00002DE4 - 00002DEB (0x8 bytes), align: 2
+  Segment part 10.            Intra module refs:   makeAvgState(wchar_t *, int)
+
+    *************************************************************************
+
+  FILE NAME : C:\Documents and Settings\Davi\Desktop\StudyElf\GlassUIWidget\Release\Obj\_cpp2.r79
+  PROGRAM MODULE, NAME : _cpp2
+
+  SEGMENTS IN THE MODULE
+  ======================
+CODE
+  Relative segment, address: CODE_AREA 00000854 - 0000085F (0xc bytes), align: 2
+  Segment part 3.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           operator new(size_t)    00000854        MyBook::MyBook() (mybook)
+                                                   SB_ELF_Killed(void *, BOOK *) (standbyDraw)
+                                                   Send_REDRAW_RELEASE() (standbyDraw)
+                                                   Weather::new Weather(Weather *) (weather)
+                                                   Weather::new Weather(int, int, int, int, wchar_t *, wchar_t *, wchar_t *) (weather)
+                                                   main (main)
+               stack 1 = 00000000 ( 00000004 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000860 - 0000086B (0xc bytes), align: 2
+  Segment part 5.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           operator new[](unsigned int)
+                                   00000860        LoadConfigData(wchar_t const *, wchar_t const *) (conf_loader)
+                                                   Weather::Weather(Weather *) (weather)
+                                                   getDate() (fileAnaliser)
+                                                   getTag(wchar_t *, int, int &) (fileAnaliser)
+                                                   getWeather(wchar_t *, int &, wchar_t *) (fileAnaliser)
+                                                   makeNullWchar(int) (Utils)
+                                                   openFile(wchar_t const *, wchar_t *) (openfile)
+               stack 1 = 00000000 ( 00000004 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 0000086C - 00000877 (0xc bytes), align: 2
+  Segment part 7.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           operator delete(void *)
+                                   0000086C        LoadConfigData(wchar_t const *, wchar_t const *) (conf_loader)
+                                                   MyBook::freeMyVars() (mybook)
+                                                   Weather::delete ~Weather(Weather *) (weather)
+                                                   Weather::~Weather() (weather)
+                                                   beginFile() (standbyDraw)
+                                                   drawClock(int, int) (standbyDraw)
+                                                   drawOnStby(wchar_t *, int, int, int, int, int) (standbyDraw)
+                                                   finalDraw(wchar_t *, wchar_t *, int, int) (standbyDraw)
+                                                   getDayState(wchar_t *, int &) (fileAnaliser)
+                                                   getDayWeather(wchar_t *, int &, wchar_t *) (fileAnaliser)
+                                                   getWeather(wchar_t *, int &, wchar_t *) (fileAnaliser)
+                                                   getWeatherConditions(wchar_t *, wchar_t *) (fileAnaliser)
+                                                   makeAvgState(wchar_t *, int) (Utils)
+                                                   makeDateMask() (standbyDraw)
+                                                   onCloseBEBook(BOOK *) (standbyDraw)
+                                                   openFile(wchar_t const *, wchar_t *) (openfile)
+               stack 1 = 00000000 ( 00000004 )
+
+    *************************************************************************
+
+  FILE NAME : C:\Documents and Settings\Davi\Desktop\StudyElf\GlassUIWidget\Release\Obj\conf_loader.r79
+  PROGRAM MODULE, NAME : conf_loader
+
+  SEGMENTS IN THE MODULE
+  ======================
+DATA_I
+  Relative segment, address: DATA_AREA 00000000 - 00000007 (0x8 bytes), align: 2
+  Segment part 4.             Intra module refs:   LoadConfigData(wchar_t const *, wchar_t const *)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           successed_config_name   00000004        ReconfigElf(void *, BOOK *) (standbyDraw)
+                                                   onBcfgConfig(void *, BOOK *) (main)
+           successed_config_path   00000000        ReconfigElf(void *, BOOK *) (standbyDraw)
+                                                   onBcfgConfig(void *, BOOK *) (main)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000878 - 0000099B (0x124 bytes), align: 2
+  Segment part 7.             Intra module refs:   InitConfig()
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           LoadConfigData(wchar_t const *, wchar_t const *)
+                                   00000878 
+               stack 1 = 00000000 ( 00000044 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 0000099C - 000009D3 (0x38 bytes), align: 2
+  Segment part 9.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           InitConfig()            0000099C        ReconfigElf(void *, BOOK *) (standbyDraw)
+                                                   main (main)
+               stack 1 = 00000000 ( 00000008 )
+    -------------------------------------------------------------------------
+DATA_ID
+  Relative segment, address: CODE_AREA 00000000 - 00000007 (0x8 bytes), align: 2
+  Segment part 5.             Intra module refs:   Segment part 4
+    -------------------------------------------------------------------------
+INITTAB
+  Relative segment, address: CODE_AREA 000036AC - 000036B7 (0xc bytes), align: 2
+  Segment part 13. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?init?tab?DATA_I        000036AC 
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000036A8 - 000036A9 (0x2 bytes), align: 1
+  Segment part 2.             Intra module refs:   Segment part 5
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00002DEC - 00002E13 (0x28 bytes), align: 2
+  Segment part 3.             Intra module refs:   InitConfig()
+
+    *************************************************************************
+
+  FILE NAME : C:\Documents and Settings\Davi\Desktop\StudyElf\GlassUIWidget\Release\Obj\config_data.r79
+  PROGRAM MODULE, NAME : config_data
+
+  SEGMENTS IN THE MODULE
+  ======================
+CONFIG_C
+  Relative segment, address: CODE_AREA 000036C8 - 000036F3 (0x2c bytes), align: 2
+  Segment part 2. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000036F4 - 0000371F (0x2c bytes), align: 2
+  Segment part 3. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003720 - 0000374B (0x2c bytes), align: 2
+  Segment part 4. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000374C - 0000374F (0x4 bytes), align: 2
+  Segment part 5. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Images_Background_Enable
+                                   0000374C        Draw(DISP_OBJ *, int, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003750 - 0000377B (0x2c bytes), align: 2
+  Segment part 6. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000377C - 0000377F (0x4 bytes), align: 2
+  Segment part 7. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Images_Background_Position_X
+                                   0000377C        Draw(DISP_OBJ *, int, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003780 - 00003783 (0x4 bytes), align: 2
+  Segment part 8. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Images_Background_Position_Y
+                                   00003780        Draw(DISP_OBJ *, int, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003784 - 000037AF (0x2c bytes), align: 2
+  Segment part 9. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000037B0 - 000037DB (0x2c bytes), align: 2
+  Segment part 10. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000037DC - 00003807 (0x2c bytes), align: 2
+  Segment part 11. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003808 - 0000380B (0x4 bytes), align: 2
+  Segment part 12. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Images_DayState_Enable
+                                   00003808        finalDraw(wchar_t *, wchar_t *, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000380C - 00003837 (0x2c bytes), align: 2
+  Segment part 13. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003838 - 0000383B (0x4 bytes), align: 2
+  Segment part 14. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Images_DayState_Position_X
+                                   00003838        finalDraw(wchar_t *, wchar_t *, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000383C - 0000383F (0x4 bytes), align: 2
+  Segment part 15. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Images_DayState_Position_Y
+                                   0000383C        finalDraw(wchar_t *, wchar_t *, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003840 - 0000386B (0x2c bytes), align: 2
+  Segment part 16. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000386C - 00003897 (0x2c bytes), align: 2
+  Segment part 17. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003898 - 000038C3 (0x2c bytes), align: 2
+  Segment part 18. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000038C4 - 000038C7 (0x4 bytes), align: 2
+  Segment part 19. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Images_Clock_Enable
+                                   000038C4        drawClock(int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000038C8 - 000038F3 (0x2c bytes), align: 2
+  Segment part 20. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000038F4 - 000038F7 (0x4 bytes), align: 2
+  Segment part 21. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Images_Clock_Position_X
+                                   000038F4        drawClock(int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000038F8 - 000038FB (0x4 bytes), align: 2
+  Segment part 22. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Images_Clock_Position_Y
+                                   000038F8        drawClock(int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000038FC - 00003927 (0x2c bytes), align: 2
+  Segment part 23. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003928 - 00003953 (0x2c bytes), align: 2
+  Segment part 24. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003954 - 0000397F (0x2c bytes), align: 2
+  Segment part 25. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003980 - 00003983 (0x4 bytes), align: 2
+  Segment part 26. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Images_AccuWeatherLogo_Enable
+                                   00003980        finalDraw(wchar_t *, wchar_t *, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003984 - 000039AF (0x2c bytes), align: 2
+  Segment part 27. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000039B0 - 000039B3 (0x4 bytes), align: 2
+  Segment part 28. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Images_AccuWeatherLogo_Position_X
+                                   000039B0        finalDraw(wchar_t *, wchar_t *, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000039B4 - 000039B7 (0x4 bytes), align: 2
+  Segment part 29. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Images_AccuWeatherLogo_Position_Y
+                                   000039B4        finalDraw(wchar_t *, wchar_t *, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000039B8 - 000039E3 (0x2c bytes), align: 2
+  Segment part 30. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000039E4 - 00003A0F (0x2c bytes), align: 2
+  Segment part 31. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003A10 - 00003A3B (0x2c bytes), align: 2
+  Segment part 32. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003A3C - 00003A67 (0x2c bytes), align: 2
+  Segment part 33. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003A68 - 00003A93 (0x2c bytes), align: 2
+  Segment part 34. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003A94 - 00003A97 (0x4 bytes), align: 2
+  Segment part 35. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Tags_AverageTemperature_Enable
+                                   00003A94        finalDraw(wchar_t *, wchar_t *, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003A98 - 00003AC3 (0x2c bytes), align: 2
+  Segment part 36. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003AC4 - 00003B67 (0xa4 bytes), align: 2
+  Segment part 37. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Tags_AverageTemperature_Mask
+                                   00003AC4        makeAvgState(wchar_t *, int) (Utils)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003B68 - 00003B93 (0x2c bytes), align: 2
+  Segment part 38. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003B94 - 00003B97 (0x4 bytes), align: 2
+  Segment part 39. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Tags_AverageTemperature_Unit
+                                   00003B94        makeAvgState(wchar_t *, int) (Utils)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003B98 - 00003BD7 (0x40 bytes), align: 2
+  Segment part 40. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003BD8 - 00003C03 (0x2c bytes), align: 2
+  Segment part 41. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003C04 - 00003C2F (0x2c bytes), align: 2
+  Segment part 42. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003C30 - 00003C5B (0x2c bytes), align: 2
+  Segment part 43. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003C5C - 00003C5F (0x4 bytes), align: 2
+  Segment part 44. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Tags_DayState_Enable
+                                   00003C5C        finalDraw(wchar_t *, wchar_t *, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003C60 - 00003C8B (0x2c bytes), align: 2
+  Segment part 45. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003C8C - 00003C8F (0x4 bytes), align: 2
+  Segment part 46. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Tags_DayState_Position_X
+                                   00003C8C        finalDraw(wchar_t *, wchar_t *, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003C90 - 00003C93 (0x4 bytes), align: 2
+  Segment part 47. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Tags_DayState_Position_Y
+                                   00003C90        finalDraw(wchar_t *, wchar_t *, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003C94 - 00003CBF (0x2c bytes), align: 2
+  Segment part 48. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003CC0 - 00003CC3 (0x4 bytes), align: 2
+  Segment part 49. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Tags_DayState_FontSize
+                                   00003CC0        finalDraw(wchar_t *, wchar_t *, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003CC4 - 00003CEF (0x2c bytes), align: 2
+  Segment part 50. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003CF0 - 00003CF3 (0x4 bytes), align: 2
+  Segment part 51. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Tags_DayState_TextColor
+                                   00003CF0        finalDraw(wchar_t *, wchar_t *, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003CF4 - 00003D1F (0x2c bytes), align: 2
+  Segment part 52. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003D20 - 00003D23 (0x4 bytes), align: 2
+  Segment part 53. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Tags_DayState_Align
+                                   00003D20        finalDraw(wchar_t *, wchar_t *, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003D24 - 00003D83 (0x60 bytes), align: 2
+  Segment part 54. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003D84 - 00003DAF (0x2c bytes), align: 2
+  Segment part 55. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003DB0 - 00003DB3 (0x4 bytes), align: 2
+  Segment part 56. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Tags_DayState_LineSpacing
+                                   00003DB0        drawOnStby(wchar_t *, int, int, int, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003DB4 - 00003DDF (0x2c bytes), align: 2
+  Segment part 57. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003DE0 - 00003E0B (0x2c bytes), align: 2
+  Segment part 58. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003E0C - 00003E37 (0x2c bytes), align: 2
+  Segment part 59. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003E38 - 00003E3B (0x4 bytes), align: 2
+  Segment part 60. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Tags_Location_Enable
+                                   00003E38        finalDraw(wchar_t *, wchar_t *, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003E3C - 00003E67 (0x2c bytes), align: 2
+  Segment part 61. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003E68 - 00003E6B (0x4 bytes), align: 2
+  Segment part 62. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Tags_Location_Position_X
+                                   00003E68        finalDraw(wchar_t *, wchar_t *, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003E6C - 00003E6F (0x4 bytes), align: 2
+  Segment part 63. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Tags_Location_Position_Y
+                                   00003E6C        finalDraw(wchar_t *, wchar_t *, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003E70 - 00003E9B (0x2c bytes), align: 2
+  Segment part 64. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003E9C - 00003E9F (0x4 bytes), align: 2
+  Segment part 65. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Tags_Location_FontSize
+                                   00003E9C        finalDraw(wchar_t *, wchar_t *, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003EA0 - 00003ECB (0x2c bytes), align: 2
+  Segment part 66. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003ECC - 00003ECF (0x4 bytes), align: 2
+  Segment part 67. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Tags_Location_TextColor
+                                   00003ECC        finalDraw(wchar_t *, wchar_t *, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003ED0 - 00003EFB (0x2c bytes), align: 2
+  Segment part 68. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003EFC - 00003EFF (0x4 bytes), align: 2
+  Segment part 69. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Tags_Location_Align
+                                   00003EFC        finalDraw(wchar_t *, wchar_t *, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003F00 - 00003F5F (0x60 bytes), align: 2
+  Segment part 70. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003F60 - 00003F8B (0x2c bytes), align: 2
+  Segment part 71. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003F8C - 00003FB7 (0x2c bytes), align: 2
+  Segment part 72. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003FB8 - 00003FE3 (0x2c bytes), align: 2
+  Segment part 73. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003FE4 - 00003FE7 (0x4 bytes), align: 2
+  Segment part 74. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Tags_Time_Day      00003FE4        Segment part 116 (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00003FE8 - 00004013 (0x2c bytes), align: 2
+  Segment part 75. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00004014 - 00004017 (0x4 bytes), align: 2
+  Segment part 76. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Tags_Time_Night    00004014        Segment part 115 (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00004018 - 00004043 (0x2c bytes), align: 2
+  Segment part 77. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00004044 - 0000406F (0x2c bytes), align: 2
+  Segment part 78. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00004070 - 0000409B (0x2c bytes), align: 2
+  Segment part 79. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000409C - 000040C7 (0x2c bytes), align: 2
+  Segment part 80. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000040C8 - 000040F3 (0x2c bytes), align: 2
+  Segment part 81. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000040F4 - 000040F7 (0x4 bytes), align: 2
+  Segment part 82. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Date_Enable        000040F4        finalDraw(wchar_t *, wchar_t *, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000040F8 - 00004123 (0x2c bytes), align: 2
+  Segment part 83. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00004124 - 00004127 (0x4 bytes), align: 2
+  Segment part 84. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_DateTime_Date_Position_X
+                                   00004124        finalDraw(wchar_t *, wchar_t *, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00004128 - 0000412B (0x4 bytes), align: 2
+  Segment part 85. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_DateTime_Date_Position_Y
+                                   00004128        finalDraw(wchar_t *, wchar_t *, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000412C - 00004157 (0x2c bytes), align: 2
+  Segment part 86. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00004158 - 0000415B (0x4 bytes), align: 2
+  Segment part 87. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Date_FontSize      00004158        finalDraw(wchar_t *, wchar_t *, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000415C - 00004187 (0x2c bytes), align: 2
+  Segment part 88. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00004188 - 0000418B (0x4 bytes), align: 2
+  Segment part 89. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Date_TextColor     00004188        finalDraw(wchar_t *, wchar_t *, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000418C - 000041B7 (0x2c bytes), align: 2
+  Segment part 90. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000041B8 - 000041BB (0x4 bytes), align: 2
+  Segment part 91. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Date_Align         000041B8        finalDraw(wchar_t *, wchar_t *, int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000041BC - 0000421B (0x60 bytes), align: 2
+  Segment part 92. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000421C - 00004247 (0x2c bytes), align: 2
+  Segment part 93. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00004248 - 00004273 (0x2c bytes), align: 2
+  Segment part 94. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00004274 - 00004407 (0x194 bytes), align: 2
+  Segment part 95. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Date_Weekday_Sunday
+                                   00004274        Segment part 2 (mybook)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00004408 - 00004433 (0x2c bytes), align: 2
+  Segment part 96. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00004434 - 000045C7 (0x194 bytes), align: 2
+  Segment part 97. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Date_Weekday_Monday
+                                   00004434        Segment part 2 (mybook)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000045C8 - 000045F3 (0x2c bytes), align: 2
+  Segment part 98. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000045F4 - 00004787 (0x194 bytes), align: 2
+  Segment part 99. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Date_Weekday_Tuesday
+                                   000045F4        Segment part 2 (mybook)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00004788 - 000047B3 (0x2c bytes), align: 2
+  Segment part 100. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000047B4 - 00004947 (0x194 bytes), align: 2
+  Segment part 101. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Date_Weekday_Wednesday
+                                   000047B4        Segment part 2 (mybook)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00004948 - 00004973 (0x2c bytes), align: 2
+  Segment part 102. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00004974 - 00004B07 (0x194 bytes), align: 2
+  Segment part 103. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Date_Weekday_Thursday
+                                   00004974        Segment part 2 (mybook)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00004B08 - 00004B33 (0x2c bytes), align: 2
+  Segment part 104. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00004B34 - 00004CC7 (0x194 bytes), align: 2
+  Segment part 105. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Date_Weekday_Friday
+                                   00004B34        Segment part 2 (mybook)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00004CC8 - 00004CF3 (0x2c bytes), align: 2
+  Segment part 106. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00004CF4 - 00004E87 (0x194 bytes), align: 2
+  Segment part 107. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Date_Weekday_Saturday
+                                   00004CF4        Segment part 2 (mybook)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00004E88 - 00004EB3 (0x2c bytes), align: 2
+  Segment part 108. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00004EB4 - 00004EDF (0x2c bytes), align: 2
+  Segment part 109. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00004EE0 - 00004F0B (0x2c bytes), align: 2
+  Segment part 110. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00004F0C - 0000509F (0x194 bytes), align: 2
+  Segment part 111. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Date_Month_January
+                                   00004F0C        Segment part 3 (mybook)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000050A0 - 000050CB (0x2c bytes), align: 2
+  Segment part 112. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000050CC - 0000525F (0x194 bytes), align: 2
+  Segment part 113. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Date_Month_February
+                                   000050CC        Segment part 3 (mybook)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00005260 - 0000528B (0x2c bytes), align: 2
+  Segment part 114. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000528C - 0000541F (0x194 bytes), align: 2
+  Segment part 115. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Date_Month_March   0000528C        Segment part 3 (mybook)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00005420 - 0000544B (0x2c bytes), align: 2
+  Segment part 116. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000544C - 000055DF (0x194 bytes), align: 2
+  Segment part 117. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Date_Month_April   0000544C        Segment part 3 (mybook)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000055E0 - 0000560B (0x2c bytes), align: 2
+  Segment part 118. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000560C - 0000579F (0x194 bytes), align: 2
+  Segment part 119. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Date_Month_May     0000560C        Segment part 3 (mybook)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000057A0 - 000057CB (0x2c bytes), align: 2
+  Segment part 120. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000057CC - 0000595F (0x194 bytes), align: 2
+  Segment part 121. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Date_Month_June    000057CC        Segment part 3 (mybook)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00005960 - 0000598B (0x2c bytes), align: 2
+  Segment part 122. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000598C - 00005B1F (0x194 bytes), align: 2
+  Segment part 123. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Date_Month_July    0000598C        Segment part 3 (mybook)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00005B20 - 00005B4B (0x2c bytes), align: 2
+  Segment part 124. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00005B4C - 00005CDF (0x194 bytes), align: 2
+  Segment part 125. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Date_Month_August
+                                   00005B4C        Segment part 3 (mybook)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00005CE0 - 00005D0B (0x2c bytes), align: 2
+  Segment part 126. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00005D0C - 00005E9F (0x194 bytes), align: 2
+  Segment part 127. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Date_Month_September
+                                   00005D0C        Segment part 3 (mybook)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00005EA0 - 00005ECB (0x2c bytes), align: 2
+  Segment part 128. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00005ECC - 0000605F (0x194 bytes), align: 2
+  Segment part 129. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Date_Month_October
+                                   00005ECC        Segment part 3 (mybook)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006060 - 0000608B (0x2c bytes), align: 2
+  Segment part 130. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000608C - 0000621F (0x194 bytes), align: 2
+  Segment part 131. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Date_Month_November
+                                   0000608C        Segment part 3 (mybook)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006220 - 0000624B (0x2c bytes), align: 2
+  Segment part 132. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000624C - 000063DF (0x194 bytes), align: 2
+  Segment part 133. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Date_Month_December
+                                   0000624C        Segment part 3 (mybook)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000063E0 - 0000640B (0x2c bytes), align: 2
+  Segment part 134. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000640C - 00006437 (0x2c bytes), align: 2
+  Segment part 135. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006438 - 00006463 (0x2c bytes), align: 2
+  Segment part 136. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006464 - 0000648F (0x2c bytes), align: 2
+  Segment part 137. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006490 - 000064BB (0x2c bytes), align: 2
+  Segment part 138. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000064BC - 000064E7 (0x2c bytes), align: 2
+  Segment part 139. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000064E8 - 000064EB (0x4 bytes), align: 2
+  Segment part 140. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Time_Hour_Enable   000064E8        drawClock(int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000064EC - 00006517 (0x2c bytes), align: 2
+  Segment part 141. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006518 - 0000651B (0x4 bytes), align: 2
+  Segment part 142. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_DateTime_Time_AnalogClock_Hour_Position_X
+                                   00006518        drawClock(int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000651C - 0000651F (0x4 bytes), align: 2
+  Segment part 143. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_DateTime_Time_AnalogClock_Hour_Position_Y
+                                   0000651C        drawClock(int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006520 - 0000654B (0x2c bytes), align: 2
+  Segment part 144. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000654C - 0000654F (0x4 bytes), align: 2
+  Segment part 145. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Time_Hour_FontSize
+                                   0000654C        drawClock(int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006550 - 0000657B (0x2c bytes), align: 2
+  Segment part 146. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000657C - 0000657F (0x4 bytes), align: 2
+  Segment part 147. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Time_Hour_TextColor
+                                   0000657C        drawClock(int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006580 - 000065AB (0x2c bytes), align: 2
+  Segment part 148. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000065AC - 000065AF (0x4 bytes), align: 2
+  Segment part 149. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Time_Hour_Align    000065AC        drawClock(int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000065B0 - 0000660F (0x60 bytes), align: 2
+  Segment part 150. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006610 - 0000663B (0x2c bytes), align: 2
+  Segment part 151. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000663C - 00006667 (0x2c bytes), align: 2
+  Segment part 152. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006668 - 00006693 (0x2c bytes), align: 2
+  Segment part 153. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006694 - 00006697 (0x4 bytes), align: 2
+  Segment part 154. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Time_State_Enable
+                                   00006694        drawClock(int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006698 - 000066C3 (0x2c bytes), align: 2
+  Segment part 155. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000066C4 - 000066CB (0x8 bytes), align: 2
+  Segment part 156. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Time_AnalogClock_State_Position
+                                   000066C4        drawClock(int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000066CC - 000066F7 (0x2c bytes), align: 2
+  Segment part 157. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000066F8 - 000066FB (0x4 bytes), align: 2
+  Segment part 158. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Time_State_FontSize
+                                   000066F8        drawClock(int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000066FC - 00006727 (0x2c bytes), align: 2
+  Segment part 159. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006728 - 0000672B (0x4 bytes), align: 2
+  Segment part 160. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Time_State_TextColor
+                                   00006728        drawClock(int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000672C - 00006757 (0x2c bytes), align: 2
+  Segment part 161. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006758 - 0000675B (0x4 bytes), align: 2
+  Segment part 162. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Time_State_Align   00006758        drawClock(int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000675C - 000067BB (0x60 bytes), align: 2
+  Segment part 163. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000067BC - 000067E7 (0x2c bytes), align: 2
+  Segment part 164. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000067E8 - 00006813 (0x2c bytes), align: 2
+  Segment part 165. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006814 - 0000683F (0x2c bytes), align: 2
+  Segment part 166. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006840 - 0000686B (0x2c bytes), align: 2
+  Segment part 167. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000686C - 0000686F (0x4 bytes), align: 2
+  Segment part 168. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Time_DigitalClock_Enable
+                                   0000686C        drawClock(int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006870 - 0000689B (0x2c bytes), align: 2
+  Segment part 169. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000689C - 0000689F (0x4 bytes), align: 2
+  Segment part 170. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_DateTime_Time_DigitalClock_Position_X
+                                   0000689C        drawClock(int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000068A0 - 000068A3 (0x4 bytes), align: 2
+  Segment part 171. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_DateTime_Time_DigitalClock_Position_Y
+                                   000068A0        drawClock(int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000068A4 - 000068CF (0x2c bytes), align: 2
+  Segment part 172. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000068D0 - 000068D3 (0x4 bytes), align: 2
+  Segment part 173. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Time_DigitalClock_FontSize
+                                   000068D0        drawClock(int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000068D4 - 000068FF (0x2c bytes), align: 2
+  Segment part 174. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006900 - 00006903 (0x4 bytes), align: 2
+  Segment part 175. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Time_DigitalClock_TextColor
+                                   00006900        drawClock(int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006904 - 0000692F (0x2c bytes), align: 2
+  Segment part 176. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006930 - 00006933 (0x4 bytes), align: 2
+  Segment part 177. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Time_DigitalClock_Align
+                                   00006930        drawClock(int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006934 - 00006993 (0x60 bytes), align: 2
+  Segment part 178. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006994 - 000069BF (0x2c bytes), align: 2
+  Segment part 179. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000069C0 - 000069EB (0x2c bytes), align: 2
+  Segment part 180. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000069EC - 000069EF (0x4 bytes), align: 2
+  Segment part 181. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Time_AMPM_Enable   000069EC        drawClock(int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000069F0 - 00006A1B (0x2c bytes), align: 2
+  Segment part 182. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006A1C - 00006A1F (0x4 bytes), align: 2
+  Segment part 183. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_DateTime_Time_DigitalClock_AMPM_Position_X
+                                   00006A1C        drawClock(int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006A20 - 00006A23 (0x4 bytes), align: 2
+  Segment part 184. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_DateTime_Time_DigitalClock_AMPM_Position_Y
+                                   00006A20        drawClock(int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006A24 - 00006A4F (0x2c bytes), align: 2
+  Segment part 185. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006A50 - 00006A53 (0x4 bytes), align: 2
+  Segment part 186. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Time_AMPM_FontSize
+                                   00006A50        drawClock(int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006A54 - 00006A7F (0x2c bytes), align: 2
+  Segment part 187. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006A80 - 00006A83 (0x4 bytes), align: 2
+  Segment part 188. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Time_AMPM_TextColor
+                                   00006A80        drawClock(int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006A84 - 00006AAF (0x2c bytes), align: 2
+  Segment part 189. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006AB0 - 00006AB3 (0x4 bytes), align: 2
+  Segment part 190. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Time_AMPM_Align    00006AB0        drawClock(int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006AB4 - 00006B13 (0x60 bytes), align: 2
+  Segment part 191. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006B14 - 00006B3F (0x2c bytes), align: 2
+  Segment part 192. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006B40 - 00006B6B (0x2c bytes), align: 2
+  Segment part 193. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006B6C - 00006B97 (0x2c bytes), align: 2
+  Segment part 194. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006B98 - 00006B9B (0x4 bytes), align: 2
+  Segment part 195. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Time_Type          00006B98        drawClock(int, int) (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006B9C - 00006BDB (0x40 bytes), align: 2
+  Segment part 196. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006BDC - 00006C07 (0x2c bytes), align: 2
+  Segment part 197. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006C08 - 00006C33 (0x2c bytes), align: 2
+  Segment part 198. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006C34 - 00006C5F (0x2c bytes), align: 2
+  Segment part 199. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006C60 - 00006C8B (0x2c bytes), align: 2
+  Segment part 200. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006C8C - 00006CB7 (0x2c bytes), align: 2
+  Segment part 201. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006CB8 - 00006CBB (0x4 bytes), align: 2
+  Segment part 202. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Music_Coverart_Enable
+                                   00006CB8 
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006CBC - 00006CE7 (0x2c bytes), align: 2
+  Segment part 203. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006CE8 - 00006CEB (0x4 bytes), align: 2
+  Segment part 204. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Music_Coverart_Position_X
+                                   00006CE8 
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006CEC - 00006CEF (0x4 bytes), align: 2
+  Segment part 205. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Music_Coverart_Position_Y
+                                   00006CEC 
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006CF0 - 00006D1B (0x2c bytes), align: 2
+  Segment part 206. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006D1C - 00006D47 (0x2c bytes), align: 2
+  Segment part 207. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006D48 - 00006D73 (0x2c bytes), align: 2
+  Segment part 208. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006D74 - 00006D77 (0x4 bytes), align: 2
+  Segment part 209. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Music_Artist_Enable
+                                   00006D74        drawId3(MyBook *) (id3)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006D78 - 00006DA3 (0x2c bytes), align: 2
+  Segment part 210. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006DA4 - 00006DA7 (0x4 bytes), align: 2
+  Segment part 211. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Music_Artist_Position_X
+                                   00006DA4        drawId3(MyBook *) (id3)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006DA8 - 00006DAB (0x4 bytes), align: 2
+  Segment part 212. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Music_Artist_Position_Y
+                                   00006DA8        drawId3(MyBook *) (id3)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006DAC - 00006DD7 (0x2c bytes), align: 2
+  Segment part 213. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006DD8 - 00006DDB (0x4 bytes), align: 2
+  Segment part 214. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Music_Artist_FontSize
+                                   00006DD8        drawId3(MyBook *) (id3)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006DDC - 00006E07 (0x2c bytes), align: 2
+  Segment part 215. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006E08 - 00006E0B (0x4 bytes), align: 2
+  Segment part 216. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Music_Artist_TextColor
+                                   00006E08        drawId3(MyBook *) (id3)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006E0C - 00006E37 (0x2c bytes), align: 2
+  Segment part 217. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006E38 - 00006E3B (0x4 bytes), align: 2
+  Segment part 218. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Music_Artist_Align
+                                   00006E38        drawId3(MyBook *) (id3)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006E3C - 00006E9B (0x60 bytes), align: 2
+  Segment part 219. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006E9C - 00006EC7 (0x2c bytes), align: 2
+  Segment part 220. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006EC8 - 00006EF3 (0x2c bytes), align: 2
+  Segment part 221. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006EF4 - 00006F1F (0x2c bytes), align: 2
+  Segment part 222. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006F20 - 00006F23 (0x4 bytes), align: 2
+  Segment part 223. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Music_Title_Enable
+                                   00006F20        drawId3(MyBook *) (id3)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006F24 - 00006F4F (0x2c bytes), align: 2
+  Segment part 224. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006F50 - 00006F53 (0x4 bytes), align: 2
+  Segment part 225. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Music_Title_Position_X
+                                   00006F50        drawId3(MyBook *) (id3)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006F54 - 00006F57 (0x4 bytes), align: 2
+  Segment part 226. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Music_Title_Position_Y
+                                   00006F54        drawId3(MyBook *) (id3)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006F58 - 00006F83 (0x2c bytes), align: 2
+  Segment part 227. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006F84 - 00006F87 (0x4 bytes), align: 2
+  Segment part 228. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Music_Title_FontSize
+                                   00006F84        drawId3(MyBook *) (id3)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006F88 - 00006FB3 (0x2c bytes), align: 2
+  Segment part 229. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006FB4 - 00006FB7 (0x4 bytes), align: 2
+  Segment part 230. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Music_Title_TextColor
+                                   00006FB4        drawId3(MyBook *) (id3)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006FB8 - 00006FE3 (0x2c bytes), align: 2
+  Segment part 231. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006FE4 - 00006FE7 (0x4 bytes), align: 2
+  Segment part 232. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Music_Title_Align
+                                   00006FE4        drawId3(MyBook *) (id3)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00006FE8 - 00007047 (0x60 bytes), align: 2
+  Segment part 233. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00007048 - 00007073 (0x2c bytes), align: 2
+  Segment part 234. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00007074 - 0000709F (0x2c bytes), align: 2
+  Segment part 235. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000070A0 - 000070CB (0x2c bytes), align: 2
+  Segment part 236. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000070CC - 000070CF (0x4 bytes), align: 2
+  Segment part 237. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Music_Time_Enable
+                                   000070CC 
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000070D0 - 000070FB (0x2c bytes), align: 2
+  Segment part 238. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000070FC - 000070FF (0x4 bytes), align: 2
+  Segment part 239. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Music_Time_Position_X
+                                   000070FC 
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00007100 - 00007103 (0x4 bytes), align: 2
+  Segment part 240. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Music_Time_Position_Y
+                                   00007100 
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00007104 - 0000712F (0x2c bytes), align: 2
+  Segment part 241. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00007130 - 00007133 (0x4 bytes), align: 2
+  Segment part 242. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Music_Time_FontSize
+                                   00007130 
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00007134 - 0000715F (0x2c bytes), align: 2
+  Segment part 243. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00007160 - 00007163 (0x4 bytes), align: 2
+  Segment part 244. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Music_Time_TextColor
+                                   00007160 
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00007164 - 0000718F (0x2c bytes), align: 2
+  Segment part 245. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00007190 - 00007193 (0x4 bytes), align: 2
+  Segment part 246. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Music_Time_Align   00007190 
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00007194 - 000071F3 (0x60 bytes), align: 2
+  Segment part 247. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000071F4 - 0000721F (0x2c bytes), align: 2
+  Segment part 248. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00007220 - 0000724B (0x2c bytes), align: 2
+  Segment part 249. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000724C - 00007277 (0x2c bytes), align: 2
+  Segment part 250. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00007278 - 0000727B (0x4 bytes), align: 2
+  Segment part 251. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Music_ProgressBar_Enable
+                                   00007278 
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000727C - 000072A7 (0x2c bytes), align: 2
+  Segment part 252. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000072A8 - 000072AF (0x8 bytes), align: 2
+  Segment part 253. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Music_ProgressBar_Position
+                                   000072A8 
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000072B0 - 000072DB (0x2c bytes), align: 2
+  Segment part 254. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000072DC - 000072DF (0x4 bytes), align: 2
+  Segment part 255. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Music_ProgressBar_Color
+                                   000072DC 
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000072E0 - 0000730B (0x2c bytes), align: 2
+  Segment part 256. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 0000730C - 00007337 (0x2c bytes), align: 2
+  Segment part 257. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00007338 - 00007363 (0x2c bytes), align: 2
+  Segment part 258. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00007364 - 0000738F (0x2c bytes), align: 2
+  Segment part 259. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00007390 - 00007523 (0x194 bytes), align: 2
+  Segment part 260. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_XMLBGLogoFolder    00007390        Segment part 127 (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00007524 - 0000754F (0x2c bytes), align: 2
+  Segment part 261. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00007550 - 000076E3 (0x194 bytes), align: 2
+  Segment part 262. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_StatesFolder       00007550        InitImages() (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000076E4 - 0000770F (0x2c bytes), align: 2
+  Segment part 263. ROOT.
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 00007710 - 000078A3 (0x194 bytes), align: 2
+  Segment part 264. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BCFG_Path_Clock         00007710        InitImages() (standbyDraw)
+    -------------------------------------------------------------------------
+CONFIG_C
+  Relative segment, address: CODE_AREA 000078A4 - 000078CF (0x2c bytes), align: 2
+  Segment part 265. ROOT.
+
+    *************************************************************************
+
+  FILE NAME : C:\Documents and Settings\Davi\Desktop\StudyElf\GlassUIWidget\Release\Obj\debug.r79
+  PROGRAM MODULE, NAME : debug
+
+  SEGMENTS IN THE MODULE
+  ======================
+CODE
+  Relative segment, address: CODE_AREA 000009D4 - 000009FF (0x2c bytes), align: 2
+  Segment part 6.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           dbtf(char *)            000009D4        beginFile() (standbyDraw)
+                                                   drawId3(MyBook *) (id3)
+               stack 1 = 00000000 ( 0000000C )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000A00 - 00000A17 (0x18 bytes), align: 2
+  Segment part 8.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           printInt(int)           00000A00        drawId3(MyBook *) (id3)
+               stack 1 = 00000000 ( 00000004 )
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00002E14 - 00002E2B (0x18 bytes), align: 2
+  Segment part 2.             Intra module refs:   dbtf(char *)
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00002E2C - 00002E43 (0x18 bytes), align: 2
+  Segment part 3.             Intra module refs:   printInt(int)
+
+    *************************************************************************
+
+  FILE NAME : C:\Documents and Settings\Davi\Desktop\StudyElf\GlassUIWidget\Release\Obj\fileAnaliser.r79
+  PROGRAM MODULE, NAME : fileAnaliser
+
+  SEGMENTS IN THE MODULE
+  ======================
+CODE
+  Relative segment, address: CODE_AREA 00000A18 - 00000A73 (0x5c bytes), align: 2
+  Segment part 5.             Intra module refs:   getDayWeather(wchar_t *, int &, wchar_t *)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           getDate()               00000A18 
+               stack 1 = 00000000 ( 00000018 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000A74 - 00000B13 (0xa0 bytes), align: 2
+  Segment part 7.             Intra module refs:   getDayWeather(wchar_t *, int &, wchar_t *)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           getTag(wchar_t *, int, int &)
+                                   00000A74 
+               stack 1 = 00000000 ( 00000020 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000B14 - 00000B5F (0x4c bytes), align: 2
+  Segment part 9.             Intra module refs:   getDayState(wchar_t *, int &)
+                                                   getLocation(wchar_t *, int &)
+                                                   getWeather(wchar_t *, int &, wchar_t *)
+                                                   getWeatherConditions(wchar_t *, wchar_t *)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           getEqualContent(wchar_t *, int &)
+                                   00000B14 
+               stack 1 = 00000000 ( 00000010 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000B60 - 00000B97 (0x38 bytes), align: 2
+  Segment part 11.            Intra module refs:   getWeather(wchar_t *, int &, wchar_t *)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           getDayState(wchar_t *, int &)
+                                   00000B60 
+               stack 1 = 00000000 ( 0000000C )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000B98 - 00000BF3 (0x5c bytes), align: 2
+  Segment part 13.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           getLocation(wchar_t *, int &)
+                                   00000B98        beginFile() (standbyDraw)
+               stack 1 = 00000000 ( 0000000C )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000BF4 - 00000CA7 (0xb4 bytes), align: 2
+  Segment part 15.            Intra module refs:   getWeather(wchar_t *, int &, wchar_t *)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           getWeatherConditions(wchar_t *, wchar_t *)
+                                   00000BF4 
+               stack 1 = 00000000 ( 00000014 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000CA8 - 00000D4F (0xa8 bytes), align: 2
+  Segment part 17.            Intra module refs:   getDayWeather(wchar_t *, int &, wchar_t *)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           getWeather(wchar_t *, int &, wchar_t *)
+                                   00000CA8        beginFile() (standbyDraw)
+               stack 1 = 00000000 ( 00000028 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000D50 - 00000E1F (0xd0 bytes), align: 2
+  Segment part 19.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           getDayWeather(wchar_t *, int &, wchar_t *)
+                                   00000D50        beginFile() (standbyDraw)
+               stack 1 = 00000000 ( 00000020 )
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00002E44 - 00002E7F (0x3c bytes), align: 2
+  Segment part 2.             Intra module refs:   getDate()
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00002E80 - 00002E87 (0x8 bytes), align: 2
+  Segment part 3.             Intra module refs:   getDayState(wchar_t *, int &)
+
+    *************************************************************************
+
+  FILE NAME : C:\Documents and Settings\Davi\Desktop\StudyElf\GlassUIWidget\Release\Obj\func.r79
+  PROGRAM MODULE, NAME : func
+
+  SEGMENTS IN THE MODULE
+  ======================
+ELFBEGIN
+  Relative segment, address: CODE_AREA 00000000, align: 0
+  Segment part 0. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ELF_BEGIN               00000000        elf_exit() (main)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000E20 - 00000E37 (0x18 bytes), align: 2
+  Segment part 1. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           kill_data               00000E20        elf_exit() (main)
+           seqkill                 00000E24 
+           ASYNC                   00000E34 
+           SYNC                    00000E30        getDate() (fileAnaliser)
+                                                   getDateTime() (Utils)
+    -------------------------------------------------------------------------
+DYN_CONST_DESC
+  Relative segment, address: CODE_AREA 000078D0 - 000078D3 (0x4 bytes), align: 2
+  Segment part 563. ROOT.
+    -------------------------------------------------------------------------
+DYN_PAGE
+  Relative segment, address: CODE_AREA 000078D4, align: 2
+  Segment part 564.
+    -------------------------------------------------------------------------
+DYN_PAGE_DESC
+  Relative segment, address: CODE_AREA 00007904 - 00007907 (0x4 bytes), align: 2
+  Segment part 565. ROOT.
+
+    *************************************************************************
+
+  FILE NAME : C:\Documents and Settings\Davi\Desktop\StudyElf\GlassUIWidget\Release\Obj\id3.r79
+  PROGRAM MODULE, NAME : id3
+
+  SEGMENTS IN THE MODULE
+  ======================
+DATA_Z
+  Relative segment, address: CODE_AREA 000036C4 - 000036C7 (0x4 bytes), align: 2
+  Segment part 3.             Intra module refs:   drawId3(MyBook *)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           _mybook                 000036C4 
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000E38 - 000010F3 (0x2bc bytes), align: 2
+  Segment part 5.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           drawId3(MyBook *)       00000E38        Draw(DISP_OBJ *, int, int, int) (standbyDraw)
+               stack 1 = 00000000 ( 000020FC )
+    -------------------------------------------------------------------------
+INITTAB
+  Relative segment, address: CODE_AREA 000036B8 - 000036C3 (0xc bytes), align: 2
+  Segment part 9. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?init?tab?DATA_Z        000036B8 
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00002E88 - 00002E9B (0x14 bytes), align: 2
+  Segment part 2.             Intra module refs:   drawId3(MyBook *)
+
+    *************************************************************************
+
+  FILE NAME : C:\Documents and Settings\Davi\Desktop\StudyElf\GlassUIWidget\Release\Obj\main.r79
+  PROGRAM MODULE, NAME : main
+
+  SEGMENTS IN THE MODULE
+  ======================
+CODE
+  Relative segment, address: CODE_AREA 000010F4 - 000011EF (0xfc bytes), align: 2
+  Segment part 10.            Intra module refs:   Segment part 6
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           onBcfgConfig(void *, BOOK *)
+                                   000010F4 
+               stack 1 = 00000000 ( 000004D8 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000011F0 - 00001203 (0x14 bytes), align: 2
+  Segment part 12.            Intra module refs:   Segment part 6
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           TerminateElf(void *, BOOK *)
+                                   000011F0 
+               stack 1 = 00000000 ( 00000004 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00001204 - 00001253 (0x50 bytes), align: 2
+  Segment part 14.            Intra module refs:   Segment part 6
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ShowAuthorInfo(void *, BOOK *)
+                                   00001204 
+               stack 1 = 00000000 ( 00000014 )
+    -------------------------------------------------------------------------
+DYN_PAGE
+  Relative segment, address: CODE_AREA 000078D4 - 00007903 (0x30 bytes), align: 2
+  Segment part 6.             Intra module refs:   Segment part 8
+    -------------------------------------------------------------------------
+DATA_I
+  Relative segment, address: DATA_AREA 00000008 - 00000013 (0xc bytes), align: 2
+  Segment part 7.             Intra module refs:   main
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           base_page               00000008 
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00001254 - 0000126F (0x1c bytes), align: 2
+  Segment part 16.            Intra module refs:   main
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           elf_exit()              00001254        onCloseBEBook(BOOK *) (standbyDraw)
+               stack 1 = 00000000 ( 00000004 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00001270 - 00001297 (0x28 bytes), align: 2
+  Segment part 18.            Intra module refs:   main
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           myFind(BOOK *)          00001270 
+               stack 1 = 00000000 ( 00000004 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00001298 - 0000135F (0xc8 bytes), align: 2
+  Segment part 20.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           main                    00001298        Absolute parts (?ABS_ENTRY_MOD)
+               stack 1 = 00000000 ( 00000014 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00001360 - 00001363 (0x4 bytes), align: 2
+  Segment part 21.            Intra module refs:   main
+                                                   myFind(BOOK *)
+    -------------------------------------------------------------------------
+DATA_ID
+  Relative segment, address: CODE_AREA 00000008 - 00000013 (0xc bytes), align: 2
+  Segment part 8.             Intra module refs:   base_page
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00002E9C - 00002EA7 (0xc bytes), align: 2
+  Segment part 2.             Intra module refs:   Segment part 8
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00002EA8 - 00002F0F (0x68 bytes), align: 2
+  Segment part 3.             Intra module refs:   onBcfgConfig(void *, BOOK *)
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00002F10 - 00002F3F (0x30 bytes), align: 2
+  Segment part 4.             Intra module refs:   ShowAuthorInfo(void *, BOOK *)
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00002F40 - 00002F93 (0x54 bytes), align: 2
+  Segment part 5.             Intra module refs:   Segment part 21
+
+    *************************************************************************
+
+  FILE NAME : C:\Documents and Settings\Davi\Desktop\StudyElf\GlassUIWidget\Release\Obj\mybook.r79
+  PROGRAM MODULE, NAME : mybook
+
+  SEGMENTS IN THE MODULE
+  ======================
+CODE
+  Relative segment, address: CODE_AREA 00001364 - 000013C3 (0x60 bytes), align: 2
+  Segment part 8.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MyBook::MyBook()        00001364        main (main)
+               stack 1 = 00000000 ( 0000000C )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000013C4 - 000013EB (0x28 bytes), align: 2
+  Segment part 10.            Intra module refs:   MyBook::loadDateNames()
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MyBook::fillWcharArray(wchar_t const * *, wchar_t const * *, int)
+                                   000013C4 
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000013EC - 0000145B (0x70 bytes), align: 2
+  Segment part 12.            Intra module refs:   MyBook::MyBook()
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MyBook::loadDateNames()
+                                   000013EC        ReconfigElf(void *, BOOK *) (standbyDraw)
+               stack 1 = 00000000 ( 00000078 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 0000145C - 00001463 (0x8 bytes), align: 2
+  Segment part 16.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MyBook::getBook() const
+                                   0000145C        errorInFile(wchar_t *) (standbyDraw)
+                                                   main (main)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00001464 - 0000146B (0x8 bytes), align: 2
+  Segment part 18.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MyBook::getError() const
+                                   00001464        drawWeatherInfo(MyBook *) (standbyDraw)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 0000146C - 00001473 (0x8 bytes), align: 2
+  Segment part 22.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MyBook::getGC() const   0000146C        ifDrawImage(bool, int, int, wchar_t const &) (standbyDraw)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00001474 - 0000147B (0x8 bytes), align: 2
+  Segment part 24.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MyBook::getHourSeted() const
+                                   00001474        drawWeatherContents() (standbyDraw)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 0000147C - 00001483 (0x8 bytes), align: 2
+  Segment part 26.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MyBook::getWeatherToDraw() const
+                                   0000147C        drawWeatherContents() (standbyDraw)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00001484 - 0000148B (0x8 bytes), align: 2
+  Segment part 28.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MyBook::getDayWeather() const
+                                   00001484        beginFile() (standbyDraw)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 0000148C - 00001493 (0x8 bytes), align: 2
+  Segment part 30.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MyBook::getNightWeather() const
+                                   0000148C        beginFile() (standbyDraw)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00001494 - 0000149B (0x8 bytes), align: 2
+  Segment part 32.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MyBook::getLocation() const
+                                   00001494        beginFile() (standbyDraw)
+                                                   drawWeatherContents() (standbyDraw)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 0000149C - 000014B7 (0x1c bytes), align: 2
+  Segment part 34.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MyBook::freeWDraw()     0000149C        drawWeatherContents() (standbyDraw)
+               stack 1 = 00000000 ( 00000008 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000014B8 - 000014BF (0x8 bytes), align: 2
+  Segment part 36.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MyBook::setHour(int)    000014B8        ReconfigElf(void *, BOOK *) (standbyDraw)
+                                                   drawWeatherContents() (standbyDraw)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000014C0 - 000014DF (0x20 bytes), align: 2
+  Segment part 38.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MyBook::setWDraw(int)   000014C0        drawWeatherContents() (standbyDraw)
+               stack 1 = 00000000 ( 00000008 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000014E0 - 000014E7 (0x8 bytes), align: 2
+  Segment part 40.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MyBook::setError(bool)
+                                   000014E0        errorInFile(wchar_t *) (standbyDraw)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000014E8 - 000014EF (0x8 bytes), align: 2
+  Segment part 42.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MyBook::setLocation(wchar_t *)
+                                   000014E8        beginFile() (standbyDraw)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000014F0 - 000014F7 (0x8 bytes), align: 2
+  Segment part 44.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MyBook::setDayWeather(Weather *)
+                                   000014F0        beginFile() (standbyDraw)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000014F8 - 000014FF (0x8 bytes), align: 2
+  Segment part 46.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MyBook::setNightWeather(Weather *)
+                                   000014F8        beginFile() (standbyDraw)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00001500 - 00001573 (0x74 bytes), align: 2
+  Segment part 48.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MyBook::freeMyVars()    00001500        beginFile() (standbyDraw)
+                                                   onCloseBEBook(BOOK *) (standbyDraw)
+               stack 1 = 00000000 ( 0000000C )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00001574 - 000015A7 (0x34 bytes), align: 2
+  Segment part 50.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MyBook::loadMetadataDll()
+                                   00001574        Draw(DISP_OBJ *, int, int, int) (standbyDraw)
+               stack 1 = 00000000 ( 00000008 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000015A8 - 000015CB (0x24 bytes), align: 2
+  Segment part 52.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           MyBook::unloadMetadataDll()
+                                   000015A8        Draw(DISP_OBJ *, int, int, int) (standbyDraw)
+               stack 1 = 00000000 ( 00000008 )
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00002F94 - 00002FAF (0x1c bytes), align: 2
+  Segment part 2.             Intra module refs:   MyBook::loadDateNames()
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00002FB0 - 00002FF7 (0x48 bytes), align: 2
+  Segment part 3.             Intra module refs:   MyBook::loadDateNames()
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00002FF8 - 00003017 (0x20 bytes), align: 2
+  Segment part 4.             Intra module refs:   MyBook::loadMetadataDll()
+
+    *************************************************************************
+
+  FILE NAME : C:\Documents and Settings\Davi\Desktop\StudyElf\GlassUIWidget\Release\Obj\openfile.r79
+  PROGRAM MODULE, NAME : openfile
+
+  SEGMENTS IN THE MODULE
+  ======================
+CODE
+  Relative segment, address: CODE_AREA 000015CC - 0000168F (0xc4 bytes), align: 2
+  Segment part 3.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           openFile(wchar_t const *, wchar_t *)
+                                   000015CC        beginFile() (standbyDraw)
+               stack 1 = 00000000 ( 0000002C )
+
+    *************************************************************************
+
+  FILE NAME : C:\Documents and Settings\Davi\Desktop\StudyElf\GlassUIWidget\Release\Obj\standbyDraw.r79
+  PROGRAM MODULE, NAME : standbyDraw
+
+  SEGMENTS IN THE MODULE
+  ======================
+CODE
+  Relative segment, address: CODE_AREA 00001690 - 00001697 (0x8 bytes), align: 2
+  Segment part 89.            Intra module refs:   drawWeatherInfo(MyBook *)
+                                                   onfTimer(u16, LPARAM)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           LPARAM::LPARAM(int)     00001690 
+    -------------------------------------------------------------------------
+DATA_I
+  Relative segment, address: DATA_AREA 00000014 - 000003FB (0x3e8 bytes), align: 2
+  Segment part 87.            Intra module refs:   Segment part 106
+                                                   Segment part 123
+                                                   Segment part 130
+                                                   Segment part 137
+                                                   Send_REDRAW_RELEASE()
+                                                   finalDraw(wchar_t *, wchar_t *, int, int)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           SIonRedraw              00000160 
+           StatusIndication        00000164 
+           clockID                 000000A0 
+           clockImages             00000278 
+           mybook                  000003F8 
+           stateImages             00000168 
+           statesID                00000014 
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00001698 - 000016E7 (0x50 bytes), align: 2
+  Segment part 91.            Intra module refs:   onCloseBEBook(BOOK *)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           Send_REDRAW_RELEASE()   00001698 
+               stack 1 = 00000000 ( 00000008 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000016E8 - 00001757 (0x70 bytes), align: 2
+  Segment part 93.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ReconfigElf(void *, BOOK *)
+                                   000016E8        Segment part 6 (main)
+               stack 1 = 00000000 ( 0000000C )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00001758 - 000018E7 (0x190 bytes), align: 2
+  Segment part 95.            Intra module refs:   ifDrawNoMask(bool, wchar_t *, int, int, int, int, unsigned int)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           drawOnStby(wchar_t *, int, int, int, int, int)
+                                   00001758 
+               stack 1 = 00000000 ( 0000004C )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000018E8 - 00001933 (0x4c bytes), align: 2
+  Segment part 97.            Intra module refs:   Draw(DISP_OBJ *, int, int, int)
+                                                   drawClock(int, int)
+                                                   finalDraw(wchar_t *, wchar_t *, int, int)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ifDrawImage(bool, int, int, wchar_t const &)
+                                   000018E8 
+               stack 1 = 00000000 ( 00000018 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00001934 - 000019AF (0x7c bytes), align: 2
+  Segment part 99.            Intra module refs:   Segment part 124
+                                                   Segment part 133
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           Draw(DISP_OBJ *, int, int, int)
+                                   00001934 
+               stack 1 = 00000000 ( 00000008 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000019B0 - 000019EB (0x3c bytes), align: 2
+  Segment part 101.           Intra module refs:   drawClock(int, int)
+                                                   finalDraw(wchar_t *, wchar_t *, int, int)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ifDrawNoMask(bool, wchar_t *, int, int, int, int, unsigned int)
+                                   000019B0        drawId3(MyBook *) (id3)
+               stack 1 = 00000000 ( 00000014 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000019EC - 00001A7B (0x90 bytes), align: 2
+  Segment part 103.           Intra module refs:   drawClock(int, int)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           drawStdby(wchar_t *, int, int, int, int, int, int, int)
+                                   000019EC 
+               stack 1 = 00000000 ( 0000003C )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00001A7C - 00001D4F (0x2d4 bytes), align: 2
+  Segment part 105.           Intra module refs:   drawWeatherContents()
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           drawClock(int, int)     00001A7C 
+               stack 1 = 00000000 ( 0000003C )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00001D50 - 00001D53 (0x4 bytes), align: 2
+  Segment part 106.           Intra module refs:   drawClock(int, int)
+                                                   ifDrawImage(bool, int, int, wchar_t const &)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00001D54 - 00001F7F (0x22c bytes), align: 2
+  Segment part 108.           Intra module refs:   drawWeatherContents()
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           finalDraw(wchar_t *, wchar_t *, int, int)
+                                   00001D54 
+               stack 1 = 00000000 ( 00000034 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00001F80 - 00001FE3 (0x64 bytes), align: 2
+  Segment part 110.           Intra module refs:   Segment part 134
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           onfTimer(u16, LPARAM)   00001F80 
+               stack 1 = 00000000 ( 0000000C )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00001FE4 - 000020EF (0x10c bytes), align: 2
+  Segment part 112.           Intra module refs:   ReconfigElf(void *, BOOK *)
+                                                   beginFile()
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           makeDateMask()          00001FE4 
+               stack 1 = 00000000 ( 00000018 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000020F0 - 00002253 (0x164 bytes), align: 2
+  Segment part 114.           Intra module refs:   Draw(DISP_OBJ *, int, int, int)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           drawWeatherContents()   000020F0 
+               stack 1 = 00000000 ( 0000001C )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00002254 - 00002257 (0x4 bytes), align: 2
+  Segment part 115.           Intra module refs:   drawClock(int, int)
+                                                   drawWeatherContents()
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00002258 - 0000225B (0x4 bytes), align: 2
+  Segment part 116.           Intra module refs:   drawClock(int, int)
+                                                   drawWeatherContents()
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 0000225C - 000022BB (0x60 bytes), align: 2
+  Segment part 118.           Intra module refs:   beginFile()
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           errorInFile(wchar_t *)
+                                   0000225C 
+               stack 1 = 00000000 ( 00000010 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000022BC - 00002443 (0x188 bytes), align: 2
+  Segment part 120.           Intra module refs:   drawWeatherContents()
+                                                   drawWeatherInfo(MyBook *)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           beginFile()             000022BC 
+               stack 1 = 00000000 ( 00000020 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00002444 - 000024D7 (0x94 bytes), align: 2
+  Segment part 122.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           SB_ELF_Killed(void *, BOOK *)
+                                   00002444        Segment part 6 (main)
+               stack 1 = 00000000 ( 00000014 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000024D8 - 000024DB (0x4 bytes), align: 2
+  Segment part 123.           Intra module refs:   ReconfigElf(void *, BOOK *)
+                                                   SB_ELF_Killed(void *, BOOK *)
+                                                   beginFile()
+                                                   drawClock(int, int)
+                                                   drawWeatherContents()
+                                                   errorInFile(wchar_t *)
+                                                   makeDateMask()
+                                                   onfTimer(u16, LPARAM)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000024DC - 000024DF (0x4 bytes), align: 2
+  Segment part 124.           Intra module refs:   SB_ELF_Killed(void *, BOOK *)
+                                                   Send_REDRAW_RELEASE()
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000024E0 - 0000256F (0x90 bytes), align: 2
+  Segment part 126.           Intra module refs:   drawWeatherInfo(MyBook *)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           InitImages()            000024E0 
+               stack 1 = 00000000 ( 00000010 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00002570 - 00002573 (0x4 bytes), align: 2
+  Segment part 127.           Intra module refs:   InitImages()
+                                                   beginFile()
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00002574 - 000025B7 (0x44 bytes), align: 2
+  Segment part 129.           Intra module refs:   onCloseBEBook(BOOK *)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           DestroyImages()         00002574 
+               stack 1 = 00000000 ( 0000000C )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000025B8 - 000025BB (0x4 bytes), align: 2
+  Segment part 130.           Intra module refs:   DestroyImages()
+                                                   Draw(DISP_OBJ *, int, int, int)
+                                                   InitImages()
+                                                   finalDraw(wchar_t *, wchar_t *, int, int)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000025BC - 0000263F (0x84 bytes), align: 2
+  Segment part 132.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           drawWeatherInfo(MyBook *)
+                                   000025BC        main (main)
+               stack 1 = 00000000 ( 0000000C )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00002640 - 00002643 (0x4 bytes), align: 2
+  Segment part 133.           Intra module refs:   drawWeatherInfo(MyBook *)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00002644 - 00002647 (0x4 bytes), align: 2
+  Segment part 134.           Intra module refs:   drawWeatherInfo(MyBook *)
+                                                   onfTimer(u16, LPARAM)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00002648 - 000026B3 (0x6c bytes), align: 2
+  Segment part 136.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           onCloseBEBook(BOOK *)   00002648        main (main)
+               stack 1 = 00000000 ( 00000008 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000026B4 - 000026B7 (0x4 bytes), align: 2
+  Segment part 137.           Intra module refs:   drawWeatherInfo(MyBook *)
+                                                   onCloseBEBook(BOOK *)
+    -------------------------------------------------------------------------
+DATA_ID
+  Relative segment, address: CODE_AREA 00000014 - 000003FB (0x3e8 bytes), align: 2
+  Segment part 88.            Intra module refs:   Segment part 87
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003018 - 00003023 (0xc bytes), align: 2
+  Segment part 2.             Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003024 - 00003057 (0x34 bytes), align: 2
+  Segment part 3.             Intra module refs:   drawClock(int, int)
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003058 - 00003067 (0x10 bytes), align: 2
+  Segment part 4.             Intra module refs:   makeDateMask()
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003068 - 000032DB (0x274 bytes), align: 2
+  Segment part 5.             Intra module refs:   beginFile()
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000032DC - 000032EB (0x10 bytes), align: 2
+  Segment part 6.             Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000032EC - 0000331F (0x34 bytes), align: 2
+  Segment part 7.             Intra module refs:   InitImages()
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003320 - 0000332B (0xc bytes), align: 2
+  Segment part 8.             Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 0000332C - 00003337 (0xc bytes), align: 2
+  Segment part 9.             Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003338 - 00003343 (0xc bytes), align: 2
+  Segment part 10.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003344 - 0000334F (0xc bytes), align: 2
+  Segment part 11.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003350 - 0000335B (0xc bytes), align: 2
+  Segment part 12.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 0000335C - 00003367 (0xc bytes), align: 2
+  Segment part 13.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003368 - 00003373 (0xc bytes), align: 2
+  Segment part 14.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003374 - 0000337F (0xc bytes), align: 2
+  Segment part 15.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003380 - 0000338F (0x10 bytes), align: 2
+  Segment part 16.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003390 - 0000339F (0x10 bytes), align: 2
+  Segment part 17.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000033A0 - 000033AF (0x10 bytes), align: 2
+  Segment part 18.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000033B0 - 000033BF (0x10 bytes), align: 2
+  Segment part 19.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000033C0 - 000033CF (0x10 bytes), align: 2
+  Segment part 20.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000033D0 - 000033DF (0x10 bytes), align: 2
+  Segment part 21.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000033E0 - 000033EF (0x10 bytes), align: 2
+  Segment part 22.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000033F0 - 000033FF (0x10 bytes), align: 2
+  Segment part 23.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003400 - 0000340F (0x10 bytes), align: 2
+  Segment part 24.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003410 - 0000341F (0x10 bytes), align: 2
+  Segment part 25.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003420 - 0000342F (0x10 bytes), align: 2
+  Segment part 26.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003430 - 0000343F (0x10 bytes), align: 2
+  Segment part 27.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003440 - 0000344F (0x10 bytes), align: 2
+  Segment part 28.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003450 - 0000345F (0x10 bytes), align: 2
+  Segment part 29.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003460 - 0000346F (0x10 bytes), align: 2
+  Segment part 30.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003470 - 0000347F (0x10 bytes), align: 2
+  Segment part 31.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003480 - 0000348F (0x10 bytes), align: 2
+  Segment part 32.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003490 - 0000349F (0x10 bytes), align: 2
+  Segment part 33.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000034A0 - 000034AF (0x10 bytes), align: 2
+  Segment part 34.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000034B0 - 000034BF (0x10 bytes), align: 2
+  Segment part 35.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000034C0 - 000034CF (0x10 bytes), align: 2
+  Segment part 36.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000034D0 - 000034DB (0xc bytes), align: 2
+  Segment part 37.            Intra module refs:   onfTimer(u16, LPARAM)
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000034DC - 000034EB (0x10 bytes), align: 2
+  Segment part 38.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000034EC - 000034FB (0x10 bytes), align: 2
+  Segment part 39.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000034FC - 0000350B (0x10 bytes), align: 2
+  Segment part 40.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 0000350C - 0000351B (0x10 bytes), align: 2
+  Segment part 41.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 0000351C - 0000352B (0x10 bytes), align: 2
+  Segment part 42.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 0000352C - 0000353B (0x10 bytes), align: 2
+  Segment part 43.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 0000353C - 0000354B (0x10 bytes), align: 2
+  Segment part 44.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 0000354C - 0000355B (0x10 bytes), align: 2
+  Segment part 45.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 0000355C - 00003567 (0xc bytes), align: 2
+  Segment part 46.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003568 - 00003577 (0x10 bytes), align: 2
+  Segment part 47.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003578 - 00003587 (0x10 bytes), align: 2
+  Segment part 48.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003588 - 00003597 (0x10 bytes), align: 2
+  Segment part 49.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003598 - 000035A7 (0x10 bytes), align: 2
+  Segment part 50.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000035A8 - 000035B7 (0x10 bytes), align: 2
+  Segment part 51.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000035B8 - 000035C7 (0x10 bytes), align: 2
+  Segment part 52.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000035C8 - 000035D7 (0x10 bytes), align: 2
+  Segment part 53.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000035D8 - 000035E7 (0x10 bytes), align: 2
+  Segment part 54.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000035E8 - 000035F7 (0x10 bytes), align: 2
+  Segment part 55.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000035F8 - 00003607 (0x10 bytes), align: 2
+  Segment part 56.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003608 - 00003617 (0x10 bytes), align: 2
+  Segment part 57.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003618 - 00003627 (0x10 bytes), align: 2
+  Segment part 58.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003628 - 00003637 (0x10 bytes), align: 2
+  Segment part 59.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003638 - 00003647 (0x10 bytes), align: 2
+  Segment part 60.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003648 - 00003657 (0x10 bytes), align: 2
+  Segment part 61.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003658 - 00003667 (0x10 bytes), align: 2
+  Segment part 62.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003668 - 00003677 (0x10 bytes), align: 2
+  Segment part 63.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003678 - 00003687 (0x10 bytes), align: 2
+  Segment part 64.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003688 - 00003697 (0x10 bytes), align: 2
+  Segment part 65.            Intra module refs:   Segment part 88
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00003698 - 000036A7 (0x10 bytes), align: 2
+  Segment part 66.            Intra module refs:   Segment part 88
+
+    *************************************************************************
+
+  FILE NAME : C:\Documents and Settings\Davi\Desktop\StudyElf\GlassUIWidget\Release\Obj\weather.r79
+  PROGRAM MODULE, NAME : weather
+
+  SEGMENTS IN THE MODULE
+  ======================
+CODE
+  Relative segment, address: CODE_AREA 000026B8 - 0000270F (0x58 bytes), align: 2
+  Segment part 3.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           Weather::new Weather(int, int, int, int, wchar_t *, wchar_t *, wchar_t *)
+                                   000026B8        getWeather(wchar_t *, int &, wchar_t *) (fileAnaliser)
+               stack 1 = 00000000 ( 00000030 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00002710 - 00002733 (0x24 bytes), align: 2
+  Segment part 5.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           Weather::new Weather(Weather *)
+                                   00002710        MyBook::setWDraw(int) (mybook)
+               stack 1 = 00000000 ( 00000008 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00002734 - 0000274F (0x1c bytes), align: 2
+  Segment part 7.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           Weather::delete ~Weather(Weather *)
+                                   00002734        MyBook::freeMyVars() (mybook)
+                                                   MyBook::freeWDraw() (mybook)
+               stack 1 = 00000000 ( 00000008 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00002750 - 000027C7 (0x78 bytes), align: 2
+  Segment part 9.             Intra module refs:   Weather::new Weather(int, int, int, int, wchar_t *, wchar_t *, wchar_t *)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           Weather::Weather(int, int, int, int, wchar_t *, wchar_t *, wchar_t *)
+                                   00002750 
+               stack 1 = 00000000 ( 0000001C )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000027C8 - 000028E3 (0x11c bytes), align: 2
+  Segment part 11.            Intra module refs:   Weather::new Weather(Weather *)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           Weather::Weather(Weather *)
+                                   000027C8 
+               stack 1 = 00000000 ( 00000010 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000028E4 - 0000292F (0x4c bytes), align: 2
+  Segment part 13.            Intra module refs:   Weather::delete ~Weather(Weather *)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           Weather::~Weather()     000028E4 
+               stack 1 = 00000000 ( 0000000C )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00002930 - 00002937 (0x8 bytes), align: 2
+  Segment part 15.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           Weather::getState() const
+                                   00002930        drawWeatherContents() (standbyDraw)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00002938 - 0000293F (0x8 bytes), align: 2
+  Segment part 23.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           Weather::getAverageTemp() const
+                                   00002938        drawWeatherContents() (standbyDraw)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00002940 - 00002947 (0x8 bytes), align: 2
+  Segment part 25.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           Weather::getState_() const
+                                   00002940        drawWeatherContents() (standbyDraw)
+
+    *************************************************************************
+
+  FILE NAME : C:\Documents and Settings\Davi\Desktop\IAR\Embedded Workbench 4.0 Evaluation\ARM\LIB\dl5tpainl8n.r79
+  LIBRARY MODULE, NAME : ?GetDenormal
+
+  SEGMENTS IN THE MODULE
+  ======================
+CODE
+  Relative segment, address: CODE_AREA 00002948 - 000029A7 (0x60 bytes), align: 2
+  Segment part 0.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?GetDenormalX           00002948        Segment part 1 (?D_MulFloat)
+           ?GetDenormalY           00002978        Segment part 1 (?D_MulFloat)
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?D_LONG2DOUBLE
+
+  SEGMENTS IN THE MODULE
+  ======================
+CODE
+  Relative segment, address: CODE_AREA 000029A8 - 00002A03 (0x5c bytes), align: 2
+  Segment part 1.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __aeabi_i2d             000029A8 
+           __longToDouble          000029A8        Weather::Weather(int, int, int, int, wchar_t *, wchar_t *, wchar_t *) (weather)
+           __longToDouble::??rA    000029A8 
+           __longToDubleStart      000029C4 
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?D_DOUBLE2LONG
+
+  SEGMENTS IN THE MODULE
+  ======================
+CODE
+  Relative segment, address: CODE_AREA 00002A04 - 00002A63 (0x60 bytes), align: 2
+  Segment part 1.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __aeabi_d2iz            00002A04 
+           __doubleToLong          00002A04        Weather::Weather(int, int, int, int, wchar_t *, wchar_t *, wchar_t *) (weather)
+           __doubleToLong::??rA    00002A04 
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?FLOATEDOUBLE
+
+  SEGMENTS IN THE MODULE
+  ======================
+CODE
+  Relative segment, address: CODE_AREA 00002A64 - 00002AC7 (0x64 bytes), align: 2
+  Segment part 1.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __aeabi_f2d             00002A64 
+           __floatToDouble         00002A64        returnMask(wchar_t const *, int, bool, float (__atpcs __interwork *)(int), int) (Utils)
+           __floatToDouble::??rA   00002A64 
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?D_MulFloat
+
+  SEGMENTS IN THE MODULE
+  ======================
+CODE
+  Relative segment, address: CODE_AREA 00002AC8 - 00002CFF (0x238 bytes), align: 2
+  Segment part 1.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __dMul                  00002AC8        Weather::Weather(int, int, int, int, wchar_t *, wchar_t *, wchar_t *) (weather)
+           __dMul::??rA            00002AC8 
+           __aeabi_dmul            00002AC8 
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?F_LONG2FLOAT
+
+  SEGMENTS IN THE MODULE
+  ======================
+CODE
+  Relative segment, address: CODE_AREA 00002D00 - 00002D67 (0x68 bytes), align: 2
+  Segment part 1.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __aeabi_i2f             00002D00 
+           __longToFloat           00002D00        celsiusToFahrenheit(int) (Utils)
+                                                   returnMask(wchar_t const *, int, bool, float (__atpcs __interwork *)(int), int) (Utils)
+           __longToFloat::??rA     00002D00 
+           __longToFloatStart      00002D14 
+
+
+
+
+                ****************************************
+                *                                      *
+                *      SEGMENTS IN ADDRESS ORDER       *
+                *                                      *
+                ****************************************
+
+
+SEGMENT              SPACE    START ADDRESS   END ADDRESS     SIZE  TYPE  ALIGN
+=======              =====    =============   ===========     ====  ====  =====
+ELFBEGIN             CODE_AREA           00000000                     rel    0
+DATA_ID              CODE_AREA      00000000 - 000003FB         3FC   rel    2
+START                CODE_AREA           000003FC                     dse    0
+CODE                 CODE_AREA      000003FC - 00002D67        296C   rel    2
+DATA_C               CODE_AREA      00002D68 - 000036A9         942   rel    2
+INITTAB              CODE_AREA      000036AC - 000036C3          18   rel    2
+DATA_Z               CODE_AREA      000036C4 - 000036C7           4   rel    2
+DATA_N               CODE_AREA           000036C8                     dse    0
+CONFIG_C             CODE_AREA      000036C8 - 000078CF        4208   rel    2
+DYN_CONST            CODE_AREA           000078D0                     dse    0
+DYN_CONST_DESC       CODE_AREA      000078D0 - 000078D3           4   rel    2
+DYN_PAGE             CODE_AREA      000078D4 - 00007903          30   rel    2
+DYN_PAGE_DESC        CODE_AREA      00007904 - 00007907           4   rel    2
+DATA_I               DATA_AREA      00000000 - 000003FB         3FC   rel    2
+
+                ****************************************
+                *                                      *
+                *        END OF CROSS REFERENCE        *
+                *                                      *
+                ****************************************
+
+ 30 982 bytes of CODE memory
+  1 020 bytes of DATA memory
+
+Errors: none
+Warnings: none
+

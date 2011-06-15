@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>AccuWeatherWidget/Release</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>178</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+        <PreferedWindows>
+          
+          
+          
+          
+        <Position>1</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>819</ColumnWidth1><ColumnWidth2>218</ColumnWidth2><ColumnWidth3>54</ColumnWidth3></Build>
+    <Debug-Log><PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows></Debug-Log></Static>
+    <Windows>
+      
+      
+    <Wnd2><Tabs><Tab>
+            <Identity>TabID-9793-1378</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab></Tabs><SelectedTab>0</SelectedTab></Wnd2><Wnd3><Tabs><Tab><Identity>TabID-6232-25869</Identity><TabName>Workspace</TabName><Factory>Workspace</Factory><Session><NodeDict><ExpandedNode>AccuWeatherWidget</ExpandedNode><ExpandedNode>AccuWeatherWidget/draw</ExpandedNode><ExpandedNode>AccuWeatherWidget/mybook.cpp</ExpandedNode></NodeDict></Session></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd3></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>C:\Users\Faby\Desktop\StudyElf\AccuWeather Widget\standby\standbyDraw.cpp</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>360</SelStart><SelEnd>360</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Users\Faby\Desktop\StudyElf\AccuWeather Widget\main.cpp</Filename><XPos>0</XPos><YPos>69</YPos><SelStart>2009</SelStart><SelEnd>2009</SelEnd></Tab><ActiveTab>1</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-01952d50><key>iaridepm.enu1</key></Toolbar-01952d50></Sizes></Row0></Top><Left><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>524</Bottom><Right>252</Right><x>-2</x><y>-2</y><xscreen>225</xscreen><yscreen>227</yscreen><sizeHorzCX>195313</sizeHorzCX><sizeHorzCY>285894</sizeHorzCY><sizeVertCX>220486</sizeVertCX><sizeVertCY>662469</sizeVertCY></Rect></Wnd3></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>225</Bottom><Right>1154</Right><x>-2</x><y>-2</y><xscreen>1156</xscreen><yscreen>227</yscreen><sizeHorzCX>1003472</sizeHorzCX><sizeHorzCY>285894</sizeHorzCY><sizeVertCX>173611</sizeVertCX><sizeVertCY>251889</sizeVertCY></Rect></Wnd2></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

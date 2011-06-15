@@ -1,0 +1,365 @@
+##############################################################################
+#                                                                            #
+# IAR ARM ANSI C/C++ Compiler V4.42A/W32 EVALUATION    07/Jun/2011  15:55:29 #
+# Copyright 1999-2005 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Cpu mode        =  interwork                                            #
+#    Endian          =  little                                               #
+#    Stack alignment =  4                                                    #
+#    Source file     =  F:\Phone\Making elf patches\Elf's\GlassUIWidget\util #
+#                       s\weather.cpp                                        #
+#    Command line    =  "F:\Phone\Making elf patches\Elf's\GlassUIWidget\uti #
+#                       ls\weather.cpp" -lC "F:\Phone\Making elf             #
+#                       patches\Elf's\GlassUIWidget\Release\List\" -lA       #
+#                       "F:\Phone\Making elf patches\Elf's\GlassUIWidget\Rel #
+#                       ease\List\" -o "F:\Phone\Making elf                  #
+#                       patches\Elf's\GlassUIWidget\Release\Obj\" -s9        #
+#                       --no_unroll --no_inline --cpu_mode arm --endian      #
+#                       little --cpu ARM926EJ-S --stack_align 4 --interwork  #
+#                       -e --enable_multibytes --fpu None --eec++            #
+#                       --dlib_config "F:\Phone\Making elf                   #
+#                       patches\IAR\Embedded Workbench 4.0                   #
+#                       Evaluation\ARM\LIB\dl5tpainl8n.h" -I                 #
+#                       "F:\Phone\Making elf patches\IAR\Embedded Workbench  #
+#                       4.0 Evaluation\ARM\INC\"                             #
+#    List file       =  F:\Phone\Making elf patches\Elf's\GlassUIWidget\Rele #
+#                       ase\List\weather.lst                                 #
+#    Object file     =  F:\Phone\Making elf patches\Elf's\GlassUIWidget\Rele #
+#                       ase\Obj\weather.r79                                  #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+F:\Phone\Making elf patches\Elf's\GlassUIWidget\utils\weather.cpp
+      1          #include "..\..\include\Lib_Clara.h"
+      2          #include "..\..\include\Dir.h"
+      3          #include "weather.h"
+      4          
+
+   \                                 In segment CODE, align 4, keep-with-next
+      5          Weather::Weather(int state, int tempMin, int tempMax, int windSpeed, wchar_t* state_, wchar_t* windDirection, wchar_t* longWind) :
+   \                     ??Weather:
+   \   00000000   F0432DE9           PUSH     {R4-R9,LR}
+   \   00000004   20509DE5           LDR      R5,[SP, #+32]
+   \   00000008   24609DE5           LDR      R6,[SP, #+36]
+   \   0000000C   28709DE5           LDR      R7,[SP, #+40]
+   \   00000010   0040A0E1           MOV      R4,R0
+   \   00000014   1C009DE5           LDR      R0,[SP, #+28]
+   \   00000018   0290A0E1           MOV      R9,R2
+   \   0000001C   0380A0E1           MOV      R8,R3
+      6            state(state) , tempMin(tempMin) , tempMax(tempMax) , state_(state_) , windDirection(windDirection),
+   \   00000020   001084E5           STR      R1,[R4, #+0]
+   \   00000024   049084E5           STR      R9,[R4, #+4]
+   \   00000028   088084E5           STR      R8,[R4, #+8]
+      7            averageTemp((tempMax+tempMin)/2) , windSpeed(windSpeed * 1.61), longWind(longWind) {
+   \   0000002C   ........           _BLF     __longToDouble,??__longToDouble??rA
+   \   00000030   0020A0E1           MOV      R2,R0
+   \   00000034   34009FE5           LDR      R0,??Weather_2   ;; 0x5c28f5c3
+   \   00000038   0130A0E1           MOV      R3,R1
+   \   0000003C   30109FE5           LDR      R1,??Weather_2+0x4  ;; 0x3ff9c28f
+   \   00000040   ........           _BLF     __dMul,??__dMul??rA
+   \   00000044   ........           _BLF     __doubleToLong,??__doubleToLong??rA
+   \   00000048   0C0084E5           STR      R0,[R4, #+12]
+   \   0000004C   080089E0           ADD      R0,R9,R8
+   \   00000050   A00F80E0           ADD      R0,R0,R0, LSR #+31
+   \   00000054   C000A0E1           ASR      R0,R0,#+1
+   \   00000058   100084E5           STR      R0,[R4, #+16]
+   \   0000005C   145084E5           STR      R5,[R4, #+20]
+   \   00000060   186084E5           STR      R6,[R4, #+24]
+   \   00000064   1C7084E5           STR      R7,[R4, #+28]
+      8          
+      9          }
+   \   00000068   0400A0E1           MOV      R0,R4
+   \   0000006C   F083BDE8           POP      {R4-R9,PC}       ;; return
+   \                     ??Weather_2:
+   \   00000070   C3F5285C           DC32     0x5c28f5c3
+   \   00000074   8FC2F93F           DC32     0x3ff9c28f
+     10          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     11          Weather::Weather(Weather* copy) : 
+   \                     ??Weather_1:
+   \   00000000   70402DE9           PUSH     {R4-R6,LR}
+   \   00000004   0040A0E1           MOV      R4,R0
+   \   00000008   0150A0E1           MOV      R5,R1
+     12            state(copy->state) , tempMin(copy->tempMin) , tempMax(copy->tempMax) , windSpeed(copy->windSpeed) ,
+   \   0000000C   000095E5           LDR      R0,[R5, #+0]
+     13            averageTemp((tempMax+tempMin)/2) {
+     14              
+     15              this->state_ = new wchar_t[ wstrlen( copy->state_ ) + 0x1];
+     16              wstrncpy( this->state_ , copy->state_ , wstrlen( copy->state_ ) );
+     17              this->state_[ wstrlen( copy->state_ ) ] = 0;
+   \   00000010   0060A0E3           MOV      R6,#+0
+   \   00000014   000084E5           STR      R0,[R4, #+0]
+   \   00000018   040095E5           LDR      R0,[R5, #+4]
+   \   0000001C   040084E5           STR      R0,[R4, #+4]
+   \   00000020   080095E5           LDR      R0,[R5, #+8]
+   \   00000024   080084E5           STR      R0,[R4, #+8]
+   \   00000028   0C0095E5           LDR      R0,[R5, #+12]
+   \   0000002C   0C0084E5           STR      R0,[R4, #+12]
+   \   00000030   080094E5           LDR      R0,[R4, #+8]
+   \   00000034   041094E5           LDR      R1,[R4, #+4]
+   \   00000038   000081E0           ADD      R0,R1,R0
+   \   0000003C   A00F80E0           ADD      R0,R0,R0, LSR #+31
+   \   00000040   C000A0E1           ASR      R0,R0,#+1
+   \   00000044   100084E5           STR      R0,[R4, #+16]
+   \   00000048   140095E5           LDR      R0,[R5, #+20]
+   \   0000004C   570100EF           SWI      +343
+   \   00000050   010080E2           ADD      R0,R0,#+1
+   \   00000054   8000A0E1           LSL      R0,R0,#+1
+   \   00000058   ........           _BLF     `??operator new[]`,`??operator new[]??rA`
+   \   0000005C   140084E5           STR      R0,[R4, #+20]
+   \   00000060   140095E5           LDR      R0,[R5, #+20]
+   \   00000064   570100EF           SWI      +343
+   \   00000068   141095E5           LDR      R1,[R5, #+20]
+   \   0000006C   0020A0E1           MOV      R2,R0
+   \   00000070   140094E5           LDR      R0,[R4, #+20]
+   \   00000074   530100EF           SWI      +339
+   \   00000078   140095E5           LDR      R0,[R5, #+20]
+   \   0000007C   570100EF           SWI      +343
+   \   00000080   141094E5           LDR      R1,[R4, #+20]
+   \   00000084   800081E0           ADD      R0,R1,R0, LSL #+1
+   \   00000088   B060C0E1           STRH     R6,[R0, #+0]
+     18          
+     19              this->windDirection = new wchar_t[ wstrlen( copy->windDirection ) + 0x1];
+   \   0000008C   180095E5           LDR      R0,[R5, #+24]
+   \   00000090   570100EF           SWI      +343
+   \   00000094   010080E2           ADD      R0,R0,#+1
+   \   00000098   8000A0E1           LSL      R0,R0,#+1
+   \   0000009C   ........           _BLF     `??operator new[]`,`??operator new[]??rA`
+   \   000000A0   180084E5           STR      R0,[R4, #+24]
+     20              wstrncpy( this->windDirection , copy->windDirection , wstrlen( copy->windDirection ) );
+   \   000000A4   180095E5           LDR      R0,[R5, #+24]
+   \   000000A8   570100EF           SWI      +343
+   \   000000AC   181095E5           LDR      R1,[R5, #+24]
+   \   000000B0   0020A0E1           MOV      R2,R0
+   \   000000B4   180094E5           LDR      R0,[R4, #+24]
+   \   000000B8   530100EF           SWI      +339
+     21              this->windDirection[ wstrlen( copy->windDirection ) ] = 0;
+   \   000000BC   180095E5           LDR      R0,[R5, #+24]
+   \   000000C0   570100EF           SWI      +343
+   \   000000C4   181094E5           LDR      R1,[R4, #+24]
+   \   000000C8   800081E0           ADD      R0,R1,R0, LSL #+1
+   \   000000CC   B060C0E1           STRH     R6,[R0, #+0]
+     22          
+     23              this->longWind = new wchar_t[ wstrlen( copy->longWind ) + 0x1];
+   \   000000D0   1C0095E5           LDR      R0,[R5, #+28]
+   \   000000D4   570100EF           SWI      +343
+   \   000000D8   010080E2           ADD      R0,R0,#+1
+   \   000000DC   8000A0E1           LSL      R0,R0,#+1
+   \   000000E0   ........           _BLF     `??operator new[]`,`??operator new[]??rA`
+   \   000000E4   1C0084E5           STR      R0,[R4, #+28]
+     24              wstrncpy( this->longWind , copy->longWind , wstrlen( copy->longWind ) );
+   \   000000E8   1C0095E5           LDR      R0,[R5, #+28]
+   \   000000EC   570100EF           SWI      +343
+   \   000000F0   1C1095E5           LDR      R1,[R5, #+28]
+   \   000000F4   0020A0E1           MOV      R2,R0
+   \   000000F8   1C0094E5           LDR      R0,[R4, #+28]
+   \   000000FC   530100EF           SWI      +339
+     25              this->longWind[ wstrlen( copy->longWind ) ] = 0;    
+   \   00000100   1C0095E5           LDR      R0,[R5, #+28]
+   \   00000104   570100EF           SWI      +343
+   \   00000108   1C1094E5           LDR      R1,[R4, #+28]
+   \   0000010C   800081E0           ADD      R0,R1,R0, LSL #+1
+   \   00000110   B060C0E1           STRH     R6,[R0, #+0]
+     26          }
+   \   00000114   0400A0E1           MOV      R0,R4
+   \   00000118   7080BDE8           POP      {R4-R6,PC}       ;; return
+     27          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     28          Weather::~Weather() {
+   \                     `?~Weather`:
+   \   00000000   30402DE9           PUSH     {R4,R5,LR}
+   \   00000004   0040A0E1           MOV      R4,R0
+     29            if (this->state_ != NULL) { delete this->state_; this->state_ = NULL; }
+   \   00000008   140094E5           LDR      R0,[R4, #+20]
+   \   0000000C   0050A0E3           MOV      R5,#+0
+   \   00000010   000050E3           CMP      R0,#+0
+   \   00000014   0100000A           BEQ      `?~Weather_1`
+   \   00000018   ........           _BLF     `??operator delete`,`??operator delete??rA`
+   \   0000001C   145084E5           STR      R5,[R4, #+20]
+     30            if (this->windDirection != NULL) { delete this->windDirection; this->windDirection = NULL; }
+   \                     `?~Weather_1`:
+   \   00000020   180094E5           LDR      R0,[R4, #+24]
+   \   00000024   000050E3           CMP      R0,#+0
+   \   00000028   0100000A           BEQ      `?~Weather_2`
+   \   0000002C   ........           _BLF     `??operator delete`,`??operator delete??rA`
+   \   00000030   185084E5           STR      R5,[R4, #+24]
+     31            if (this->longWind != NULL) { delete this->longWind; this->longWind = NULL; }
+   \                     `?~Weather_2`:
+   \   00000034   1C0094E5           LDR      R0,[R4, #+28]
+   \   00000038   000050E3           CMP      R0,#+0
+   \   0000003C   3080BD08           POPEQ    {R4,R5,PC}
+   \   00000040   ........           _BLF     `??operator delete`,`??operator delete??rA`
+   \   00000044   1C5084E5           STR      R5,[R4, #+28]
+     32          }
+   \   00000048   3080BDE8           POP      {R4,R5,PC}       ;; return
+     33          
+     34          //void Weather::setState(int state) { this->state = state; }
+     35          //void Weather::setTempMin(int tempMin) { this->tempMin = tempMin; }
+     36          //void Weather::setTempMax(int tempMax) { this->tempMax = tempMax; }
+     37          //void Weather::setWindSpeed(int windSpeed) { this->windSpeed = windSpeed; }
+     38          //void Weather::setAverageTemp(int averageTemp) { this->averageTemp = averageTemp; }
+     39          //void Weather::setState_(wchar_t* state_) { this->state_ = state_; }
+     40          //void Weather::setWindDirection(wchar_t* windDirection) { this->windDirection = windDirection; }
+     41          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     42          int Weather::getState() const { return this->state; }
+   \                     ??getState:
+   \   00000000   000090E5           LDR      R0,[R0, #+0]
+   \   00000004   1EFF2FE1           BX       LR               ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     43          int Weather::getTempMin() const { return this->tempMin; }
+   \                     ??getTempMin:
+   \   00000000   040090E5           LDR      R0,[R0, #+4]
+   \   00000004   1EFF2FE1           BX       LR               ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     44          int Weather::getTempMax() const { return this->tempMax; }
+   \                     ??getTempMax:
+   \   00000000   080090E5           LDR      R0,[R0, #+8]
+   \   00000004   1EFF2FE1           BX       LR               ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     45          int Weather::getWindSpeed() const { return this->windSpeed; }
+   \                     ??getWindSpeed:
+   \   00000000   0C0090E5           LDR      R0,[R0, #+12]
+   \   00000004   1EFF2FE1           BX       LR               ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     46          int Weather::getAverageTemp() const { return this->averageTemp; }
+   \                     ??getAverageTemp:
+   \   00000000   100090E5           LDR      R0,[R0, #+16]
+   \   00000004   1EFF2FE1           BX       LR               ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     47          wchar_t* Weather::getState_() const { return this->state_; }
+   \                     ??getState_:
+   \   00000000   140090E5           LDR      R0,[R0, #+20]
+   \   00000004   1EFF2FE1           BX       LR               ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     48          wchar_t* Weather::getWindDirection() const { return this->windDirection; }
+   \                     ??getWindDirection:
+   \   00000000   180090E5           LDR      R0,[R0, #+24]
+   \   00000004   1EFF2FE1           BX       LR               ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     49          wchar_t* Weather::getLongWind() const { return this->longWind; }
+   \                     ??getLongWind:
+   \   00000000   1C0090E5           LDR      R0,[R0, #+28]
+   \   00000004   1EFF2FE1           BX       LR               ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \   __??Code32?? __code __interwork __atpcs Weather &Weather::new Weather(int, int, int, int, wchar_t *, wchar_t *, wchar_t *)
+   \                     `??new Weather`:
+   \   00000000   F0472DE9           PUSH     {R4-R10,LR}
+   \   00000004   20809DE5           LDR      R8,[SP, #+32]
+   \   00000008   24909DE5           LDR      R9,[SP, #+36]
+   \   0000000C   28A09DE5           LDR      R10,[SP, #+40]
+   \   00000010   0040A0E1           MOV      R4,R0
+   \   00000014   0150A0E1           MOV      R5,R1
+   \   00000018   0260A0E1           MOV      R6,R2
+   \   0000001C   0370A0E1           MOV      R7,R3
+   \   00000020   2000A0E3           MOV      R0,#+32
+   \   00000024   ........           _BLF     `??operator new`,`??operator new??rA`
+   \   00000028   000050E3           CMP      R0,#+0
+   \   0000002C   F087BD08           POPEQ    {R4-R10,PC}
+   \   00000030   00042DE9           PUSH     {R10}
+   \   00000034   00022DE9           PUSH     {R9}
+   \   00000038   00012DE9           PUSH     {R8}
+   \   0000003C   80002DE9           PUSH     {R7}
+   \   00000040   0630A0E1           MOV      R3,R6
+   \   00000044   0520A0E1           MOV      R2,R5
+   \   00000048   0410A0E1           MOV      R1,R4
+   \   0000004C   ........           BL       ??Weather
+   \   00000050   10D08DE2           ADD      SP,SP,#+16
+   \   00000054   F087BDE8           POP      {R4-R10,PC}      ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \   __??Code32?? __code __interwork __atpcs Weather &Weather::new Weather(Weather *)
+   \                     `??new Weather_1`:
+   \   00000000   10402DE9           PUSH     {R4,LR}
+   \   00000004   0040A0E1           MOV      R4,R0
+   \   00000008   2000A0E3           MOV      R0,#+32
+   \   0000000C   ........           _BLF     `??operator new`,`??operator new??rA`
+   \   00000010   000050E3           CMP      R0,#+0
+   \   00000014   1080BD08           POPEQ    {R4,PC}
+   \   00000018   0410A0E1           MOV      R1,R4
+   \   0000001C   1040BDE8           POP      {R4,LR}          ;; Pop
+   \   00000020   ........           B        ??Weather_1      ;; tailcall
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \   __??Code32?? __code __interwork __atpcs void Weather::delete ~Weather(Weather *)
+   \                     `??delete ~Weather`:
+   \   00000000   10402DE9           PUSH     {R4,LR}
+   \   00000004   0040B0E1           MOVS     R4,R0
+   \   00000008   1080BD08           POPEQ    {R4,PC}
+   \   0000000C   ........           BL       `?~Weather`
+   \   00000010   0400A0E1           MOV      R0,R4
+   \   00000014   ........           _BLF     `??operator delete`,`??operator delete??rA`
+   \   00000018   1080BDE8           POP      {R4,PC}          ;; return
+     50          
+
+   Maximum stack usage in bytes:
+
+     Function                       CSTACK
+     --------                       ------
+     Weather::Weather(Weather *)       16
+     Weather::Weather(int, int, int, int, wchar_t *, wchar_t *, wchar_t *)
+                                       28
+     Weather::delete ~Weather(Weather *)
+                                        8
+     Weather::getAverageTemp() const
+                                        0
+     Weather::getLongWind() const       0
+     Weather::getState() const          0
+     Weather::getState_() const         0
+     Weather::getTempMax() const        0
+     Weather::getTempMin() const        0
+     Weather::getWindDirection() const
+                                        0
+     Weather::getWindSpeed() const      0
+     Weather::new Weather(Weather *)
+                                        8
+     Weather::new Weather(int, int, int, int, wchar_t *, wchar_t *, wchar_t *)
+                                       48
+     Weather::~Weather()               12
+
+
+   Segment part sizes:
+
+     Function/Label                 Bytes
+     --------------                 -----
+     Weather::Weather(int, int, int, int, wchar_t *, wchar_t *, wchar_t *)
+                                     120
+     Weather::Weather(Weather *)     284
+     Weather::~Weather()              76
+     Weather::getState() const         8
+     Weather::getTempMin() const       8
+     Weather::getTempMax() const       8
+     Weather::getWindSpeed() const     8
+     Weather::getAverageTemp() const
+                                       8
+     Weather::getState_() const        8
+     Weather::getWindDirection() const
+                                       8
+     Weather::getLongWind() const      8
+     Weather::new Weather(int, int, int, int, wchar_t *, wchar_t *, wchar_t *)
+                                      88
+     Weather::new Weather(Weather *)
+                                      36
+     Weather::delete ~Weather(Weather *)
+                                      28
+      Others                         128
+
+ 
+ 824 bytes in segment CODE
+ 
+ 696 bytes of CODE memory (+ 128 bytes shared)
+
+Errors: none
+Warnings: none

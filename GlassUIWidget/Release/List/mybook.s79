@@ -1,0 +1,1062 @@
+//////////////////////////////////////////////////////////////////////////////
+//                                                                           /
+// IAR ARM ANSI C/C++ Compiler V4.42A/W32 EVALUATION   07/Jun/2011  15:55:26 /
+// Copyright 1999-2005 IAR Systems. All rights reserved.                     /
+//                                                                           /
+//    Cpu mode        =  interwork                                           /
+//    Endian          =  little                                              /
+//    Stack alignment =  4                                                   /
+//    Source file     =  F:\Phone\Making elf patches\Elf's\GlassUIWidget\myb /
+//                       ook.cpp                                             /
+//    Command line    =  "F:\Phone\Making elf patches\Elf's\GlassUIWidget\my /
+//                       book.cpp" -lC "F:\Phone\Making elf                  /
+//                       patches\Elf's\GlassUIWidget\Release\List\" -lA      /
+//                       "F:\Phone\Making elf patches\Elf's\GlassUIWidget\Re /
+//                       lease\List\" -o "F:\Phone\Making elf                /
+//                       patches\Elf's\GlassUIWidget\Release\Obj\" -s9       /
+//                       --no_unroll --no_inline --cpu_mode arm --endian     /
+//                       little --cpu ARM926EJ-S --stack_align 4             /
+//                       --interwork -e --enable_multibytes --fpu None       /
+//                       --eec++ --dlib_config "F:\Phone\Making elf          /
+//                       patches\IAR\Embedded Workbench 4.0                  /
+//                       Evaluation\ARM\LIB\dl5tpainl8n.h" -I                /
+//                       "F:\Phone\Making elf patches\IAR\Embedded           /
+//                       Workbench 4.0 Evaluation\ARM\INC\"                  /
+//    List file       =  F:\Phone\Making elf patches\Elf's\GlassUIWidget\Rel /
+//                       ease\List\mybook.s79                                /
+//                                                                           /
+//                                                                           /
+//////////////////////////////////////////////////////////////////////////////
+
+        NAME mybook
+
+        RTMODEL "StackAlign4", "USED"
+        RTMODEL "__cpu_mode", "__pcs__interwork"
+        RTMODEL "__data_model", "absolute"
+        RTMODEL "__endian", "little"
+        RTMODEL "__rt_version", "6"
+
+        RSEG CSTACK:DATA:NOROOT(2)
+
+        ERROR
+//NOTE: This module defines or uses C++ features that are not
+//      accessible from assembler code. Assembling this file will
+//      not produce an equivalent object file to the one produced
+//      by the C++ compiler.
+
+        PUBLIC ??MyBook
+        FUNCTION ??MyBook,0203H
+        LOCFRAME CSTACK, 12, STACK
+        MULTWEAK ??MyBook??rT
+        MULTWEAK `??delete ~Weather??rA`
+        PUBLIC ??donothing
+        FUNCTION ??donothing,0203H
+        MULTWEAK ??donothing??rT
+        PUBLIC ??fillWcharArray
+        FUNCTION ??fillWcharArray,0203H
+        MULTWEAK ??fillWcharArray??rT
+        PUBLIC ??freeMyVars
+        FUNCTION ??freeMyVars,0203H
+        LOCFRAME CSTACK, 12, STACK
+        MULTWEAK ??freeMyVars??rT
+        PUBLIC ??freeWDraw
+        FUNCTION ??freeWDraw,0203H
+        LOCFRAME CSTACK, 8, STACK
+        MULTWEAK ??freeWDraw??rT
+        PUBLIC ??getBook
+        FUNCTION ??getBook,0203H
+        MULTWEAK ??getBook??rT
+        PUBLIC ??getDayWeather
+        FUNCTION ??getDayWeather,0203H
+        MULTWEAK ??getDayWeather??rT
+        PUBLIC ??getError
+        FUNCTION ??getError,0203H
+        MULTWEAK ??getError??rT
+        PUBLIC ??getFTimer
+        FUNCTION ??getFTimer,0203H
+        MULTWEAK ??getFTimer??rT
+        PUBLIC ??getGC
+        FUNCTION ??getGC,0203H
+        MULTWEAK ??getGC??rT
+        PUBLIC ??getHourSeted
+        FUNCTION ??getHourSeted,0203H
+        MULTWEAK ??getHourSeted??rT
+        PUBLIC ??getLocation
+        FUNCTION ??getLocation,0203H
+        MULTWEAK ??getLocation??rT
+        PUBLIC ??getNightWeather
+        FUNCTION ??getNightWeather,0203H
+        MULTWEAK ??getNightWeather??rT
+        PUBLIC ??getWeatherToDraw
+        FUNCTION ??getWeatherToDraw,0203H
+        MULTWEAK ??getWeatherToDraw??rT
+        PUBLIC ??loadDateNames
+        FUNCTION ??loadDateNames,0203H
+        LOCFRAME CSTACK, 120, STACK
+        MULTWEAK ??loadDateNames??rT
+        PUBLIC ??loadMetadataDll
+        FUNCTION ??loadMetadataDll,0203H
+        LOCFRAME CSTACK, 8, STACK
+        MULTWEAK ??loadMetadataDll??rT
+        PUBLIC `??new MyBook`
+        FUNCTION `??new MyBook`,0203H
+        LOCFRAME CSTACK, 4, STACK
+        MULTWEAK `??new MyBook??rT`
+        MULTWEAK `??new Weather??rA`
+        MULTWEAK `??operator delete??rA`
+        MULTWEAK `??operator new??rA`
+        PUBLIC ??setDayWeather
+        FUNCTION ??setDayWeather,0203H
+        MULTWEAK ??setDayWeather??rT
+        PUBLIC ??setError
+        FUNCTION ??setError,0203H
+        MULTWEAK ??setError??rT
+        PUBLIC ??setHour
+        FUNCTION ??setHour,0203H
+        MULTWEAK ??setHour??rT
+        PUBLIC ??setLocation
+        FUNCTION ??setLocation,0203H
+        MULTWEAK ??setLocation??rT
+        PUBLIC ??setNightWeather
+        FUNCTION ??setNightWeather,0203H
+        MULTWEAK ??setNightWeather??rT
+        PUBLIC ??setWDraw
+        FUNCTION ??setWDraw,0203H
+        LOCFRAME CSTACK, 8, STACK
+        MULTWEAK ??setWDraw??rT
+        PUBLIC ??unloadMetadataDll
+        FUNCTION ??unloadMetadataDll,0203H
+        LOCFRAME CSTACK, 8, STACK
+        MULTWEAK ??unloadMetadataDll??rT
+        
+        CFI Names cfiNames0
+        CFI StackFrame CFA R13 HUGEDATA
+        CFI Resource R0:32, R1:32, R2:32, R3:32, R4:32, R5:32, R6:32, R7:32
+        CFI Resource R8:32, R9:32, R10:32, R11:32, R12:32, CPSR:32, R13:32
+        CFI Resource R14:32, SPSR:32
+        CFI VirtualResource ?RET:32
+        CFI EndNames cfiNames0
+        
+        CFI Common cfiCommon0 Using cfiNames0
+        CFI CodeAlign 2
+        CFI DataAlign 4
+        CFI ReturnAddress ?RET CODE
+        CFI CFA R13+0
+        CFI R0 Undefined
+        CFI R1 Undefined
+        CFI R2 Undefined
+        CFI R3 Undefined
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI R8 SameValue
+        CFI R9 SameValue
+        CFI R10 SameValue
+        CFI R11 SameValue
+        CFI R12 Undefined
+        CFI CPSR SameValue
+        CFI R14 Undefined
+        CFI SPSR SameValue
+        CFI ?RET R14
+        CFI EndCommon cfiCommon0
+        
+        
+        CFI Common cfiCommon1 Using cfiNames0
+        CFI CodeAlign 4
+        CFI DataAlign 4
+        CFI ReturnAddress ?RET CODE
+        CFI CFA R13+0
+        CFI R0 Undefined
+        CFI R1 Undefined
+        CFI R2 Undefined
+        CFI R3 Undefined
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI R8 SameValue
+        CFI R9 SameValue
+        CFI R10 SameValue
+        CFI R11 SameValue
+        CFI R12 Undefined
+        CFI CPSR SameValue
+        CFI R14 Undefined
+        CFI SPSR SameValue
+        CFI ?RET R14
+        CFI EndCommon cfiCommon1
+        
+
+
+
+
+
+??MyBook??rT        SYMBOL "??rT", ??MyBook
+`??delete ~Weather??rA` SYMBOL "??rA", `??delete ~Weather`
+
+??donothing??rT     SYMBOL "??rT", ??donothing
+
+??fillWcharArray??rT SYMBOL "??rT", ??fillWcharArray
+
+??freeMyVars??rT    SYMBOL "??rT", ??freeMyVars
+
+??freeWDraw??rT     SYMBOL "??rT", ??freeWDraw
+
+??getBook??rT       SYMBOL "??rT", ??getBook
+
+??getDayWeather??rT SYMBOL "??rT", ??getDayWeather
+
+??getError??rT      SYMBOL "??rT", ??getError
+
+??getFTimer??rT     SYMBOL "??rT", ??getFTimer
+
+??getGC??rT         SYMBOL "??rT", ??getGC
+
+??getHourSeted??rT  SYMBOL "??rT", ??getHourSeted
+
+??getLocation??rT   SYMBOL "??rT", ??getLocation
+
+??getNightWeather??rT SYMBOL "??rT", ??getNightWeather
+
+??getWeatherToDraw??rT SYMBOL "??rT", ??getWeatherToDraw
+
+??loadDateNames??rT SYMBOL "??rT", ??loadDateNames
+
+??loadMetadataDll??rT SYMBOL "??rT", ??loadMetadataDll
+
+`??new MyBook??rT`  SYMBOL "??rT", `??new MyBook`
+`??new Weather??rA` SYMBOL "??rA", `??new Weather`
+`??operator delete??rA` SYMBOL "??rA", `??operator delete`
+`??operator new??rA` SYMBOL "??rA", `??operator new`
+
+??setDayWeather??rT SYMBOL "??rT", ??setDayWeather
+
+??setError??rT      SYMBOL "??rT", ??setError
+
+??setHour??rT       SYMBOL "??rT", ??setHour
+
+??setLocation??rT   SYMBOL "??rT", ??setLocation
+
+??setNightWeather??rT SYMBOL "??rT", ??setNightWeather
+
+??setWDraw??rT      SYMBOL "??rT", ??setWDraw
+
+??unloadMetadataDll??rT SYMBOL "??rT", ??unloadMetadataDll
+
+        EXTERN `??delete ~Weather`
+        FUNCTION `??delete ~Weather`,0202H
+        EXTERN `??new Weather`
+        FUNCTION `??new Weather`,0202H
+        EXTERN `??operator delete`
+        FUNCTION `??operator delete`,0202H
+        EXTERN `??operator new`
+        FUNCTION `??operator new`,0202H
+        EXTERN BCFG_Date_Month_April
+        EXTERN BCFG_Date_Month_August
+        EXTERN BCFG_Date_Month_December
+        EXTERN BCFG_Date_Month_February
+        EXTERN BCFG_Date_Month_January
+        EXTERN BCFG_Date_Month_July
+        EXTERN BCFG_Date_Month_June
+        EXTERN BCFG_Date_Month_March
+        EXTERN BCFG_Date_Month_May
+        EXTERN BCFG_Date_Month_November
+        EXTERN BCFG_Date_Month_October
+        EXTERN BCFG_Date_Month_September
+        EXTERN BCFG_Date_Weekday_Friday
+        EXTERN BCFG_Date_Weekday_Monday
+        EXTERN BCFG_Date_Weekday_Saturday
+        EXTERN BCFG_Date_Weekday_Sunday
+        EXTERN BCFG_Date_Weekday_Thursday
+        EXTERN BCFG_Date_Weekday_Tuesday
+        EXTERN BCFG_Date_Weekday_Wednesday
+
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock0 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+`??new MyBook??rT`:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock0
+        REQUIRE `??new MyBook`
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock1 Using cfiCommon1
+        CFI Function `??new MyBook`
+        ARM
+// __??Code32?? __code __interwork __atpcs MyBook &MyBook::new MyBook()
+`??new MyBook`:
+        PUSH     {LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI CFA R13+4
+        MOV      R0,#+172
+        _BLF     `??operator new`,`??operator new??rA`
+        CMP      R0,#+0
+        POPEQ    {PC}
+        POP      {LR}             ;; Pop
+        CFI ?RET R14
+        CFI CFA R13+0
+        B        ??MyBook         ;; tailcall
+        CFI EndBlock cfiBlock1
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock2 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??MyBook??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock2
+        REQUIRE ??MyBook
+// F:\Phone\Making elf patches\Elf's\GlassUIWidget\mybook.cpp
+//    1 #include "..\include\Lib_Clara.h"
+//    2 #include "..\include\Dir.h"
+//    3 #include "bcfg\config_data.h"
+//    4 #include "mybook.h"
+//    5 #include "debug.h"
+//    6 #include "utils\weather.h"
+//    7 #include "standby\MetaDataDll.h"
+//    8 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock3 Using cfiCommon1
+        CFI Function ??MyBook
+        ARM
+//    9 MyBook::MyBook() : awBook(new BOOK) , location(NULL) , dayWeather(NULL), nightWeather(NULL) , weatherToDraw(NULL) , 
+??MyBook:
+        PUSH     {R4,R5,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R5 Frame(CFA, -8)
+        CFI R4 Frame(CFA, -12)
+        CFI CFA R13+12
+        MOV      R4,R0
+        MOV      R0,#+24
+        MOV      R5,#+0
+        _BLF     `??operator new`,`??operator new??rA`
+        STR      R0,[R4, #+0]
+        STR      R5,[R4, #+4]
+        STR      R5,[R4, #+8]
+        STR      R5,[R4, #+12]
+        STR      R5,[R4, #+16]
+//   10 error(false) , hourSeted(-1) , gc(get_DisplayGC()) , dateToDraw(NULL)  , weekToDraw(NULL), monthToDraw(NULL) ,
+        MVN      R0,R5
+        STR      R0,[R4, #+20]
+        MOV      R0,#+0
+        STRB     R0,[R4, #+24]
+        SWI      +485
+        STR      R0,[R4, #+28]
+//   11 metadataDll(NULL) {  
+        STR      R5,[R4, #+32]
+        STR      R5,[R4, #+64]
+        STR      R5,[R4, #+140]
+        STR      R5,[R4, #+148]
+//   12   loadDateNames();
+        MOV      R0,R4
+        BL       ??loadDateNames
+//   13 }
+        MOV      R0,R4
+        POP      {R4,R5,PC}       ;; return
+        CFI EndBlock cfiBlock3
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock4 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??fillWcharArray??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock4
+        REQUIRE ??fillWcharArray
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock5 Using cfiCommon1
+        CFI Function ??fillWcharArray
+        ARM
+//   14 void MyBook::fillWcharArray(const wchar_t** dest, const wchar_t** src, int len ) {
+//   15   for (int i=0; i < len; i++)
+??fillWcharArray:
+        MOV      R0,#+0
+        CMP      R3,#+1
+        BGE      ??fillWcharArray_1
+        BX       LR
+//   16     dest[i] = src[i];
+??fillWcharArray_2:
+        LDR      R12,[R2, +R0, LSL #+2]
+        STR      R12,[R1, +R0, LSL #+2]
+        ADD      R0,R0,#+1
+??fillWcharArray_1:
+        CMP      R0,R3
+        BLT      ??fillWcharArray_2
+//   17 }
+        BX       LR               ;; return
+        CFI EndBlock cfiBlock5
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock6 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??loadDateNames??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock6
+        REQUIRE ??loadDateNames
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock7 Using cfiCommon1
+        CFI Function ??loadDateNames
+        ARM
+//   18 void MyBook::loadDateNames() {
+//   19   const wchar_t* tempWeeks[0x7] = { BCFG_Date_Weekday_Monday, BCFG_Date_Weekday_Tuesday, BCFG_Date_Weekday_Wednesday,
+//   20   BCFG_Date_Weekday_Thursday, BCFG_Date_Weekday_Friday, BCFG_Date_Weekday_Saturday, BCFG_Date_Weekday_Sunday };
+??loadDateNames:
+        LDR      R1,??loadDateNames_1  ;; `?<Constant {BCFG_Date_Weekday_Monday, BCFG_Dat`
+        PUSH     {R4-R7,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R7 Frame(CFA, -8)
+        CFI R6 Frame(CFA, -12)
+        CFI R5 Frame(CFA, -16)
+        CFI R4 Frame(CFA, -20)
+        CFI CFA R13+20
+        SUB      SP,SP,#+100
+        CFI CFA R13+120
+        LDM      R1,{R2,R3,R5-R7,R12,LR}
+//   21 
+//   22   const wchar_t* tempMonth[0x12] = { BCFG_Date_Month_January, BCFG_Date_Month_February, BCFG_Date_Month_March,
+//   23     BCFG_Date_Month_April, BCFG_Date_Month_May, BCFG_Date_Month_June, BCFG_Date_Month_July, BCFG_Date_Month_August,
+//   24     BCFG_Date_Month_September, BCFG_Date_Month_October, BCFG_Date_Month_November, BCFG_Date_Month_December };
+        LDR      R1,??loadDateNames_1+0x4  ;; `?<Constant {BCFG_Date_Month_January, BCFG_Date`
+        MOV      R4,R0
+        ADD      R0,SP,#+72
+        STM      R0,{R2,R3,R5-R7,R12,LR}
+        MOV      R0,SP
+        MOV      R3,#+72
+??loadDateNames_2:
+        SUBS     R3,R3,#+4
+        LDR      R2,[R1, R3]
+        STR      R2,[R0, R3]
+        BNE      ??loadDateNames_2
+//   25 
+//   26   fillWcharArray(weekNames, tempWeeks, 7);
+        MOV      R3,#+7
+        ADD      R2,SP,#+72
+        ADD      R1,R4,#+36
+        MOV      R0,R4
+        BL       ??fillWcharArray
+//   27   fillWcharArray(monthNames, tempMonth, 12);
+        MOV      R3,#+12
+        MOV      R2,SP
+        ADD      R1,R4,#+68
+        MOV      R0,R4
+        BL       ??fillWcharArray
+//   28 }
+        ADD      SP,SP,#+100
+        CFI CFA R13+20
+        POP      {R4-R7,PC}       ;; return
+        DATA
+??loadDateNames_1:
+        DC32     `?<Constant {BCFG_Date_Weekday_Monday, BCFG_Dat`
+        DC32     `?<Constant {BCFG_Date_Month_January, BCFG_Date`
+        CFI EndBlock cfiBlock7
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock8 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??donothing??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock8
+        REQUIRE ??donothing
+//   29 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock9 Using cfiCommon1
+        CFI Function ??donothing
+        ARM
+//   30 void MyBook::donothing() {}
+??donothing:
+        BX       LR               ;; return
+        CFI EndBlock cfiBlock9
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock10 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getBook??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock10
+        REQUIRE ??getBook
+//   31 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock11 Using cfiCommon1
+        CFI Function ??getBook
+        ARM
+//   32 BOOK* MyBook::getBook() const { return this->awBook; }
+??getBook:
+        LDR      R0,[R0, #+0]
+        BX       LR               ;; return
+        CFI EndBlock cfiBlock11
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock12 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getError??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock12
+        REQUIRE ??getError
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock13 Using cfiCommon1
+        CFI Function ??getError
+        ARM
+//   33 bool MyBook::getError() const { return this->error; }
+??getError:
+        LDRB     R0,[R0, #+24]
+        BX       LR               ;; return
+        CFI EndBlock cfiBlock13
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock14 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getFTimer??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock14
+        REQUIRE ??getFTimer
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock15 Using cfiCommon1
+        CFI Function ??getFTimer
+        ARM
+//   34 u16 MyBook::getFTimer() const { return this->ftimer; }
+??getFTimer:
+        LDRH     R0,[R0, #+160]
+        BX       LR               ;; return
+        CFI EndBlock cfiBlock15
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock16 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getGC??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock16
+        REQUIRE ??getGC
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock17 Using cfiCommon1
+        CFI Function ??getGC
+        ARM
+//   35 GC* MyBook::getGC() const { return this->gc; }
+??getGC:
+        LDR      R0,[R0, #+28]
+        BX       LR               ;; return
+        CFI EndBlock cfiBlock17
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock18 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getHourSeted??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock18
+        REQUIRE ??getHourSeted
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock19 Using cfiCommon1
+        CFI Function ??getHourSeted
+        ARM
+//   36 int MyBook::getHourSeted() const { return this->hourSeted; }
+??getHourSeted:
+        LDR      R0,[R0, #+20]
+        BX       LR               ;; return
+        CFI EndBlock cfiBlock19
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock20 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getWeatherToDraw??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock20
+        REQUIRE ??getWeatherToDraw
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock21 Using cfiCommon1
+        CFI Function ??getWeatherToDraw
+        ARM
+//   37 Weather* MyBook::getWeatherToDraw() const { return this->weatherToDraw; }
+??getWeatherToDraw:
+        LDR      R0,[R0, #+16]
+        BX       LR               ;; return
+        CFI EndBlock cfiBlock21
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock22 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getDayWeather??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock22
+        REQUIRE ??getDayWeather
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock23 Using cfiCommon1
+        CFI Function ??getDayWeather
+        ARM
+//   38 Weather* MyBook::getDayWeather() const { return this->dayWeather; }
+??getDayWeather:
+        LDR      R0,[R0, #+8]
+        BX       LR               ;; return
+        CFI EndBlock cfiBlock23
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock24 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getNightWeather??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock24
+        REQUIRE ??getNightWeather
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock25 Using cfiCommon1
+        CFI Function ??getNightWeather
+        ARM
+//   39 Weather* MyBook::getNightWeather() const { return this->nightWeather; }
+??getNightWeather:
+        LDR      R0,[R0, #+12]
+        BX       LR               ;; return
+        CFI EndBlock cfiBlock25
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock26 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getLocation??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock26
+        REQUIRE ??getLocation
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock27 Using cfiCommon1
+        CFI Function ??getLocation
+        ARM
+//   40 wchar_t* MyBook::getLocation() const { return this->location; }
+??getLocation:
+        LDR      R0,[R0, #+4]
+        BX       LR               ;; return
+        CFI EndBlock cfiBlock27
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock28 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??freeWDraw??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock28
+        REQUIRE ??freeWDraw
+//   41 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock29 Using cfiCommon1
+        CFI Function ??freeWDraw
+        ARM
+//   42 void MyBook::freeWDraw() { delete this->weatherToDraw; this->weatherToDraw = NULL; }
+??freeWDraw:
+        PUSH     {R4,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R4 Frame(CFA, -8)
+        CFI CFA R13+8
+        MOV      R4,R0
+        LDR      R0,[R4, #+16]
+        _BLF     `??delete ~Weather`,`??delete ~Weather??rA`
+        MOV      R0,#+0
+        STR      R0,[R4, #+16]
+        POP      {R4,PC}          ;; return
+        CFI EndBlock cfiBlock29
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock30 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??setHour??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock30
+        REQUIRE ??setHour
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock31 Using cfiCommon1
+        CFI Function ??setHour
+        ARM
+//   43 void MyBook::setHour(int hour) { this->hourSeted = hour; }
+??setHour:
+        STR      R1,[R0, #+20]
+        BX       LR               ;; return
+        CFI EndBlock cfiBlock31
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock32 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??setWDraw??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock32
+        REQUIRE ??setWDraw
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock33 Using cfiCommon1
+        CFI Function ??setWDraw
+        ARM
+//   44 void MyBook::setWDraw(int one) { (one == 1) ? weatherToDraw = new Weather(dayWeather) : weatherToDraw = new Weather(nightWeather); }
+??setWDraw:
+        PUSH     {R4,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R4 Frame(CFA, -8)
+        CFI CFA R13+8
+        CMP      R1,#+1
+        MOV      R4,R0
+        LDREQ    R0,[R4, #+8]
+        LDRNE    R0,[R4, #+12]
+        _BLF     `??new Weather`,`??new Weather??rA`
+        STR      R0,[R4, #+16]
+        POP      {R4,PC}          ;; return
+        CFI EndBlock cfiBlock33
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock34 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??setError??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock34
+        REQUIRE ??setError
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock35 Using cfiCommon1
+        CFI Function ??setError
+        ARM
+//   45 void MyBook::setError(bool error) { this->error = error; }
+??setError:
+        STRB     R1,[R0, #+24]
+        BX       LR               ;; return
+        CFI EndBlock cfiBlock35
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock36 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??setLocation??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock36
+        REQUIRE ??setLocation
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock37 Using cfiCommon1
+        CFI Function ??setLocation
+        ARM
+//   46 void MyBook::setLocation(wchar_t* location) { this->location = location; }
+??setLocation:
+        STR      R1,[R0, #+4]
+        BX       LR               ;; return
+        CFI EndBlock cfiBlock37
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock38 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??setDayWeather??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock38
+        REQUIRE ??setDayWeather
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock39 Using cfiCommon1
+        CFI Function ??setDayWeather
+        ARM
+//   47 void MyBook::setDayWeather(Weather* day) { this->dayWeather = day; }
+??setDayWeather:
+        STR      R1,[R0, #+8]
+        BX       LR               ;; return
+        CFI EndBlock cfiBlock39
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock40 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??setNightWeather??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock40
+        REQUIRE ??setNightWeather
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock41 Using cfiCommon1
+        CFI Function ??setNightWeather
+        ARM
+//   48 void MyBook::setNightWeather(Weather* night) { this->nightWeather = night; }
+??setNightWeather:
+        STR      R1,[R0, #+12]
+        BX       LR               ;; return
+        CFI EndBlock cfiBlock41
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock42 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??freeMyVars??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock42
+        REQUIRE ??freeMyVars
+//   49 
+//   50 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock43 Using cfiCommon1
+        CFI Function ??freeMyVars
+        ARM
+//   51 void MyBook::freeMyVars() {
+??freeMyVars:
+        PUSH     {R4,R5,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R5 Frame(CFA, -8)
+        CFI R4 Frame(CFA, -12)
+        CFI CFA R13+12
+        MOV      R4,R0
+//   52   if (location != NULL) {
+        LDR      R0,[R4, #+4]
+        MOV      R5,#+0
+        CMP      R0,#+0
+        BEQ      ??freeMyVars_1
+//   53     delete location;
+        _BLF     `??operator delete`,`??operator delete??rA`
+//   54     location = NULL;
+        STR      R5,[R4, #+4]
+//   55   }
+//   56   if (dayWeather != NULL) {
+??freeMyVars_1:
+        LDR      R0,[R4, #+8]
+        CMP      R0,#+0
+        BEQ      ??freeMyVars_2
+//   57     delete dayWeather;
+        _BLF     `??delete ~Weather`,`??delete ~Weather??rA`
+//   58     dayWeather = NULL;
+        STR      R5,[R4, #+8]
+//   59   }
+//   60   if (nightWeather != NULL) {
+??freeMyVars_2:
+        LDR      R0,[R4, #+12]
+        CMP      R0,#+0
+        BEQ      ??freeMyVars_3
+//   61     delete nightWeather;   
+        _BLF     `??delete ~Weather`,`??delete ~Weather??rA`
+//   62     nightWeather = NULL;
+        STR      R5,[R4, #+12]
+//   63   }
+//   64   if (weatherToDraw != NULL) { 
+??freeMyVars_3:
+        LDR      R0,[R4, #+16]
+        CMP      R0,#+0
+        BEQ      ??freeMyVars_4
+//   65     delete weatherToDraw;
+        _BLF     `??delete ~Weather`,`??delete ~Weather??rA`
+//   66     weatherToDraw = NULL; 
+        STR      R5,[R4, #+16]
+//   67   }
+//   68   if (dateToDraw != NULL) {
+??freeMyVars_4:
+        LDR      R0,[R4, #+148]
+        CMP      R0,#+0
+        POPEQ    {R4,R5,PC}
+//   69     delete dateToDraw;
+        _BLF     `??operator delete`,`??operator delete??rA`
+//   70     dateToDraw = NULL;
+        STR      R5,[R4, #+148]
+//   71   }
+//   72 }
+        POP      {R4,R5,PC}       ;; return
+        CFI EndBlock cfiBlock43
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock44 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??loadMetadataDll??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock44
+        REQUIRE ??loadMetadataDll
+//   73 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock45 Using cfiCommon1
+        CFI Function ??loadMetadataDll
+        ARM
+//   74 void MyBook::loadMetadataDll() {
+??loadMetadataDll:
+        PUSH     {R4,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R4 Frame(CFA, -8)
+        CFI CFA R13+8
+        MOV      R4,R0
+//   75   if (this->metadataDll == NULL) {
+        LDR      R0,[R4, #+32]
+        CMP      R0,#+0
+        POPNE    {R4,PC}
+//   76     w_chdir(GetDir(MEM_INTERNAL|DIR_DLL));
+        MOV      R0,#+25
+        SWI      +261
+        SWI      +759
+//   77     this->metadataDll = (METADATA_DLL_DATA*)LoadDLL(L"MetaDataDLL.dll");
+        LDR      R0,??loadMetadataDll_1  ;; `?<Constant L"\\x4d\\x65\\x74\\x61\\x44\\x61\\x74\\x61\\`
+        SWI      +270
+        STR      R0,[R4, #+32]
+//   78   }
+//   79 }
+        POP      {R4,PC}          ;; return
+        DATA
+??loadMetadataDll_1:
+        DC32     `?<Constant L"\\x4d\\x65\\x74\\x61\\x44\\x61\\x74\\x61\\`
+        CFI EndBlock cfiBlock45
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock46 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??unloadMetadataDll??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock46
+        REQUIRE ??unloadMetadataDll
+//   80 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock47 Using cfiCommon1
+        CFI Function ??unloadMetadataDll
+        ARM
+//   81 void MyBook::unloadMetadataDll() {
+??unloadMetadataDll:
+        PUSH     {R4,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R4 Frame(CFA, -8)
+        CFI CFA R13+8
+        MOV      R4,R0
+//   82   if (this->metadataDll != NULL) {
+        LDR      R0,[R4, #+32]
+        CMP      R0,#+0
+        POPEQ    {R4,PC}
+//   83     UnLoadDLL(this->metadataDll);
+        SWI      +271
+//   84     this->metadataDll = NULL;
+        MOV      R0,#+0
+        STR      R0,[R4, #+32]
+//   85   }
+//   86 }
+        POP      {R4,PC}          ;; return
+        CFI EndBlock cfiBlock47
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock48 Using cfiCommon1
+        CFI NoFunction
+        ARM
+`??operator new??rA`:
+        LDR      R12,??Subroutine24_0  ;; `??operator new`
+        BX       R12
+        DATA
+??Subroutine24_0:
+        DC32     `??operator new`
+        CFI EndBlock cfiBlock48
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock49 Using cfiCommon1
+        CFI NoFunction
+        ARM
+`??delete ~Weather??rA`:
+        LDR      R12,??Subroutine25_0  ;; `??delete ~Weather`
+        BX       R12
+        DATA
+??Subroutine25_0:
+        DC32     `??delete ~Weather`
+        CFI EndBlock cfiBlock49
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock50 Using cfiCommon1
+        CFI NoFunction
+        ARM
+`??new Weather??rA`:
+        LDR      R12,??Subroutine26_0  ;; `??new Weather`
+        BX       R12
+        DATA
+??Subroutine26_0:
+        DC32     `??new Weather`
+        CFI EndBlock cfiBlock50
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock51 Using cfiCommon1
+        CFI NoFunction
+        ARM
+`??operator delete??rA`:
+        LDR      R12,??Subroutine27_0  ;; `??operator delete`
+        BX       R12
+        DATA
+??Subroutine27_0:
+        DC32     `??operator delete`
+        CFI EndBlock cfiBlock51
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant {BCFG_Date_Weekday_Monday, BCFG_Dat`:
+        DATA
+        DC32 BCFG_Date_Weekday_Monday, BCFG_Date_Weekday_Tuesday
+        DC32 BCFG_Date_Weekday_Wednesday, BCFG_Date_Weekday_Thursday
+        DC32 BCFG_Date_Weekday_Friday, BCFG_Date_Weekday_Saturday
+        DC32 BCFG_Date_Weekday_Sunday
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant {BCFG_Date_Month_January, BCFG_Date`:
+        DATA
+        DC32 BCFG_Date_Month_January, BCFG_Date_Month_February
+        DC32 BCFG_Date_Month_March, BCFG_Date_Month_April, BCFG_Date_Month_May
+        DC32 BCFG_Date_Month_June, BCFG_Date_Month_July, BCFG_Date_Month_August
+        DC32 BCFG_Date_Month_September, BCFG_Date_Month_October
+        DC32 BCFG_Date_Month_November, BCFG_Date_Month_December
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x4d\\x65\\x74\\x61\\x44\\x61\\x74\\x61\\`:
+        DATA
+        DC8 4DH, 0, 65H, 0, 74H, 0, 61H, 0
+        DC8 44H, 0, 61H, 0, 74H, 0, 61H, 0
+        DC8 44H, 0, 4CH, 0, 4CH, 0, 2EH, 0
+        DC8 64H, 0, 6CH, 0, 6CH, 0, 0, 0
+
+        END
+// 
+// 800 bytes in segment CODE
+// 132 bytes in segment DATA_C
+// 
+// 656 bytes of CODE  memory (+ 144 bytes shared)
+// 132 bytes of CONST memory
+//
+//Errors: none
+//Warnings: none

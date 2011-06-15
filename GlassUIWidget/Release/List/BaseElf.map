@@ -1,0 +1,658 @@
+################################################################################
+#                                                                              #
+#      IAR Universal Linker V4.60I/386                                         #
+#                                                                              #
+#           Link time     =  23/Mar/2011  13:55:59                             #
+#           Target CPU    =  ARM                                               #
+#           List file     =  "D:\Phone\Elfs\Weather Widget\Release\List\BaseEl #
+#                            f.map"                                            #
+#           Output file 1 =  "D:\Phone\Elfs\Weather Widget\Release\Exe\BaseElf #
+#                            .elf"                                             #
+#                            Format: elf, variant: -ynpra                      #
+#           Command line  =  "D:\Phone\Elfs\Weather Widget\Release\Obj\debug.r #
+#                            79"                                               #
+#                            "D:\Phone\Elfs\Weather Widget\Release\Obj\func.r7 #
+#                            9"                                                #
+#                            "D:\Phone\Elfs\Weather Widget\Release\Obj\main.r7 #
+#                            9"                                                #
+#                            "D:\Phone\Elfs\Weather Widget\Release\Obj\mem2.r7 #
+#                            9"                                                #
+#                            "D:\Phone\Elfs\Weather Widget\Release\Obj\openfil #
+#                            e.r79"                                            #
+#                            "D:\Phone\Elfs\Weather Widget\Release\Obj\string. #
+#                            r79"                                              #
+#                            "D:\Phone\Elfs\Weather Widget\Release\Obj\tagCont #
+#                            ent.r79"                                          #
+#                            "D:\Phone\Elfs\Weather Widget\Release\Obj\weather #
+#                            .r79"                                             #
+#                            -o                                                #
+#                            "D:\Phone\Elfs\Weather Widget\Release\Exe\BaseElf #
+#                            .elf"                                             #
+#                            -Felf -l                                          #
+#                            "D:\Phone\Elfs\Weather Widget\Release\List\BaseEl #
+#                            f.map"                                            #
+#                            -xms -f                                           #
+#                            "D:\Phone\Elfs\Weather Widget\..\include\1.xcl"   #
+#                            (-carm -ynpra -V(CODE)CODE_AREA,12                #
+#                            -V(DATA)DATA_AREA,12                              #
+#                            -Z(CODE_AREA)ELFBEGIN,DATA_ID,START,CODE,DATA_C,I #
+#                            NITTAB,DATA_Z,DATA_N,CONFIG_C,DYN_CONST,DYN_CONST #
+#                            _DESC,DYN_PAGE,DYN_PAGE_DESC=0-FFFFFFFF           #
+#                            -Z(DATA_AREA)DATA_I=0-FFFFFFFF)                   #
+#                            "D:\Phone\IAR\Embedded Workbench 4.0 Evaluation\A #
+#                            RM\LIB\dl5tpainl8n.r79"                           #
+#                            -s main                                           #
+#                                                                              #
+#                        Copyright 1987-2007 IAR Systems. All rights reserved. #
+################################################################################
+
+
+
+
+
+                ****************************************
+                *                                      *
+                *           CROSS REFERENCE            *
+                *                                      *
+                ****************************************
+
+       Program entry at : CODE_AREA 00000350  Relocatable, from module : main
+
+
+
+
+                ****************************************
+                *                                      *
+                *            RUNTIME MODEL             *
+                *                                      *
+                ****************************************
+
+  ARMv4M                 = USED
+  ARMv4T                 = USED
+  ARMv5T                 = USED
+  StackAlign4            = USED
+  StackAlign8            = USED
+  __cpu_mode             = __pcs__interwork
+  __data_model           = absolute
+  __dlib_file_descriptor = 1
+  __endian               = little
+  __rt_version           = 6
+
+
+
+                ****************************************
+                *                                      *
+                *              MODULE MAP              *
+                *                                      *
+                ****************************************
+
+
+  DEFINED ABSOLUTE ENTRIES
+    *************************************************************************
+
+  DEFINED ABSOLUTE ENTRIES
+    *************************************************************************
+
+  FILE NAME : D:\Phone\Elfs\Weather Widget\Release\Obj\debug.r79
+  PROGRAM MODULE, NAME : debug
+
+  SEGMENTS IN THE MODULE
+  ======================
+CODE
+  Relative segment, address: CODE_AREA 0000017C - 00000213 (0x98 bytes), align: 2
+  Segment part 6.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           dbtf(char *)            0000017C        TerminateElf(void *, BOOK *) (main)
+                                                   elf_exit() (main)
+                                                   main (main)
+                                                   onCloseBEBook(BOOK *) (main)
+                                                   openFile() (openfile)
+               stack 1 = 00000000 ( 00000018 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000214 - 00000217 (0x4 bytes), align: 2
+  Segment part 13.            Intra module refs:   dbtf(char *)
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00000E14 - 00000E4F (0x3c bytes), align: 2
+  Segment part 2.             Intra module refs:   Segment part 13
+
+    *************************************************************************
+
+  FILE NAME : D:\Phone\Elfs\Weather Widget\Release\Obj\func.r79
+  PROGRAM MODULE, NAME : func
+
+  SEGMENTS IN THE MODULE
+  ======================
+ELFBEGIN
+  Relative segment, address: CODE_AREA 00000000, align: 0
+  Segment part 0. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ELF_BEGIN               00000000        elf_exit() (main)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000218 - 0000022F (0x18 bytes), align: 2
+  Segment part 1. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           kill_data               00000218        elf_exit() (main)
+           seqkill                 0000021C 
+           ASYNC                   0000022C 
+           SYNC                    00000228 
+    -------------------------------------------------------------------------
+DYN_CONST_DESC
+  Relative segment, address: CODE_AREA 00001298 - 0000129B (0x4 bytes), align: 2
+  Segment part 561. ROOT.
+    -------------------------------------------------------------------------
+DYN_PAGE
+  Relative segment, address: CODE_AREA 0000129C, align: 2
+  Segment part 562.
+    -------------------------------------------------------------------------
+DYN_PAGE_DESC
+  Relative segment, address: CODE_AREA 000012B4 - 000012B7 (0x4 bytes), align: 2
+  Segment part 563. ROOT.
+
+    *************************************************************************
+
+  FILE NAME : D:\Phone\Elfs\Weather Widget\Release\Obj\main.r79
+  PROGRAM MODULE, NAME : main
+
+  SEGMENTS IN THE MODULE
+  ======================
+CODE
+  Relative segment, address: CODE_AREA 00000230 - 0000025B (0x2c bytes), align: 2
+  Segment part 9.             Intra module refs:   Segment part 7
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           TerminateElf(void *, BOOK *)
+                                   00000230 
+               stack 1 = 00000000 ( 0000000C )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 0000025C - 000002CB (0x70 bytes), align: 2
+  Segment part 11.            Intra module refs:   Segment part 7
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ShowAuthorInfo(void *, BOOK *)
+                                   0000025C 
+               stack 1 = 00000000 ( 00000024 )
+    -------------------------------------------------------------------------
+DYN_PAGE
+  Relative segment, address: CODE_AREA 0000129C - 000012B3 (0x18 bytes), align: 2
+  Segment part 7.             Intra module refs:   Segment part 6
+    -------------------------------------------------------------------------
+DATA_I
+  Relative segment, address: DATA_AREA 00000000 - 0000000F (0x10 bytes), align: 2
+  Segment part 5.             Intra module refs:   main
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           BEBook                  00000000 
+           base_page               00000004 
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000002CC - 000002FF (0x34 bytes), align: 2
+  Segment part 13.            Intra module refs:   Segment part 21
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           elf_exit()              000002CC 
+               stack 1 = 00000000 ( 00000008 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000300 - 00000323 (0x24 bytes), align: 2
+  Segment part 15.            Intra module refs:   main
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           onCloseBEBook(BOOK *)   00000300 
+               stack 1 = 00000000 ( 00000004 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000324 - 0000034F (0x2c bytes), align: 2
+  Segment part 17.            Intra module refs:   main
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           myFind(BOOK *)          00000324 
+               stack 1 = 00000000 ( 00000004 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000350 - 000004D7 (0x188 bytes), align: 2
+  Segment part 19.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           main                    00000350        Absolute parts (?ABS_ENTRY_MOD)
+               stack 1 = 00000000 ( 00000024 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000004D8 - 000004DB (0x4 bytes), align: 2
+  Segment part 20.            Intra module refs:   ShowAuthorInfo(void *, BOOK *)
+                                                   TerminateElf(void *, BOOK *)
+                                                   elf_exit()
+                                                   main
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000004DC - 000004DF (0x4 bytes), align: 2
+  Segment part 21.            Intra module refs:   main
+                                                   onCloseBEBook(BOOK *)
+    -------------------------------------------------------------------------
+DATA_ID
+  Relative segment, address: CODE_AREA 00000000 - 0000000F (0x10 bytes), align: 2
+  Segment part 6.             Intra module refs:   Segment part 5
+    -------------------------------------------------------------------------
+INITTAB
+  Relative segment, address: CODE_AREA 0000128C - 00001297 (0xc bytes), align: 2
+  Segment part 39. ROOT.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           ?init?tab?DATA_I        0000128C 
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00000E50 - 00000E5B (0xc bytes), align: 2
+  Segment part 2.             Intra module refs:   Segment part 6
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00000E5C - 00000F8F (0x134 bytes), align: 2
+  Segment part 3.             Intra module refs:   Segment part 20
+                                                   myFind(BOOK *)
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00000F90 - 00000FAF (0x20 bytes), align: 2
+  Segment part 4.             Intra module refs:   onCloseBEBook(BOOK *)
+
+    *************************************************************************
+
+  FILE NAME : D:\Phone\Elfs\Weather Widget\Release\Obj\mem2.r79
+  PROGRAM MODULE, NAME : mem2
+
+  SEGMENTS IN THE MODULE
+  ======================
+DATA_I
+  Relative segment, address: DATA_AREA 00000010 - 0000017B (0x16c bytes), align: 2
+  Segment part 23.            Intra module refs:   Segment part 35
+                                                   Segment part 53
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000004E0 - 000005F3 (0x114 bytes), align: 2
+  Segment part 26.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           trace_init(wchar_t *)   000004E0        main (main)
+               stack 1 = 00000000 ( 00000018 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000005F4 - 000007DB (0x1e8 bytes), align: 2
+  Segment part 28.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           trace_done()            000005F4        elf_exit() (main)
+               stack 1 = 00000000 ( 00000288 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000007DC - 00000813 (0x38 bytes), align: 2
+  Segment part 30.            Intra module refs:   __deleaker_CreateBook(char const *, int, BOOK *, void (__atpcs __interwork *)(BOOK *), PAGE_DESC const *, char const *, int, APP_DESC *)
+                                                   __deleaker_TextID_Create(char const *, int, void const *, TEXT_ENCODING, int)
+                                                   __deleaker_malloc(char const *, int, int)
+                                                   __deleaker_w_fopen(char const *, int, wchar_t const *, int, int, int)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           trace_alloc(int, void *, char const *, int)
+                                   000007DC 
+               stack 1 = 00000000 ( 00000014 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000814 - 000008AB (0x98 bytes), align: 2
+  Segment part 34.            Intra module refs:   __deleaker_CreateBook(char const *, int, BOOK *, void (__atpcs __interwork *)(BOOK *), PAGE_DESC const *, char const *, int, APP_DESC *)
+                                                   __deleaker_FreeBook(char const *, int, BOOK *)
+                                                   __deleaker_MessageBox(char const *, int, int, int, IMAGEID, int, int, BOOK *)
+                                                   __deleaker_TextID_Create(char const *, int, void const *, TEXT_ENCODING, int)
+                                                   __deleaker_mfree(char const *, int, void *)
+                                                   __deleaker_w_fclose(char const *, int, int)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           trace_free(int, void *, char const *, int)
+                                   00000814 
+               stack 1 = 00000000 ( 0000001C )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000008AC - 000008AF (0x4 bytes), align: 2
+  Segment part 35.            Intra module refs:   trace_alloc(int, void *, char const *, int)
+                                                   trace_done()
+                                                   trace_free(int, void *, char const *, int)
+                                                   trace_init(wchar_t *)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000008B0 - 000008D7 (0x28 bytes), align: 2
+  Segment part 46.            Intra module refs:   __deleaker_MessageBox(char const *, int, int, int, IMAGEID, int, int, BOOK *)
+                                                   __deleaker_TextID_Create(char const *, int, void const *, TEXT_ENCODING, int)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           isallocatedstrid(int)   000008B0 
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000008D8 - 000008FB (0x24 bytes), align: 2
+  Segment part 48.            Intra module refs:   __deleaker_MessageBox(char const *, int, int, int, IMAGEID, int, int, BOOK *)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           isallocatediconid(IMAGEID)
+                                   000008D8 
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000008FC - 00000923 (0x28 bytes), align: 2
+  Segment part 50.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __deleaker_pushfileline(char const *, int)
+                                   000008FC        main (main)
+                                                   openFile() (openfile)
+               stack 1 = 00000000 ( 0000000C )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000924 - 0000097F (0x5c bytes), align: 2
+  Segment part 52.            Intra module refs:   operator delete(void *)
+                                                   operator new(size_t)
+                                                   operator new[](size_t)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __deleaker_popfileline(char const * &, int &)
+                                   00000924 
+               stack 1 = 00000000 ( 00000010 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000980 - 00000983 (0x4 bytes), align: 2
+  Segment part 53.            Intra module refs:   __deleaker_popfileline(char const * &, int &)
+                                                   __deleaker_pushfileline(char const *, int)
+                                                   isallocatediconid(IMAGEID)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000984 - 000009AF (0x2c bytes), align: 2
+  Segment part 55.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           operator delete(void *)
+                                   00000984        main (main)
+                                                   openFile() (openfile)
+               stack 1 = 00000000 ( 00000010 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000009B0 - 000009DB (0x2c bytes), align: 2
+  Segment part 59.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           operator new(size_t)    000009B0        main (main)
+               stack 1 = 00000000 ( 00000010 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 000009DC - 00000A07 (0x2c bytes), align: 2
+  Segment part 61.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           operator new[](size_t)
+                                   000009DC        openFile() (openfile)
+               stack 1 = 00000000 ( 00000010 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000A08 - 00000A3F (0x38 bytes), align: 2
+  Segment part 71.            Intra module refs:   operator new(size_t)
+                                                   operator new[](size_t)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __deleaker_malloc(char const *, int, int)
+                                   00000A08 
+               stack 1 = 00000000 ( 00000010 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000A40 - 00000A53 (0x14 bytes), align: 2
+  Segment part 73.            Intra module refs:   __deleaker_mfree_adr(char const *, int)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           mfree_(void *)          00000A40 
+               stack 1 = 00000000 ( 00000004 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000A54 - 00000A5F (0xc bytes), align: 2
+  Segment part 75.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __deleaker_mfree_adr(char const *, int)
+                                   00000A54        elf_exit() (main)
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000A60 - 00000A87 (0x28 bytes), align: 2
+  Segment part 77.            Intra module refs:   mfree_(void *)
+                                                   operator delete(void *)
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __deleaker_mfree(char const *, int, void *)
+                                   00000A60 
+               stack 1 = 00000000 ( 00000008 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000A88 - 00000AF3 (0x6c bytes), align: 2
+  Segment part 79.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __deleaker_CreateBook(char const *, int, BOOK *, void (__atpcs __interwork *)(BOOK *), PAGE_DESC const *, char const *, int, APP_DESC *)
+                                   00000A88        main (main)
+               stack 1 = 00000000 ( 0000002C )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000AF4 - 00000B1B (0x28 bytes), align: 2
+  Segment part 81.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __deleaker_FreeBook(char const *, int, BOOK *)
+                                   00000AF4        TerminateElf(void *, BOOK *) (main)
+                                                   main (main)
+               stack 1 = 00000000 ( 00000008 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000B1C - 00000B63 (0x48 bytes), align: 2
+  Segment part 105.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __deleaker_w_fopen(char const *, int, wchar_t const *, int, int, int)
+                                   00000B1C        dbtf(char *) (debug)
+                                                   main (main)
+                                                   openFile() (openfile)
+               stack 1 = 00000000 ( 00000010 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000B64 - 00000B8B (0x28 bytes), align: 2
+  Segment part 107.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __deleaker_w_fclose(char const *, int, int)
+                                   00000B64        dbtf(char *) (debug)
+                                                   main (main)
+                                                   openFile() (openfile)
+               stack 1 = 00000000 ( 00000008 )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000B8C - 00000C1B (0x90 bytes), align: 2
+  Segment part 119.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __deleaker_TextID_Create(char const *, int, void const *, TEXT_ENCODING, int)
+                                   00000B8C        ShowAuthorInfo(void *, BOOK *) (main)
+                                                   main (main)
+               stack 1 = 00000000 ( 0000001C )
+    -------------------------------------------------------------------------
+CODE
+  Relative segment, address: CODE_AREA 00000C1C - 00000CCB (0xb0 bytes), align: 2
+  Segment part 139.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __deleaker_MessageBox(char const *, int, int, int, IMAGEID, int, int, BOOK *)
+                                   00000C1C        ShowAuthorInfo(void *, BOOK *) (main)
+                                                   main (main)
+               stack 1 = 00000000 ( 0000002C )
+    -------------------------------------------------------------------------
+DATA_ID
+  Relative segment, address: CODE_AREA 00000010 - 0000017B (0x16c bytes), align: 2
+  Segment part 24.            Intra module refs:   Segment part 23
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00000FB0 - 00000FB3 (0x4 bytes), align: 2
+  Segment part 2.             Intra module refs:   Segment part 24
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00000FB4 - 00001067 (0xb4 bytes), align: 2
+  Segment part 3.             Intra module refs:   trace_init(wchar_t *)
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00001068 - 000010B7 (0x50 bytes), align: 2
+  Segment part 4.             Intra module refs:   trace_done()
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000010B8 - 000010C7 (0x10 bytes), align: 2
+  Segment part 5.             Intra module refs:   __deleaker_popfileline(char const * &, int &)
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000010C8 - 000010CF (0x8 bytes), align: 2
+  Segment part 6.             Intra module refs:   Segment part 24
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000010D0 - 000010D7 (0x8 bytes), align: 2
+  Segment part 7.             Intra module refs:   Segment part 24
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000010D8 - 000010DF (0x8 bytes), align: 2
+  Segment part 8.             Intra module refs:   Segment part 24
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000010E0 - 000010E7 (0x8 bytes), align: 2
+  Segment part 9.             Intra module refs:   Segment part 24
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000010E8 - 000010EF (0x8 bytes), align: 2
+  Segment part 10.            Intra module refs:   Segment part 24
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000010F0 - 000010F7 (0x8 bytes), align: 2
+  Segment part 11.            Intra module refs:   Segment part 24
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000010F8 - 000010FB (0x4 bytes), align: 2
+  Segment part 12.            Intra module refs:   Segment part 24
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00001288 - 0000128A (0x3 bytes), align: 0
+  Segment part 13.            Intra module refs:   Segment part 24
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 000010FC - 000010FF (0x4 bytes), align: 2
+  Segment part 14.            Intra module refs:   Segment part 24
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00001100 - 0000111F (0x20 bytes), align: 2
+  Segment part 15.            Intra module refs:   mfree_(void *)
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00001120 - 00001127 (0x8 bytes), align: 2
+  Segment part 16.            Intra module refs:   Segment part 24
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00001128 - 0000112F (0x8 bytes), align: 2
+  Segment part 17.            Intra module refs:   Segment part 24
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00001130 - 0000113B (0xc bytes), align: 2
+  Segment part 18.            Intra module refs:   Segment part 24
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 0000113C - 0000114B (0x10 bytes), align: 2
+  Segment part 19.            Intra module refs:   Segment part 24
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 0000114C - 0000115B (0x10 bytes), align: 2
+  Segment part 20.            Intra module refs:   Segment part 24
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 0000115C - 00001163 (0x8 bytes), align: 2
+  Segment part 21.            Intra module refs:   Segment part 24
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00001164 - 0000116F (0xc bytes), align: 2
+  Segment part 22.            Intra module refs:   Segment part 24
+
+    *************************************************************************
+
+  FILE NAME : D:\Phone\Elfs\Weather Widget\Release\Obj\openfile.r79
+  PROGRAM MODULE, NAME : openfile
+
+  SEGMENTS IN THE MODULE
+  ======================
+CODE
+  Relative segment, address: CODE_AREA 00000CCC - 00000DF3 (0x128 bytes), align: 2
+  Segment part 4.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           openFile()              00000CCC        main (main)
+               stack 1 = 00000000 ( 00000038 )
+    -------------------------------------------------------------------------
+DATA_C
+  Relative segment, address: CODE_AREA 00001170 - 00001287 (0x118 bytes), align: 2
+  Segment part 2.             Intra module refs:   openFile()
+
+    *************************************************************************
+
+  FILE NAME : D:\Phone\Elfs\Weather Widget\Release\Obj\string.r79
+    *************************************************************************
+
+  FILE NAME : D:\Phone\Elfs\Weather Widget\Release\Obj\tagContent.r79
+    *************************************************************************
+
+  FILE NAME : D:\Phone\Elfs\Weather Widget\Release\Obj\weather.r79
+    *************************************************************************
+
+  FILE NAME : D:\Phone\IAR\Embedded Workbench 4.0 Evaluation\ARM\LIB\dl5tpainl8n.r79
+  LIBRARY MODULE, NAME : ?xxmemxmemzero
+
+  SEGMENTS IN THE MODULE
+  ======================
+CODE
+  Relative segment, address: CODE_AREA 00000DF4 - 00000E13 (0x20 bytes), align: 2
+  Segment part 3.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __data_memzero          00000DF4        main (main)
+
+
+
+
+                ****************************************
+                *                                      *
+                *      SEGMENTS IN ADDRESS ORDER       *
+                *                                      *
+                ****************************************
+
+
+SEGMENT              SPACE    START ADDRESS   END ADDRESS     SIZE  TYPE  ALIGN
+=======              =====    =============   ===========     ====  ====  =====
+ELFBEGIN             CODE_AREA           00000000                     rel    0
+DATA_ID              CODE_AREA      00000000 - 0000017B         17C   rel    2
+START                CODE_AREA           0000017C                     dse    0
+CODE                 CODE_AREA      0000017C - 00000E13         C98   rel    2
+DATA_C               CODE_AREA      00000E14 - 0000128A         477   rel    2
+INITTAB              CODE_AREA      0000128C - 00001297           C   rel    2
+DATA_Z               CODE_AREA           00001298                     dse    0
+DATA_N               CODE_AREA           00001298                     dse    0
+CONFIG_C             CODE_AREA           00001298                     dse    0
+DYN_CONST            CODE_AREA           00001298                     dse    0
+DYN_CONST_DESC       CODE_AREA      00001298 - 0000129B           4   rel    2
+DYN_PAGE             CODE_AREA      0000129C - 000012B3          18   rel    2
+DYN_PAGE_DESC        CODE_AREA      000012B4 - 000012B7           4   rel    2
+DATA_I               DATA_AREA      00000000 - 0000017B         17C   rel    2
+
+                ****************************************
+                *                                      *
+                *        END OF CROSS REFERENCE        *
+                *                                      *
+                ****************************************
+
+ 4 791 bytes of CODE memory
+   380 bytes of DATA memory
+
+Errors: none
+Warnings: none
+

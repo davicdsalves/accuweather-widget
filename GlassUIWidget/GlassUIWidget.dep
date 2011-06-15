@@ -1,0 +1,884 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>1487815404</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\..\deleaker\mem2.cpp</file>
+      <file>$PROJ_DIR$\bcfg\conf_loader.cpp</file>
+      <file>$PROJ_DIR$\..\include\dir.h</file>
+      <file>$PROJ_DIR$\file\openfile.h</file>
+      <file>$PROJ_DIR$\..\include\Types.h</file>
+      <file>$PROJ_DIR$\Debug\List\_cpp2.s79</file>
+      <file>$PROJ_DIR$\Debug\List\openfile.s79</file>
+      <file>$PROJ_DIR$\Debug\List\mem2.lst</file>
+      <file>$PROJ_DIR$\Debug\Obj\GlassUIWidget.pbd</file>
+      <file>$PROJ_DIR$\Debug\List\Utils.lst</file>
+      <file>$PROJ_DIR$\Debug\List\conf_loader.s79</file>
+      <file>$PROJ_DIR$\Debug\List\main.s79</file>
+      <file>$PROJ_DIR$\..\include\Colors.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\_cpp2.pbi</file>
+      <file>$PROJ_DIR$\Debug\List\_cpp2.lst</file>
+      <file>$PROJ_DIR$\Debug\List\standbyDraw.s79</file>
+      <file>$PROJ_DIR$\standby\standbyDraw.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\mem2.r79</file>
+      <file>$PROJ_DIR$\Debug\Exe\GlassUIWidget.elf</file>
+      <file>$PROJ_DIR$\Debug\Obj\func.r79</file>
+      <file>$PROJ_DIR$\Debug\List\config_data.lst</file>
+      <file>$PROJ_DIR$\..\include\Lib_Clara.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\mem2.pbi</file>
+      <file>$PROJ_DIR$\Debug\List\debug.s79</file>
+      <file>$PROJ_DIR$\Debug\Obj\mybook.pbi</file>
+      <file>$PROJ_DIR$\Debug\List\fileAnaliser.s79</file>
+      <file>$PROJ_DIR$\..\include\cfg_items.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\debug.r79</file>
+      <file>$PROJ_DIR$\..\include\1.xcl</file>
+      <file>$PROJ_DIR$\Debug\Obj\conf_loader.r79</file>
+      <file>$PROJ_DIR$\file\fileAnaliser.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\standbyDraw.r79</file>
+      <file>$PROJ_DIR$\Debug\Obj\_cpp2.r79</file>
+      <file>$PROJ_DIR$\Debug\List\conf_loader.lst</file>
+      <file>$PROJ_DIR$\Debug\List\openfile.lst</file>
+      <file>$PROJ_DIR$\Debug\List\mybook.s79</file>
+      <file>$PROJ_DIR$\..\deleaker\mem2.h</file>
+      <file>$PROJ_DIR$\Debug\List\weather.s79</file>
+      <file>$PROJ_DIR$\Debug\List\weather.lst</file>
+      <file>$PROJ_DIR$\Debug\Obj\Utils.r79</file>
+      <file>$PROJ_DIR$\Debug\Obj\debug.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\standbyDraw.pbi</file>
+      <file>$PROJ_DIR$\Debug\List\mem2.s79</file>
+      <file>$PROJ_DIR$\Debug\List\config_data.s79</file>
+      <file>$PROJ_DIR$\..\include\DYN_tag.h</file>
+      <file>$PROJ_DIR$\Debug\List\fileAnaliser.lst</file>
+      <file>$PROJ_DIR$\..\include\obsolete.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\mybook.r79</file>
+      <file>$PROJ_DIR$\Debug\List\func.lst</file>
+      <file>$PROJ_DIR$\..\include\DYN_mac.asm</file>
+      <file>$PROJ_DIR$\Debug\Obj\fileAnaliser.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\Utils.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\openfile.r79</file>
+      <file>$PROJ_DIR$\mybook.h</file>
+      <file>$TOOLKIT_DIR$\lib\dl5tpainl8n.r79</file>
+      <file>$PROJ_DIR$\file\fileAnaliser.cpp</file>
+      <file>$PROJ_DIR$\file\openfile.cpp</file>
+      <file>$PROJ_DIR$\utils\Utils.cpp</file>
+      <file>$PROJ_DIR$\utils\weather.cpp</file>
+      <file>$PROJ_DIR$\..\include\func.asm</file>
+      <file>$PROJ_DIR$\main.cpp</file>
+      <file>$PROJ_DIR$\mybook.cpp</file>
+      <file>$PROJ_DIR$\debug.cpp</file>
+      <file>$PROJ_DIR$\bcfg\config_data.c</file>
+      <file>$PROJ_DIR$\..\C++\_cpp2.cpp</file>
+      <file>$PROJ_DIR$\standby\standbyDraw.cpp</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\Debug\List\main.lst</file>
+      <file>$PROJ_DIR$\debug.h</file>
+      <file>$PROJ_DIR$\utils\weather.h</file>
+      <file>$PROJ_DIR$\classes.h</file>
+      <file>$PROJ_DIR$\Debug\List\Utils.s79</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.r79</file>
+      <file>$PROJ_DIR$\bcfg\config_data.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\openfile.pbi</file>
+      <file>$PROJ_DIR$\..\deleaker\Lib_Clara_original.h</file>
+      <file>$PROJ_DIR$\Debug\List\GlassUIWidget.map</file>
+      <file>$PROJ_DIR$\standby\stdby.h</file>
+      <file>$PROJ_DIR$\Debug\List\standbyDraw.lst</file>
+      <file>$PROJ_DIR$\Debug\Obj\conf_loader.pbi</file>
+      <file>$PROJ_DIR$\Debug\List\mybook.lst</file>
+      <file>$PROJ_DIR$\Debug\Obj\fileAnaliser.r79</file>
+      <file>$PROJ_DIR$\bcfg\conf_loader.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\weather.pbi</file>
+      <file>$PROJ_DIR$\..\include\DYN_ext.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\config_data.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\config_data.r79</file>
+      <file>$PROJ_DIR$\Debug\Obj\weather.r79</file>
+      <file>$PROJ_DIR$\Debug\List\debug.lst</file>
+      <file>$PROJ_DIR$\utils\utils.h</file>
+    </outputs>
+    <file>
+      <name>$PROJ_DIR$\..\deleaker\mem2.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 17 42 7</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 22</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 36 21 4 84 44 12 46 75 2</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 36 21 4 84 44 12 46 75 2</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\bcfg\conf_loader.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 29 10 33</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 79</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 21 4 84 44 12 46 2 26 82</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21 4 84 44 12 46 2 26 82</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 18 76</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Obj\GlassUIWidget.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 51 13 79 85 40 50 66 24 74 41 83</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\GlassUIWidget.elf</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 76</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 28 39 32 29 86 27 81 19 72 47 52 31 87 54</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\file\fileAnaliser.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 81 25 45</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 50</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 21 4 84 44 12 46 2 89 30 69</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21 4 84 44 12 46 2 89 30 69</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\file\openfile.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 52 6 34</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 74</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 21 4 84 44 12 46 2 73 3</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21 4 84 44 12 46 2 73 3</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\utils\Utils.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 39 71 9</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 51</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 21 4 84 44 12 46 2 89</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21 4 84 44 12 46 2 89</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\utils\weather.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 87 37 38</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 83</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 21 4 84 44 12 46 2 69</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21 4 84 44 12 46 2 69</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\include\func.asm</name>
+      <outputs>
+        <tool>
+          <name>AARM</name>
+          <file> 19 48</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>AARM</name>
+          <file> 44 49</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 72 11 67</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 66</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 21 4 84 44 12 46 2 26 16 53 69 82 73</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21 4 84 44 12 46 2 26 16 53 69 82 73</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\mybook.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 47 35 80</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 24</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 21 4 84 44 12 46 2 73 53 69 68</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21 4 84 44 12 46 2 73 53 69 68</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\debug.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 27 23 88</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 40</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 21 4 84 44 12 46 2 68</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21 4 84 44 12 46 2 68</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\bcfg\config_data.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 86 43 20</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 85</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 26 4 73</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 26 4 73</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\C++\_cpp2.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 32 5 14</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 13</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 21 4 84 44 12 46</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21 4 84 44 12 46</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\standby\standbyDraw.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 31 15 78</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 41</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 21 4 84 44 12 46 2 26 73 82 3 30 69 89 53 70 16 77 68</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21 4 84 44 12 46 2 26 73 82 3 30 69 89 53 70 16 77 68</file>
+        </tool>
+      </inputs>
+    </file>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>XLINK</tool>
+    </forcedrebuild>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs>
+      <file>$PROJ_DIR$\..\deleaker\mem2.cpp</file>
+      <file>$PROJ_DIR$\bcfg\conf_loader.cpp</file>
+      <file>$PROJ_DIR$\..\include\dir.h</file>
+      <file>$PROJ_DIR$\file\openfile.h</file>
+      <file>$PROJ_DIR$\..\include\Types.h</file>
+      <file>$PROJ_DIR$\..\include\Colors.h</file>
+      <file>$PROJ_DIR$\standby\standbyDraw.h</file>
+      <file>$PROJ_DIR$\Release\List\fileAnaliser.s79</file>
+      <file>$PROJ_DIR$\standby\id3.h</file>
+      <file>$PROJ_DIR$\Release\Obj\id3.r79</file>
+      <file>$PROJ_DIR$\Release\List\config_data.s79</file>
+      <file>$PROJ_DIR$\Release\List\standbyDraw.s79</file>
+      <file>$PROJ_DIR$\Release\List\fileAnaliser.lst</file>
+      <file>$PROJ_DIR$\Release\List\openfile.lst</file>
+      <file>$PROJ_DIR$\Release\Obj\debug.pbi</file>
+      <file>$PROJ_DIR$\Release\List\weather.lst</file>
+      <file>$PROJ_DIR$\Release\Obj\fileAnaliser.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\standbyDraw.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\conf_loader.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\debug.r79</file>
+      <file>$PROJ_DIR$\Release\List\standbyDraw.lst</file>
+      <file>$PROJ_DIR$\..\include\Lib_Clara.h</file>
+      <file>$PROJ_DIR$\Release\List\conf_loader.lst</file>
+      <file>$PROJ_DIR$\Release\Obj\mem2.r79</file>
+      <file>$PROJ_DIR$\Release\Obj\openfile.r79</file>
+      <file>$PROJ_DIR$\Release\List\openfile.s79</file>
+      <file>$PROJ_DIR$\Release\List\mybook.s79</file>
+      <file>$PROJ_DIR$\Release\Obj\GlassUIWidget.pbd</file>
+      <file>$PROJ_DIR$\..\include\cfg_items.h</file>
+      <file>$PROJ_DIR$\..\include\1.xcl</file>
+      <file>$PROJ_DIR$\file\fileAnaliser.h</file>
+      <file>$PROJ_DIR$\Release\List\config_data.lst</file>
+      <file>$PROJ_DIR$\Release\Obj\_cpp2.pbi</file>
+      <file>$PROJ_DIR$\..\deleaker\mem2.h</file>
+      <file>$PROJ_DIR$\..\include\DYN_tag.h</file>
+      <file>$PROJ_DIR$\Release\Obj\weather.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\Utils.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\openfile.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\func.r79</file>
+      <file>$PROJ_DIR$\Release\Obj\mybook.r79</file>
+      <file>$PROJ_DIR$\..\include\obsolete.h</file>
+      <file>$PROJ_DIR$\Release\Exe\GlassUIWidget.elf</file>
+      <file>$PROJ_DIR$\..\include\DYN_mac.asm</file>
+      <file>$PROJ_DIR$\Release\Obj\main.r79</file>
+      <file>$PROJ_DIR$\Release\List\_cpp2.s79</file>
+      <file>$PROJ_DIR$\Release\List\debug.lst</file>
+      <file>$PROJ_DIR$\Release\List\mem2.s79</file>
+      <file>$PROJ_DIR$\Release\List\Utils.s79</file>
+      <file>$PROJ_DIR$\Release\List\weather.s79</file>
+      <file>$PROJ_DIR$\Release\List\mem2.lst</file>
+      <file>$PROJ_DIR$\Release\List\Utils.lst</file>
+      <file>$PROJ_DIR$\Release\List\func.lst</file>
+      <file>$PROJ_DIR$\Release\Obj\config_data.pbi</file>
+      <file>$PROJ_DIR$\Release\List\main.lst</file>
+      <file>$PROJ_DIR$\Release\List\GlassUIWidget.map</file>
+      <file>$PROJ_DIR$\Release\List\_cpp2.lst</file>
+      <file>$PROJ_DIR$\Release\List\mybook.lst</file>
+      <file>$PROJ_DIR$\mybook.h</file>
+      <file>$TOOLKIT_DIR$\lib\dl5tpainl8n.r79</file>
+      <file>$PROJ_DIR$\file\fileAnaliser.cpp</file>
+      <file>$PROJ_DIR$\file\openfile.cpp</file>
+      <file>$PROJ_DIR$\utils\Utils.cpp</file>
+      <file>$PROJ_DIR$\utils\weather.cpp</file>
+      <file>$PROJ_DIR$\..\include\func.asm</file>
+      <file>$PROJ_DIR$\main.cpp</file>
+      <file>$PROJ_DIR$\mybook.cpp</file>
+      <file>$PROJ_DIR$\Release\Obj\_cpp2.r79</file>
+      <file>$PROJ_DIR$\Release\Obj\fileAnaliser.r79</file>
+      <file>$PROJ_DIR$\Release\Obj\config_data.r79</file>
+      <file>$PROJ_DIR$\Release\Obj\standbyDraw.r79</file>
+      <file>$PROJ_DIR$\Release\Obj\conf_loader.r79</file>
+      <file>$PROJ_DIR$\Release\List\debug.s79</file>
+      <file>$PROJ_DIR$\Release\Obj\mybook.pbi</file>
+      <file>$PROJ_DIR$\debug.cpp</file>
+      <file>$PROJ_DIR$\bcfg\config_data.c</file>
+      <file>$PROJ_DIR$\..\C++\_cpp2.cpp</file>
+      <file>$PROJ_DIR$\standby\id3.cpp</file>
+      <file>$PROJ_DIR$\standby\standbyDraw.cpp</file>
+      <file>$PROJ_DIR$\debug.h</file>
+      <file>$PROJ_DIR$\utils\weather.h</file>
+      <file>$PROJ_DIR$\classes.h</file>
+      <file>$PROJ_DIR$\Release\List\main.s79</file>
+      <file>$PROJ_DIR$\Release\List\conf_loader.s79</file>
+      <file>$PROJ_DIR$\Release\Obj\mem2.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\weather.r79</file>
+      <file>$PROJ_DIR$\Release\Obj\Utils.r79</file>
+      <file>$PROJ_DIR$\Release\List\id3.lst</file>
+      <file>$PROJ_DIR$\Release\List\id3.s79</file>
+      <file>$PROJ_DIR$\standby\MetaDataDll.h</file>
+      <file>$PROJ_DIR$\Release\Obj\id3.pbi</file>
+      <file>$PROJ_DIR$\bcfg\config_data.h</file>
+      <file>$PROJ_DIR$\..\deleaker\Lib_Clara_original.h</file>
+      <file>$PROJ_DIR$\standby\stdby.h</file>
+      <file>$PROJ_DIR$\bcfg\conf_loader.h</file>
+      <file>$PROJ_DIR$\..\include\DYN_ext.h</file>
+      <file>$PROJ_DIR$\utils\utils.h</file>
+    </outputs>
+    <file>
+      <name>$PROJ_DIR$\..\deleaker\mem2.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 23 46 49</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 83</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 33 21 4 95 34 5 40 92 2</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 33 21 4 95 34 5 40 92 2</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\bcfg\conf_loader.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 70 82 22</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 18</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 21 4 95 34 5 40 2 28 94</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21 4 95 34 5 40 2 28 94</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 41 54</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Release\Obj\GlassUIWidget.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 36 32 18 52 14 16 90 84 72 37 17 35</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Release\Exe\GlassUIWidget.elf</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 54</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 29 86 66 70 68 19 67 38 9 43 39 24 69 85 58</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\file\fileAnaliser.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 67 7 12</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 16</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 21 4 95 34 5 40 2 96 30 79</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21 4 95 34 5 40 2 96 30 79</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\file\openfile.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 24 25 13</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 37</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 21 4 95 34 5 40 2 91 3</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21 4 95 34 5 40 2 91 3</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\utils\Utils.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 86 47 50</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 36</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 21 4 95 34 5 40 2 91 96</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21 4 95 34 5 40 2 91 96</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\utils\weather.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 85 48 15</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 35</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 21 4 95 34 5 40 2 79</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21 4 95 34 5 40 2 79</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\include\func.asm</name>
+      <outputs>
+        <tool>
+          <name>AARM</name>
+          <file> 38 51</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>AARM</name>
+          <file> 34 42</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 43 81 53</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 84</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 21 4 95 34 5 40 2 28 6 57 79 89 94 91</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21 4 95 34 5 40 2 28 6 57 79 89 94 91</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\mybook.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 39 26 56</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 72</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 21 4 95 34 5 40 2 91 57 79 89 78</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21 4 95 34 5 40 2 91 57 79 89 78</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\debug.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 19 71 45</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 14</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 21 4 95 34 5 40 2 78</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21 4 95 34 5 40 2 78</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\bcfg\config_data.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 68 10 31</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 52</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 28 4 91</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 28 4 91</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\C++\_cpp2.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 66 44 55</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 32</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 21 4 95 34 5 40</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21 4 95 34 5 40</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\standby\id3.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 9 88 87</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 90</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 21 4 95 34 5 40 2 28 91 79 96 57 89 78 8 6</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21 4 95 34 5 40 2 28 91 79 96 57 89 78 8 6</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\standby\standbyDraw.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 69 11 20</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 17</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 21 4 95 34 5 40 2 28 91 94 3 30 79 96 57 89 80 6 93 8 78</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21 4 95 34 5 40 2 28 91 94 3 30 79 96 57 89 80 6 93 8 78</file>
+        </tool>
+      </inputs>
+    </file>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\deleaker\mem2.cpp</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+

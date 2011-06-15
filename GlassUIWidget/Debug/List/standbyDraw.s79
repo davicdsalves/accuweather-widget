@@ -1,0 +1,4315 @@
+//////////////////////////////////////////////////////////////////////////////
+//                                                                           /
+// IAR ARM ANSI C/C++ Compiler V4.42A/W32 EVALUATION   08/May/2011  19:48:27 /
+// Copyright 1999-2005 IAR Systems. All rights reserved.                     /
+//                                                                           /
+//    Cpu mode        =  interwork                                           /
+//    Endian          =  little                                              /
+//    Stack alignment =  4                                                   /
+//    Source file     =  C:\Users\Faby\Desktop\StudyElf\GlassUIWidget\standb /
+//                       y\standbyDraw.cpp                                   /
+//    Command line    =  C:\Users\Faby\Desktop\StudyElf\GlassUIWidget\standb /
+//                       y\standbyDraw.cpp -D OLDFUNCTIONS -lC               /
+//                       C:\Users\Faby\Desktop\StudyElf\GlassUIWidget\Debug\ /
+//                       List\ -lA C:\Users\Faby\Desktop\StudyElf\GlassUIWid /
+//                       get\Debug\List\ -o C:\Users\Faby\Desktop\StudyElf\G /
+//                       lassUIWidget\Debug\Obj\ -z2 --no_cse --no_unroll    /
+//                       --no_inline --no_code_motion --no_tbaa              /
+//                       --no_clustering --no_scheduling --debug --cpu_mode  /
+//                       arm --endian little --cpu ARM926EJ-S --stack_align  /
+//                       4 --interwork -e --fpu None --eec++ --dlib_config   /
+//                       "C:\Users\Faby\EmbebedIAR\Embedded Workbench 4.0    /
+//                       Evaluation\ARM\LIB\dl5tpainl8n.h" -I                /
+//                       "C:\Users\Faby\EmbebedIAR\Embedded Workbench 4.0    /
+//                       Evaluation\ARM\INC\"                                /
+//    List file       =  C:\Users\Faby\Desktop\StudyElf\GlassUIWidget\Debug\ /
+//                       List\standbyDraw.s79                                /
+//                                                                           /
+//                                                                           /
+//////////////////////////////////////////////////////////////////////////////
+
+        NAME standbyDraw
+
+        RTMODEL "StackAlign4", "USED"
+        RTMODEL "__cpu_mode", "__pcs__interwork"
+        RTMODEL "__data_model", "absolute"
+        RTMODEL "__endian", "little"
+        RTMODEL "__rt_version", "6"
+
+        RSEG CSTACK:DATA:NOROOT(2)
+
+        ERROR
+//NOTE: This module defines or uses C++ features that are not
+//      accessible from assembler code. Assembling this file will
+//      not produce an equivalent object file to the one produced
+//      by the C++ compiler.
+
+        PUBWEAK `?*?DATA_ID`
+??DataTable0 EQU 0
+??DataTable10 EQU 0
+??DataTable11 EQU 0
+??DataTable12 EQU 0
+??DataTable13 EQU 0
+??DataTable14 EQU 0
+??DataTable15 EQU 0
+??DataTable16 EQU 0
+??DataTable17 EQU 0
+??DataTable18 EQU 0
+??DataTable19 EQU 0
+??DataTable2 EQU 0
+??DataTable20 EQU 0
+??DataTable21 EQU 0
+??DataTable22 EQU 0
+??DataTable23 EQU 0
+??DataTable24 EQU 0
+??DataTable25 EQU 0
+??DataTable26 EQU 0
+??DataTable27 EQU 0
+??DataTable28 EQU 0
+??DataTable29 EQU 0
+??DataTable3 EQU 0
+??DataTable30 EQU 0
+??DataTable31 EQU 0
+??DataTable32 EQU 0
+??DataTable33 EQU 0
+??DataTable34 EQU 0
+??DataTable35 EQU 0
+??DataTable36 EQU 0
+??DataTable37 EQU 0
+??DataTable38 EQU 0
+??DataTable39 EQU 0
+??DataTable4 EQU 0
+??DataTable40 EQU 0
+??DataTable41 EQU 0
+??DataTable42 EQU 0
+??DataTable43 EQU 0
+??DataTable44 EQU 0
+??DataTable45 EQU 0
+??DataTable46 EQU 0
+??DataTable47 EQU 0
+??DataTable48 EQU 0
+??DataTable49 EQU 0
+??DataTable50 EQU 0
+??DataTable52 EQU 0
+??DataTable53 EQU 0
+??DataTable54 EQU 0
+??DataTable55 EQU 0
+??DataTable56 EQU 0
+??DataTable57 EQU 0
+??DataTable58 EQU 0
+??DataTable59 EQU 0
+??DataTable6 EQU 0
+??DataTable60 EQU 0
+??DataTable61 EQU 0
+??DataTable62 EQU 0
+??DataTable63 EQU 0
+??DataTable64 EQU 0
+??DataTable65 EQU 0
+??DataTable66 EQU 0
+??DataTable67 EQU 0
+??DataTable68 EQU 0
+??DataTable69 EQU 0
+??DataTable7 EQU 0
+??DataTable70 EQU 0
+??DataTable71 EQU 0
+??DataTable72 EQU 0
+??DataTable73 EQU 0
+??DataTable74 EQU 0
+??DataTable77 EQU 0
+??DataTable78 EQU 0
+??DataTable8 EQU 0
+??DataTable81 EQU 0
+??DataTable82 EQU 0
+??DataTable83 EQU 0
+??DataTable84 EQU 0
+??DataTable85 EQU 0
+??DataTable86 EQU 0
+??DataTable89 EQU 0
+??DataTable9 EQU 0
+??DataTable90 EQU 0
+??DataTable91 EQU 0
+??DataTable92 EQU 0
+??DataTable95 EQU 0
+        PUBLIC ??DestroyImages
+        FUNCTION ??DestroyImages,0203H
+        LOCFRAME CSTACK, 8, STACK
+        MULTWEAK ??DestroyImages??rT
+        PUBLIC ??Draw
+        FUNCTION ??Draw,0603H
+        LOCFRAME CSTACK, 20, STACK
+        MULTWEAK ??Draw??rT
+        MULTWEAK ??InitConfig??rA
+        PUBLIC ??InitImages
+        FUNCTION ??InitImages,0203H
+        LOCFRAME CSTACK, 8, STACK
+        MULTWEAK ??InitImages??rT
+        PUBWEAK ??LPARAM
+        FUNCTION ??LPARAM,0203H
+        MULTWEAK ??LPARAM??rA
+        PUBLIC ??ReconfigElf
+        FUNCTION ??ReconfigElf,0203H
+        LOCFRAME CSTACK, 20, STACK
+        MULTWEAK ??ReconfigElf??rT
+        PUBLIC ??SB_ELF_Killed
+        FUNCTION ??SB_ELF_Killed,0203H
+        LOCFRAME CSTACK, 20, STACK
+        MULTWEAK ??SB_ELF_Killed??rT
+        PUBLIC ??Send_REDRAW_RELEASE
+        FUNCTION ??Send_REDRAW_RELEASE,0203H
+        LOCFRAME CSTACK, 8, STACK
+        MULTWEAK ??Send_REDRAW_RELEASE??rT
+        MULTWEAK ??__floatToDouble??rA
+        MULTWEAK ??__longToFloat??rA
+        PUBLIC ??beginFile
+        FUNCTION ??beginFile,0203H
+        LOCFRAME CSTACK, 24, STACK
+        MULTWEAK ??beginFile??rT
+        MULTWEAK ??dbtf??rA
+        MULTWEAK ??donothing??rA
+        PUBLIC ??drawClock
+        FUNCTION ??drawClock,0203H
+        LOCFRAME CSTACK, 32, STACK
+        MULTWEAK ??drawClock??rT
+        PUBLIC ??drawOnStby
+        FUNCTION ??drawOnStby,0203H
+        LOCFRAME CSTACK, 80, STACK
+        MULTWEAK ??drawOnStby??rT
+        PUBLIC ??drawWeatherContents
+        FUNCTION ??drawWeatherContents,0203H
+        LOCFRAME CSTACK, 24, STACK
+        MULTWEAK ??drawWeatherContents??rT
+        PUBLIC ??drawWeatherInfo
+        FUNCTION ??drawWeatherInfo,0203H
+        LOCFRAME CSTACK, 12, STACK
+        MULTWEAK ??drawWeatherInfo??rT
+        PUBLIC ??errorInFile
+        FUNCTION ??errorInFile,0203H
+        LOCFRAME CSTACK, 16, STACK
+        MULTWEAK ??errorInFile??rT
+        PUBLIC ??finalDraw
+        FUNCTION ??finalDraw,0203H
+        LOCFRAME CSTACK, 40, STACK
+        MULTWEAK ??finalDraw??rT
+        MULTWEAK ??freeMyVars??rA
+        MULTWEAK ??freeWDraw??rA
+        MULTWEAK ??getAverageTemp??rA
+        MULTWEAK ??getBook??rA
+        MULTWEAK ??getDateTime??rA
+        MULTWEAK ??getDayWeather??rA
+        MULTWEAK ??getDayWeather??rA_1
+        MULTWEAK ??getError??rA
+        MULTWEAK ??getGC??rA
+        MULTWEAK ??getHourSeted??rA
+        MULTWEAK ??getLocation??rA
+        MULTWEAK ??getLocation??rA_1
+        MULTWEAK ??getNightWeather??rA
+        MULTWEAK ??getState??rA
+        PUBLIC ??getStateByHour
+        FUNCTION ??getStateByHour,0203H
+        LOCFRAME CSTACK, 40, STACK
+        MULTWEAK ??getStateByHour??rT
+        MULTWEAK ??getState_??rA
+        MULTWEAK ??getWSubStr??rA
+        MULTWEAK ??getWeather??rA
+        MULTWEAK ??getWeatherToDraw??rA
+        PUBLIC ??ifDrawImage
+        FUNCTION ??ifDrawImage,0203H
+        LOCFRAME CSTACK, 28, STACK
+        MULTWEAK ??ifDrawImage??rT
+        PUBLIC ??ifDrawNoMask
+        FUNCTION ??ifDrawNoMask,0203H
+        LOCFRAME CSTACK, 40, STACK
+        MULTWEAK ??ifDrawNoMask??rT
+        MULTWEAK ??intlen??rA
+        MULTWEAK ??isDateEqual??rA
+        MULTWEAK ??loadDateNames??rA
+        PUBLIC ??makeDateMask
+        FUNCTION ??makeDateMask,0203H
+        LOCFRAME CSTACK, 36, STACK
+        MULTWEAK ??makeDateMask??rT
+        PUBLIC ??onCloseBEBook
+        FUNCTION ??onCloseBEBook,0203H
+        LOCFRAME CSTACK, 8, STACK
+        MULTWEAK ??onCloseBEBook??rT
+        PUBLIC ??onfTimer
+        FUNCTION ??onfTimer,0603H
+        LOCFRAME CSTACK, 16, STACK
+        MULTWEAK ??onfTimer??rT
+        MULTWEAK ??openFile??rA
+        MULTWEAK `??operator delete??rA`
+        MULTWEAK `??operator new??rA`
+        MULTWEAK `??operator new[]??rA`
+        PUBLIC ??returnMask
+        FUNCTION ??returnMask,0203H
+        LOCFRAME CSTACK, 44, STACK
+        MULTWEAK ??returnMask??rT
+        MULTWEAK ??searchLine??rA
+        MULTWEAK ??setDayWeather??rA
+        MULTWEAK ??setError??rA
+        MULTWEAK ??setHour??rA
+        MULTWEAK ??setLocation??rA
+        MULTWEAK ??setNightWeather??rA
+        MULTWEAK ??setWDraw??rA
+        MULTWEAK ??wGetIndexOfLine??rA
+        PUBWEAK ?init?tab?DATA_I
+        PUBWEAK ?init?tab?DATA_Z
+        PUBLIC CID_CFontManager
+        PUBLIC CID_CImageManager
+        PUBLIC CID_CIndicationDeviceManager
+        PUBLIC CID_CMetaData
+        PUBLIC CID_CTextRenderingManager
+        PUBLIC IID_IFontManager
+        PUBLIC IID_IImageManager
+        PUBLIC IID_IIndicationDeviceManager
+        PUBLIC IID_IMetaData
+        PUBLIC IID_ITextRenderingManager
+        PUBLIC SIonRedraw
+        PUBLIC StatusIndication
+        PUBLIC clockID
+        PUBLIC clockImages
+        PUBLIC mybook
+        PUBLIC stateImages
+        PUBLIC statesID
+        
+        CFI Names cfiNames0
+        CFI StackFrame CFA R13 HUGEDATA
+        CFI Resource R0:32, R1:32, R2:32, R3:32, R4:32, R5:32, R6:32, R7:32
+        CFI Resource R8:32, R9:32, R10:32, R11:32, R12:32, CPSR:32, R13:32
+        CFI Resource R14:32, SPSR:32
+        CFI VirtualResource ?RET:32
+        CFI EndNames cfiNames0
+        
+        CFI Common cfiCommon0 Using cfiNames0
+        CFI CodeAlign 4
+        CFI DataAlign 4
+        CFI ReturnAddress ?RET CODE
+        CFI CFA R13+0
+        CFI R0 Undefined
+        CFI R1 Undefined
+        CFI R2 Undefined
+        CFI R3 Undefined
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI R8 SameValue
+        CFI R9 SameValue
+        CFI R10 SameValue
+        CFI R11 SameValue
+        CFI R12 Undefined
+        CFI CPSR SameValue
+        CFI R14 Undefined
+        CFI SPSR SameValue
+        CFI ?RET R14
+        CFI EndCommon cfiCommon0
+        
+        
+        CFI Common cfiCommon1 Using cfiNames0
+        CFI CodeAlign 2
+        CFI DataAlign 4
+        CFI ReturnAddress ?RET CODE
+        CFI CFA R13+0
+        CFI R0 Undefined
+        CFI R1 Undefined
+        CFI R2 Undefined
+        CFI R3 Undefined
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI R8 SameValue
+        CFI R9 SameValue
+        CFI R10 SameValue
+        CFI R11 SameValue
+        CFI R12 Undefined
+        CFI CPSR SameValue
+        CFI R14 Undefined
+        CFI SPSR SameValue
+        CFI ?RET R14
+        CFI EndCommon cfiCommon1
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+__floatToDouble     SYMBOL "__floatToDouble"
+__longToFloat       SYMBOL "__longToFloat"
+
+??DestroyImages??rT SYMBOL "??rT", ??DestroyImages
+
+??Draw??rT          SYMBOL "??rT", ??Draw
+??InitConfig??rA    SYMBOL "??rA", ??InitConfig
+
+??InitImages??rT    SYMBOL "??rT", ??InitImages
+
+??LPARAM??rA        SYMBOL "??rA", ??LPARAM
+
+??ReconfigElf??rT   SYMBOL "??rT", ??ReconfigElf
+
+??SB_ELF_Killed??rT SYMBOL "??rT", ??SB_ELF_Killed
+
+??Send_REDRAW_RELEASE??rT SYMBOL "??rT", ??Send_REDRAW_RELEASE
+??__floatToDouble??rA SYMBOL "??rA", __floatToDouble
+??__longToFloat??rA SYMBOL "??rA", __longToFloat
+
+??beginFile??rT     SYMBOL "??rT", ??beginFile
+??dbtf??rA          SYMBOL "??rA", ??dbtf
+??donothing??rA     SYMBOL "??rA", ??donothing
+
+??drawClock??rT     SYMBOL "??rT", ??drawClock
+
+??drawOnStby??rT    SYMBOL "??rT", ??drawOnStby
+
+??drawWeatherContents??rT SYMBOL "??rT", ??drawWeatherContents
+
+??drawWeatherInfo??rT SYMBOL "??rT", ??drawWeatherInfo
+
+??errorInFile??rT   SYMBOL "??rT", ??errorInFile
+
+??finalDraw??rT     SYMBOL "??rT", ??finalDraw
+??freeMyVars??rA    SYMBOL "??rA", ??freeMyVars
+??freeWDraw??rA     SYMBOL "??rA", ??freeWDraw
+??getAverageTemp??rA SYMBOL "??rA", ??getAverageTemp
+??getBook??rA       SYMBOL "??rA", ??getBook
+??getDateTime??rA   SYMBOL "??rA", ??getDateTime
+??getDayWeather??rA SYMBOL "??rA", ??getDayWeather
+??getDayWeather??rA_1 SYMBOL "??rA", ??getDayWeather_1
+??getError??rA      SYMBOL "??rA", ??getError
+??getGC??rA         SYMBOL "??rA", ??getGC
+??getHourSeted??rA  SYMBOL "??rA", ??getHourSeted
+??getLocation??rA   SYMBOL "??rA", ??getLocation
+??getLocation??rA_1 SYMBOL "??rA", ??getLocation_1
+??getNightWeather??rA SYMBOL "??rA", ??getNightWeather
+??getState??rA      SYMBOL "??rA", ??getState
+
+??getStateByHour??rT SYMBOL "??rT", ??getStateByHour
+??getState_??rA     SYMBOL "??rA", ??getState_
+??getWSubStr??rA    SYMBOL "??rA", ??getWSubStr
+??getWeather??rA    SYMBOL "??rA", ??getWeather
+??getWeatherToDraw??rA SYMBOL "??rA", ??getWeatherToDraw
+
+??ifDrawImage??rT   SYMBOL "??rT", ??ifDrawImage
+
+??ifDrawNoMask??rT  SYMBOL "??rT", ??ifDrawNoMask
+??intlen??rA        SYMBOL "??rA", ??intlen
+??isDateEqual??rA   SYMBOL "??rA", ??isDateEqual
+??loadDateNames??rA SYMBOL "??rA", ??loadDateNames
+
+??makeDateMask??rT  SYMBOL "??rT", ??makeDateMask
+
+??onCloseBEBook??rT SYMBOL "??rT", ??onCloseBEBook
+
+??onfTimer??rT      SYMBOL "??rT", ??onfTimer
+??openFile??rA      SYMBOL "??rA", ??openFile
+`??operator delete??rA` SYMBOL "??rA", `??operator delete`
+`??operator new??rA` SYMBOL "??rA", `??operator new`
+`??operator new[]??rA` SYMBOL "??rA", `??operator new[]`
+
+??returnMask??rT    SYMBOL "??rT", ??returnMask
+??searchLine??rA    SYMBOL "??rA", ??searchLine
+??setDayWeather??rA SYMBOL "??rA", ??setDayWeather
+??setError??rA      SYMBOL "??rA", ??setError
+??setHour??rA       SYMBOL "??rA", ??setHour
+??setLocation??rA   SYMBOL "??rA", ??setLocation
+??setNightWeather??rA SYMBOL "??rA", ??setNightWeather
+??setWDraw??rA      SYMBOL "??rA", ??setWDraw
+??wGetIndexOfLine??rA SYMBOL "??rA", ??wGetIndexOfLine
+
+        EXTERN ??InitConfig
+        FUNCTION ??InitConfig,0202H
+        EXTERN ??celsiusToFahrenheit
+        FUNCTION ??celsiusToFahrenheit,0602H
+        EXTERN ??dbtf
+        FUNCTION ??dbtf,0202H
+        EXTERN ??donothing
+        FUNCTION ??donothing,0202H
+        EXTERN ??elf_exit
+        FUNCTION ??elf_exit,0602H
+        EXTERN ??freeMyVars
+        FUNCTION ??freeMyVars,0202H
+        EXTERN ??freeWDraw
+        FUNCTION ??freeWDraw,0202H
+        EXTERN ??getAverageTemp
+        FUNCTION ??getAverageTemp,0202H
+        EXTERN ??getBook
+        FUNCTION ??getBook,0202H
+        EXTERN ??getDateTime
+        FUNCTION ??getDateTime,0202H
+        EXTERN ??getDayWeather
+        FUNCTION ??getDayWeather,0202H
+        EXTERN ??getDayWeather_1
+        FUNCTION ??getDayWeather_1,0202H
+        EXTERN ??getError
+        FUNCTION ??getError,0202H
+        EXTERN ??getGC
+        FUNCTION ??getGC,0202H
+        EXTERN ??getHourSeted
+        FUNCTION ??getHourSeted,0202H
+        EXTERN ??getLocation
+        FUNCTION ??getLocation,0202H
+        EXTERN ??getLocation_1
+        FUNCTION ??getLocation_1,0202H
+        EXTERN ??getNightWeather
+        FUNCTION ??getNightWeather,0202H
+        EXTERN ??getState
+        FUNCTION ??getState,0202H
+        EXTERN ??getState_
+        FUNCTION ??getState_,0202H
+        EXTERN ??getWSubStr
+        FUNCTION ??getWSubStr,0202H
+        EXTERN ??getWeather
+        FUNCTION ??getWeather,0202H
+        EXTERN ??getWeatherToDraw
+        FUNCTION ??getWeatherToDraw,0202H
+        EXTERN ??intlen
+        FUNCTION ??intlen,0202H
+        EXTERN ??isDateEqual
+        FUNCTION ??isDateEqual,0202H
+        EXTERN ??loadDateNames
+        FUNCTION ??loadDateNames,0202H
+        EXTERN ??openFile
+        FUNCTION ??openFile,0202H
+        EXTERN `??operator delete`
+        FUNCTION `??operator delete`,0202H
+        EXTERN `??operator new`
+        FUNCTION `??operator new`,0202H
+        EXTERN `??operator new[]`
+        FUNCTION `??operator new[]`,0202H
+        EXTERN ??searchLine
+        FUNCTION ??searchLine,0202H
+        EXTERN ??setDayWeather
+        FUNCTION ??setDayWeather,0202H
+        EXTERN ??setError
+        FUNCTION ??setError,0202H
+        EXTERN ??setHour
+        FUNCTION ??setHour,0202H
+        EXTERN ??setLocation
+        FUNCTION ??setLocation,0202H
+        EXTERN ??setNightWeather
+        FUNCTION ??setNightWeather,0202H
+        EXTERN ??setWDraw
+        FUNCTION ??setWDraw,0202H
+        EXTERN ??wGetIndexOfLine
+        FUNCTION ??wGetIndexOfLine,0202H
+        EXTERN BCFG_Date_Align
+        EXTERN BCFG_Date_Enable
+        EXTERN BCFG_Date_FontSize
+        EXTERN BCFG_Date_Position_X
+        EXTERN BCFG_Date_Position_Y
+        EXTERN BCFG_Date_TextColor
+        EXTERN BCFG_Images_AccuWeatherLogo_Enable
+        EXTERN BCFG_Images_AccuWeatherLogo_Position_X
+        EXTERN BCFG_Images_AccuWeatherLogo_Position_Y
+        EXTERN BCFG_Images_Background_Enable
+        EXTERN BCFG_Images_Background_Position_X
+        EXTERN BCFG_Images_Background_Position_Y
+        EXTERN BCFG_Images_Clock_Enable
+        EXTERN BCFG_Images_Clock_Position_X
+        EXTERN BCFG_Images_Clock_Position_Y
+        EXTERN BCFG_Images_DayState_Enable
+        EXTERN BCFG_Images_DayState_Position_X
+        EXTERN BCFG_Images_DayState_Position_Y
+        EXTERN BCFG_Path_Clock
+        EXTERN BCFG_StatesFolder
+        EXTERN BCFG_Tags_AverageTemperature_Enable
+        EXTERN BCFG_Tags_AverageTemperature_Mask
+        EXTERN BCFG_Tags_AverageTemperature_Unit
+        EXTERN BCFG_Tags_DayState_Align
+        EXTERN BCFG_Tags_DayState_Enable
+        EXTERN BCFG_Tags_DayState_FontSize
+        EXTERN BCFG_Tags_DayState_LineSpacing
+        EXTERN BCFG_Tags_DayState_Position_X
+        EXTERN BCFG_Tags_DayState_Position_Y
+        EXTERN BCFG_Tags_DayState_TextColor
+        EXTERN BCFG_Tags_Location_Align
+        EXTERN BCFG_Tags_Location_Enable
+        EXTERN BCFG_Tags_Location_FontSize
+        EXTERN BCFG_Tags_Location_Position_X
+        EXTERN BCFG_Tags_Location_Position_Y
+        EXTERN BCFG_Tags_Location_TextColor
+        EXTERN BCFG_Tags_Time_Day
+        EXTERN BCFG_Tags_Time_Night
+        EXTERN BCFG_Time_DigitalClock_Align
+        EXTERN BCFG_Time_DigitalClock_Enable
+        EXTERN BCFG_Time_DigitalClock_FontSize
+        EXTERN BCFG_Time_DigitalClock_Position_X
+        EXTERN BCFG_Time_DigitalClock_Position_Y
+        EXTERN BCFG_Time_DigitalClock_TextColor
+        EXTERN BCFG_Time_Hour_Align
+        EXTERN BCFG_Time_Hour_Enable
+        EXTERN BCFG_Time_Hour_FontSize
+        EXTERN BCFG_Time_Hour_Position_X
+        EXTERN BCFG_Time_Hour_Position_Y
+        EXTERN BCFG_Time_Hour_TextColor
+        EXTERN BCFG_Time_State_Align
+        EXTERN BCFG_Time_State_Enable
+        EXTERN BCFG_Time_State_FontSize
+        EXTERN BCFG_Time_State_Position_X
+        EXTERN BCFG_Time_State_Position_Y
+        EXTERN BCFG_Time_State_TextColor
+        EXTERN BCFG_XMLBGLogoFolder
+        EXTERN __floatToDouble
+        FUNCTION __floatToDouble,0202H
+        EXTERN __longToFloat
+        FUNCTION __longToFloat,0202H
+        EXTERN successed_config_name
+        EXTERN successed_config_path
+
+// C:\Users\Faby\Desktop\StudyElf\GlassUIWidget\standby\standbyDraw.cpp
+//    1 #include "..\..\include\Lib_Clara.h"
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock0 Using cfiCommon0
+        CFI Function ??LPARAM
+        ARM
+// __??Code32?? __code __interwork __atpcs LPARAM::LPARAM(int)
+??LPARAM:
+        STR      R1,[R0, #+0]
+        BX       LR               ;; return
+        CFI EndBlock cfiBlock0
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock1 Using cfiCommon1
+        CFI NoFunction
+        THUMB
+??Send_REDRAW_RELEASE??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock1
+        REQUIRE ??Send_REDRAW_RELEASE
+//    2 #include "..\..\include\Dir.h"
+//    3 #include "..\..\include\cfg_items.h"
+//    4 #include "..\bcfg\config_data.h"
+//    5 #include "..\bcfg\conf_loader.h"
+//    6 #include "..\file\openfile.h"
+//    7 #include "..\file\fileAnaliser.h"
+//    8 #include "..\utils\weather.h"
+//    9 #include "..\utils\utils.h"
+//   10 #include "..\mybook.h"
+//   11 #include "..\classes.h"
+
+        RSEG DATA_I:DATA:SORT:NOROOT(2)
+// UUID __data IID_IFontManager
+IID_IFontManager:
+        DS8 16
+        REQUIRE `?<Initializer for IID_IFontManager>`
+
+        RSEG DATA_I:DATA:SORT:NOROOT(2)
+// UUID __data CID_CFontManager
+CID_CFontManager:
+        DS8 16
+        REQUIRE `?<Initializer for CID_CFontManager>`
+
+        RSEG DATA_I:DATA:SORT:NOROOT(2)
+// UUID __data IID_ITextRenderingManager
+IID_ITextRenderingManager:
+        DS8 16
+        REQUIRE `?<Initializer for IID_ITextRenderingManager>`
+
+        RSEG DATA_I:DATA:SORT:NOROOT(2)
+// UUID __data CID_CTextRenderingManager
+CID_CTextRenderingManager:
+        DS8 16
+        REQUIRE `?<Initializer for CID_CTextRenderingManager>`
+
+        RSEG DATA_I:DATA:SORT:NOROOT(2)
+// UUID __data IID_IImageManager
+IID_IImageManager:
+        DS8 16
+        REQUIRE `?<Initializer for IID_IImageManager>`
+
+        RSEG DATA_I:DATA:SORT:NOROOT(2)
+// UUID __data CID_CImageManager
+CID_CImageManager:
+        DS8 16
+        REQUIRE `?<Initializer for CID_CImageManager>`
+
+        RSEG DATA_I:DATA:SORT:NOROOT(2)
+// UUID __data IID_IMetaData
+IID_IMetaData:
+        DS8 16
+        REQUIRE `?<Initializer for IID_IMetaData>`
+
+        RSEG DATA_I:DATA:SORT:NOROOT(2)
+// UUID __data CID_CMetaData
+CID_CMetaData:
+        DS8 16
+        REQUIRE `?<Initializer for CID_CMetaData>`
+
+        RSEG DATA_I:DATA:SORT:NOROOT(2)
+// UUID __data IID_IIndicationDeviceManager
+IID_IIndicationDeviceManager:
+        DS8 16
+        REQUIRE `?<Initializer for IID_IIndicationDeviceManager`
+
+        RSEG DATA_I:DATA:SORT:NOROOT(2)
+// UUID __data CID_CIndicationDeviceManager
+CID_CIndicationDeviceManager:
+        DS8 16
+        REQUIRE `?<Initializer for CID_CIndicationDeviceManager`
+//   12 #include "standbyDraw.h"
+//   13 #include "stdby.h" 
+
+        RSEG DATA_Z:DATA:SORT:NOROOT(2)
+// void (*__data SIonRedraw)(DISP_OBJ *, int, int, int)
+SIonRedraw:
+        DS8 4
+
+        RSEG DATA_Z:DATA:SORT:NOROOT(2)
+// DISP_OBJ *__data StatusIndication
+StatusIndication:
+        DS8 4
+
+        RSEG DATA_I:DATA:SORT:NOROOT(2)
+// wchar_t *__data stateImages[68]
+stateImages:
+        DS8 272
+        REQUIRE `?<Initializer for stateImages>`
+
+        RSEG DATA_I:DATA:SORT:NOROOT(2)
+// wchar_t __data statesID[70]
+statesID:
+        DS8 140
+        REQUIRE `?<Initializer for statesID>`
+
+        RSEG DATA_I:DATA:SORT:NOROOT(2)
+// wchar_t *__data clockImages[89]
+clockImages:
+        DS8 356
+        REQUIRE `?<Initializer for clockImages>`
+
+        RSEG DATA_I:DATA:SORT:NOROOT(2)
+// wchar_t __data clockID[89]
+clockID:
+        DS8 180
+        REQUIRE `?<Initializer for clockID>`
+//   14 #include "..\debug.h"
+
+        RSEG DATA_Z:DATA:SORT:NOROOT(2)
+//   15 MyBook* mybook;
+mybook:
+        DS8 4
+//   16 
+//   17 //<!--bookmanager
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock2 Using cfiCommon0
+        CFI Function ??Send_REDRAW_RELEASE
+        ARM
+//   18 void Send_REDRAW_RELEASE() {
+??Send_REDRAW_RELEASE:
+        PUSH     {R4,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R4 Frame(CFA, -8)
+        CFI CFA R13+8
+//   19   REDRAW_RELEASE_MESSAGE * sbm= new REDRAW_RELEASE_MESSAGE;
+        MOV      R0,#+24
+        _BLF     `??operator new`,`??operator new??rA`
+        MOVS     R4,R0
+//   20   memset(sbm,0,sizeof(REDRAW_RELEASE_MESSAGE));
+        MOV      R2,#+24
+        MOV      R1,#+0
+        MOVS     R0,R4
+        SWI      +274
+//   21   sbm->SB_OldOnRedraw=SIonRedraw;
+        LDR      R0,??DataTable5  ;; SIonRedraw
+        LDR      R0,[R0, #+0]
+        STR      R0,[R4, #+0]
+//   22   sbm->SB_NewOnRedraw=Draw;
+        LDR      R0,??DataTable1  ;; ??Draw
+        STR      R0,[R4, #+4]
+//   23   UI_Event_wData(SBY_REDRAW_RELEASE_EVENT ,sbm,(void (*)(void*))mfree_adr());
+        SWI      +33028
+        MOVS     R2,R0
+        MOVS     R1,R4
+        MOV      R0,#+227
+        ORR      R0,R0,#0x300
+        SWI      +425
+//   24 }
+        POP      {R4,PC}          ;; return
+        CFI EndBlock cfiBlock2
+
+        RSEG CODE:CODE:NOROOT(2)
+        DATA
+??DataTable1:
+        DC32     ??Draw
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock3 Using cfiCommon1
+        CFI NoFunction
+        THUMB
+??ReconfigElf??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock3
+        REQUIRE ??ReconfigElf
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock4 Using cfiCommon0
+        CFI Function ??ReconfigElf
+        ARM
+//   25 int ReconfigElf(void *mess ,BOOK *book)
+//   26 {
+??ReconfigElf:
+        PUSH     {R4-R7,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R7 Frame(CFA, -8)
+        CFI R6 Frame(CFA, -12)
+        CFI R5 Frame(CFA, -16)
+        CFI R4 Frame(CFA, -20)
+        CFI CFA R13+20
+        MOVS     R4,R0
+        MOVS     R5,R1
+//   27   RECONFIG_EVENT_DATA *reconf=(RECONFIG_EVENT_DATA *)mess;
+        MOVS     R6,R4
+//   28   int result=0;
+        MOV      R0,#+0
+        MOVS     R7,R0
+//   29   if (wstrcmpi(reconf->path,successed_config_path)==0 && wstrcmpi(reconf->name,successed_config_name)==0)
+        LDR      R0,??ReconfigElf_1  ;; successed_config_path
+        LDR      R1,[R0, #+0]
+        MOVS     R0,R6
+        SWI      +671
+        CMP      R0,#+0
+        BNE      ??ReconfigElf_2
+        LDR      R0,??ReconfigElf_1+0x4  ;; successed_config_name
+        LDR      R1,[R0, #+0]
+        ADDS     R0,R6,#+128
+        SWI      +671
+        CMP      R0,#+0
+        BNE      ??ReconfigElf_2
+//   30   {
+//   31     InitConfig();
+        _BLF     ??InitConfig,??InitConfig??rA
+//   32     mybook->setHour(-1);
+        MVN      R1,#+0
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??setHour,??setHour??rA
+//   33     DestroyImages();
+        BL       ??DestroyImages
+//   34     InitImages();
+        BL       ??InitImages
+//   35     mybook->loadDateNames();
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??loadDateNames,??loadDateNames??rA
+//   36     makeDateMask();
+        BL       ??makeDateMask
+//   37     result=1;
+        MOV      R0,#+1
+        MOVS     R7,R0
+//   38   }
+//   39   return(result);
+??ReconfigElf_2:
+        MOVS     R0,R7
+        POP      {R4-R7,PC}       ;; return
+        DATA
+??ReconfigElf_1:
+        DC32     successed_config_path
+        DC32     successed_config_name
+        CFI EndBlock cfiBlock4
+//   40 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock5 Using cfiCommon1
+        CFI NoFunction
+        THUMB
+??drawOnStby??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock5
+        REQUIRE ??drawOnStby
+//   41 
+//   42 //-->
+//   43 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock6 Using cfiCommon0
+        CFI Function ??drawOnStby
+        ARM
+//   44 void drawOnStby(wchar_t* message, int fontSize, int align, int x, int y, int textColor ) {
+??drawOnStby:
+        PUSH     {R1,R4-R11,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R11 Frame(CFA, -8)
+        CFI R10 Frame(CFA, -12)
+        CFI R9 Frame(CFA, -16)
+        CFI R8 Frame(CFA, -20)
+        CFI R7 Frame(CFA, -24)
+        CFI R6 Frame(CFA, -28)
+        CFI R5 Frame(CFA, -32)
+        CFI R4 Frame(CFA, -36)
+        CFI CFA R13+40
+        SUB      SP,SP,#+16
+        CFI CFA R13+56
+        MOVS     R4,R0
+        MOVS     R5,R2
+        MOVS     R6,R3
+        LDR      R7,[SP, #+56]
+        LDR      R8,[SP, #+60]
+//   45   int displayWidth = Display_GetWidth( 0 );
+        MOV      R0,#+0
+        SWI      +601
+        STR      R0,[SP, #+8]
+//   46   int displayHeigth = Display_GetHeight( 0 );
+        MOV      R0,#+0
+        SWI      +600
+        STR      R0,[SP, #+12]
+//   47   int msgSize = wstrlen(message);
+        MOVS     R0,R4
+        SWI      +343
+        MOVS     R9,R0
+//   48   if (searchLine(message)) {
+        MOVS     R0,R4
+        _BLF     ??searchLine,??searchLine??rA
+        CMP      R0,#+0
+        BEQ      ??drawOnStby_1
+//   49     int indexLine = wGetIndexOfLine(message);
+        MOVS     R0,R4
+        _BLF     ??wGetIndexOfLine,??wGetIndexOfLine??rA
+        STR      R0,[SP, #+0]
+//   50     wchar_t* line1 = getWSubStr(message,0,indexLine-1);
+        LDR      R0,[SP, #+0]
+        SUBS     R2,R0,#+1
+        MOV      R1,#+0
+        MOVS     R0,R4
+        _BLF     ??getWSubStr,??getWSubStr??rA
+        MOVS     R10,R0
+//   51     wchar_t* line2 = getWSubStr(message,indexLine+2,wstrlen(message));
+        MOVS     R0,R4
+        SWI      +343
+        MOVS     R2,R0
+        LDR      R0,[SP, #+0]
+        ADDS     R1,R0,#+2
+        MOVS     R0,R4
+        _BLF     ??getWSubStr,??getWSubStr??rA
+        MOVS     R11,R0
+//   52     msgSize = wstrlen(line1);
+        MOVS     R0,R10
+        SWI      +343
+        MOVS     R9,R0
+//   53     
+//   54     TEXTID drawText = TextID_Create(line1, ENC_UCS2 , msgSize);
+        MOVS     R2,R9
+        MOV      R1,#+0
+        MOVS     R0,R10
+        SWI      +349
+        STR      R0,[SP, #+4]
+//   55     SetFont(fontSize);
+        LDR      R0,[SP, #+16]
+        SWI      +497
+//   56     DrawString( drawText , align , x , y , displayWidth, displayHeigth , 60 , 0x05 , textColor , textColor );
+        MOVS     R0,R8
+        PUSH     {R0}
+        CFI CFA R13+60
+        MOVS     R0,R8
+        PUSH     {R0}
+        CFI CFA R13+64
+        MOV      R0,#+5
+        PUSH     {R0}
+        CFI CFA R13+68
+        MOV      R0,#+60
+        PUSH     {R0}
+        CFI CFA R13+72
+        LDR      R0,[SP, #+28]
+        PUSH     {R0}
+        CFI CFA R13+76
+        LDR      R0,[SP, #+28]
+        PUSH     {R0}
+        CFI CFA R13+80
+        MOVS     R3,R7
+        MOVS     R2,R6
+        MOVS     R1,R5
+        LDR      R0,[SP, #+28]
+        SWI      +493
+        ADD      SP,SP,#+24       ;; stack cleaning
+        CFI CFA R13+56
+//   57     TextID_Destroy( drawText );
+        LDR      R0,[SP, #+4]
+        SWI      +353
+//   58 
+//   59     delete line1; 
+        MOVS     R0,R10
+        _BLF     `??operator delete`,`??operator delete??rA`
+//   60     line1 = NULL;
+        MOV      R0,#+0
+        MOVS     R10,R0
+//   61     drawOnStby(line2, fontSize, align, x, y + BCFG_Tags_DayState_LineSpacing, textColor );
+        MOVS     R0,R8
+        PUSH     {R0}
+        CFI CFA R13+60
+        LDR      R0,??drawOnStby_2  ;; BCFG_Tags_DayState_LineSpacing
+        LDR      R0,[R0, #+0]
+        ADDS     R0,R0,R7
+        PUSH     {R0}
+        CFI CFA R13+64
+        MOVS     R3,R6
+        MOVS     R2,R5
+        LDR      R1,[SP, #+24]
+        MOVS     R0,R11
+        BL       ??drawOnStby
+        ADD      SP,SP,#+8        ;; stack cleaning
+        CFI CFA R13+56
+//   62     delete line2;
+        MOVS     R0,R11
+        _BLF     `??operator delete`,`??operator delete??rA`
+//   63     line2 = NULL;
+        MOV      R0,#+0
+        MOVS     R11,R0
+        B        ??drawOnStby_3
+//   64   }
+//   65   else {
+//   66     TEXTID drawText = TextID_Create(message, ENC_UCS2 , msgSize);
+??drawOnStby_1:
+        MOVS     R2,R9
+        MOV      R1,#+0
+        MOVS     R0,R4
+        SWI      +349
+        MOVS     R10,R0
+//   67     SetFont(fontSize);
+        LDR      R0,[SP, #+16]
+        SWI      +497
+//   68     DrawString( drawText , align , x , y , displayWidth, displayHeigth , 60 , 0x05 , textColor , textColor );
+        MOVS     R0,R8
+        PUSH     {R0}
+        CFI CFA R13+60
+        MOVS     R0,R8
+        PUSH     {R0}
+        CFI CFA R13+64
+        MOV      R0,#+5
+        PUSH     {R0}
+        CFI CFA R13+68
+        MOV      R0,#+60
+        PUSH     {R0}
+        CFI CFA R13+72
+        LDR      R0,[SP, #+28]
+        PUSH     {R0}
+        CFI CFA R13+76
+        LDR      R0,[SP, #+28]
+        PUSH     {R0}
+        CFI CFA R13+80
+        MOVS     R3,R7
+        MOVS     R2,R6
+        MOVS     R1,R5
+        MOVS     R0,R10
+        SWI      +493
+        ADD      SP,SP,#+24       ;; stack cleaning
+        CFI CFA R13+56
+//   69     TextID_Destroy( drawText );
+        MOVS     R0,R10
+        SWI      +353
+//   70   }
+//   71 }
+??drawOnStby_3:
+        ADD      SP,SP,#+20       ;; stack cleaning
+        CFI CFA R13+36
+        POP      {R4-R11,PC}      ;; return
+        DATA
+??drawOnStby_2:
+        DC32     BCFG_Tags_DayState_LineSpacing
+        CFI EndBlock cfiBlock6
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock7 Using cfiCommon1
+        CFI NoFunction
+        THUMB
+??Draw??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock7
+        REQUIRE ??Draw
+//   72 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock8 Using cfiCommon0
+        CFI Function ??Draw
+        ARM
+//   73 void Draw(DISP_OBJ* db,int r1, int r2,int r3) { //change lines for w800
+??Draw:
+        PUSH     {R4-R7,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R7 Frame(CFA, -8)
+        CFI R6 Frame(CFA, -12)
+        CFI R5 Frame(CFA, -16)
+        CFI R4 Frame(CFA, -20)
+        CFI CFA R13+20
+        MOVS     R4,R0
+        MOVS     R5,R1
+        MOVS     R6,R2
+        MOVS     R7,R3
+//   74   if (SIonRedraw) SIonRedraw(db,r1,r2,r3);
+        LDR      R0,??DataTable5  ;; SIonRedraw
+        LDR      R0,[R0, #+0]
+        CMP      R0,#+0
+        BEQ      ??Draw_1
+        MOVS     R3,R7
+        MOVS     R2,R6
+        MOVS     R1,R5
+        MOVS     R0,R4
+        LDR      R12,??DataTable5  ;; SIonRedraw
+        LDR      R12,[R12, #+0]
+        BLX      R12
+//   75   (!FindBook(get_IsAudioPlayerBook()) ? drawWeatherContents() : mybook->donothing());
+??Draw_1:
+        SWI      +33419
+        SWI      +304
+        CMP      R0,#+0
+        BNE      ??Draw_2
+        BL       ??drawWeatherContents
+        B        ??Draw_3
+??Draw_2:
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??donothing,??donothing??rA
+//   76 
+//   77 } 
+??Draw_3:
+        POP      {R4-R7,PC}       ;; return
+        CFI EndBlock cfiBlock8
+
+        RSEG CODE:CODE:NOROOT(2)
+        DATA
+??DataTable5:
+        DC32     SIonRedraw
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock9 Using cfiCommon1
+        CFI NoFunction
+        THUMB
+??returnMask??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock9
+        REQUIRE ??returnMask
+//   78 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock10 Using cfiCommon0
+        CFI Function ??returnMask
+        ARM
+//   79 wchar_t* returnMask(const wchar_t* mask, int tag, bool contentIf, float (*func)(int) , int cond=0) {
+??returnMask:
+        PUSH     {R4-R11,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R11 Frame(CFA, -8)
+        CFI R10 Frame(CFA, -12)
+        CFI R9 Frame(CFA, -16)
+        CFI R8 Frame(CFA, -20)
+        CFI R7 Frame(CFA, -24)
+        CFI R6 Frame(CFA, -28)
+        CFI R5 Frame(CFA, -32)
+        CFI R4 Frame(CFA, -36)
+        CFI CFA R13+36
+        MOVS     R4,R0
+        MOVS     R5,R1
+        MOVS     R10,R2
+        MOVS     R6,R3
+        LDR      R7,[SP, #+36]
+//   80   int sizeOfTemp = wstrlen(mask) + intlen(tag);
+        MOVS     R0,R4
+        SWI      +343
+        MOVS     R11,R0
+        MOVS     R0,R5
+        _BLF     ??intlen,??intlen??rA
+        ADDS     R0,R0,R11
+        MOVS     R8,R0
+//   81   wchar_t* newMask = new wchar_t[ sizeOfTemp + 0x1 ];
+        ADDS     R0,R8,#+1
+        MOV      R1,#+2
+        MULS     R0,R1,R0
+        _BLF     `??operator new[]`,`??operator new[]??rA`
+        MOVS     R9,R0
+//   82   snwprintf( newMask, sizeOfTemp, mask, ( contentIf == cond ? tag : (*func)(tag) ) );
+        MOVS     R0,R10
+        CMP      R0,R7
+        BNE      ??returnMask_1
+        MOVS     R0,R5
+        _BLF     __longToFloat,??__longToFloat??rA
+        B        ??returnMask_2
+??returnMask_1:
+        MOVS     R0,R5
+        MOVS     R1,R6
+        BLX      R1
+??returnMask_2:
+        _BLF     __floatToDouble,??__floatToDouble??rA
+        PUSH     {R0,R1}
+        CFI CFA R13+44
+        MOVS     R2,R4
+        MOVS     R1,R8
+        MOVS     R0,R9
+        POP      {R3}
+        CFI CFA R13+40
+        SWI      +277
+        ADD      SP,SP,#+4        ;; stack cleaning
+        CFI CFA R13+36
+//   83   newMask[sizeOfTemp] = 0;
+        MOV      R0,#+2
+        MLA      R1,R0,R8,R9
+        MOV      R0,#+0
+        STRH     R0,[R1, #+0]
+//   84   return newMask;
+        MOVS     R0,R9
+        POP      {R4-R11,PC}      ;; return
+        CFI EndBlock cfiBlock10
+//   85 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock11 Using cfiCommon1
+        CFI NoFunction
+        THUMB
+??ifDrawNoMask??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock11
+        REQUIRE ??ifDrawNoMask
+//   86 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock12 Using cfiCommon0
+        CFI Function ??ifDrawNoMask
+        ARM
+//   87 void ifDrawNoMask(bool contentIf, wchar_t* message, int fontSize, int align, int x, int y, unsigned int color) {
+??ifDrawNoMask:
+        PUSH     {R4-R10,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R10 Frame(CFA, -8)
+        CFI R9 Frame(CFA, -12)
+        CFI R8 Frame(CFA, -16)
+        CFI R7 Frame(CFA, -20)
+        CFI R6 Frame(CFA, -24)
+        CFI R5 Frame(CFA, -28)
+        CFI R4 Frame(CFA, -32)
+        CFI CFA R13+32
+        MOVS     R4,R0
+        MOVS     R5,R1
+        MOVS     R6,R2
+        MOVS     R7,R3
+        LDR      R8,[SP, #+32]
+        LDR      R9,[SP, #+36]
+        LDR      R10,[SP, #+40]
+//   88   if (contentIf)
+        CMP      R4,#+0
+        BEQ      ??ifDrawNoMask_1
+//   89     drawOnStby( message, fontSize, align, x, y, color);
+        MOVS     R0,R10
+        PUSH     {R0}
+        CFI CFA R13+36
+        MOVS     R0,R9
+        PUSH     {R0}
+        CFI CFA R13+40
+        MOVS     R3,R8
+        MOVS     R2,R7
+        MOVS     R1,R6
+        MOVS     R0,R5
+        BL       ??drawOnStby
+        ADD      SP,SP,#+8        ;; stack cleaning
+        CFI CFA R13+32
+//   90 }
+??ifDrawNoMask_1:
+        POP      {R4-R10,PC}      ;; return
+        CFI EndBlock cfiBlock12
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock13 Using cfiCommon1
+        CFI NoFunction
+        THUMB
+??ifDrawImage??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock13
+        REQUIRE ??ifDrawImage
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock14 Using cfiCommon0
+        CFI Function ??ifDrawImage
+        ARM
+//   91 void ifDrawImage( bool _drawImage, int x, int y, const wchar_t& imgID) {
+??ifDrawImage:
+        PUSH     {R4-R7,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R7 Frame(CFA, -8)
+        CFI R6 Frame(CFA, -12)
+        CFI R5 Frame(CFA, -16)
+        CFI R4 Frame(CFA, -20)
+        CFI CFA R13+20
+        MOVS     R4,R0
+        MOVS     R5,R1
+        MOVS     R6,R2
+        MOVS     R7,R3
+//   92   if (_drawImage)
+        CMP      R4,#+0
+        BEQ      ??ifDrawImage_1
+//   93     DrawImage(mybook->getGC(), x , y, imgID );
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??getGC,??getGC??rA
+        LDRH     R1,[R7, #+0]
+        PUSH     {R1}
+        CFI CFA R13+24
+        MOV      R1,#+0
+        PUSH     {R1}
+        CFI CFA R13+28
+        MOV      R3,#+0
+        MOVS     R2,R6
+        MOVS     R1,R5
+        SWI      +320
+        ADD      SP,SP,#+8        ;; stack cleaning
+        CFI CFA R13+20
+//   94 }
+??ifDrawImage_1:
+        POP      {R4-R7,PC}       ;; return
+        CFI EndBlock cfiBlock14
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock15 Using cfiCommon1
+        CFI NoFunction
+        THUMB
+??getStateByHour??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock15
+        REQUIRE ??getStateByHour
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock16 Using cfiCommon0
+        CFI Function ??getStateByHour
+        ARM
+//   95 wchar_t* getStateByHour(int hour) {
+??getStateByHour:
+        SUB      SP,SP,#+40
+        CFI CFA R13+40
+        MOVS     R1,R0
+//   96   wchar_t* states[0x5] = { L"Morning", L"Noon", L"Afternoon", L"Evening", L"Night" };
+        MOVS     R0,SP
+        LDR      R2,??getStateByHour_1  ;; `?<Constant {&L"\\x4d\\x6f\\x72\\x6e\\x69\\x6e\\x67", `
+        MOV      R12,#+20
+??getStateByHour_2:
+        SUBS     R12,R12,#+4
+        LDR      R3,[R2, R12]
+        STR      R3,[R0, R12]
+        BNE      ??getStateByHour_2
+//   97   int hourState[0x5] = { 0, 12, 13, 16, 18 };
+        ADD      R0,SP,#+20
+        LDR      R2,??getStateByHour_1+0x4  ;; `?<Constant {0, 12, 13, 16, 18}>`
+        MOV      R12,#+20
+??getStateByHour_3:
+        SUBS     R12,R12,#+4
+        LDR      R3,[R2, R12]
+        STR      R3,[R0, R12]
+        BNE      ??getStateByHour_3
+//   98   for (int i=0;i<4;i++)
+        MOV      R2,#+0
+        MOVS     R0,R2
+??getStateByHour_4:
+        CMP      R0,#+4
+        BGE      ??getStateByHour_5
+//   99     if (hour >= hourState[i] && hour < hourState[i + 0x1])
+        MOV      R2,#+4
+        ADD      R3,SP,#+20
+        MLA      R3,R2,R0,R3
+        LDR      R2,[R3, #+0]
+        CMP      R1,R2
+        BLT      ??getStateByHour_6
+        MOV      R2,#+4
+        ADD      R3,SP,#+20
+        MLA      R3,R2,R0,R3
+        LDR      R2,[R3, #+4]
+        CMP      R1,R2
+        BGE      ??getStateByHour_6
+//  100       return states[i];
+        MOV      R2,#+4
+        MOVS     R3,SP
+        MLA      R0,R2,R0,R3
+        LDR      R0,[R0, #+0]
+        B        ??getStateByHour_7
+??getStateByHour_6:
+        ADDS     R0,R0,#+1
+        B        ??getStateByHour_4
+//  101   return states[0x4];
+??getStateByHour_5:
+        LDR      R0,[SP, #+16]
+??getStateByHour_7:
+        ADD      SP,SP,#+40       ;; stack cleaning
+        CFI CFA R13+0
+        BX       LR               ;; return
+        DATA
+??getStateByHour_1:
+        DC32     `?<Constant {&L"\\x4d\\x6f\\x72\\x6e\\x69\\x6e\\x67", `
+        DC32     `?<Constant {0, 12, 13, 16, 18}>`
+        CFI EndBlock cfiBlock16
+//  102 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock17 Using cfiCommon1
+        CFI NoFunction
+        THUMB
+??drawClock??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock17
+        REQUIRE ??drawClock
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock18 Using cfiCommon0
+        CFI Function ??drawClock
+        ARM
+//  103 void drawClock(int hour, int min) {
+??drawClock:
+        PUSH     {R4-R7,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R7 Frame(CFA, -8)
+        CFI R6 Frame(CFA, -12)
+        CFI R5 Frame(CFA, -16)
+        CFI R4 Frame(CFA, -20)
+        CFI CFA R13+20
+        MOVS     R5,R0
+        MOVS     R6,R1
+//  104   ifDrawImage( BCFG_Images_Clock_Enable, BCFG_Images_Clock_Position_X, BCFG_Images_Clock_Position_Y,
+//  105               clockID[(min < 1 && min > 59 ? 0x0 : min-0x1)] );
+        CMP      R6,#+1
+        BGE      ??drawClock_1
+        CMP      R6,#+60
+        BLT      ??drawClock_1
+        MOV      R1,#+0
+        B        ??drawClock_2
+??drawClock_1:
+        SUBS     R1,R6,#+1
+??drawClock_2:
+        LDR      R0,??drawClock_3+0x4  ;; BCFG_Images_Clock_Enable
+        LDR      R0,[R0, #+0]
+        CMP      R0,#+0
+        BEQ      ??drawClock_4
+        MOV      R0,#+1
+        B        ??drawClock_5
+??drawClock_4:
+        MOV      R0,#+0
+??drawClock_5:
+        MOV      R2,#+2
+        LDR      R3,??DataTable80  ;; clockID
+        MLA      R3,R2,R1,R3
+        LDR      R1,??drawClock_3+0x8  ;; BCFG_Images_Clock_Position_Y
+        LDR      R2,[R1, #+0]
+        LDR      R1,??drawClock_3+0xC  ;; BCFG_Images_Clock_Position_X
+        LDR      R1,[R1, #+0]
+        BL       ??ifDrawImage
+//  106 
+//  107   wchar_t* tempHour = new wchar_t[0x3];
+        MOV      R0,#+6
+        _BLF     `??operator new[]`,`??operator new[]??rA`
+        MOVS     R7,R0
+//  108   memset( tempHour, 0, sizeof(wchar_t)*0x3);
+        MOV      R2,#+6
+        MOV      R1,#+0
+        MOVS     R0,R7
+        SWI      +274
+//  109   snwprintf( tempHour, 3, L"%d", hour);
+        MOVS     R3,R5
+        LDR      R2,??drawClock_3+0x10  ;; `?<Constant L"\\x25\\x64">`
+        MOV      R1,#+3
+        MOVS     R0,R7
+        SWI      +277
+//  110   ifDrawNoMask( BCFG_Time_Hour_Enable, tempHour, BCFG_Time_Hour_FontSize, BCFG_Time_Hour_Align,
+//  111                BCFG_Time_Hour_Position_X, BCFG_Time_Hour_Position_Y - 16, BCFG_Time_Hour_TextColor );
+        LDR      R0,??drawClock_3+0x14  ;; BCFG_Time_Hour_Enable
+        LDR      R0,[R0, #+0]
+        CMP      R0,#+0
+        BEQ      ??drawClock_6
+        MOV      R0,#+1
+        B        ??drawClock_7
+??drawClock_6:
+        MOV      R0,#+0
+??drawClock_7:
+        LDR      R1,??drawClock_3+0x18  ;; BCFG_Time_Hour_TextColor
+        LDR      R1,[R1, #+0]
+        PUSH     {R1}
+        CFI CFA R13+24
+        LDR      R1,??drawClock_3+0x1C  ;; BCFG_Time_Hour_Position_Y
+        LDR      R1,[R1, #+0]
+        SUBS     R1,R1,#+16
+        PUSH     {R1}
+        CFI CFA R13+28
+        LDR      R1,??drawClock_3+0x20  ;; BCFG_Time_Hour_Position_X
+        LDR      R1,[R1, #+0]
+        PUSH     {R1}
+        CFI CFA R13+32
+        LDR      R1,??drawClock_3+0x24  ;; BCFG_Time_Hour_Align
+        LDR      R3,[R1, #+0]
+        LDR      R1,??drawClock_3+0x28  ;; BCFG_Time_Hour_FontSize
+        LDR      R2,[R1, #+0]
+        MOVS     R1,R7
+        BL       ??ifDrawNoMask
+        ADD      SP,SP,#+12       ;; stack cleaning
+        CFI CFA R13+20
+//  112   ifDrawNoMask( BCFG_Time_State_Enable, getStateByHour(hour) , BCFG_Time_State_FontSize, BCFG_Time_State_Align,
+//  113                BCFG_Time_State_Position_X, BCFG_Time_State_Position_Y - 16, BCFG_Time_State_TextColor );
+        MOVS     R0,R5
+        BL       ??getStateByHour
+        MOVS     R1,R0
+        LDR      R0,??drawClock_3+0x2C  ;; BCFG_Time_State_Enable
+        LDR      R0,[R0, #+0]
+        CMP      R0,#+0
+        BEQ      ??drawClock_8
+        MOV      R0,#+1
+        B        ??drawClock_9
+??drawClock_8:
+        MOV      R0,#+0
+??drawClock_9:
+        LDR      R2,??drawClock_3+0x30  ;; BCFG_Time_State_TextColor
+        LDR      R2,[R2, #+0]
+        PUSH     {R2}
+        CFI CFA R13+24
+        LDR      R2,??drawClock_3+0x34  ;; BCFG_Time_State_Position_Y
+        LDR      R2,[R2, #+0]
+        SUBS     R2,R2,#+16
+        PUSH     {R2}
+        CFI CFA R13+28
+        LDR      R2,??drawClock_3+0x38  ;; BCFG_Time_State_Position_X
+        LDR      R2,[R2, #+0]
+        PUSH     {R2}
+        CFI CFA R13+32
+        LDR      R2,??drawClock_3+0x3C  ;; BCFG_Time_State_Align
+        LDR      R3,[R2, #+0]
+        LDR      R2,??drawClock_3+0x40  ;; BCFG_Time_State_FontSize
+        LDR      R2,[R2, #+0]
+        BL       ??ifDrawNoMask
+        ADD      SP,SP,#+12       ;; stack cleaning
+        CFI CFA R13+20
+//  114   delete tempHour;  tempHour = NULL;
+        MOVS     R0,R7
+        _BLF     `??operator delete`,`??operator delete??rA`
+        MOV      R0,#+0
+        MOVS     R7,R0
+//  115   
+//  116   tempHour = new wchar_t[0x7];
+        MOV      R0,#+14
+        _BLF     `??operator new[]`,`??operator new[]??rA`
+        MOVS     R7,R0
+//  117   memset( tempHour, 0, sizeof(wchar_t)*0x7 );
+        MOV      R2,#+14
+        MOV      R1,#+0
+        MOVS     R0,R7
+        SWI      +274
+//  118   wchar_t* hourMask = L"";
+        ADR      R0,??drawClock_3  ;; 0x00, 0x00
+        MOVS     R4,R0
+//  119   (min > 10 ? hourMask = L"%d:%d" : L"%d:0%d" );
+        CMP      R6,#+11
+        BLT      ??drawClock_10
+        LDR      R0,??drawClock_3+0x44  ;; `?<Constant L"\\x25\\x64\\x3a\\x25\\x64">`
+        MOVS     R4,R0
+        B        ??drawClock_11
+??drawClock_10:
+        LDR      R0,??drawClock_3+0x48  ;; `?<Constant L"\\x25\\x64\\x3a\\x30\\x25\\x64">`
+//  120   snwprintf( tempHour, 7, hourMask, hour, min);
+??drawClock_11:
+        MOVS     R0,R6
+        PUSH     {R0}
+        CFI CFA R13+24
+        MOVS     R3,R5
+        MOVS     R2,R4
+        MOV      R1,#+7
+        MOVS     R0,R7
+        SWI      +277
+        ADD      SP,SP,#+4        ;; stack cleaning
+        CFI CFA R13+20
+//  121   
+//  122   ifDrawNoMask( BCFG_Time_DigitalClock_Enable, tempHour, BCFG_Time_DigitalClock_FontSize, BCFG_Time_DigitalClock_Align,
+//  123                BCFG_Time_DigitalClock_Position_X, BCFG_Time_DigitalClock_Position_Y - 16, BCFG_Time_DigitalClock_TextColor );
+        LDR      R0,??drawClock_3+0x4C  ;; BCFG_Time_DigitalClock_Enable
+        LDR      R0,[R0, #+0]
+        CMP      R0,#+0
+        BEQ      ??drawClock_12
+        MOV      R0,#+1
+        B        ??drawClock_13
+??drawClock_12:
+        MOV      R0,#+0
+??drawClock_13:
+        LDR      R1,??drawClock_3+0x50  ;; BCFG_Time_DigitalClock_TextColor
+        LDR      R1,[R1, #+0]
+        PUSH     {R1}
+        CFI CFA R13+24
+        LDR      R1,??drawClock_3+0x54  ;; BCFG_Time_DigitalClock_Position_Y
+        LDR      R1,[R1, #+0]
+        SUBS     R1,R1,#+16
+        PUSH     {R1}
+        CFI CFA R13+28
+        LDR      R1,??drawClock_3+0x58  ;; BCFG_Time_DigitalClock_Position_X
+        LDR      R1,[R1, #+0]
+        PUSH     {R1}
+        CFI CFA R13+32
+        LDR      R1,??drawClock_3+0x5C  ;; BCFG_Time_DigitalClock_Align
+        LDR      R3,[R1, #+0]
+        LDR      R1,??drawClock_3+0x60  ;; BCFG_Time_DigitalClock_FontSize
+        LDR      R2,[R1, #+0]
+        MOVS     R1,R7
+        BL       ??ifDrawNoMask
+        ADD      SP,SP,#+12       ;; stack cleaning
+        CFI CFA R13+20
+//  124   delete tempHour; tempHour = NULL;
+        MOVS     R0,R7
+        _BLF     `??operator delete`,`??operator delete??rA`
+        MOV      R0,#+0
+        MOVS     R7,R0
+//  125 }
+        POP      {R4-R7,PC}       ;; return
+        DATA
+??drawClock_3:
+        DC8      0x00, 0x00,+0,+0
+        DC32     BCFG_Images_Clock_Enable
+        DC32     BCFG_Images_Clock_Position_Y
+        DC32     BCFG_Images_Clock_Position_X
+        DC32     `?<Constant L"\\x25\\x64">`
+        DC32     BCFG_Time_Hour_Enable
+        DC32     BCFG_Time_Hour_TextColor
+        DC32     BCFG_Time_Hour_Position_Y
+        DC32     BCFG_Time_Hour_Position_X
+        DC32     BCFG_Time_Hour_Align
+        DC32     BCFG_Time_Hour_FontSize
+        DC32     BCFG_Time_State_Enable
+        DC32     BCFG_Time_State_TextColor
+        DC32     BCFG_Time_State_Position_Y
+        DC32     BCFG_Time_State_Position_X
+        DC32     BCFG_Time_State_Align
+        DC32     BCFG_Time_State_FontSize
+        DC32     `?<Constant L"\\x25\\x64\\x3a\\x25\\x64">`
+        DC32     `?<Constant L"\\x25\\x64\\x3a\\x30\\x25\\x64">`
+        DC32     BCFG_Time_DigitalClock_Enable
+        DC32     BCFG_Time_DigitalClock_TextColor
+        DC32     BCFG_Time_DigitalClock_Position_Y
+        DC32     BCFG_Time_DigitalClock_Position_X
+        DC32     BCFG_Time_DigitalClock_Align
+        DC32     BCFG_Time_DigitalClock_FontSize
+        CFI EndBlock cfiBlock18
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock19 Using cfiCommon1
+        CFI NoFunction
+        THUMB
+??finalDraw??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock19
+        REQUIRE ??finalDraw
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock20 Using cfiCommon0
+        CFI Function ??finalDraw
+        ARM
+//  126 void finalDraw(wchar_t* location, wchar_t* state, int dayState, int averageTemp) {
+??finalDraw:
+        PUSH     {R4-R9,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R9 Frame(CFA, -8)
+        CFI R8 Frame(CFA, -12)
+        CFI R7 Frame(CFA, -16)
+        CFI R6 Frame(CFA, -20)
+        CFI R5 Frame(CFA, -24)
+        CFI R4 Frame(CFA, -28)
+        CFI CFA R13+28
+        MOVS     R4,R0
+        MOVS     R5,R1
+        MOVS     R6,R2
+        MOVS     R7,R3
+//  127   wchar_t* temp = NULL;
+        MOV      R0,#+0
+        MOVS     R8,R0
+//  128   //<!--images
+//  129   ifDrawImage( BCFG_Images_Background_Enable, BCFG_Images_Background_Position_X, BCFG_Images_Background_Position_Y,
+//  130               statesID[0x0] );
+        LDR      R0,??finalDraw_1  ;; BCFG_Images_Background_Enable
+        LDR      R0,[R0, #+0]
+        CMP      R0,#+0
+        BEQ      ??finalDraw_2
+        MOV      R0,#+1
+        B        ??finalDraw_3
+??finalDraw_2:
+        MOV      R0,#+0
+??finalDraw_3:
+        LDR      R3,??DataTable79  ;; statesID
+        LDR      R1,??finalDraw_1+0x4  ;; BCFG_Images_Background_Position_Y
+        LDR      R2,[R1, #+0]
+        LDR      R1,??finalDraw_1+0x8  ;; BCFG_Images_Background_Position_X
+        LDR      R1,[R1, #+0]
+        BL       ??ifDrawImage
+//  131   ifDrawImage( BCFG_Images_AccuWeatherLogo_Enable, BCFG_Images_AccuWeatherLogo_Position_X, BCFG_Images_AccuWeatherLogo_Position_Y,
+//  132               statesID[0x1] );
+        LDR      R0,??finalDraw_1+0xC  ;; BCFG_Images_AccuWeatherLogo_Enable
+        LDR      R0,[R0, #+0]
+        CMP      R0,#+0
+        BEQ      ??finalDraw_4
+        MOV      R0,#+1
+        B        ??finalDraw_5
+??finalDraw_4:
+        MOV      R0,#+0
+??finalDraw_5:
+        LDR      R3,??DataTable75  ;; statesID + 2
+        LDR      R1,??finalDraw_1+0x10  ;; BCFG_Images_AccuWeatherLogo_Position_Y
+        LDR      R2,[R1, #+0]
+        LDR      R1,??finalDraw_1+0x14  ;; BCFG_Images_AccuWeatherLogo_Position_X
+        LDR      R1,[R1, #+0]
+        BL       ??ifDrawImage
+//  133   ifDrawImage( BCFG_Images_DayState_Enable, BCFG_Images_DayState_Position_X, BCFG_Images_DayState_Position_Y,
+//  134               statesID[dayState+0x1] );
+        LDR      R0,??finalDraw_1+0x18  ;; BCFG_Images_DayState_Enable
+        LDR      R0,[R0, #+0]
+        CMP      R0,#+0
+        BEQ      ??finalDraw_6
+        MOV      R0,#+1
+        B        ??finalDraw_7
+??finalDraw_6:
+        MOV      R0,#+0
+??finalDraw_7:
+        MOV      R1,#+2
+        LDR      R2,??DataTable79  ;; statesID
+        MLA      R2,R1,R6,R2
+        ADDS     R3,R2,#+2
+        LDR      R1,??finalDraw_1+0x1C  ;; BCFG_Images_DayState_Position_Y
+        LDR      R2,[R1, #+0]
+        LDR      R1,??finalDraw_1+0x20  ;; BCFG_Images_DayState_Position_X
+        LDR      R1,[R1, #+0]
+        BL       ??ifDrawImage
+//  135   //-->
+//  136   //<!--text
+//  137   ifDrawNoMask(BCFG_Tags_Location_Enable , location, BCFG_Tags_Location_FontSize , BCFG_Tags_Location_Align , 
+//  138                BCFG_Tags_Location_Position_X , BCFG_Tags_Location_Position_Y - 16 , BCFG_Tags_Location_TextColor);
+        LDR      R0,??finalDraw_1+0x24  ;; BCFG_Tags_Location_Enable
+        LDR      R0,[R0, #+0]
+        CMP      R0,#+0
+        BEQ      ??finalDraw_8
+        MOV      R0,#+1
+        B        ??finalDraw_9
+??finalDraw_8:
+        MOV      R0,#+0
+??finalDraw_9:
+        LDR      R1,??finalDraw_1+0x28  ;; BCFG_Tags_Location_TextColor
+        LDR      R1,[R1, #+0]
+        PUSH     {R1}
+        CFI CFA R13+32
+        LDR      R1,??finalDraw_1+0x2C  ;; BCFG_Tags_Location_Position_Y
+        LDR      R1,[R1, #+0]
+        SUBS     R1,R1,#+16
+        PUSH     {R1}
+        CFI CFA R13+36
+        LDR      R1,??finalDraw_1+0x30  ;; BCFG_Tags_Location_Position_X
+        LDR      R1,[R1, #+0]
+        PUSH     {R1}
+        CFI CFA R13+40
+        LDR      R1,??finalDraw_1+0x34  ;; BCFG_Tags_Location_Align
+        LDR      R3,[R1, #+0]
+        LDR      R1,??finalDraw_1+0x38  ;; BCFG_Tags_Location_FontSize
+        LDR      R2,[R1, #+0]
+        MOVS     R1,R4
+        BL       ??ifDrawNoMask
+        ADD      SP,SP,#+12       ;; stack cleaning
+        CFI CFA R13+28
+//  139   
+//  140   if (BCFG_Tags_AverageTemperature_Enable) {// %d
+        LDR      R0,??finalDraw_1+0x3C  ;; BCFG_Tags_AverageTemperature_Enable
+        LDR      R0,[R0, #+0]
+        CMP      R0,#+0
+        BEQ      ??finalDraw_10
+//  141     temp = returnMask( BCFG_Tags_AverageTemperature_Mask , averageTemp , BCFG_Tags_AverageTemperature_Unit , celsiusToFahrenheit );
+        LDR      R0,??finalDraw_1+0x40  ;; BCFG_Tags_AverageTemperature_Unit
+        LDR      R0,[R0, #+0]
+        CMP      R0,#+0
+        BEQ      ??finalDraw_11
+        MOV      R2,#+1
+        B        ??finalDraw_12
+??finalDraw_11:
+        MOV      R2,#+0
+??finalDraw_12:
+        MOV      R0,#+0
+        PUSH     {R0}
+        CFI CFA R13+32
+        LDR      R3,??finalDraw_1+0x44  ;; ??celsiusToFahrenheit
+        MOVS     R1,R7
+        LDR      R0,??finalDraw_1+0x48  ;; BCFG_Tags_AverageTemperature_Mask
+        BL       ??returnMask
+        ADD      SP,SP,#+4        ;; stack cleaning
+        CFI CFA R13+28
+        MOVS     R8,R0
+//  142     wchar_t* stateAvg = new wchar_t[0x256];
+        MOV      R0,#+172
+        ORR      R0,R0,#0x400
+        _BLF     `??operator new[]`,`??operator new[]??rA`
+        MOVS     R9,R0
+//  143     memset( stateAvg, 0, sizeof(wchar_t)*0x256 );
+        MOV      R2,#+172
+        ORR      R2,R2,#0x400
+        MOV      R1,#+0
+        MOVS     R0,R9
+        SWI      +274
+//  144     
+//  145     wstrcpy(stateAvg,state);
+        MOVS     R1,R5
+        MOVS     R0,R9
+        SWI      +338
+//  146     wstrcat(stateAvg, L"\\n");
+        LDR      R1,??finalDraw_1+0x4C  ;; `?<Constant L"\\x5c\\x6e">`
+        MOVS     R0,R9
+        SWI      +340
+//  147     wstrcat(stateAvg, temp );
+        MOVS     R1,R8
+        MOVS     R0,R9
+        SWI      +340
+//  148 
+//  149     ifDrawNoMask( BCFG_Tags_AverageTemperature_Enable, stateAvg, BCFG_Tags_DayState_FontSize, BCFG_Tags_DayState_Align,
+//  150                  BCFG_Tags_DayState_Position_X, BCFG_Tags_DayState_Position_Y - 16, BCFG_Tags_DayState_TextColor );
+        LDR      R0,??finalDraw_1+0x3C  ;; BCFG_Tags_AverageTemperature_Enable
+        LDR      R0,[R0, #+0]
+        CMP      R0,#+0
+        BEQ      ??finalDraw_13
+        MOV      R0,#+1
+        B        ??finalDraw_14
+??finalDraw_13:
+        MOV      R0,#+0
+??finalDraw_14:
+        LDR      R1,??finalDraw_1+0x50  ;; BCFG_Tags_DayState_TextColor
+        LDR      R1,[R1, #+0]
+        PUSH     {R1}
+        CFI CFA R13+32
+        LDR      R1,??finalDraw_1+0x54  ;; BCFG_Tags_DayState_Position_Y
+        LDR      R1,[R1, #+0]
+        SUBS     R1,R1,#+16
+        PUSH     {R1}
+        CFI CFA R13+36
+        LDR      R1,??finalDraw_1+0x58  ;; BCFG_Tags_DayState_Position_X
+        LDR      R1,[R1, #+0]
+        PUSH     {R1}
+        CFI CFA R13+40
+        LDR      R1,??finalDraw_1+0x5C  ;; BCFG_Tags_DayState_Align
+        LDR      R3,[R1, #+0]
+        LDR      R1,??finalDraw_1+0x60  ;; BCFG_Tags_DayState_FontSize
+        LDR      R2,[R1, #+0]
+        MOVS     R1,R9
+        BL       ??ifDrawNoMask
+        ADD      SP,SP,#+12       ;; stack cleaning
+        CFI CFA R13+28
+//  151     delete temp; temp = NULL;
+        MOVS     R0,R8
+        _BLF     `??operator delete`,`??operator delete??rA`
+        MOV      R0,#+0
+        MOVS     R8,R0
+//  152     delete stateAvg; stateAvg = NULL;
+        MOVS     R0,R9
+        _BLF     `??operator delete`,`??operator delete??rA`
+        MOV      R0,#+0
+        MOVS     R9,R0
+        B        ??finalDraw_15
+//  153   }
+//  154   else {
+//  155     ifDrawNoMask( BCFG_Tags_DayState_Enable , state , BCFG_Tags_DayState_FontSize , BCFG_Tags_DayState_Align ,
+//  156                  BCFG_Tags_DayState_Position_X, BCFG_Tags_DayState_Position_Y - 16 , BCFG_Tags_DayState_TextColor );
+??finalDraw_10:
+        LDR      R0,??finalDraw_1+0x64  ;; BCFG_Tags_DayState_Enable
+        LDR      R0,[R0, #+0]
+        CMP      R0,#+0
+        BEQ      ??finalDraw_16
+        MOV      R0,#+1
+        B        ??finalDraw_17
+??finalDraw_16:
+        MOV      R0,#+0
+??finalDraw_17:
+        LDR      R1,??finalDraw_1+0x50  ;; BCFG_Tags_DayState_TextColor
+        LDR      R1,[R1, #+0]
+        PUSH     {R1}
+        CFI CFA R13+32
+        LDR      R1,??finalDraw_1+0x54  ;; BCFG_Tags_DayState_Position_Y
+        LDR      R1,[R1, #+0]
+        SUBS     R1,R1,#+16
+        PUSH     {R1}
+        CFI CFA R13+36
+        LDR      R1,??finalDraw_1+0x58  ;; BCFG_Tags_DayState_Position_X
+        LDR      R1,[R1, #+0]
+        PUSH     {R1}
+        CFI CFA R13+40
+        LDR      R1,??finalDraw_1+0x5C  ;; BCFG_Tags_DayState_Align
+        LDR      R3,[R1, #+0]
+        LDR      R1,??finalDraw_1+0x60  ;; BCFG_Tags_DayState_FontSize
+        LDR      R2,[R1, #+0]
+        MOVS     R1,R5
+        BL       ??ifDrawNoMask
+        ADD      SP,SP,#+12       ;; stack cleaning
+        CFI CFA R13+28
+//  157   }
+//  158   ifDrawNoMask( BCFG_Date_Enable , mybook->dateToDraw , BCFG_Date_FontSize, BCFG_Date_Align ,
+//  159                BCFG_Date_Position_X , BCFG_Date_Position_Y - 16, BCFG_Date_TextColor );
+??finalDraw_15:
+        LDR      R0,??finalDraw_1+0x68  ;; BCFG_Date_Enable
+        LDR      R0,[R0, #+0]
+        CMP      R0,#+0
+        BEQ      ??finalDraw_18
+        MOV      R0,#+1
+        B        ??finalDraw_19
+??finalDraw_18:
+        MOV      R0,#+0
+??finalDraw_19:
+        LDR      R1,??finalDraw_1+0x6C  ;; BCFG_Date_TextColor
+        LDR      R1,[R1, #+0]
+        PUSH     {R1}
+        CFI CFA R13+32
+        LDR      R1,??finalDraw_1+0x70  ;; BCFG_Date_Position_Y
+        LDR      R1,[R1, #+0]
+        SUBS     R1,R1,#+16
+        PUSH     {R1}
+        CFI CFA R13+36
+        LDR      R1,??finalDraw_1+0x74  ;; BCFG_Date_Position_X
+        LDR      R1,[R1, #+0]
+        PUSH     {R1}
+        CFI CFA R13+40
+        LDR      R1,??finalDraw_1+0x78  ;; BCFG_Date_Align
+        LDR      R3,[R1, #+0]
+        LDR      R1,??finalDraw_1+0x7C  ;; BCFG_Date_FontSize
+        LDR      R2,[R1, #+0]
+        LDR      R1,??DataTable51  ;; mybook
+        LDR      R1,[R1, #+0]
+        LDR      R1,[R1, #+144]
+        BL       ??ifDrawNoMask
+        ADD      SP,SP,#+12       ;; stack cleaning
+        CFI CFA R13+28
+//  160   
+//  161   //-->
+//  162 }
+        POP      {R4-R9,PC}       ;; return
+        DATA
+??finalDraw_1:
+        DC32     BCFG_Images_Background_Enable
+        DC32     BCFG_Images_Background_Position_Y
+        DC32     BCFG_Images_Background_Position_X
+        DC32     BCFG_Images_AccuWeatherLogo_Enable
+        DC32     BCFG_Images_AccuWeatherLogo_Position_Y
+        DC32     BCFG_Images_AccuWeatherLogo_Position_X
+        DC32     BCFG_Images_DayState_Enable
+        DC32     BCFG_Images_DayState_Position_Y
+        DC32     BCFG_Images_DayState_Position_X
+        DC32     BCFG_Tags_Location_Enable
+        DC32     BCFG_Tags_Location_TextColor
+        DC32     BCFG_Tags_Location_Position_Y
+        DC32     BCFG_Tags_Location_Position_X
+        DC32     BCFG_Tags_Location_Align
+        DC32     BCFG_Tags_Location_FontSize
+        DC32     BCFG_Tags_AverageTemperature_Enable
+        DC32     BCFG_Tags_AverageTemperature_Unit
+        DC32     ??celsiusToFahrenheit
+        DC32     BCFG_Tags_AverageTemperature_Mask
+        DC32     `?<Constant L"\\x5c\\x6e">`
+        DC32     BCFG_Tags_DayState_TextColor
+        DC32     BCFG_Tags_DayState_Position_Y
+        DC32     BCFG_Tags_DayState_Position_X
+        DC32     BCFG_Tags_DayState_Align
+        DC32     BCFG_Tags_DayState_FontSize
+        DC32     BCFG_Tags_DayState_Enable
+        DC32     BCFG_Date_Enable
+        DC32     BCFG_Date_TextColor
+        DC32     BCFG_Date_Position_Y
+        DC32     BCFG_Date_Position_X
+        DC32     BCFG_Date_Align
+        DC32     BCFG_Date_FontSize
+        CFI EndBlock cfiBlock20
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock21 Using cfiCommon1
+        CFI NoFunction
+        THUMB
+??onfTimer??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock21
+        REQUIRE ??onfTimer
+//  163 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock22 Using cfiCommon0
+        CFI Function ??onfTimer
+        ARM
+//  164 void onfTimer (u16 tmr , LPARAM) {
+??onfTimer:
+        PUSH     {R4,R5,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R5 Frame(CFA, -8)
+        CFI R4 Frame(CFA, -12)
+        CFI CFA R13+12
+        SUB      SP,SP,#+4
+        CFI CFA R13+16
+        MOVS     R4,R0
+        MOVS     R5,R1
+//  165   DispObject_InvalidateRect(StatusIndication,0);
+        MOV      R1,#+0
+        LDR      R0,??DataTable94  ;; StatusIndication
+        LDR      R0,[R0, #+0]
+        SWI      +495
+//  166   Timer_ReSet(&mybook->ftimer,1000,onfTimer,0);
+        MOV      R1,#+0
+        MOVS     R0,SP
+        _BLF     ??LPARAM,??LPARAM??rA
+        LDR      R3,[SP, #+0]
+        LDR      R2,??DataTable88  ;; ??onfTimer
+        MOV      R1,#+1000
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        ADDS     R0,R0,#+156
+        SWI      +296
+//  167 }
+        ADD      SP,SP,#+4        ;; stack cleaning
+        CFI CFA R13+12
+        POP      {R4,R5,PC}       ;; return
+        CFI EndBlock cfiBlock22
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock23 Using cfiCommon1
+        CFI NoFunction
+        THUMB
+??makeDateMask??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock23
+        REQUIRE ??makeDateMask
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock24 Using cfiCommon0
+        CFI Function ??makeDateMask
+        ARM
+//  168 void makeDateMask() { //0 = segunda, 1 = terça, ... , 6 = domingo
+??makeDateMask:
+        PUSH     {R4-R10,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R10 Frame(CFA, -8)
+        CFI R9 Frame(CFA, -12)
+        CFI R8 Frame(CFA, -16)
+        CFI R7 Frame(CFA, -20)
+        CFI R6 Frame(CFA, -24)
+        CFI R5 Frame(CFA, -28)
+        CFI R4 Frame(CFA, -32)
+        CFI CFA R13+32
+        SUB      SP,SP,#+4
+        CFI CFA R13+36
+//  169   char _weekDay;
+//  170   DATE_GetWeekDay(&mybook->now.date, &_weekDay);
+        MOVS     R1,SP
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        ADDS     R0,R0,#+148
+        SWI      +668
+//  171   int weekday = _weekDay;
+        LDRB     R0,[SP, #+0]
+        MOVS     R4,R0
+//  172   if (weekday < 1 && weekday > 6)
+        CMP      R4,#+1
+        BGE      ??makeDateMask_1
+        CMP      R4,#+7
+        BLT      ??makeDateMask_1
+//  173     weekday = 0;
+        MOV      R0,#+0
+        MOVS     R4,R0
+//  174   mybook->weekToDraw = mybook->weekNames[weekday];
+??makeDateMask_1:
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        MOV      R1,#+4
+        LDR      R2,??DataTable51  ;; mybook
+        LDR      R2,[R2, #+0]
+        MLA      R2,R1,R4,R2
+        LDR      R1,[R2, #+32]
+        STR      R1,[R0, #+60]
+//  175   int month = mybook->now.date.mon;
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        LDRB     R0,[R0, #+150]
+        MOVS     R5,R0
+//  176   mybook->monthToDraw = mybook->monthNames[ (month > 0 ? month - 0x1 : 0x0) ];
+        CMP      R5,#+1
+        BLT      ??makeDateMask_2
+        SUBS     R0,R5,#+1
+        B        ??makeDateMask_3
+??makeDateMask_2:
+        MOV      R0,#+0
+??makeDateMask_3:
+        LDR      R1,??DataTable51  ;; mybook
+        LDR      R1,[R1, #+0]
+        MOV      R2,#+4
+        LDR      R3,??DataTable51  ;; mybook
+        LDR      R3,[R3, #+0]
+        MLA      R0,R2,R0,R3
+        LDR      R0,[R0, #+64]
+        STR      R0,[R1, #+136]
+//  177   int dateLength = wstrlen(mybook->weekToDraw) + wstrlen(mybook->monthToDraw) + 5;
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        LDR      R0,[R0, #+60]
+        SWI      +343
+        MOVS     R10,R0
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        LDR      R0,[R0, #+136]
+        SWI      +343
+        ADDS     R0,R0,R10
+        ADDS     R0,R0,#+5
+        MOVS     R6,R0
+//  178   wchar_t* dateToDraw = new wchar_t[ dateLength ];
+        MOV      R1,#+2
+        MULS     R0,R1,R6
+        _BLF     `??operator new[]`,`??operator new[]??rA`
+        MOVS     R7,R0
+//  179   memset( dateToDraw, 0, sizeof(wchar_t)*dateLength );
+        MOV      R0,#+2
+        MULS     R2,R0,R6
+        MOV      R1,#+0
+        MOVS     R0,R7
+        SWI      +274
+//  180   wstrcpy(dateToDraw, mybook->weekToDraw);
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        LDR      R1,[R0, #+60]
+        MOVS     R0,R7
+        SWI      +338
+//  181   wstrcat(dateToDraw, L", ");
+        LDR      R1,??makeDateMask_4  ;; `?<Constant L"\\x2c\\x20">`
+        MOVS     R0,R7
+        SWI      +340
+//  182   wstrcat(dateToDraw, mybook->monthToDraw);
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        LDR      R1,[R0, #+136]
+        MOVS     R0,R7
+        SWI      +340
+//  183   wchar_t* day = new wchar_t[0x4];
+        MOV      R0,#+8
+        _BLF     `??operator new[]`,`??operator new[]??rA`
+        MOVS     R8,R0
+//  184   memset( day, 0, sizeof(wchar_t)*0x4 );
+        MOV      R2,#+8
+        MOV      R1,#+0
+        MOVS     R0,R8
+        SWI      +274
+//  185   int intDay = mybook->now.date.day;
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        LDRB     R0,[R0, #+151]
+        MOVS     R9,R0
+//  186   snwprintf( day, 4, L" %d", intDay);
+        MOVS     R3,R9
+        LDR      R2,??makeDateMask_4+0x4  ;; `?<Constant L"\\x20\\x25\\x64">`
+        MOV      R1,#+4
+        MOVS     R0,R8
+        SWI      +277
+//  187   wstrcat(dateToDraw, day);
+        MOVS     R1,R8
+        MOVS     R0,R7
+        SWI      +340
+//  188   mybook->dateToDraw = dateToDraw;
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        STR      R7,[R0, #+144]
+//  189   delete day;
+        MOVS     R0,R8
+        _BLF     `??operator delete`,`??operator delete??rA`
+//  190 }
+        ADD      SP,SP,#+4        ;; stack cleaning
+        CFI CFA R13+32
+        POP      {R4-R10,PC}      ;; return
+        DATA
+??makeDateMask_4:
+        DC32     `?<Constant L"\\x2c\\x20">`
+        DC32     `?<Constant L"\\x20\\x25\\x64">`
+        CFI EndBlock cfiBlock24
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock25 Using cfiCommon1
+        CFI NoFunction
+        THUMB
+??drawWeatherContents??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock25
+        REQUIRE ??drawWeatherContents
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock26 Using cfiCommon0
+        CFI Function ??drawWeatherContents
+        ARM
+//  191 void drawWeatherContents() {
+??drawWeatherContents:
+        PUSH     {R4-R6,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R6 Frame(CFA, -8)
+        CFI R5 Frame(CFA, -12)
+        CFI R4 Frame(CFA, -16)
+        CFI CFA R13+16
+        SUB      SP,SP,#+8
+        CFI CFA R13+24
+//  192   //18 ~ 06: night, 06 ~ 18: day
+//  193   mybook->now = getDateTime();
+        MOVS     R0,SP
+        _BLF     ??getDateTime,??getDateTime??rA
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        ADDS     R0,R0,#+148
+        MOVS     R1,SP
+        MOV      R3,#+8
+??drawWeatherContents_1:
+        SUBS     R3,R3,#+2
+        LDRH     R2,[R1, R3]
+        STRH     R2,[R0, R3]
+        BNE      ??drawWeatherContents_1
+//  194 
+//  195   if (mybook->getHourSeted() == -1) {
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??getHourSeted,??getHourSeted??rA
+        CMN      R0,#+1
+        BNE      ??drawWeatherContents_2
+//  196     if (mybook->getWeatherToDraw() != NULL) mybook->freeWDraw();
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??getWeatherToDraw,??getWeatherToDraw??rA
+        CMP      R0,#+0
+        BEQ      ??drawWeatherContents_3
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??freeWDraw,??freeWDraw??rA
+//  197     mybook->setHour(mybook->now.time.hour);
+??drawWeatherContents_3:
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        LDRB     R1,[R0, #+152]
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??setHour,??setHour??rA
+//  198 
+//  199     if (mybook->now.time.hour >= BCFG_Tags_Time_Night || mybook->now.time.hour < BCFG_Tags_Time_Day) //need to check that later, midnight weather!
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        LDRB     R0,[R0, #+152]
+        LDR      R1,??drawWeatherContents_4  ;; BCFG_Tags_Time_Night
+        LDR      R1,[R1, #+0]
+        CMP      R0,R1
+        BCS      ??drawWeatherContents_5
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        LDRB     R0,[R0, #+152]
+        LDR      R1,??drawWeatherContents_4+0x4  ;; BCFG_Tags_Time_Day
+        LDR      R1,[R1, #+0]
+        CMP      R0,R1
+        BCS      ??drawWeatherContents_6
+//  200       mybook->setWDraw(2);
+??drawWeatherContents_5:
+        MOV      R1,#+2
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??setWDraw,??setWDraw??rA
+        B        ??drawWeatherContents_2
+//  201     else
+//  202       mybook->setWDraw(1);
+??drawWeatherContents_6:
+        MOV      R1,#+1
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??setWDraw,??setWDraw??rA
+//  203   }
+//  204   
+//  205   if (mybook->getHourSeted() != mybook->now.time.hour) {
+??drawWeatherContents_2:
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??getHourSeted,??getHourSeted??rA
+        LDR      R1,??DataTable51  ;; mybook
+        LDR      R1,[R1, #+0]
+        LDRB     R1,[R1, #+152]
+        CMP      R0,R1
+        BEQ      ??drawWeatherContents_7
+//  206     mybook->setHour(-1);
+        MVN      R1,#+0
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??setHour,??setHour??rA
+//  207     mybook->hourState = getStateByHour(mybook->now.time.hour);
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        LDRB     R0,[R0, #+152]
+        BL       ??getStateByHour
+        LDR      R1,??DataTable51  ;; mybook
+        LDR      R1,[R1, #+0]
+        STR      R0,[R1, #+140]
+//  208   }
+//  209 
+//  210   finalDraw(mybook->getLocation(), mybook->getWeatherToDraw()->getState_(),
+//  211             mybook->getWeatherToDraw()->getState(), mybook->getWeatherToDraw()->getAverageTemp());
+??drawWeatherContents_7:
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??getWeatherToDraw,??getWeatherToDraw??rA
+        _BLF     ??getAverageTemp,??getAverageTemp??rA
+        MOVS     R4,R0
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??getWeatherToDraw,??getWeatherToDraw??rA
+        _BLF     ??getState,??getState??rA
+        MOVS     R5,R0
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??getWeatherToDraw,??getWeatherToDraw??rA
+        _BLF     ??getState_,??getState_??rA
+        MOVS     R6,R0
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??getLocation,??getLocation??rA
+        MOVS     R3,R4
+        MOVS     R2,R5
+        MOVS     R1,R6
+        BL       ??finalDraw
+//  212   drawClock(mybook->now.time.hour, mybook->now.time.min);
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        LDRB     R1,[R0, #+153]
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        LDRB     R0,[R0, #+152]
+        BL       ??drawClock
+//  213   if (isDateEqual(&mybook->now,&mybook->dateOfWeather) != 0) {
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        ADDS     R1,R0,#+158
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        ADDS     R0,R0,#+148
+        _BLF     ??isDateEqual,??isDateEqual??rA
+        CMP      R0,#+0
+        BEQ      ??drawWeatherContents_8
+//  214     mybook->setHour(-1);
+        MVN      R1,#+0
+        LDR      R0,??DataTable51  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??setHour,??setHour??rA
+//  215     beginFile();
+        BL       ??beginFile
+//  216   }  
+//  217 }
+??drawWeatherContents_8:
+        ADD      SP,SP,#+8        ;; stack cleaning
+        CFI CFA R13+16
+        POP      {R4-R6,PC}       ;; return
+        DATA
+??drawWeatherContents_4:
+        DC32     BCFG_Tags_Time_Night
+        DC32     BCFG_Tags_Time_Day
+        CFI EndBlock cfiBlock26
+
+        RSEG CODE:CODE:NOROOT(2)
+        DATA
+??DataTable51:
+        DC32     mybook
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock27 Using cfiCommon1
+        CFI NoFunction
+        THUMB
+??errorInFile??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock27
+        REQUIRE ??errorInFile
+//  218 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock28 Using cfiCommon0
+        CFI Function ??errorInFile
+        ARM
+//  219 void errorInFile(wchar_t* message) {
+??errorInFile:
+        PUSH     {R4,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R4 Frame(CFA, -8)
+        CFI CFA R13+8
+        MOVS     R4,R0
+//  220   MessageBox(0x6FFFFFFF,TextID_Create(message,ENC_UCS2 , wstrlen(message)), NOIMAGE, 1, 0,0);
+        MOVS     R0,R4
+        SWI      +343
+        MOVS     R2,R0
+        MOV      R1,#+0
+        MOVS     R0,R4
+        SWI      +349
+        MOVS     R1,R0
+        MOV      R0,#+0
+        PUSH     {R0}
+        CFI CFA R13+12
+        MOV      R0,#+0
+        PUSH     {R0}
+        CFI CFA R13+16
+        MOV      R3,#+1
+        MOV      R2,#+255
+        ORR      R2,R2,#0xFF00
+        MVN      R0,#-1879048192
+        SWI      +599
+        ADD      SP,SP,#+8        ;; stack cleaning
+        CFI CFA R13+8
+//  221   mybook->setError(true);
+        MOV      R1,#+1
+        LDR      R0,??DataTable96  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??setError,??setError??rA
+//  222   message = NULL;
+        MOV      R0,#+0
+        MOVS     R4,R0
+//  223   FreeBook(mybook->getBook());
+        LDR      R0,??DataTable96  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??getBook,??getBook??rA
+        SWI      +303
+//  224 }
+        POP      {R4,PC}          ;; return
+        CFI EndBlock cfiBlock28
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock29 Using cfiCommon1
+        CFI NoFunction
+        THUMB
+??beginFile??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock29
+        REQUIRE ??beginFile
+//  225 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock30 Using cfiCommon0
+        CFI Function ??beginFile
+        ARM
+//  226 void beginFile() {
+??beginFile:
+        PUSH     {R4,R5,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R5 Frame(CFA, -8)
+        CFI R4 Frame(CFA, -12)
+        CFI CFA R13+12
+        SUB      SP,SP,#+12
+        CFI CFA R13+24
+//  227   dbtf("loading file");
+        LDR      R0,??beginFile_1  ;; `?<Constant "loading file">`
+        _BLF     ??dbtf,??dbtf??rA
+//  228   wchar_t* fileContent = openFile(BCFG_XMLBGLogoFolder,L"weather.txt");
+        LDR      R1,??beginFile_1+0x4  ;; `?<Constant L"\\x77\\x65\\x61\\x74\\x68\\x65\\x72\\x2e\\`
+        LDR      R0,??DataTable76  ;; BCFG_XMLBGLogoFolder
+        _BLF     ??openFile,??openFile??rA
+        MOVS     R4,R0
+//  229   wchar_t* conditionXml = openFile(BCFG_XMLBGLogoFolder, L"condition.xml");
+        LDR      R1,??beginFile_1+0x8  ;; `?<Constant L"\\x63\\x6f\\x6e\\x64\\x69\\x74\\x69\\x6f\\`
+        LDR      R0,??DataTable76  ;; BCFG_XMLBGLogoFolder
+        _BLF     ??openFile,??openFile??rA
+        MOVS     R5,R0
+//  230   if (fileContent != NULL && conditionXml != NULL) {
+        CMP      R4,#+0
+        BEQ      ??beginFile_2
+        CMP      R5,#+0
+        BEQ      ??beginFile_2
+//  231     int pos = 0;
+        MOV      R1,#+0
+        STR      R1,[SP, #+0]
+//  232     mybook->freeMyVars();
+        LDR      R0,??DataTable96  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??freeMyVars,??freeMyVars??rA
+//  233     mybook->setLocation(getLocation(fileContent, pos));
+        MOVS     R1,SP
+        MOVS     R0,R4
+        _BLF     ??getLocation_1,??getLocation??rA_1
+        MOVS     R1,R0
+        LDR      R0,??DataTable96  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??setLocation,??setLocation??rA
+//  234 
+//  235     if (mybook->getLocation() == NULL) 
+        LDR      R0,??DataTable96  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??getLocation,??getLocation??rA
+        CMP      R0,#+0
+        BNE      ??beginFile_3
+//  236       errorInFile(L"Error in location! Update your file weather.txt and run the elf again!");
+        LDR      R0,??beginFile_1+0xC  ;; `?<Constant L"\\x45\\x72\\x72\\x6f\\x72\\x20\\x69\\x6e\\`
+        BL       ??errorInFile
+        B        ??beginFile_4
+//  237     else {
+//  238       mybook->setDayWeather(getDayWeather(fileContent, pos, conditionXml));
+??beginFile_3:
+        MOVS     R2,R5
+        MOVS     R1,SP
+        MOVS     R0,R4
+        _BLF     ??getDayWeather,??getDayWeather??rA
+        MOVS     R1,R0
+        LDR      R0,??DataTable96  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??setDayWeather,??setDayWeather??rA
+//  239 
+//  240       if (mybook->getDayWeather() == NULL) errorInFile(L"Error in Day Weather! Update your file weather.txt and run the elf again!");
+        LDR      R0,??DataTable96  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??getDayWeather_1,??getDayWeather??rA_1
+        CMP      R0,#+0
+        BNE      ??beginFile_5
+        LDR      R0,??beginFile_1+0x10  ;; `?<Constant L"\\x45\\x72\\x72\\x6f\\x72\\x20\\x69\\x6e\\_1`
+        BL       ??errorInFile
+        B        ??beginFile_4
+//  241       else {
+//  242         mybook->setNightWeather(getWeather(fileContent,pos, conditionXml));
+??beginFile_5:
+        MOVS     R2,R5
+        MOVS     R1,SP
+        MOVS     R0,R4
+        _BLF     ??getWeather,??getWeather??rA
+        MOVS     R1,R0
+        LDR      R0,??DataTable96  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??setNightWeather,??setNightWeather??rA
+//  243         if (mybook->getNightWeather() == NULL) errorInFile(L"Error in Night Weather! Update your file weather.txt and run the elf again!");
+        LDR      R0,??DataTable96  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??getNightWeather,??getNightWeather??rA
+        CMP      R0,#+0
+        BNE      ??beginFile_6
+        LDR      R0,??beginFile_1+0x14  ;; `?<Constant L"\\x45\\x72\\x72\\x6f\\x72\\x20\\x69\\x6e\\_2`
+        BL       ??errorInFile
+        B        ??beginFile_4
+//  244         else { mybook->dateOfWeather = getDateTime(); mybook->now = mybook->dateOfWeather; makeDateMask(); 
+??beginFile_6:
+        ADD      R0,SP,#+4
+        _BLF     ??getDateTime,??getDateTime??rA
+        LDR      R0,??DataTable96  ;; mybook
+        LDR      R0,[R0, #+0]
+        ADDS     R0,R0,#+158
+        ADD      R1,SP,#+4
+        MOV      R3,#+8
+??beginFile_7:
+        SUBS     R3,R3,#+2
+        LDRH     R2,[R1, R3]
+        STRH     R2,[R0, R3]
+        BNE      ??beginFile_7
+        LDR      R0,??DataTable96  ;; mybook
+        LDR      R0,[R0, #+0]
+        ADDS     R0,R0,#+148
+        LDR      R1,??DataTable96  ;; mybook
+        LDR      R1,[R1, #+0]
+        ADDS     R1,R1,#+158
+        MOV      R3,#+8
+??beginFile_8:
+        SUBS     R3,R3,#+2
+        LDRH     R2,[R1, R3]
+        STRH     R2,[R0, R3]
+        BNE      ??beginFile_8
+        BL       ??makeDateMask
+//  245           mybook->hourState = getStateByHour(mybook->now.time.hour); }
+        LDR      R0,??DataTable96  ;; mybook
+        LDR      R0,[R0, #+0]
+        LDRB     R0,[R0, #+152]
+        BL       ??getStateByHour
+        LDR      R1,??DataTable96  ;; mybook
+        LDR      R1,[R1, #+0]
+        STR      R0,[R1, #+140]
+//  246       }
+//  247     }
+//  248     delete fileContent;
+??beginFile_4:
+        MOVS     R0,R4
+        _BLF     `??operator delete`,`??operator delete??rA`
+//  249     delete conditionXml;
+        MOVS     R0,R5
+        _BLF     `??operator delete`,`??operator delete??rA`
+        B        ??beginFile_9
+//  250   } 
+//  251   else
+//  252     errorInFile(L"Error while trying to open weather.txt and condition.xml!");
+??beginFile_2:
+        LDR      R0,??beginFile_1+0x18  ;; `?<Constant L"\\x45\\x72\\x72\\x6f\\x72\\x20\\x77\\x68\\`
+        BL       ??errorInFile
+//  253 }
+??beginFile_9:
+        ADD      SP,SP,#+12       ;; stack cleaning
+        CFI CFA R13+12
+        POP      {R4,R5,PC}       ;; return
+        DATA
+??beginFile_1:
+        DC32     `?<Constant "loading file">`
+        DC32     `?<Constant L"\\x77\\x65\\x61\\x74\\x68\\x65\\x72\\x2e\\`
+        DC32     `?<Constant L"\\x63\\x6f\\x6e\\x64\\x69\\x74\\x69\\x6f\\`
+        DC32     `?<Constant L"\\x45\\x72\\x72\\x6f\\x72\\x20\\x69\\x6e\\`
+        DC32     `?<Constant L"\\x45\\x72\\x72\\x6f\\x72\\x20\\x69\\x6e\\_1`
+        DC32     `?<Constant L"\\x45\\x72\\x72\\x6f\\x72\\x20\\x69\\x6e\\_2`
+        DC32     `?<Constant L"\\x45\\x72\\x72\\x6f\\x72\\x20\\x77\\x68\\`
+        CFI EndBlock cfiBlock30
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock31 Using cfiCommon1
+        CFI NoFunction
+        THUMB
+??SB_ELF_Killed??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock31
+        REQUIRE ??SB_ELF_Killed
+//  254 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock32 Using cfiCommon0
+        CFI Function ??SB_ELF_Killed
+        ARM
+//  255 int SB_ELF_Killed(void *mess ,BOOK* book) {
+??SB_ELF_Killed:
+        PUSH     {R4-R7,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R7 Frame(CFA, -8)
+        CFI R6 Frame(CFA, -12)
+        CFI R5 Frame(CFA, -16)
+        CFI R4 Frame(CFA, -20)
+        CFI CFA R13+20
+        MOVS     R4,R0
+        MOVS     R5,R1
+//  256   REDRAW_RELEASE_MESSAGE* sbm=(REDRAW_RELEASE_MESSAGE*)mess;
+        MOVS     R6,R4
+//  257   REDRAW_RELEASE_MESSAGE* res = 0;
+        MOV      R0,#+0
+        MOVS     R7,R0
+//  258   if (sbm->SB_NewOnRedraw==SIonRedraw) {
+        LDR      R0,[R6, #+4]
+        LDR      R1,??DataTable93  ;; SIonRedraw
+        LDR      R1,[R1, #+0]
+        CMP      R0,R1
+        BNE      ??SB_ELF_Killed_1
+//  259     res=new REDRAW_RELEASE_MESSAGE;
+        MOV      R0,#+24
+        _BLF     `??operator new`,`??operator new??rA`
+        MOVS     R7,R0
+//  260     memcpy(res,sbm,sizeof(REDRAW_RELEASE_MESSAGE));
+        MOV      R2,#+24
+        MOVS     R1,R6
+        MOVS     R0,R7
+        SWI      +275
+//  261     if (sbm->SB_OldOnRedraw!=EMPTY_REDRAW_METHOD) SIonRedraw=sbm->SB_OldOnRedraw;
+        LDR      R0,[R6, #+0]
+        MVN      R1,#+0
+        CMP      R0,R1
+        BEQ      ??SB_ELF_Killed_2
+        LDR      R0,??DataTable93  ;; SIonRedraw
+        LDR      R1,[R6, #+0]
+        STR      R1,[R0, #+0]
+//  262     DISP_DESC_SetOnRedraw(DispObject_GetDESC(StatusIndication),Draw);
+??SB_ELF_Killed_2:
+        LDR      R0,??DataTable94  ;; StatusIndication
+        LDR      R0,[R0, #+0]
+        SWI      +543
+        LDR      R1,??DataTable87  ;; ??Draw
+        SWI      +552
+//  263     res->SB_OldOnRedraw=EMPTY_REDRAW_METHOD;
+        MVN      R0,#+0
+        STR      R0,[R7, #+0]
+//  264     res->SB_NewOnRedraw=Draw;
+        LDR      R0,??DataTable87  ;; ??Draw
+        STR      R0,[R7, #+4]
+//  265   }
+//  266   if (res) {
+??SB_ELF_Killed_1:
+        CMP      R7,#+0
+        BEQ      ??SB_ELF_Killed_3
+//  267     UI_Event_wData(SBY_REDRAW_RELEASE_EVENT ,res,(void (*)(void*))mfree_adr());
+        SWI      +33028
+        MOVS     R2,R0
+        MOVS     R1,R7
+        MOV      R0,#+227
+        ORR      R0,R0,#0x300
+        SWI      +425
+//  268     return BLOCK_EVENT_GLOBALLY;
+        MOV      R0,#+154
+        ORR      R0,R0,#0x200
+        B        ??SB_ELF_Killed_4
+//  269   }
+//  270   return 0;
+??SB_ELF_Killed_3:
+        MOV      R0,#+0
+??SB_ELF_Killed_4:
+        POP      {R4-R7,PC}       ;; return
+        CFI EndBlock cfiBlock32
+//  271 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock33 Using cfiCommon1
+        CFI NoFunction
+        THUMB
+??InitImages??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock33
+        REQUIRE ??InitImages
+//  272 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock34 Using cfiCommon0
+        CFI Function ??InitImages
+        ARM
+//  273 void InitImages(void) {
+??InitImages:
+        PUSH     {R4,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R4 Frame(CFA, -8)
+        CFI CFA R13+8
+//  274   ImageID_Get(BCFG_XMLBGLogoFolder,L"background.png",&statesID[0x0]);
+        LDR      R2,??DataTable79  ;; statesID
+        LDR      R1,??InitImages_1  ;; `?<Constant L"\\x62\\x61\\x63\\x6b\\x67\\x72\\x6f\\x75\\`
+        LDR      R0,??DataTable76  ;; BCFG_XMLBGLogoFolder
+        SWI      +716
+//  275   ImageID_Get(BCFG_XMLBGLogoFolder,L"logo.png",&statesID[0x1]);
+        LDR      R2,??DataTable75  ;; statesID + 2
+        LDR      R1,??InitImages_1+0x4  ;; `?<Constant L"\\x6c\\x6f\\x67\\x6f\\x2e\\x70\\x6e\\x67"`
+        LDR      R0,??DataTable76  ;; BCFG_XMLBGLogoFolder
+        SWI      +716
+//  276   for (int i = 0 ; i < 44 ; i++) ImageID_Get(BCFG_StatesFolder,stateImages[i],&statesID[i+0x2]);
+        MOV      R0,#+0
+        MOVS     R4,R0
+??InitImages_2:
+        CMP      R4,#+44
+        BGE      ??InitImages_3
+        MOV      R0,#+2
+        LDR      R1,??DataTable79  ;; statesID
+        MLA      R1,R0,R4,R1
+        ADDS     R2,R1,#+4
+        MOV      R0,#+4
+        LDR      R1,??InitImages_1+0x8  ;; stateImages
+        MLA      R1,R0,R4,R1
+        LDR      R1,[R1, #+0]
+        LDR      R0,??InitImages_1+0xC  ;; BCFG_StatesFolder
+        SWI      +716
+        ADDS     R4,R4,#+1
+        B        ??InitImages_2
+//  277   for (int i = 0 ; i < 59 ; i++)ImageID_Get(BCFG_Path_Clock,clockImages[i],&clockID[i]);
+??InitImages_3:
+        MOV      R0,#+0
+        MOVS     R4,R0
+??InitImages_4:
+        CMP      R4,#+59
+        BGE      ??InitImages_5
+        MOV      R0,#+2
+        LDR      R1,??DataTable80  ;; clockID
+        MLA      R2,R0,R4,R1
+        MOV      R0,#+4
+        LDR      R1,??InitImages_1+0x10  ;; clockImages
+        MLA      R1,R0,R4,R1
+        LDR      R1,[R1, #+0]
+        LDR      R0,??InitImages_1+0x14  ;; BCFG_Path_Clock
+        SWI      +716
+        ADDS     R4,R4,#+1
+        B        ??InitImages_4
+//  278 }
+??InitImages_5:
+        POP      {R4,PC}          ;; return
+        DATA
+??InitImages_1:
+        DC32     `?<Constant L"\\x62\\x61\\x63\\x6b\\x67\\x72\\x6f\\x75\\`
+        DC32     `?<Constant L"\\x6c\\x6f\\x67\\x6f\\x2e\\x70\\x6e\\x67"`
+        DC32     stateImages
+        DC32     BCFG_StatesFolder
+        DC32     clockImages
+        DC32     BCFG_Path_Clock
+        CFI EndBlock cfiBlock34
+
+        RSEG CODE:CODE:NOROOT(2)
+        DATA
+??DataTable75:
+        DC32     statesID + 2
+
+        RSEG CODE:CODE:NOROOT(2)
+        DATA
+??DataTable76:
+        DC32     BCFG_XMLBGLogoFolder
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock35 Using cfiCommon1
+        CFI NoFunction
+        THUMB
+??DestroyImages??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock35
+        REQUIRE ??DestroyImages
+//  279 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock36 Using cfiCommon0
+        CFI Function ??DestroyImages
+        ARM
+//  280 void DestroyImages(void) {
+??DestroyImages:
+        PUSH     {R4,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R4 Frame(CFA, -8)
+        CFI CFA R13+8
+//  281   for (int i = 0 ; i < 46 ; i++) ImageID_Free(statesID[i]);
+        MOV      R0,#+0
+        MOVS     R4,R0
+??DestroyImages_1:
+        CMP      R4,#+46
+        BGE      ??DestroyImages_2
+        MOV      R0,#+2
+        LDR      R1,??DataTable79  ;; statesID
+        MLA      R1,R0,R4,R1
+        LDRH     R0,[R1, #+0]
+        SWI      +717
+        ADDS     R4,R4,#+1
+        B        ??DestroyImages_1
+//  282   for (int i = 0 ; i < 59 ; i++) ImageID_Free(clockID[i]);
+??DestroyImages_2:
+        MOV      R0,#+0
+        MOVS     R4,R0
+??DestroyImages_3:
+        CMP      R4,#+59
+        BGE      ??DestroyImages_4
+        MOV      R0,#+2
+        LDR      R1,??DataTable80  ;; clockID
+        MLA      R1,R0,R4,R1
+        LDRH     R0,[R1, #+0]
+        SWI      +717
+        ADDS     R4,R4,#+1
+        B        ??DestroyImages_3
+//  283 }
+??DestroyImages_4:
+        POP      {R4,PC}          ;; return
+        CFI EndBlock cfiBlock36
+
+        RSEG CODE:CODE:NOROOT(2)
+        DATA
+??DataTable79:
+        DC32     statesID
+
+        RSEG CODE:CODE:NOROOT(2)
+        DATA
+??DataTable80:
+        DC32     clockID
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock37 Using cfiCommon1
+        CFI NoFunction
+        THUMB
+??drawWeatherInfo??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock37
+        REQUIRE ??drawWeatherInfo
+//  284 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock38 Using cfiCommon0
+        CFI Function ??drawWeatherInfo
+        ARM
+//  285 void drawWeatherInfo(MyBook* book) {
+??drawWeatherInfo:
+        PUSH     {R4,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R4 Frame(CFA, -8)
+        CFI CFA R13+8
+        SUB      SP,SP,#+4
+        CFI CFA R13+12
+        MOVS     R4,R0
+//  286   mybook = book;
+        LDR      R0,??DataTable96  ;; mybook
+        STR      R4,[R0, #+0]
+//  287   beginFile();
+        BL       ??beginFile
+//  288 
+//  289   if (!mybook->getError()) {
+        LDR      R0,??DataTable96  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??getError,??getError??rA
+        CMP      R0,#+0
+        BNE      ??drawWeatherInfo_1
+//  290     InitImages();
+        BL       ??InitImages
+//  291     StatusIndication = GUIObject_GetDispObject( (GUI*)List_Get(Find_StandbyBook()->xguilist->guilist,0) );
+        SWI      +305
+        MOV      R1,#+0
+        LDR      R0,[R0, #+20]
+        LDR      R0,[R0, #+4]
+        SWI      +429
+        SWI      +360
+        LDR      R1,??DataTable94  ;; StatusIndication
+        STR      R0,[R1, #+0]
+//  292     SIonRedraw=DispObject_GetOnRedraw(StatusIndication);
+        LDR      R0,??DataTable94  ;; StatusIndication
+        LDR      R0,[R0, #+0]
+        SWI      +553
+        LDR      R1,??DataTable93  ;; SIonRedraw
+        STR      R0,[R1, #+0]
+//  293     DISP_DESC_SetOnRedraw(DispObject_GetDESC(StatusIndication),Draw);
+        LDR      R0,??DataTable94  ;; StatusIndication
+        LDR      R0,[R0, #+0]
+        SWI      +543
+        LDR      R1,??DataTable87  ;; ??Draw
+        SWI      +552
+//  294     mybook->ftimer=Timer_Set(1000,onfTimer,0);
+        MOV      R1,#+0
+        MOVS     R0,SP
+        _BLF     ??LPARAM,??LPARAM??rA
+        LDR      R2,[SP, #+0]
+        LDR      R1,??DataTable88  ;; ??onfTimer
+        MOV      R0,#+1000
+        SWI      +297
+        LDR      R1,??DataTable96  ;; mybook
+        LDR      R1,[R1, #+0]
+        STRH     R0,[R1, #+156]
+//  295   }
+//  296 }
+??drawWeatherInfo_1:
+        ADD      SP,SP,#+4        ;; stack cleaning
+        CFI CFA R13+8
+        POP      {R4,PC}          ;; return
+        CFI EndBlock cfiBlock38
+
+        RSEG CODE:CODE:NOROOT(2)
+        DATA
+??DataTable87:
+        DC32     ??Draw
+
+        RSEG CODE:CODE:NOROOT(2)
+        DATA
+??DataTable88:
+        DC32     ??onfTimer
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock39 Using cfiCommon1
+        CFI NoFunction
+        THUMB
+??onCloseBEBook??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock39
+        REQUIRE ??onCloseBEBook
+//  297 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock40 Using cfiCommon0
+        CFI Function ??onCloseBEBook
+        ARM
+//  298 void onCloseBEBook(BOOK* book) {
+??onCloseBEBook:
+        PUSH     {R4,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R4 Frame(CFA, -8)
+        CFI CFA R13+8
+        MOVS     R4,R0
+//  299   if (book)  {
+        CMP      R4,#+0
+        BEQ      ??onCloseBEBook_1
+//  300     if (StatusIndication) {
+        LDR      R0,??DataTable94  ;; StatusIndication
+        LDR      R0,[R0, #+0]
+        CMP      R0,#+0
+        BEQ      ??onCloseBEBook_2
+//  301       Timer_Kill(&mybook->ftimer);
+        LDR      R0,??DataTable96  ;; mybook
+        LDR      R0,[R0, #+0]
+        ADDS     R0,R0,#+156
+        SWI      +298
+//  302       DestroyImages();
+        BL       ??DestroyImages
+//  303       DISP_DESC_SetOnRedraw(DispObject_GetDESC(StatusIndication),SIonRedraw);
+        LDR      R0,??DataTable94  ;; StatusIndication
+        LDR      R0,[R0, #+0]
+        SWI      +543
+        LDR      R1,??DataTable93  ;; SIonRedraw
+        LDR      R1,[R1, #+0]
+        SWI      +552
+//  304       DispObject_InvalidateRect(StatusIndication,0);
+        MOV      R1,#+0
+        LDR      R0,??DataTable94  ;; StatusIndication
+        LDR      R0,[R0, #+0]
+        SWI      +495
+//  305       Send_REDRAW_RELEASE();
+        BL       ??Send_REDRAW_RELEASE
+//  306     }
+//  307     mybook->freeMyVars();
+??onCloseBEBook_2:
+        LDR      R0,??DataTable96  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     ??freeMyVars,??freeMyVars??rA
+//  308     delete mybook;
+        LDR      R0,??DataTable96  ;; mybook
+        LDR      R0,[R0, #+0]
+        _BLF     `??operator delete`,`??operator delete??rA`
+//  309     SUBPROC(elf_exit);
+        LDR      R0,??onCloseBEBook_3  ;; ??elf_exit
+        SWI      +264
+//  310   }
+//  311 }
+??onCloseBEBook_1:
+        POP      {R4,PC}          ;; return
+        DATA
+??onCloseBEBook_3:
+        DC32     ??elf_exit
+        CFI EndBlock cfiBlock40
+
+        RSEG CODE:CODE:NOROOT(2)
+        DATA
+??DataTable93:
+        DC32     SIonRedraw
+
+        RSEG CODE:CODE:NOROOT(2)
+        DATA
+??DataTable94:
+        DC32     StatusIndication
+
+        RSEG CODE:CODE:NOROOT(2)
+        DATA
+??DataTable96:
+        DC32     mybook
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock41 Using cfiCommon0
+        CFI NoFunction
+        ARM
+`??operator new??rA`:
+        LDR      R12,??Subroutine20_0  ;; `??operator new`
+        BX       R12
+        DATA
+??Subroutine20_0:
+        DC32     `??operator new`
+        CFI EndBlock cfiBlock41
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock42 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??InitConfig??rA:
+        LDR      R12,??Subroutine21_0  ;; ??InitConfig
+        BX       R12
+        DATA
+??Subroutine21_0:
+        DC32     ??InitConfig
+        CFI EndBlock cfiBlock42
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock43 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??setHour??rA:
+        LDR      R12,??Subroutine22_0  ;; ??setHour
+        BX       R12
+        DATA
+??Subroutine22_0:
+        DC32     ??setHour
+        CFI EndBlock cfiBlock43
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock44 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??loadDateNames??rA:
+        LDR      R12,??Subroutine23_0  ;; ??loadDateNames
+        BX       R12
+        DATA
+??Subroutine23_0:
+        DC32     ??loadDateNames
+        CFI EndBlock cfiBlock44
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock45 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??searchLine??rA:
+        LDR      R12,??Subroutine24_0  ;; ??searchLine
+        BX       R12
+        DATA
+??Subroutine24_0:
+        DC32     ??searchLine
+        CFI EndBlock cfiBlock45
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock46 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??wGetIndexOfLine??rA:
+        LDR      R12,??Subroutine25_0  ;; ??wGetIndexOfLine
+        BX       R12
+        DATA
+??Subroutine25_0:
+        DC32     ??wGetIndexOfLine
+        CFI EndBlock cfiBlock46
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock47 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??getWSubStr??rA:
+        LDR      R12,??Subroutine26_0  ;; ??getWSubStr
+        BX       R12
+        DATA
+??Subroutine26_0:
+        DC32     ??getWSubStr
+        CFI EndBlock cfiBlock47
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock48 Using cfiCommon0
+        CFI NoFunction
+        ARM
+`??operator delete??rA`:
+        LDR      R12,??Subroutine27_0  ;; `??operator delete`
+        BX       R12
+        DATA
+??Subroutine27_0:
+        DC32     `??operator delete`
+        CFI EndBlock cfiBlock48
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock49 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??donothing??rA:
+        LDR      R12,??Subroutine28_0  ;; ??donothing
+        BX       R12
+        DATA
+??Subroutine28_0:
+        DC32     ??donothing
+        CFI EndBlock cfiBlock49
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock50 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??intlen??rA:
+        LDR      R12,??Subroutine29_0  ;; ??intlen
+        BX       R12
+        DATA
+??Subroutine29_0:
+        DC32     ??intlen
+        CFI EndBlock cfiBlock50
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock51 Using cfiCommon0
+        CFI NoFunction
+        ARM
+`??operator new[]??rA`:
+        LDR      R12,??Subroutine30_0  ;; `??operator new[]`
+        BX       R12
+        DATA
+??Subroutine30_0:
+        DC32     `??operator new[]`
+        CFI EndBlock cfiBlock51
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock52 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??__longToFloat??rA:
+        LDR      R3,??Subroutine31_0  ;; __longToFloat
+        BX       R3
+        DATA
+??Subroutine31_0:
+        DC32     __longToFloat
+        CFI EndBlock cfiBlock52
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock53 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??__floatToDouble??rA:
+        LDR      R3,??Subroutine32_0  ;; __floatToDouble
+        BX       R3
+        DATA
+??Subroutine32_0:
+        DC32     __floatToDouble
+        CFI EndBlock cfiBlock53
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock54 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??getGC??rA:
+        LDR      R12,??Subroutine33_0  ;; ??getGC
+        BX       R12
+        DATA
+??Subroutine33_0:
+        DC32     ??getGC
+        CFI EndBlock cfiBlock54
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock55 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??LPARAM??rA:
+        LDR      R12,??Subroutine34_0  ;; ??LPARAM
+        BX       R12
+        DATA
+??Subroutine34_0:
+        DC32     ??LPARAM
+        CFI EndBlock cfiBlock55
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock56 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??getDateTime??rA:
+        LDR      R12,??Subroutine35_0  ;; ??getDateTime
+        BX       R12
+        DATA
+??Subroutine35_0:
+        DC32     ??getDateTime
+        CFI EndBlock cfiBlock56
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock57 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??getHourSeted??rA:
+        LDR      R12,??Subroutine36_0  ;; ??getHourSeted
+        BX       R12
+        DATA
+??Subroutine36_0:
+        DC32     ??getHourSeted
+        CFI EndBlock cfiBlock57
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock58 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??getWeatherToDraw??rA:
+        LDR      R12,??Subroutine37_0  ;; ??getWeatherToDraw
+        BX       R12
+        DATA
+??Subroutine37_0:
+        DC32     ??getWeatherToDraw
+        CFI EndBlock cfiBlock58
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock59 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??freeWDraw??rA:
+        LDR      R12,??Subroutine38_0  ;; ??freeWDraw
+        BX       R12
+        DATA
+??Subroutine38_0:
+        DC32     ??freeWDraw
+        CFI EndBlock cfiBlock59
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock60 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??setWDraw??rA:
+        LDR      R12,??Subroutine39_0  ;; ??setWDraw
+        BX       R12
+        DATA
+??Subroutine39_0:
+        DC32     ??setWDraw
+        CFI EndBlock cfiBlock60
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock61 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??getAverageTemp??rA:
+        LDR      R12,??Subroutine40_0  ;; ??getAverageTemp
+        BX       R12
+        DATA
+??Subroutine40_0:
+        DC32     ??getAverageTemp
+        CFI EndBlock cfiBlock61
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock62 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??getState??rA:
+        LDR      R12,??Subroutine41_0  ;; ??getState
+        BX       R12
+        DATA
+??Subroutine41_0:
+        DC32     ??getState
+        CFI EndBlock cfiBlock62
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock63 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??getState_??rA:
+        LDR      R12,??Subroutine42_0  ;; ??getState_
+        BX       R12
+        DATA
+??Subroutine42_0:
+        DC32     ??getState_
+        CFI EndBlock cfiBlock63
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock64 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??getLocation??rA:
+        LDR      R12,??Subroutine43_0  ;; ??getLocation
+        BX       R12
+        DATA
+??Subroutine43_0:
+        DC32     ??getLocation
+        CFI EndBlock cfiBlock64
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock65 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??isDateEqual??rA:
+        LDR      R12,??Subroutine44_0  ;; ??isDateEqual
+        BX       R12
+        DATA
+??Subroutine44_0:
+        DC32     ??isDateEqual
+        CFI EndBlock cfiBlock65
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock66 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??setError??rA:
+        LDR      R12,??Subroutine45_0  ;; ??setError
+        BX       R12
+        DATA
+??Subroutine45_0:
+        DC32     ??setError
+        CFI EndBlock cfiBlock66
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock67 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??getBook??rA:
+        LDR      R12,??Subroutine46_0  ;; ??getBook
+        BX       R12
+        DATA
+??Subroutine46_0:
+        DC32     ??getBook
+        CFI EndBlock cfiBlock67
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock68 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??dbtf??rA:
+        LDR      R12,??Subroutine47_0  ;; ??dbtf
+        BX       R12
+        DATA
+??Subroutine47_0:
+        DC32     ??dbtf
+        CFI EndBlock cfiBlock68
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock69 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??openFile??rA:
+        LDR      R12,??Subroutine48_0  ;; ??openFile
+        BX       R12
+        DATA
+??Subroutine48_0:
+        DC32     ??openFile
+        CFI EndBlock cfiBlock69
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock70 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??freeMyVars??rA:
+        LDR      R12,??Subroutine49_0  ;; ??freeMyVars
+        BX       R12
+        DATA
+??Subroutine49_0:
+        DC32     ??freeMyVars
+        CFI EndBlock cfiBlock70
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock71 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??getLocation??rA_1:
+        LDR      R12,??Subroutine50_0  ;; ??getLocation_1
+        BX       R12
+        DATA
+??Subroutine50_0:
+        DC32     ??getLocation_1
+        CFI EndBlock cfiBlock71
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock72 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??setLocation??rA:
+        LDR      R12,??Subroutine51_0  ;; ??setLocation
+        BX       R12
+        DATA
+??Subroutine51_0:
+        DC32     ??setLocation
+        CFI EndBlock cfiBlock72
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock73 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??getDayWeather??rA:
+        LDR      R12,??Subroutine52_0  ;; ??getDayWeather
+        BX       R12
+        DATA
+??Subroutine52_0:
+        DC32     ??getDayWeather
+        CFI EndBlock cfiBlock73
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock74 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??setDayWeather??rA:
+        LDR      R12,??Subroutine53_0  ;; ??setDayWeather
+        BX       R12
+        DATA
+??Subroutine53_0:
+        DC32     ??setDayWeather
+        CFI EndBlock cfiBlock74
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock75 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??getDayWeather??rA_1:
+        LDR      R12,??Subroutine54_0  ;; ??getDayWeather_1
+        BX       R12
+        DATA
+??Subroutine54_0:
+        DC32     ??getDayWeather_1
+        CFI EndBlock cfiBlock75
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock76 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??getWeather??rA:
+        LDR      R12,??Subroutine55_0  ;; ??getWeather
+        BX       R12
+        DATA
+??Subroutine55_0:
+        DC32     ??getWeather
+        CFI EndBlock cfiBlock76
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock77 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??setNightWeather??rA:
+        LDR      R12,??Subroutine56_0  ;; ??setNightWeather
+        BX       R12
+        DATA
+??Subroutine56_0:
+        DC32     ??setNightWeather
+        CFI EndBlock cfiBlock77
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock78 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??getNightWeather??rA:
+        LDR      R12,??Subroutine57_0  ;; ??getNightWeather
+        BX       R12
+        DATA
+??Subroutine57_0:
+        DC32     ??getNightWeather
+        CFI EndBlock cfiBlock78
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock79 Using cfiCommon0
+        CFI NoFunction
+        ARM
+??getError??rA:
+        LDR      R12,??Subroutine58_0  ;; ??getError
+        BX       R12
+        DATA
+??Subroutine58_0:
+        DC32     ??getError
+        CFI EndBlock cfiBlock79
+
+        RSEG DATA_ID:CONST:SORT:NOROOT(2)
+`?<Initializer for IID_IFontManager>`:
+        DATA
+        DC8 149, 208, 95, 202, 15, 48, 79, 146, 148, 59, 19, 137, 33, 47, 9
+        DC8 215
+
+        RSEG DATA_ID:CONST:SORT:NOROOT(2)
+`?<Initializer for CID_CFontManager>`:
+        DATA
+        DC8 130, 172, 151, 155, 88, 68, 65, 57, 160, 211, 230, 207, 114, 181
+        DC8 128, 105
+
+        RSEG DATA_ID:CONST:SORT:NOROOT(2)
+`?<Initializer for IID_ITextRenderingManager>`:
+        DATA
+        DC8 206, 145, 123, 98, 227, 58, 77, 199, 133, 36, 121, 30, 111, 1, 3, 9
+
+        RSEG DATA_ID:CONST:SORT:NOROOT(2)
+`?<Initializer for CID_CTextRenderingManager>`:
+        DATA
+        DC8 207, 220, 205, 157, 174, 109, 64, 174, 179, 151, 56, 176, 93, 45
+        DC8 53, 157
+
+        RSEG DATA_ID:CONST:SORT:NOROOT(2)
+`?<Initializer for IID_IImageManager>`:
+        DATA
+        DC8 99, 239, 165, 49, 255, 209, 78, 37, 166, 36, 96, 10, 150, 129, 63
+        DC8 197
+
+        RSEG DATA_ID:CONST:SORT:NOROOT(2)
+`?<Initializer for CID_CImageManager>`:
+        DATA
+        DC8 134, 45, 249, 149, 28, 59, 75, 36, 183, 77, 143, 152, 112, 30, 93
+        DC8 20
+
+        RSEG DATA_ID:CONST:SORT:NOROOT(2)
+`?<Initializer for IID_IMetaData>`:
+        DATA
+        DC8 177, 235, 79, 151, 176, 221, 66, 9, 182, 150, 206, 17, 45, 94, 216
+        DC8 232
+
+        RSEG DATA_ID:CONST:SORT:NOROOT(2)
+`?<Initializer for CID_CMetaData>`:
+        DATA
+        DC8 11, 205, 149, 15, 159, 182, 78, 122, 167, 205, 202, 29, 135, 186
+        DC8 154, 39
+
+        RSEG DATA_ID:CONST:SORT:NOROOT(2)
+`?<Initializer for IID_IIndicationDeviceManager`:
+        DATA
+        DC8 13, 68, 191, 134, 134, 234, 76, 138, 174, 123, 186, 38, 64, 200, 99
+        DC8 16
+
+        RSEG DATA_ID:CONST:SORT:NOROOT(2)
+`?<Initializer for CID_CIndicationDeviceManager`:
+        DATA
+        DC8 63, 72, 254, 39, 100, 248, 73, 7, 160, 230, 234, 43, 192, 224, 204
+        DC8 200
+
+        RSEG DATA_ID:CONST:SORT:NOROOT(2)
+`?<Initializer for stateImages>`:
+        DATA
+        DC32 `?<Constant L"\\x31\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x32\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x33\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x34\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x35\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x36\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x37\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x38\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x31\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x31\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x39\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x31\\x30\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x31\\x31\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x31\\x32\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x31\\x33\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x31\\x34\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x31\\x35\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x31\\x36\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x31\\x37\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x31\\x38\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x31\\x39\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x32\\x30\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x32\\x31\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x32\\x32\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x32\\x33\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x32\\x34\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x31\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x31\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x32\\x35\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x32\\x36\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x32\\x37\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x32\\x38\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x32\\x39\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x33\\x30\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x33\\x31\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x33\\x32\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x33\\x33\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x33\\x34\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x33\\x35\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x33\\x36\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x33\\x37\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x33\\x37\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x33\\x38\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x33\\x39\\x2e\\x70\\x6e\\x67">`
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+
+        RSEG DATA_ID:CONST:SORT:NOROOT(2)
+`?<Initializer for statesID>`:
+        DATA
+        DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+        DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+        DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+        DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+        DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+        DC16 65535
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+
+        RSEG DATA_ID:CONST:SORT:NOROOT(2)
+`?<Initializer for clockImages>`:
+        DATA
+        DC32 `?<Constant L"\\x31\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x32\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x33\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x34\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x35\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x36\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x37\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x38\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x39\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x31\\x30\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x31\\x31\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x31\\x32\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x31\\x33\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x31\\x34\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x31\\x35\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x31\\x36\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x31\\x37\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x31\\x38\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x31\\x39\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x32\\x30\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x32\\x31\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x32\\x32\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x32\\x33\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x32\\x34\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x32\\x35\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x32\\x36\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x32\\x37\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x32\\x38\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x32\\x39\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x33\\x30\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x33\\x31\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x33\\x32\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x33\\x33\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x33\\x34\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x33\\x35\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x33\\x36\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x33\\x37\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x33\\x38\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x33\\x39\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x34\\x30\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x34\\x31\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x34\\x32\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x34\\x33\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x34\\x34\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x34\\x35\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x34\\x36\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x34\\x37\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x34\\x38\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x34\\x39\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x35\\x30\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x35\\x31\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x35\\x32\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x35\\x33\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x35\\x34\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x35\\x35\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x35\\x36\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x35\\x37\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x35\\x38\\x2e\\x70\\x6e\\x67">`
+        DC32 `?<Constant L"\\x35\\x39\\x2e\\x70\\x6e\\x67">`
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0
+
+        RSEG DATA_ID:CONST:SORT:NOROOT(2)
+`?<Initializer for clockID>`:
+        DATA
+        DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+        DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+        DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+        DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+        DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+        DC16 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535
+        DC16 65535, 65535, 65535, 65535, 65535
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+
+        RSEG INITTAB:CODE:ROOT(2)
+        DATA
+?init?tab?DATA_Z:
+        DCD      sfe(DATA_Z) - sfb(DATA_Z), sfb(DATA_Z), sfb(DATA_Z)
+
+        RSEG DATA_ID:CONST:SORT:NOROOT(2)
+`?*?DATA_ID`:
+
+        RSEG INITTAB:CODE:ROOT(2)
+        DATA
+?init?tab?DATA_I:
+        DCD      sfe(DATA_I) - sfb(DATA_I), sfb(DATA_I), sfb(DATA_ID)
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x38\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 38H, 0, 2EH, 0, 70H, 0, 6EH, 0
+        DC8 67H, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant {0, 12, 13, 16, 18}>`:
+        DATA
+        DC32 0, 12, 13, 16, 18
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x25\\x64">`:
+        DATA
+        DC8 25H, 0, 64H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(1)
+        DATA
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x25\\x64\\x3a\\x25\\x64">`:
+        DATA
+        DC8 25H, 0, 64H, 0, 3AH, 0, 25H, 0
+        DC8 64H, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x5c\\x6e">`:
+        DATA
+        DC8 5CH, 0, 6EH, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x2c\\x20">`:
+        DATA
+        DC8 2CH, 0, 20H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x20\\x25\\x64">`:
+        DATA
+        DC8 20H, 0, 25H, 0, 64H, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant "loading file">`:
+        DATA
+        DC8 "loading file"
+        DC8 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x77\\x65\\x61\\x74\\x68\\x65\\x72\\x2e\\`:
+        DATA
+        DC8 77H, 0, 65H, 0, 61H, 0, 74H, 0
+        DC8 68H, 0, 65H, 0, 72H, 0, 2EH, 0
+        DC8 74H, 0, 78H, 0, 74H, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x63\\x6f\\x6e\\x64\\x69\\x74\\x69\\x6f\\`:
+        DATA
+        DC8 63H, 0, 6FH, 0, 6EH, 0, 64H, 0
+        DC8 69H, 0, 74H, 0, 69H, 0, 6FH, 0
+        DC8 6EH, 0, 2EH, 0, 78H, 0, 6DH, 0
+        DC8 6CH, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x45\\x72\\x72\\x6f\\x72\\x20\\x69\\x6e\\`:
+        DATA
+        DC8 45H, 0, 72H, 0, 72H, 0, 6FH, 0
+        DC8 72H, 0, 20H, 0, 69H, 0, 6EH, 0
+        DC8 20H, 0, 6CH, 0, 6FH, 0, 63H, 0
+        DC8 61H, 0, 74H, 0, 69H, 0, 6FH, 0
+        DC8 6EH, 0, 21H, 0, 20H, 0, 55H, 0
+        DC8 70H, 0, 64H, 0, 61H, 0, 74H, 0
+        DC8 65H, 0, 20H, 0, 79H, 0, 6FH, 0
+        DC8 75H, 0, 72H, 0, 20H, 0, 66H, 0
+        DC8 69H, 0, 6CH, 0, 65H, 0, 20H, 0
+        DC8 77H, 0, 65H, 0, 61H, 0, 74H, 0
+        DC8 68H, 0, 65H, 0, 72H, 0, 2EH, 0
+        DC8 74H, 0, 78H, 0, 74H, 0, 20H, 0
+        DC8 61H, 0, 6EH, 0, 64H, 0, 20H, 0
+        DC8 72H, 0, 75H, 0, 6EH, 0, 20H, 0
+        DC8 74H, 0, 68H, 0, 65H, 0, 20H, 0
+        DC8 65H, 0, 6CH, 0, 66H, 0, 20H, 0
+        DC8 61H, 0, 67H, 0, 61H, 0, 69H, 0
+        DC8 6EH, 0, 21H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x33\\x33\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 33H, 0, 33H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x45\\x72\\x72\\x6f\\x72\\x20\\x69\\x6e\\_1`:
+        DATA
+        DC8 45H, 0, 72H, 0, 72H, 0, 6FH, 0
+        DC8 72H, 0, 20H, 0, 69H, 0, 6EH, 0
+        DC8 20H, 0, 44H, 0, 61H, 0, 79H, 0
+        DC8 20H, 0, 57H, 0, 65H, 0, 61H, 0
+        DC8 74H, 0, 68H, 0, 65H, 0, 72H, 0
+        DC8 21H, 0, 20H, 0, 55H, 0, 70H, 0
+        DC8 64H, 0, 61H, 0, 74H, 0, 65H, 0
+        DC8 20H, 0, 79H, 0, 6FH, 0, 75H, 0
+        DC8 72H, 0, 20H, 0, 66H, 0, 69H, 0
+        DC8 6CH, 0, 65H, 0, 20H, 0, 77H, 0
+        DC8 65H, 0, 61H, 0, 74H, 0, 68H, 0
+        DC8 65H, 0, 72H, 0, 2EH, 0, 74H, 0
+        DC8 78H, 0, 74H, 0, 20H, 0, 61H, 0
+        DC8 6EH, 0, 64H, 0, 20H, 0, 72H, 0
+        DC8 75H, 0, 6EH, 0, 20H, 0, 74H, 0
+        DC8 68H, 0, 65H, 0, 20H, 0, 65H, 0
+        DC8 6CH, 0, 66H, 0, 20H, 0, 61H, 0
+        DC8 67H, 0, 61H, 0, 69H, 0, 6EH, 0
+        DC8 21H, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x45\\x72\\x72\\x6f\\x72\\x20\\x69\\x6e\\_2`:
+        DATA
+        DC8 45H, 0, 72H, 0, 72H, 0, 6FH, 0
+        DC8 72H, 0, 20H, 0, 69H, 0, 6EH, 0
+        DC8 20H, 0, 4EH, 0, 69H, 0, 67H, 0
+        DC8 68H, 0, 74H, 0, 20H, 0, 57H, 0
+        DC8 65H, 0, 61H, 0, 74H, 0, 68H, 0
+        DC8 65H, 0, 72H, 0, 21H, 0, 20H, 0
+        DC8 55H, 0, 70H, 0, 64H, 0, 61H, 0
+        DC8 74H, 0, 65H, 0, 20H, 0, 79H, 0
+        DC8 6FH, 0, 75H, 0, 72H, 0, 20H, 0
+        DC8 66H, 0, 69H, 0, 6CH, 0, 65H, 0
+        DC8 20H, 0, 77H, 0, 65H, 0, 61H, 0
+        DC8 74H, 0, 68H, 0, 65H, 0, 72H, 0
+        DC8 2EH, 0, 74H, 0, 78H, 0, 74H, 0
+        DC8 20H, 0, 61H, 0, 6EH, 0, 64H, 0
+        DC8 20H, 0, 72H, 0, 75H, 0, 6EH, 0
+        DC8 20H, 0, 74H, 0, 68H, 0, 65H, 0
+        DC8 20H, 0, 65H, 0, 6CH, 0, 66H, 0
+        DC8 20H, 0, 61H, 0, 67H, 0, 61H, 0
+        DC8 69H, 0, 6EH, 0, 21H, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x45\\x72\\x72\\x6f\\x72\\x20\\x77\\x68\\`:
+        DATA
+        DC8 45H, 0, 72H, 0, 72H, 0, 6FH, 0
+        DC8 72H, 0, 20H, 0, 77H, 0, 68H, 0
+        DC8 69H, 0, 6CH, 0, 65H, 0, 20H, 0
+        DC8 74H, 0, 72H, 0, 79H, 0, 69H, 0
+        DC8 6EH, 0, 67H, 0, 20H, 0, 74H, 0
+        DC8 6FH, 0, 20H, 0, 6FH, 0, 70H, 0
+        DC8 65H, 0, 6EH, 0, 20H, 0, 77H, 0
+        DC8 65H, 0, 61H, 0, 74H, 0, 68H, 0
+        DC8 65H, 0, 72H, 0, 2EH, 0, 74H, 0
+        DC8 78H, 0, 74H, 0, 20H, 0, 61H, 0
+        DC8 6EH, 0, 64H, 0, 20H, 0, 63H, 0
+        DC8 6FH, 0, 6EH, 0, 64H, 0, 69H, 0
+        DC8 74H, 0, 69H, 0, 6FH, 0, 6EH, 0
+        DC8 2EH, 0, 78H, 0, 6DH, 0, 6CH, 0
+        DC8 21H, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x62\\x61\\x63\\x6b\\x67\\x72\\x6f\\x75\\`:
+        DATA
+        DC8 62H, 0, 61H, 0, 63H, 0, 6BH, 0
+        DC8 67H, 0, 72H, 0, 6FH, 0, 75H, 0
+        DC8 6EH, 0, 64H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x31\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 31H, 0, 2EH, 0, 70H, 0, 6EH, 0
+        DC8 67H, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x32\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 32H, 0, 2EH, 0, 70H, 0, 6EH, 0
+        DC8 67H, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x33\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 33H, 0, 2EH, 0, 70H, 0, 6EH, 0
+        DC8 67H, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x34\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 34H, 0, 2EH, 0, 70H, 0, 6EH, 0
+        DC8 67H, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x35\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 35H, 0, 2EH, 0, 70H, 0, 6EH, 0
+        DC8 67H, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x36\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 36H, 0, 2EH, 0, 70H, 0, 6EH, 0
+        DC8 67H, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x37\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 37H, 0, 2EH, 0, 70H, 0, 6EH, 0
+        DC8 67H, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x6c\\x6f\\x67\\x6f\\x2e\\x70\\x6e\\x67"`:
+        DATA
+        DC8 6CH, 0, 6FH, 0, 67H, 0, 6FH, 0
+        DC8 2EH, 0, 70H, 0, 6EH, 0, 67H, 0
+        DC8 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x39\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 39H, 0, 2EH, 0, 70H, 0, 6EH, 0
+        DC8 67H, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x31\\x30\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 31H, 0, 30H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x31\\x31\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 31H, 0, 31H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x31\\x32\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 31H, 0, 32H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x31\\x33\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 31H, 0, 33H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x31\\x34\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 31H, 0, 34H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x31\\x35\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 31H, 0, 35H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x31\\x36\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 31H, 0, 36H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x31\\x37\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 31H, 0, 37H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x31\\x38\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 31H, 0, 38H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x31\\x39\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 31H, 0, 39H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x32\\x30\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 32H, 0, 30H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x32\\x31\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 32H, 0, 31H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x32\\x32\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 32H, 0, 32H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x32\\x33\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 32H, 0, 33H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x32\\x34\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 32H, 0, 34H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x32\\x35\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 32H, 0, 35H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x32\\x36\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 32H, 0, 36H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x32\\x37\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 32H, 0, 37H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x32\\x38\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 32H, 0, 38H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x32\\x39\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 32H, 0, 39H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x33\\x30\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 33H, 0, 30H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x33\\x31\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 33H, 0, 31H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x33\\x32\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 33H, 0, 32H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x25\\x64\\x3a\\x30\\x25\\x64">`:
+        DATA
+        DC8 25H, 0, 64H, 0, 3AH, 0, 30H, 0
+        DC8 25H, 0, 64H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x33\\x34\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 33H, 0, 34H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x33\\x35\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 33H, 0, 35H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x33\\x36\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 33H, 0, 36H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x33\\x37\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 33H, 0, 37H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x33\\x38\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 33H, 0, 38H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x33\\x39\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 33H, 0, 39H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x34\\x30\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 34H, 0, 30H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x34\\x31\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 34H, 0, 31H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x34\\x32\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 34H, 0, 32H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x34\\x33\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 34H, 0, 33H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x34\\x34\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 34H, 0, 34H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x34\\x35\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 34H, 0, 35H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x34\\x36\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 34H, 0, 36H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x34\\x37\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 34H, 0, 37H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x34\\x38\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 34H, 0, 38H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x34\\x39\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 34H, 0, 39H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x35\\x30\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 35H, 0, 30H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x35\\x31\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 35H, 0, 31H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x35\\x32\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 35H, 0, 32H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x35\\x33\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 35H, 0, 33H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x35\\x34\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 35H, 0, 34H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x35\\x35\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 35H, 0, 35H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x35\\x36\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 35H, 0, 36H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x35\\x37\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 35H, 0, 37H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x35\\x38\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 35H, 0, 38H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x35\\x39\\x2e\\x70\\x6e\\x67">`:
+        DATA
+        DC8 35H, 0, 39H, 0, 2EH, 0, 70H, 0
+        DC8 6EH, 0, 67H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x4d\\x6f\\x72\\x6e\\x69\\x6e\\x67">`:
+        DATA
+        DC8 4DH, 0, 6FH, 0, 72H, 0, 6EH, 0
+        DC8 69H, 0, 6EH, 0, 67H, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x4e\\x6f\\x6f\\x6e">`:
+        DATA
+        DC8 4EH, 0, 6FH, 0, 6FH, 0, 6EH, 0
+        DC8 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x41\\x66\\x74\\x65\\x72\\x6e\\x6f\\x6f\\`:
+        DATA
+        DC8 41H, 0, 66H, 0, 74H, 0, 65H, 0
+        DC8 72H, 0, 6EH, 0, 6FH, 0, 6FH, 0
+        DC8 6EH, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x45\\x76\\x65\\x6e\\x69\\x6e\\x67">`:
+        DATA
+        DC8 45H, 0, 76H, 0, 65H, 0, 6EH, 0
+        DC8 69H, 0, 6EH, 0, 67H, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x4e\\x69\\x67\\x68\\x74">`:
+        DATA
+        DC8 4EH, 0, 69H, 0, 67H, 0, 68H, 0
+        DC8 74H, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant {&L"\\x4d\\x6f\\x72\\x6e\\x69\\x6e\\x67", `:
+        DATA
+        DC32 `?<Constant L"\\x4d\\x6f\\x72\\x6e\\x69\\x6e\\x67">`
+        DC32 `?<Constant L"\\x4e\\x6f\\x6f\\x6e">`
+        DC32 `?<Constant L"\\x41\\x66\\x74\\x65\\x72\\x6e\\x6f\\x6f\\`
+        DC32 `?<Constant L"\\x45\\x76\\x65\\x6e\\x69\\x6e\\x67">`
+        DC32 `?<Constant L"\\x4e\\x69\\x67\\x68\\x74">`
+
+        END
+// 
+// 5 804 bytes in segment CODE
+// 1 766 bytes in segment DATA_C
+// 1 108 bytes in segment DATA_I
+// 1 108 bytes in segment DATA_ID
+//    12 bytes in segment DATA_Z
+//    24 bytes in segment INITTAB
+// 
+// 5 248 bytes of CODE  memory (+ 580 bytes shared)
+// 2 874 bytes of CONST memory
+// 1 120 bytes of DATA  memory
+//
+//Errors: none
+//Warnings: none
