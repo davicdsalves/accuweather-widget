@@ -1,0 +1,804 @@
+//////////////////////////////////////////////////////////////////////////////
+//                                                                           /
+// IAR ARM ANSI C/C++ Compiler V4.42A/W32 EVALUATION   06/Jun/2011  22:25:10 /
+// Copyright 1999-2005 IAR Systems. All rights reserved.                     /
+//                                                                           /
+//    Cpu mode        =  interwork                                           /
+//    Endian          =  little                                              /
+//    Stack alignment =  4                                                   /
+//    Source file     =  C:\Documents and Settings\Davi\Desktop\StudyElf\Acc /
+//                       uWeather Widget\utils\weather.cpp                   /
+//    Command line    =  "C:\Documents and Settings\Davi\Desktop\StudyElf\Ac /
+//                       cuWeather Widget\utils\weather.cpp" -lC             /
+//                       "C:\Documents and Settings\Davi\Desktop\StudyElf\Ac /
+//                       cuWeather Widget\Release\List\" -lA "C:\Documents   /
+//                       and Settings\Davi\Desktop\StudyElf\AccuWeather      /
+//                       Widget\Release\List\" -o "C:\Documents and          /
+//                       Settings\Davi\Desktop\StudyElf\AccuWeather          /
+//                       Widget\Release\Obj\" -s9 --no_unroll --no_inline    /
+//                       --cpu_mode arm --endian little --cpu ARM926EJ-S     /
+//                       --stack_align 4 --interwork -e --fpu None --eec++   /
+//                       --dlib_config "C:\Documents and                     /
+//                       Settings\Davi\Desktop\IAR\Embedded Workbench 4.0    /
+//                       Evaluation\ARM\LIB\dl5tpainl8n.h" -I "C:\Documents  /
+//                       and Settings\Davi\Desktop\IAR\Embedded Workbench    /
+//                       4.0 Evaluation\ARM\INC\"                            /
+//    List file       =  C:\Documents and Settings\Davi\Desktop\StudyElf\Acc /
+//                       uWeather Widget\Release\List\weather.s79            /
+//                                                                           /
+//                                                                           /
+//////////////////////////////////////////////////////////////////////////////
+
+        NAME weather
+
+        RTMODEL "StackAlign4", "USED"
+        RTMODEL "__cpu_mode", "__pcs__interwork"
+        RTMODEL "__data_model", "absolute"
+        RTMODEL "__endian", "little"
+        RTMODEL "__rt_version", "6"
+
+        RSEG CSTACK:DATA:NOROOT(2)
+
+        ERROR
+//NOTE: This module defines or uses C++ features that are not
+//      accessible from assembler code. Assembling this file will
+//      not produce an equivalent object file to the one produced
+//      by the C++ compiler.
+
+        PUBLIC ??Weather
+        FUNCTION ??Weather,0203H
+        LOCFRAME CSTACK, 28, STACK
+        MULTWEAK ??Weather??rT
+        MULTWEAK ??Weather??rT_1
+        PUBLIC ??Weather_1
+        FUNCTION ??Weather_1,0203H
+        LOCFRAME CSTACK, 16, STACK
+        MULTWEAK ??__dMul??rA
+        MULTWEAK ??__doubleToLong??rA
+        MULTWEAK ??__longToDouble??rA
+        PUBLIC `??delete ~Weather`
+        FUNCTION `??delete ~Weather`,0203H
+        LOCFRAME CSTACK, 8, STACK
+        MULTWEAK `??delete ~Weather??rT`
+        PUBLIC ??getAverageTemp
+        FUNCTION ??getAverageTemp,0203H
+        MULTWEAK ??getAverageTemp??rT
+        PUBLIC ??getLongWind
+        FUNCTION ??getLongWind,0203H
+        MULTWEAK ??getLongWind??rT
+        PUBLIC ??getState
+        FUNCTION ??getState,0203H
+        MULTWEAK ??getState??rT
+        PUBLIC ??getState_
+        FUNCTION ??getState_,0203H
+        MULTWEAK ??getState_??rT
+        PUBLIC ??getTempMax
+        FUNCTION ??getTempMax,0203H
+        MULTWEAK ??getTempMax??rT
+        PUBLIC ??getTempMin
+        FUNCTION ??getTempMin,0203H
+        MULTWEAK ??getTempMin??rT
+        PUBLIC ??getWindDirection
+        FUNCTION ??getWindDirection,0203H
+        MULTWEAK ??getWindDirection??rT
+        PUBLIC ??getWindSpeed
+        FUNCTION ??getWindSpeed,0203H
+        MULTWEAK ??getWindSpeed??rT
+        PUBLIC `??new Weather`
+        FUNCTION `??new Weather`,0203H
+        LOCFRAME CSTACK, 48, STACK
+        MULTWEAK `??new Weather??rT`
+        MULTWEAK `??new Weather??rT_1`
+        PUBLIC `??new Weather_1`
+        FUNCTION `??new Weather_1`,0203H
+        LOCFRAME CSTACK, 8, STACK
+        MULTWEAK `??operator delete??rA`
+        MULTWEAK `??operator new??rA`
+        MULTWEAK `??operator new[]??rA`
+        PUBLIC `?~Weather`
+        FUNCTION `?~Weather`,0203H
+        LOCFRAME CSTACK, 12, STACK
+        MULTWEAK `?~Weather??rT`
+        
+        CFI Names cfiNames0
+        CFI StackFrame CFA R13 HUGEDATA
+        CFI Resource R0:32, R1:32, R2:32, R3:32, R4:32, R5:32, R6:32, R7:32
+        CFI Resource R8:32, R9:32, R10:32, R11:32, R12:32, CPSR:32, R13:32
+        CFI Resource R14:32, SPSR:32
+        CFI VirtualResource ?RET:32
+        CFI EndNames cfiNames0
+        
+        CFI Common cfiCommon0 Using cfiNames0
+        CFI CodeAlign 2
+        CFI DataAlign 4
+        CFI ReturnAddress ?RET CODE
+        CFI CFA R13+0
+        CFI R0 Undefined
+        CFI R1 Undefined
+        CFI R2 Undefined
+        CFI R3 Undefined
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI R8 SameValue
+        CFI R9 SameValue
+        CFI R10 SameValue
+        CFI R11 SameValue
+        CFI R12 Undefined
+        CFI CPSR SameValue
+        CFI R14 Undefined
+        CFI SPSR SameValue
+        CFI ?RET R14
+        CFI EndCommon cfiCommon0
+        
+        
+        CFI Common cfiCommon1 Using cfiNames0
+        CFI CodeAlign 4
+        CFI DataAlign 4
+        CFI ReturnAddress ?RET CODE
+        CFI CFA R13+0
+        CFI R0 Undefined
+        CFI R1 Undefined
+        CFI R2 Undefined
+        CFI R3 Undefined
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI R8 SameValue
+        CFI R9 SameValue
+        CFI R10 SameValue
+        CFI R11 SameValue
+        CFI R12 Undefined
+        CFI CPSR SameValue
+        CFI R14 Undefined
+        CFI SPSR SameValue
+        CFI ?RET R14
+        CFI EndCommon cfiCommon1
+        
+
+
+
+__dMul              SYMBOL "__dMul"
+__doubleToLong      SYMBOL "__doubleToLong"
+__longToDouble      SYMBOL "__longToDouble"
+
+??Weather??rT       SYMBOL "??rT", ??Weather
+
+??Weather??rT_1     SYMBOL "??rT", ??Weather_1
+??__dMul??rA        SYMBOL "??rA", __dMul
+??__doubleToLong??rA SYMBOL "??rA", __doubleToLong
+??__longToDouble??rA SYMBOL "??rA", __longToDouble
+
+`??delete ~Weather??rT` SYMBOL "??rT", `??delete ~Weather`
+
+??getAverageTemp??rT SYMBOL "??rT", ??getAverageTemp
+
+??getLongWind??rT   SYMBOL "??rT", ??getLongWind
+
+??getState??rT      SYMBOL "??rT", ??getState
+
+??getState_??rT     SYMBOL "??rT", ??getState_
+
+??getTempMax??rT    SYMBOL "??rT", ??getTempMax
+
+??getTempMin??rT    SYMBOL "??rT", ??getTempMin
+
+??getWindDirection??rT SYMBOL "??rT", ??getWindDirection
+
+??getWindSpeed??rT  SYMBOL "??rT", ??getWindSpeed
+
+`??new Weather??rT` SYMBOL "??rT", `??new Weather`
+
+`??new Weather??rT_1` SYMBOL "??rT", `??new Weather_1`
+`??operator delete??rA` SYMBOL "??rA", `??operator delete`
+`??operator new??rA` SYMBOL "??rA", `??operator new`
+`??operator new[]??rA` SYMBOL "??rA", `??operator new[]`
+
+`?~Weather??rT`     SYMBOL "??rT", `?~Weather`
+
+        EXTERN `??operator delete`
+        FUNCTION `??operator delete`,0202H
+        EXTERN `??operator new`
+        FUNCTION `??operator new`,0202H
+        EXTERN `??operator new[]`
+        FUNCTION `??operator new[]`,0202H
+        EXTERN __dMul
+        FUNCTION __dMul,0202H
+        EXTERN __doubleToLong
+        FUNCTION __doubleToLong,0202H
+        EXTERN __longToDouble
+        FUNCTION __longToDouble,0202H
+
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock0 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+`??new Weather??rT`:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock0
+        REQUIRE `??new Weather`
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock1 Using cfiCommon1
+        CFI Function `??new Weather`
+        ARM
+// __??Code32?? __code __interwork __atpcs Weather &Weather::new Weather(int, int, int, int, wchar_t *, wchar_t *, wchar_t *)
+`??new Weather`:
+        PUSH     {R4-R10,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R10 Frame(CFA, -8)
+        CFI R9 Frame(CFA, -12)
+        CFI R8 Frame(CFA, -16)
+        CFI R7 Frame(CFA, -20)
+        CFI R6 Frame(CFA, -24)
+        CFI R5 Frame(CFA, -28)
+        CFI R4 Frame(CFA, -32)
+        CFI CFA R13+32
+        LDR      R8,[SP, #+32]
+        LDR      R9,[SP, #+36]
+        LDR      R10,[SP, #+40]
+        MOV      R4,R0
+        MOV      R5,R1
+        MOV      R6,R2
+        MOV      R7,R3
+        MOV      R0,#+32
+        _BLF     `??operator new`,`??operator new??rA`
+        CMP      R0,#+0
+        POPEQ    {R4-R10,PC}
+        PUSH     {R10}
+        CFI CFA R13+36
+        PUSH     {R9}
+        CFI CFA R13+40
+        PUSH     {R8}
+        CFI CFA R13+44
+        PUSH     {R7}
+        CFI CFA R13+48
+        MOV      R3,R6
+        MOV      R2,R5
+        MOV      R1,R4
+        BL       ??Weather
+        ADD      SP,SP,#+16
+        CFI CFA R13+32
+        POP      {R4-R10,PC}      ;; return
+        CFI EndBlock cfiBlock1
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock2 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+`??new Weather??rT_1`:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock2
+        REQUIRE `??new Weather_1`
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock3 Using cfiCommon1
+        CFI Function `??new Weather_1`
+        ARM
+// __??Code32?? __code __interwork __atpcs Weather &Weather::new Weather(Weather *)
+`??new Weather_1`:
+        PUSH     {R4,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R4 Frame(CFA, -8)
+        CFI CFA R13+8
+        MOV      R4,R0
+        MOV      R0,#+32
+        _BLF     `??operator new`,`??operator new??rA`
+        CMP      R0,#+0
+        POPEQ    {R4,PC}
+        MOV      R1,R4
+        POP      {R4,LR}          ;; Pop
+        CFI R4 SameValue
+        CFI ?RET R14
+        CFI CFA R13+0
+        B        ??Weather_1      ;; tailcall
+        CFI EndBlock cfiBlock3
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock4 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+`??delete ~Weather??rT`:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock4
+        REQUIRE `??delete ~Weather`
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock5 Using cfiCommon1
+        CFI Function `??delete ~Weather`
+        ARM
+// __??Code32?? __code __interwork __atpcs void Weather::delete ~Weather(Weather *)
+`??delete ~Weather`:
+        PUSH     {R4,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R4 Frame(CFA, -8)
+        CFI CFA R13+8
+        MOVS     R4,R0
+        POPEQ    {R4,PC}
+        BL       `?~Weather`
+        MOV      R0,R4
+        _BLF     `??operator delete`,`??operator delete??rA`
+        POP      {R4,PC}          ;; return
+        CFI EndBlock cfiBlock5
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock6 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??Weather??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock6
+        REQUIRE ??Weather
+// C:\Documents and Settings\Davi\Desktop\StudyElf\AccuWeather Widget\utils\weather.cpp
+//    1 #include "..\..\include\Lib_Clara.h"
+//    2 #include "..\..\include\Dir.h"
+//    3 #include "weather.h"
+//    4 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock7 Using cfiCommon1
+        CFI Function ??Weather
+        ARM
+//    5 Weather::Weather(int state, int tempMin, int tempMax, int windSpeed, wchar_t* state_, wchar_t* windDirection, wchar_t* longWind) :
+??Weather:
+        PUSH     {R4-R9,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R9 Frame(CFA, -8)
+        CFI R8 Frame(CFA, -12)
+        CFI R7 Frame(CFA, -16)
+        CFI R6 Frame(CFA, -20)
+        CFI R5 Frame(CFA, -24)
+        CFI R4 Frame(CFA, -28)
+        CFI CFA R13+28
+        LDR      R5,[SP, #+32]
+        LDR      R6,[SP, #+36]
+        LDR      R7,[SP, #+40]
+        MOV      R4,R0
+        LDR      R0,[SP, #+28]
+        MOV      R9,R2
+        MOV      R8,R3
+//    6   state(state) , tempMin(tempMin) , tempMax(tempMax) , state_(state_) , windDirection(windDirection),
+        STR      R1,[R4, #+0]
+        STR      R9,[R4, #+4]
+        STR      R8,[R4, #+8]
+//    7   averageTemp((tempMax+tempMin)/2) , windSpeed(windSpeed * 1.61), longWind(longWind) {
+        _BLF     __longToDouble,??__longToDouble??rA
+        MOV      R2,R0
+        LDR      R0,??Weather_2   ;; 0x5c28f5c3
+        MOV      R3,R1
+        LDR      R1,??Weather_2+0x4  ;; 0x3ff9c28f
+        _BLF     __dMul,??__dMul??rA
+        _BLF     __doubleToLong,??__doubleToLong??rA
+        STR      R0,[R4, #+12]
+        ADD      R0,R9,R8
+        ADD      R0,R0,R0, LSR #+31
+        ASR      R0,R0,#+1
+        STR      R0,[R4, #+16]
+        STR      R5,[R4, #+20]
+        STR      R6,[R4, #+24]
+        STR      R7,[R4, #+28]
+//    8 
+//    9 }
+        MOV      R0,R4
+        POP      {R4-R9,PC}       ;; return
+        DATA
+??Weather_2:
+        DC32     0x5c28f5c3
+        DC32     0x3ff9c28f
+        CFI EndBlock cfiBlock7
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock8 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??Weather??rT_1:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock8
+        REQUIRE ??Weather_1
+//   10 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock9 Using cfiCommon1
+        CFI Function ??Weather_1
+        ARM
+//   11 Weather::Weather(Weather* copy) : 
+??Weather_1:
+        PUSH     {R4-R6,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R6 Frame(CFA, -8)
+        CFI R5 Frame(CFA, -12)
+        CFI R4 Frame(CFA, -16)
+        CFI CFA R13+16
+        MOV      R4,R0
+        MOV      R5,R1
+//   12   state(copy->state) , tempMin(copy->tempMin) , tempMax(copy->tempMax) , windSpeed(copy->windSpeed) ,
+        LDR      R0,[R5, #+0]
+//   13   averageTemp((tempMax+tempMin)/2) {
+//   14     
+//   15     this->state_ = new wchar_t[ wstrlen( copy->state_ ) + 0x1];
+//   16     wstrncpy( this->state_ , copy->state_ , wstrlen( copy->state_ ) );
+//   17     this->state_[ wstrlen( copy->state_ ) ] = 0;
+        MOV      R6,#+0
+        STR      R0,[R4, #+0]
+        LDR      R0,[R5, #+4]
+        STR      R0,[R4, #+4]
+        LDR      R0,[R5, #+8]
+        STR      R0,[R4, #+8]
+        LDR      R0,[R5, #+12]
+        STR      R0,[R4, #+12]
+        LDR      R0,[R4, #+8]
+        LDR      R1,[R4, #+4]
+        ADD      R0,R1,R0
+        ADD      R0,R0,R0, LSR #+31
+        ASR      R0,R0,#+1
+        STR      R0,[R4, #+16]
+        LDR      R0,[R5, #+20]
+        SWI      +343
+        ADD      R0,R0,#+1
+        LSL      R0,R0,#+1
+        _BLF     `??operator new[]`,`??operator new[]??rA`
+        STR      R0,[R4, #+20]
+        LDR      R0,[R5, #+20]
+        SWI      +343
+        LDR      R1,[R5, #+20]
+        MOV      R2,R0
+        LDR      R0,[R4, #+20]
+        SWI      +339
+        LDR      R0,[R5, #+20]
+        SWI      +343
+        LDR      R1,[R4, #+20]
+        ADD      R0,R1,R0, LSL #+1
+        STRH     R6,[R0, #+0]
+//   18 
+//   19     this->windDirection = new wchar_t[ wstrlen( copy->windDirection ) + 0x1];
+        LDR      R0,[R5, #+24]
+        SWI      +343
+        ADD      R0,R0,#+1
+        LSL      R0,R0,#+1
+        _BLF     `??operator new[]`,`??operator new[]??rA`
+        STR      R0,[R4, #+24]
+//   20     wstrncpy( this->windDirection , copy->windDirection , wstrlen( copy->windDirection ) );
+        LDR      R0,[R5, #+24]
+        SWI      +343
+        LDR      R1,[R5, #+24]
+        MOV      R2,R0
+        LDR      R0,[R4, #+24]
+        SWI      +339
+//   21     this->windDirection[ wstrlen( copy->windDirection ) ] = 0;
+        LDR      R0,[R5, #+24]
+        SWI      +343
+        LDR      R1,[R4, #+24]
+        ADD      R0,R1,R0, LSL #+1
+        STRH     R6,[R0, #+0]
+//   22 
+//   23     this->longWind = new wchar_t[ wstrlen( copy->longWind ) + 0x1];
+        LDR      R0,[R5, #+28]
+        SWI      +343
+        ADD      R0,R0,#+1
+        LSL      R0,R0,#+1
+        _BLF     `??operator new[]`,`??operator new[]??rA`
+        STR      R0,[R4, #+28]
+//   24     wstrncpy( this->longWind , copy->longWind , wstrlen( copy->longWind ) );
+        LDR      R0,[R5, #+28]
+        SWI      +343
+        LDR      R1,[R5, #+28]
+        MOV      R2,R0
+        LDR      R0,[R4, #+28]
+        SWI      +339
+//   25     this->longWind[ wstrlen( copy->longWind ) ] = 0;    
+        LDR      R0,[R5, #+28]
+        SWI      +343
+        LDR      R1,[R4, #+28]
+        ADD      R0,R1,R0, LSL #+1
+        STRH     R6,[R0, #+0]
+//   26 }
+        MOV      R0,R4
+        POP      {R4-R6,PC}       ;; return
+        CFI EndBlock cfiBlock9
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock10 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+`?~Weather??rT`:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock10
+        REQUIRE `?~Weather`
+//   27 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock11 Using cfiCommon1
+        CFI Function `?~Weather`
+        ARM
+//   28 Weather::~Weather() {
+`?~Weather`:
+        PUSH     {R4,R5,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R5 Frame(CFA, -8)
+        CFI R4 Frame(CFA, -12)
+        CFI CFA R13+12
+        MOV      R4,R0
+//   29   if (this->state_ != NULL) { delete this->state_; this->state_ = NULL; }
+        LDR      R0,[R4, #+20]
+        MOV      R5,#+0
+        CMP      R0,#+0
+        BEQ      `?~Weather_1`
+        _BLF     `??operator delete`,`??operator delete??rA`
+        STR      R5,[R4, #+20]
+//   30   if (this->windDirection != NULL) { delete this->windDirection; this->windDirection = NULL; }
+`?~Weather_1`:
+        LDR      R0,[R4, #+24]
+        CMP      R0,#+0
+        BEQ      `?~Weather_2`
+        _BLF     `??operator delete`,`??operator delete??rA`
+        STR      R5,[R4, #+24]
+//   31   if (this->longWind != NULL) { delete this->longWind; this->longWind = NULL; }
+`?~Weather_2`:
+        LDR      R0,[R4, #+28]
+        CMP      R0,#+0
+        POPEQ    {R4,R5,PC}
+        _BLF     `??operator delete`,`??operator delete??rA`
+        STR      R5,[R4, #+28]
+//   32 }
+        POP      {R4,R5,PC}       ;; return
+        CFI EndBlock cfiBlock11
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock12 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getState??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock12
+        REQUIRE ??getState
+//   33 
+//   34 //void Weather::setState(int state) { this->state = state; }
+//   35 //void Weather::setTempMin(int tempMin) { this->tempMin = tempMin; }
+//   36 //void Weather::setTempMax(int tempMax) { this->tempMax = tempMax; }
+//   37 //void Weather::setWindSpeed(int windSpeed) { this->windSpeed = windSpeed; }
+//   38 //void Weather::setAverageTemp(int averageTemp) { this->averageTemp = averageTemp; }
+//   39 //void Weather::setState_(wchar_t* state_) { this->state_ = state_; }
+//   40 //void Weather::setWindDirection(wchar_t* windDirection) { this->windDirection = windDirection; }
+//   41 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock13 Using cfiCommon1
+        CFI Function ??getState
+        ARM
+//   42 int Weather::getState() const { return this->state; }
+??getState:
+        LDR      R0,[R0, #+0]
+        BX       LR               ;; return
+        CFI EndBlock cfiBlock13
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock14 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getTempMin??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock14
+        REQUIRE ??getTempMin
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock15 Using cfiCommon1
+        CFI Function ??getTempMin
+        ARM
+//   43 int Weather::getTempMin() const { return this->tempMin; }
+??getTempMin:
+        LDR      R0,[R0, #+4]
+        BX       LR               ;; return
+        CFI EndBlock cfiBlock15
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock16 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getTempMax??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock16
+        REQUIRE ??getTempMax
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock17 Using cfiCommon1
+        CFI Function ??getTempMax
+        ARM
+//   44 int Weather::getTempMax() const { return this->tempMax; }
+??getTempMax:
+        LDR      R0,[R0, #+8]
+        BX       LR               ;; return
+        CFI EndBlock cfiBlock17
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock18 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getWindSpeed??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock18
+        REQUIRE ??getWindSpeed
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock19 Using cfiCommon1
+        CFI Function ??getWindSpeed
+        ARM
+//   45 int Weather::getWindSpeed() const { return this->windSpeed; }
+??getWindSpeed:
+        LDR      R0,[R0, #+12]
+        BX       LR               ;; return
+        CFI EndBlock cfiBlock19
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock20 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getAverageTemp??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock20
+        REQUIRE ??getAverageTemp
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock21 Using cfiCommon1
+        CFI Function ??getAverageTemp
+        ARM
+//   46 int Weather::getAverageTemp() const { return this->averageTemp; }
+??getAverageTemp:
+        LDR      R0,[R0, #+16]
+        BX       LR               ;; return
+        CFI EndBlock cfiBlock21
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock22 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getState_??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock22
+        REQUIRE ??getState_
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock23 Using cfiCommon1
+        CFI Function ??getState_
+        ARM
+//   47 wchar_t* Weather::getState_() const { return this->state_; }
+??getState_:
+        LDR      R0,[R0, #+20]
+        BX       LR               ;; return
+        CFI EndBlock cfiBlock23
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock24 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getWindDirection??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock24
+        REQUIRE ??getWindDirection
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock25 Using cfiCommon1
+        CFI Function ??getWindDirection
+        ARM
+//   48 wchar_t* Weather::getWindDirection() const { return this->windDirection; }
+??getWindDirection:
+        LDR      R0,[R0, #+24]
+        BX       LR               ;; return
+        CFI EndBlock cfiBlock25
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock26 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getLongWind??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock26
+        REQUIRE ??getLongWind
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock27 Using cfiCommon1
+        CFI Function ??getLongWind
+        ARM
+//   49 wchar_t* Weather::getLongWind() const { return this->longWind; }
+??getLongWind:
+        LDR      R0,[R0, #+28]
+        BX       LR               ;; return
+        CFI EndBlock cfiBlock27
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock28 Using cfiCommon1
+        CFI NoFunction
+        ARM
+`??operator new??rA`:
+        LDR      R12,??Subroutine14_0  ;; `??operator new`
+        BX       R12
+        DATA
+??Subroutine14_0:
+        DC32     `??operator new`
+        CFI EndBlock cfiBlock28
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock29 Using cfiCommon1
+        CFI NoFunction
+        ARM
+`??operator delete??rA`:
+        LDR      R12,??Subroutine15_0  ;; `??operator delete`
+        BX       R12
+        DATA
+??Subroutine15_0:
+        DC32     `??operator delete`
+        CFI EndBlock cfiBlock29
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock30 Using cfiCommon1
+        CFI NoFunction
+        ARM
+??__longToDouble??rA:
+        LDR      R3,??Subroutine16_0  ;; __longToDouble
+        BX       R3
+        DATA
+??Subroutine16_0:
+        DC32     __longToDouble
+        CFI EndBlock cfiBlock30
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock31 Using cfiCommon1
+        CFI NoFunction
+        ARM
+??__dMul??rA:
+        LDR      R12,??Subroutine17_0  ;; __dMul
+        BX       R12
+        DATA
+??Subroutine17_0:
+        DC32     __dMul
+        CFI EndBlock cfiBlock31
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock32 Using cfiCommon1
+        CFI NoFunction
+        ARM
+??__doubleToLong??rA:
+        LDR      R3,??Subroutine18_0  ;; __doubleToLong
+        BX       R3
+        DATA
+??Subroutine18_0:
+        DC32     __doubleToLong
+        CFI EndBlock cfiBlock32
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock33 Using cfiCommon1
+        CFI NoFunction
+        ARM
+`??operator new[]??rA`:
+        LDR      R12,??Subroutine19_0  ;; `??operator new[]`
+        BX       R12
+        DATA
+??Subroutine19_0:
+        DC32     `??operator new[]`
+        CFI EndBlock cfiBlock33
+
+        END
+//   50 
+// 
+// 824 bytes in segment CODE
+// 
+// 696 bytes of CODE memory (+ 128 bytes shared)
+//
+//Errors: none
+//Warnings: none

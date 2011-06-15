@@ -1,0 +1,337 @@
+##############################################################################
+#                                                                            #
+# IAR ARM ANSI C/C++ Compiler V4.42A/W32 EVALUATION    06/Jun/2011  22:25:09 #
+# Copyright 1999-2005 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Cpu mode        =  interwork                                            #
+#    Endian          =  little                                               #
+#    Stack alignment =  4                                                    #
+#    Source file     =  C:\Documents and Settings\Davi\Desktop\StudyElf\Accu #
+#                       Weather Widget\mybook.cpp                            #
+#    Command line    =  "C:\Documents and Settings\Davi\Desktop\StudyElf\Acc #
+#                       uWeather Widget\mybook.cpp" -lC "C:\Documents and    #
+#                       Settings\Davi\Desktop\StudyElf\AccuWeather           #
+#                       Widget\Release\List\" -lA "C:\Documents and          #
+#                       Settings\Davi\Desktop\StudyElf\AccuWeather           #
+#                       Widget\Release\List\" -o "C:\Documents and           #
+#                       Settings\Davi\Desktop\StudyElf\AccuWeather           #
+#                       Widget\Release\Obj\" -s9 --no_unroll --no_inline     #
+#                       --cpu_mode arm --endian little --cpu ARM926EJ-S      #
+#                       --stack_align 4 --interwork -e --fpu None --eec++    #
+#                       --dlib_config "C:\Documents and                      #
+#                       Settings\Davi\Desktop\IAR\Embedded Workbench 4.0     #
+#                       Evaluation\ARM\LIB\dl5tpainl8n.h" -I "C:\Documents   #
+#                       and Settings\Davi\Desktop\IAR\Embedded Workbench     #
+#                       4.0 Evaluation\ARM\INC\"                             #
+#    List file       =  C:\Documents and Settings\Davi\Desktop\StudyElf\Accu #
+#                       Weather Widget\Release\List\mybook.lst               #
+#    Object file     =  C:\Documents and Settings\Davi\Desktop\StudyElf\Accu #
+#                       Weather Widget\Release\Obj\mybook.r79                #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Davi\Desktop\StudyElf\AccuWeather Widget\mybook.cpp
+      1          #include "..\include\Lib_Clara.h"
+      2          #include "..\include\Dir.h"
+      3          #include "mybook.h"
+      4          #include "utils\weather.h"
+      5          
+
+   \                                 In segment CODE, align 4, keep-with-next
+      6          MyBook::MyBook() : awBook(new BOOK) , location(NULL) , dayWeather(NULL), nightWeather(NULL) , weatherToDraw(NULL) , 
+   \                     ??MyBook:
+   \   00000000   10402DE9           PUSH     {R4,LR}
+   \   00000004   0040A0E1           MOV      R4,R0
+   \   00000008   1800A0E3           MOV      R0,#+24
+   \   0000000C   ........           _BLF     `??operator new`,`??operator new??rA`
+   \   00000010   000084E5           STR      R0,[R4, #+0]
+   \   00000014   0000A0E3           MOV      R0,#+0
+   \   00000018   040084E5           STR      R0,[R4, #+4]
+   \   0000001C   080084E5           STR      R0,[R4, #+8]
+   \   00000020   0C0084E5           STR      R0,[R4, #+12]
+   \   00000024   100084E5           STR      R0,[R4, #+16]
+      7          error(false) , hourSeted(-1) , bgCursor(0) , cursorDown(false) , wallpaperType(0) , changeWallpaper(false) { 
+   \   00000028   0010E0E1           MVN      R1,R0
+   \   0000002C   141084E5           STR      R1,[R4, #+20]
+   \   00000030   180084E5           STR      R0,[R4, #+24]
+   \   00000034   0010A0E3           MOV      R1,#+0
+   \   00000038   1C10C4E5           STRB     R1,[R4, #+28]
+   \   0000003C   240084E5           STR      R0,[R4, #+36]
+   \   00000040   2810C4E5           STRB     R1,[R4, #+40]
+   \   00000044   2900C4E5           STRB     R0,[R4, #+41]
+      8            gc = get_DisplayGC();
+   \   00000048   E50100EF           SWI      +485
+   \   0000004C   200084E5           STR      R0,[R4, #+32]
+      9          }
+   \   00000050   0400A0E1           MOV      R0,R4
+   \   00000054   1080BDE8           POP      {R4,PC}          ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     10          void MyBook::donothing() {}
+   \                     ??donothing:
+   \   00000000   1EFF2FE1           BX       LR               ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     11          BOOK* MyBook::getBook() const { return this->awBook; }
+   \                     ??getBook:
+   \   00000000   000090E5           LDR      R0,[R0, #+0]
+   \   00000004   1EFF2FE1           BX       LR               ;; return
+     12          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     13          bool MyBook::getError() const { return this->error; }
+   \                     ??getError:
+   \   00000000   1C00D0E5           LDRB     R0,[R0, #+28]
+   \   00000004   1EFF2FE1           BX       LR               ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     14          u16 MyBook::getFTimer() const { return this->ftimer; }
+   \                     ??getFTimer:
+   \   00000000   BA02D0E1           LDRH     R0,[R0, #+42]
+   \   00000004   1EFF2FE1           BX       LR               ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     15          GC* MyBook::getGC() const { return this->gc; }
+   \                     ??getGC:
+   \   00000000   200090E5           LDR      R0,[R0, #+32]
+   \   00000004   1EFF2FE1           BX       LR               ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     16          int MyBook::getHourSeted() const { return this->hourSeted; }
+   \                     ??getHourSeted:
+   \   00000000   140090E5           LDR      R0,[R0, #+20]
+   \   00000004   1EFF2FE1           BX       LR               ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     17          Weather* MyBook::getWeatherToDraw() const { return this->weatherToDraw; }
+   \                     ??getWeatherToDraw:
+   \   00000000   100090E5           LDR      R0,[R0, #+16]
+   \   00000004   1EFF2FE1           BX       LR               ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     18          Weather* MyBook::getDayWeather() const { return this->dayWeather; }
+   \                     ??getDayWeather:
+   \   00000000   080090E5           LDR      R0,[R0, #+8]
+   \   00000004   1EFF2FE1           BX       LR               ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     19          Weather* MyBook::getNightWeather() const { return this->nightWeather; }
+   \                     ??getNightWeather:
+   \   00000000   0C0090E5           LDR      R0,[R0, #+12]
+   \   00000004   1EFF2FE1           BX       LR               ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     20          wchar_t* MyBook::getLocation() const { return this->location; }
+   \                     ??getLocation:
+   \   00000000   040090E5           LDR      R0,[R0, #+4]
+   \   00000004   1EFF2FE1           BX       LR               ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     21          int MyBook::getCursor() const { return this->bgCursor; }
+   \                     ??getCursor:
+   \   00000000   180090E5           LDR      R0,[R0, #+24]
+   \   00000004   1EFF2FE1           BX       LR               ;; return
+     22          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     23          void MyBook::addCursor(int i) { this->bgCursor += i; }
+   \                     ??addCursor:
+   \   00000000   182090E5           LDR      R2,[R0, #+24]
+   \   00000004   021081E0           ADD      R1,R1,R2
+   \   00000008   181080E5           STR      R1,[R0, #+24]
+   \   0000000C   1EFF2FE1           BX       LR               ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     24          void MyBook::setCursor(int i) { this->bgCursor = i; }
+   \                     ??setCursor:
+   \   00000000   181080E5           STR      R1,[R0, #+24]
+   \   00000004   1EFF2FE1           BX       LR               ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     25          void MyBook::freeWDraw() { delete this->weatherToDraw; this->weatherToDraw = NULL; }
+   \                     ??freeWDraw:
+   \   00000000   10402DE9           PUSH     {R4,LR}
+   \   00000004   0040A0E1           MOV      R4,R0
+   \   00000008   100094E5           LDR      R0,[R4, #+16]
+   \   0000000C   ........           _BLF     `??delete ~Weather`,`??delete ~Weather??rA`
+   \   00000010   0000A0E3           MOV      R0,#+0
+   \   00000014   100084E5           STR      R0,[R4, #+16]
+   \   00000018   1080BDE8           POP      {R4,PC}          ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     26          void MyBook::setHour(int hour) { this->hourSeted = hour; }
+   \                     ??setHour:
+   \   00000000   141080E5           STR      R1,[R0, #+20]
+   \   00000004   1EFF2FE1           BX       LR               ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     27          void MyBook::setWDraw(int one) { (one == 1) ? weatherToDraw = new Weather(dayWeather) : weatherToDraw = new Weather(nightWeather); }
+   \                     ??setWDraw:
+   \   00000000   10402DE9           PUSH     {R4,LR}
+   \   00000004   010051E3           CMP      R1,#+1
+   \   00000008   0040A0E1           MOV      R4,R0
+   \   0000000C   08009405           LDREQ    R0,[R4, #+8]
+   \   00000010   0C009415           LDRNE    R0,[R4, #+12]
+   \   00000014   ........           _BLF     `??new Weather`,`??new Weather??rA`
+   \   00000018   100084E5           STR      R0,[R4, #+16]
+   \   0000001C   1080BDE8           POP      {R4,PC}          ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     28          void MyBook::setError(bool error) { this->error = error; }
+   \                     ??setError:
+   \   00000000   1C10C0E5           STRB     R1,[R0, #+28]
+   \   00000004   1EFF2FE1           BX       LR               ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     29          void MyBook::setLocation(wchar_t* location) { this->location = location; }
+   \                     ??setLocation:
+   \   00000000   041080E5           STR      R1,[R0, #+4]
+   \   00000004   1EFF2FE1           BX       LR               ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     30          void MyBook::setDayWeather(Weather* day) { this->dayWeather = day; }
+   \                     ??setDayWeather:
+   \   00000000   081080E5           STR      R1,[R0, #+8]
+   \   00000004   1EFF2FE1           BX       LR               ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+     31          void MyBook::setNightWeather(Weather* night) { this->nightWeather = night; }
+   \                     ??setNightWeather:
+   \   00000000   0C1080E5           STR      R1,[R0, #+12]
+   \   00000004   1EFF2FE1           BX       LR               ;; return
+     32          
+     33          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     34          void MyBook::freeMyVars() {
+   \                     ??freeMyVars:
+   \   00000000   30402DE9           PUSH     {R4,R5,LR}
+   \   00000004   0040A0E1           MOV      R4,R0
+     35            if (location != NULL) {
+   \   00000008   040094E5           LDR      R0,[R4, #+4]
+   \   0000000C   0050A0E3           MOV      R5,#+0
+   \   00000010   000050E3           CMP      R0,#+0
+   \   00000014   0100000A           BEQ      ??freeMyVars_1
+     36              delete location;
+   \   00000018   ........           _BLF     `??operator delete`,`??operator delete??rA`
+     37              location = NULL;
+   \   0000001C   045084E5           STR      R5,[R4, #+4]
+     38            }
+     39            if (dayWeather != NULL) {
+   \                     ??freeMyVars_1:
+   \   00000020   080094E5           LDR      R0,[R4, #+8]
+   \   00000024   000050E3           CMP      R0,#+0
+   \   00000028   0100000A           BEQ      ??freeMyVars_2
+     40              delete dayWeather;
+   \   0000002C   ........           _BLF     `??delete ~Weather`,`??delete ~Weather??rA`
+     41              dayWeather = NULL;
+   \   00000030   085084E5           STR      R5,[R4, #+8]
+     42            }
+     43            if (nightWeather != NULL) {
+   \                     ??freeMyVars_2:
+   \   00000034   0C0094E5           LDR      R0,[R4, #+12]
+   \   00000038   000050E3           CMP      R0,#+0
+   \   0000003C   0100000A           BEQ      ??freeMyVars_3
+     44              delete nightWeather;   
+   \   00000040   ........           _BLF     `??delete ~Weather`,`??delete ~Weather??rA`
+     45              nightWeather = NULL;
+   \   00000044   0C5084E5           STR      R5,[R4, #+12]
+     46            }
+     47            if (weatherToDraw != NULL) { 
+   \                     ??freeMyVars_3:
+   \   00000048   100094E5           LDR      R0,[R4, #+16]
+   \   0000004C   000050E3           CMP      R0,#+0
+   \   00000050   3080BD08           POPEQ    {R4,R5,PC}
+     48              delete weatherToDraw;
+   \   00000054   ........           _BLF     `??delete ~Weather`,`??delete ~Weather??rA`
+     49              weatherToDraw = NULL; 
+   \   00000058   105084E5           STR      R5,[R4, #+16]
+     50            }
+     51          }
+   \   0000005C   3080BDE8           POP      {R4,R5,PC}       ;; return
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \   __??Code32?? __code __interwork __atpcs MyBook &MyBook::new MyBook()
+   \                     `??new MyBook`:
+   \   00000000   00402DE9           PUSH     {LR}
+   \   00000004   3400A0E3           MOV      R0,#+52
+   \   00000008   ........           _BLF     `??operator new`,`??operator new??rA`
+   \   0000000C   000050E3           CMP      R0,#+0
+   \   00000010   0080BD08           POPEQ    {PC}
+   \   00000014   0040BDE8           POP      {LR}             ;; Pop
+   \   00000018   ........           B        ??MyBook         ;; tailcall
+
+   Maximum stack usage in bytes:
+
+     Function                       CSTACK
+     --------                       ------
+     MyBook::MyBook()                   8
+     MyBook::addCursor(int)             0
+     MyBook::donothing()                0
+     MyBook::freeMyVars()              12
+     MyBook::freeWDraw()                8
+     MyBook::getBook() const            0
+     MyBook::getCursor() const          0
+     MyBook::getDayWeather() const      0
+     MyBook::getError() const           0
+     MyBook::getFTimer() const          0
+     MyBook::getGC() const              0
+     MyBook::getHourSeted() const       0
+     MyBook::getLocation() const        0
+     MyBook::getNightWeather() const
+                                        0
+     MyBook::getWeatherToDraw() const
+                                        0
+     MyBook::new MyBook()               4
+     MyBook::setCursor(int)             0
+     MyBook::setDayWeather(Weather *)
+                                        0
+     MyBook::setError(bool)             0
+     MyBook::setHour(int)               0
+     MyBook::setLocation(wchar_t *)     0
+     MyBook::setNightWeather(Weather *)
+                                        0
+     MyBook::setWDraw(int)              8
+
+
+   Segment part sizes:
+
+     Function/Label                 Bytes
+     --------------                 -----
+     MyBook::MyBook()                 88
+     MyBook::donothing()               4
+     MyBook::getBook() const           8
+     MyBook::getError() const          8
+     MyBook::getFTimer() const         8
+     MyBook::getGC() const             8
+     MyBook::getHourSeted() const      8
+     MyBook::getWeatherToDraw() const
+                                       8
+     MyBook::getDayWeather() const     8
+     MyBook::getNightWeather() const
+                                       8
+     MyBook::getLocation() const       8
+     MyBook::getCursor() const         8
+     MyBook::addCursor(int)           16
+     MyBook::setCursor(int)            8
+     MyBook::freeWDraw()              28
+     MyBook::setHour(int)              8
+     MyBook::setWDraw(int)            32
+     MyBook::setError(bool)            8
+     MyBook::setLocation(wchar_t *)    8
+     MyBook::setDayWeather(Weather *)
+                                       8
+     MyBook::setNightWeather(Weather *)
+                                       8
+     MyBook::freeMyVars()             96
+     MyBook::new MyBook()             28
+      Others                         140
+
+ 
+ 560 bytes in segment CODE
+ 
+ 420 bytes of CODE memory (+ 140 bytes shared)
+
+Errors: none
+Warnings: none
