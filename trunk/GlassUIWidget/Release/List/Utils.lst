@@ -1,0 +1,700 @@
+##############################################################################
+#                                                                            #
+# IAR ARM ANSI C/C++ Compiler V4.42A/W32 EVALUATION    07/Jun/2011  15:55:24 #
+# Copyright 1999-2005 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Cpu mode        =  interwork                                            #
+#    Endian          =  little                                               #
+#    Stack alignment =  4                                                    #
+#    Source file     =  F:\Phone\Making elf patches\Elf's\GlassUIWidget\util #
+#                       s\Utils.cpp                                          #
+#    Command line    =  "F:\Phone\Making elf patches\Elf's\GlassUIWidget\uti #
+#                       ls\Utils.cpp" -lC "F:\Phone\Making elf               #
+#                       patches\Elf's\GlassUIWidget\Release\List\" -lA       #
+#                       "F:\Phone\Making elf patches\Elf's\GlassUIWidget\Rel #
+#                       ease\List\" -o "F:\Phone\Making elf                  #
+#                       patches\Elf's\GlassUIWidget\Release\Obj\" -s9        #
+#                       --no_unroll --no_inline --cpu_mode arm --endian      #
+#                       little --cpu ARM926EJ-S --stack_align 4 --interwork  #
+#                       -e --enable_multibytes --fpu None --eec++            #
+#                       --dlib_config "F:\Phone\Making elf                   #
+#                       patches\IAR\Embedded Workbench 4.0                   #
+#                       Evaluation\ARM\LIB\dl5tpainl8n.h" -I                 #
+#                       "F:\Phone\Making elf patches\IAR\Embedded Workbench  #
+#                       4.0 Evaluation\ARM\INC\"                             #
+#    List file       =  F:\Phone\Making elf patches\Elf's\GlassUIWidget\Rele #
+#                       ase\List\Utils.lst                                   #
+#    Object file     =  F:\Phone\Making elf patches\Elf's\GlassUIWidget\Rele #
+#                       ase\Obj\Utils.r79                                    #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+F:\Phone\Making elf patches\Elf's\GlassUIWidget\utils\Utils.cpp
+      1          #include "..\..\include\Lib_Clara.h"
+      2          #include "..\..\include\Dir.h"
+      3          #include "..\bcfg\config_data.h"
+      4          #include "utils.h"
+      5          
+      6          //<Day State="02">,12,13
+
+   \                                 In segment CODE, align 4, keep-with-next
+      7          wchar_t* getWSubStr(wchar_t* wString, int begin, int end) {
+   \                     ??getWSubStr:
+   \   00000000   70402DE9           PUSH     {R4-R6,LR}
+   \   00000004   0040A0E1           MOV      R4,R0
+   \   00000008   0150B0E1           MOVS     R5,R1
+      8            if (begin < 0 || end < 0 || (end - begin) < 0) return NULL;
+   \   0000000C   00005253           CMPPL    R2,#+0
+   \   00000010   05605250           SUBSPL   R6,R2,R5
+   \   00000014   0000A043           MOVMI    R0,#+0
+   \   00000018   7080BD48           POPMI    {R4-R6,PC}
+      9            wchar_t* wSubStr = makeNullWchar( end - begin + 0x2 );
+   \   0000001C   020086E2           ADD      R0,R6,#+2
+   \   00000020   ........           BL       ??makeNullWchar
+     10            int i;
+     11            for (i=0;i < (end - begin + 1); i++)
+   \   00000024   0010A0E3           MOV      R1,#+0
+   \   00000028   012086E2           ADD      R2,R6,#+1
+   \   0000002C   010052E3           CMP      R2,#+1
+   \   00000030   060000AA           BGE      ??getWSubStr_1
+   \   00000034   7080BDE8           POP      {R4-R6,PC}
+     12                 wSubStr[i] = wString[begin + i];
+   \                     ??getWSubStr_2:
+   \   00000038   056081E0           ADD      R6,R1,R5
+   \   0000003C   866084E0           ADD      R6,R4,R6, LSL #+1
+   \   00000040   B060D6E1           LDRH     R6,[R6, #+0]
+   \   00000044   813080E0           ADD      R3,R0,R1, LSL #+1
+   \   00000048   011081E2           ADD      R1,R1,#+1
+   \   0000004C   B060C3E1           STRH     R6,[R3, #+0]
+   \                     ??getWSubStr_1:
+   \   00000050   020051E1           CMP      R1,R2
+   \   00000054   F7FFFFBA           BLT      ??getWSubStr_2
+     13            return wSubStr;
+   \   00000058   7080BDE8           POP      {R4-R6,PC}       ;; return
+     14          }
+     15          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     16          int wGetIndexOfLine(wchar_t* string) {
+   \                     ??wGetIndexOfLine:
+   \   00000000   30402DE9           PUSH     {R4,R5,LR}
+   \   00000004   0040A0E1           MOV      R4,R0
+     17            for (int i=0;i<wstrlen(string);i++)
+   \   00000008   0050A0E3           MOV      R5,#+0
+   \   0000000C   000000EA           B        ??wGetIndexOfLine_1
+   \                     ??wGetIndexOfLine_2:
+   \   00000010   015085E2           ADD      R5,R5,#+1
+   \                     ??wGetIndexOfLine_1:
+   \   00000014   0400A0E1           MOV      R0,R4
+   \   00000018   570100EF           SWI      +343
+   \   0000001C   000055E1           CMP      R5,R0
+   \   00000020   070000AA           BGE      ??wGetIndexOfLine_3
+     18          	if (string[i] == '\\' && string[i+0x1] == 'n')
+   \   00000024   850084E0           ADD      R0,R4,R5, LSL #+1
+   \   00000028   B010D0E1           LDRH     R1,[R0, #+0]
+   \   0000002C   5C0051E3           CMP      R1,#+92
+   \   00000030   B200D001           LDRHEQ   R0,[R0, #+2]
+   \   00000034   6E005003           CMPEQ    R0,#+110
+   \   00000038   F4FFFF1A           BNE      ??wGetIndexOfLine_2
+     19                    return i;
+   \   0000003C   0500A0E1           MOV      R0,R5
+   \   00000040   3080BDE8           POP      {R4,R5,PC}
+     20            return 0;  
+   \                     ??wGetIndexOfLine_3:
+   \   00000044   0000A0E3           MOV      R0,#+0
+   \   00000048   3080BDE8           POP      {R4,R5,PC}       ;; return
+     21          }
+     22          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     23          bool searchLine(wchar_t* string) {
+   \                     ??searchLine:
+   \   00000000   30402DE9           PUSH     {R4,R5,LR}
+   \   00000004   0040A0E1           MOV      R4,R0
+     24            for (int i=0;i<wstrlen(string);i++)
+   \   00000008   0050A0E3           MOV      R5,#+0
+   \   0000000C   000000EA           B        ??searchLine_1
+   \                     ??searchLine_2:
+   \   00000010   015085E2           ADD      R5,R5,#+1
+   \                     ??searchLine_1:
+   \   00000014   0400A0E1           MOV      R0,R4
+   \   00000018   570100EF           SWI      +343
+   \   0000001C   000055E1           CMP      R5,R0
+   \   00000020   070000AA           BGE      ??searchLine_3
+     25              if (string[i] == '\\' && string[i+0x1] == 'n') return true;
+   \   00000024   850084E0           ADD      R0,R4,R5, LSL #+1
+   \   00000028   B010D0E1           LDRH     R1,[R0, #+0]
+   \   0000002C   5C0051E3           CMP      R1,#+92
+   \   00000030   B200D001           LDRHEQ   R0,[R0, #+2]
+   \   00000034   6E005003           CMPEQ    R0,#+110
+   \   00000038   F4FFFF1A           BNE      ??searchLine_2
+   \   0000003C   0100A0E3           MOV      R0,#+1
+   \   00000040   3080BDE8           POP      {R4,R5,PC}
+     26            return false;
+   \                     ??searchLine_3:
+   \   00000044   0000A0E3           MOV      R0,#+0
+   \   00000048   3080BDE8           POP      {R4,R5,PC}       ;; return
+     27          }
+     28          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     29          int wGetIndexOf(wchar_t* string, char search, int time, int from) {
+   \                     ??wGetIndexOf:
+   \   00000000   F0432DE9           PUSH     {R4-R9,LR}
+   \   00000004   0040A0E1           MOV      R4,R0
+   \   00000008   0150A0E1           MOV      R5,R1
+   \   0000000C   0260A0E1           MOV      R6,R2
+   \   00000010   0370A0E1           MOV      R7,R3
+     30            int found = 0;
+   \   00000014   0080A0E3           MOV      R8,#+0
+     31            for (int i=0;i<wstrlen(string);i++) {
+   \   00000018   0090A0E3           MOV      R9,#+0
+   \   0000001C   000000EA           B        ??wGetIndexOf_1
+   \                     ??wGetIndexOf_2:
+   \   00000020   019089E2           ADD      R9,R9,#+1
+   \                     ??wGetIndexOf_1:
+   \   00000024   0400A0E1           MOV      R0,R4
+   \   00000028   570100EF           SWI      +343
+   \   0000002C   000059E1           CMP      R9,R0
+   \   00000030   070000AA           BGE      ??wGetIndexOf_3
+     32          	if (string[i + from] == search){
+   \   00000034   090087E0           ADD      R0,R7,R9
+   \   00000038   801084E0           ADD      R1,R4,R0, LSL #+1
+   \   0000003C   B010D1E1           LDRH     R1,[R1, #+0]
+   \   00000040   050051E1           CMP      R1,R5
+     33          	  found++;
+   \   00000044   01808802           ADDEQ    R8,R8,#+1
+     34          	  if (found == time) return i+from;
+   \   00000048   06005801           CMPEQ    R8,R6
+   \   0000004C   F3FFFF1A           BNE      ??wGetIndexOf_2
+   \   00000050   F083BDE8           POP      {R4-R9,PC}
+     35          	}
+     36            }
+     37            return 0;
+   \                     ??wGetIndexOf_3:
+   \   00000054   0000A0E3           MOV      R0,#+0
+   \   00000058   F083BDE8           POP      {R4-R9,PC}       ;; return
+     38          }
+     39          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     40          bool compareWchar(wchar_t* tagFound, wchar_t* todayTag) {
+   \                     ??compareWchar:
+   \   00000000   70402DE9           PUSH     {R4-R6,LR}
+   \   00000004   0040A0E1           MOV      R4,R0
+   \   00000008   0150A0E1           MOV      R5,R1
+     41            for (int i=0;i<wstrlen(tagFound) && i<wstrlen(todayTag);i++)
+   \   0000000C   0060A0E3           MOV      R6,#+0
+   \   00000010   000000EA           B        ??compareWchar_1
+   \                     ??compareWchar_2:
+   \   00000014   016086E2           ADD      R6,R6,#+1
+   \                     ??compareWchar_1:
+   \   00000018   0400A0E1           MOV      R0,R4
+   \   0000001C   570100EF           SWI      +343
+   \   00000020   000056E1           CMP      R6,R0
+   \   00000024   0B0000AA           BGE      ??compareWchar_3
+   \   00000028   0500A0E1           MOV      R0,R5
+   \   0000002C   570100EF           SWI      +343
+   \   00000030   000056E1           CMP      R6,R0
+   \   00000034   070000AA           BGE      ??compareWchar_3
+     42              if (tagFound[i] != todayTag[i]) return false;
+   \   00000038   860084E0           ADD      R0,R4,R6, LSL #+1
+   \   0000003C   B000D0E1           LDRH     R0,[R0, #+0]
+   \   00000040   861085E0           ADD      R1,R5,R6, LSL #+1
+   \   00000044   B010D1E1           LDRH     R1,[R1, #+0]
+   \   00000048   010050E1           CMP      R0,R1
+   \   0000004C   F0FFFF0A           BEQ      ??compareWchar_2
+   \   00000050   0000A0E3           MOV      R0,#+0
+   \   00000054   7080BDE8           POP      {R4-R6,PC}
+     43            return true;
+   \                     ??compareWchar_3:
+   \   00000058   0100A0E3           MOV      R0,#+1
+   \   0000005C   7080BDE8           POP      {R4-R6,PC}       ;; return
+     44          }
+     45          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     46          int intlen(int start) {
+     47              int end = 0;
+   \                     ??intlen:
+   \   00000000   ........           LDR      R2,??DataTable1  ;; 0x66666667
+   \   00000004   0010A0E3           MOV      R1,#+0
+   \   00000008   010050E3           CMP      R0,#+1
+   \   0000000C   050000BA           BLT      ??intlen_1
+     48              while(start > 0) {
+     49                  start = start/10;
+   \                     ??intlen_2:
+   \   00000010   9230CCE0           SMULL    R3,R12,R2,R0
+     50                  end++;
+   \   00000014   011081E2           ADD      R1,R1,#+1
+   \   00000018   4CC1A0E1           ASR      R12,R12,#+2
+   \   0000001C   A00F8CE0           ADD      R0,R12,R0, LSR #+31
+     51              }
+   \   00000020   010050E3           CMP      R0,#+1
+   \   00000024   F9FFFFAA           BGE      ??intlen_2
+     52              return end;
+   \                     ??intlen_1:
+   \   00000028   0100A0E1           MOV      R0,R1
+   \   0000002C   1EFF2FE1           BX       LR               ;; return
+     53          }  
+     54          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     55          DATETIME getDateTime() { //"2011/3/20"
+   \                     ??getDateTime:
+   \   00000000   10402DE9           PUSH     {R4,LR}
+   \   00000004   08D04DE2           SUB      SP,SP,#+8
+     56            DATETIME dt;
+     57            REQUEST_DATEANDTIME_GET(SYNC,&dt);
+   \   00000008   0D10A0E1           MOV      R1,SP
+   \   0000000C   0040A0E1           MOV      R4,R0
+   \   00000010   30009FE5           LDR      R0,??getDateTime_1  ;; SYNC
+   \   00000014   000090E5           LDR      R0,[R0, #+0]
+   \   00000018   6E0100EF           SWI      +366
+     58            return dt;
+   \   0000001C   0D00A0E1           MOV      R0,SP
+   \   00000020   B010D0E1           LDRH     R1,[R0, #0]
+   \   00000024   B010C4E1           STRH     R1,[R4, #+0]
+   \   00000028   B210D0E1           LDRH     R1,[R0, #+2]
+   \   0000002C   B210C4E1           STRH     R1,[R4, #+2]
+   \   00000030   B410D0E1           LDRH     R1,[R0, #+4]
+   \   00000034   B410C4E1           STRH     R1,[R4, #+4]
+   \   00000038   B610D0E1           LDRH     R1,[R0, #+6]
+   \   0000003C   0400A0E1           MOV      R0,R4
+   \   00000040   B610C4E1           STRH     R1,[R4, #+6]
+   \   00000044   1680BDE8           POP      {R1,R2,R4,PC}    ;; return
+   \                     ??getDateTime_1:
+   \   00000048   ........           DC32     SYNC
+     59          }
+     60          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     61          wchar_t* int2wstr(int num) {
+   \                     ??int2wstr:
+   \   00000000   30402DE9           PUSH     {R4,R5,LR}
+   \   00000004   0040A0E1           MOV      R4,R0
+     62            wchar_t* number = makeNullWchar( intlen(num) );
+   \   00000008   ........           BL       ??intlen
+   \   0000000C   ........           BL       ??makeNullWchar
+   \   00000010   0050A0E1           MOV      R5,R0
+     63            snwprintf(number,intlen(num),L"%d",num);
+   \   00000014   0400A0E1           MOV      R0,R4
+   \   00000018   ........           BL       ??intlen
+   \   0000001C   14209FE5           LDR      R2,??int2wstr_1  ;; `?<Constant L"\\x25\\x64">`
+   \   00000020   0010A0E1           MOV      R1,R0
+   \   00000024   0430A0E1           MOV      R3,R4
+   \   00000028   0500A0E1           MOV      R0,R5
+   \   0000002C   150100EF           SWI      +277
+     64            return number;
+   \   00000030   0500A0E1           MOV      R0,R5
+   \   00000034   3080BDE8           POP      {R4,R5,PC}       ;; return
+   \                     ??int2wstr_1:
+   \   00000038   ........           DC32     `?<Constant L"\\x25\\x64">`
+     65          }
+     66          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     67          bool isDateEqual(DATETIME* r1, DATETIME* r2) {
+     68            int dif = r1->date.year - r2->date.year;
+   \                     ??isDateEqual:
+   \   00000000   B020D0E1           LDRH     R2,[R0, #+0]
+   \   00000004   B030D1E1           LDRH     R3,[R1, #+0]
+   \   00000008   032052E0           SUBS     R2,R2,R3
+     69            if (dif == 0) {
+   \   0000000C   0500001A           BNE      ??isDateEqual_1
+     70              dif = r1->date.mon - r2->date.mon;
+   \   00000010   0220D0E5           LDRB     R2,[R0, #+2]
+   \   00000014   0230D1E5           LDRB     R3,[R1, #+2]
+   \   00000018   032052E0           SUBS     R2,R2,R3
+     71              if (dif == 0) dif = r1->date.day - r2->date.day;
+   \   0000001C   0300D005           LDRBEQ   R0,[R0, #+3]
+   \   00000020   0310D105           LDRBEQ   R1,[R1, #+3]
+   \   00000024   01204000           SUBEQ    R2,R0,R1
+     72            }
+     73            return dif;
+   \                     ??isDateEqual_1:
+   \   00000028   000052E3           CMP      R2,#+0
+   \   0000002C   0100A013           MOVNE    R0,#+1
+   \   00000030   1EFF2F11           BXNE     LR
+   \   00000034   0000A0E3           MOV      R0,#+0
+   \   00000038   1EFF2FE1           BX       LR               ;; return
+     74          }
+     75          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     76          float celsiusToFahrenheit(int celsius) {
+     77            return (celsius * 9 / 5) + 32;
+   \                     ??celsiusToFahrenheit:
+   \   00000000   ........           LDR      R1,??DataTable1  ;; 0x66666667
+   \   00000004   800180E0           ADD      R0,R0,R0, LSL #+3
+   \   00000008   9120C3E0           SMULL    R2,R3,R1,R0
+   \   0000000C   C330A0E1           ASR      R3,R3,#+1
+   \   00000010   A00F83E0           ADD      R0,R3,R0, LSR #+31
+   \   00000014   200080E2           ADD      R0,R0,#+32
+   \   00000018   ........           _BF      __longToFloat,??__longToFloat??rA  ;; tailcall
+     78          }
+     79          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     80          float km2Mile(int km) {
+   \                     ??km2Mile:
+   \   00000000   00402DE9           PUSH     {LR}
+     81            return (km * 0.6214);
+   \   00000004   ........           _BLF     __longToDouble,??__longToDouble??rA
+   \   00000008   0C209FE5           LDR      R2,??km2Mile_1   ;; 0x40b78034
+   \   0000000C   0C309FE5           LDR      R3,??km2Mile_1+0x4  ;; 0x3fe3e282
+   \   00000010   ........           _BLF     __dMul,??__dMul??rA
+   \   00000014   0040BDE8           POP      {LR}             ;; Pop
+   \   00000018   ........           _BF      __doubleToFloat,??__doubleToFloat??rA  ;; tailcall
+   \                     ??km2Mile_1:
+   \   0000001C   3480B740           DC32     0x40b78034
+   \   00000020   82E2E33F           DC32     0x3fe3e282
+     82          }
+     83          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     84          float km2meter(int km) {
+   \                     ??km2meter:
+   \   00000000   00402DE9           PUSH     {LR}
+     85            return (km / 3.6);
+   \   00000004   ........           _BLF     __longToDouble,??__longToDouble??rA
+   \   00000008   0C209FE5           LDR      R2,??km2meter_1  ;; 0xffffffffcccccccd
+   \   0000000C   0C309FE5           LDR      R3,??km2meter_1+0x4  ;; 0x400ccccc
+   \   00000010   ........           _BLF     __dDiv,??__dDiv??rA
+   \   00000014   0040BDE8           POP      {LR}             ;; Pop
+   \   00000018   ........           _BF      __doubleToFloat,??__doubleToFloat??rA  ;; tailcall
+   \                     ??km2meter_1:
+   \   0000001C   CDCCCCCC           DC32     0xffffffffcccccccd
+   \   00000020   CCCC0C40           DC32     0x400ccccc
+     86          }
+     87          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     88          void showBox(wchar_t* message, int time) {
+   \                     ??showBox:
+   \   00000000   30402DE9           PUSH     {R4,R5,LR}
+   \   00000004   0040A0E1           MOV      R4,R0
+   \   00000008   0150A0E1           MOV      R5,R1
+     89            MessageBox(0x6FFFFFFF,TextID_Create(message,ENC_UCS2 , wstrlen(message)), NOIMAGE, 1, time,0);
+   \   0000000C   570100EF           SWI      +343
+   \   00000010   0020A0E1           MOV      R2,R0
+   \   00000014   0010A0E3           MOV      R1,#+0
+   \   00000018   0400A0E1           MOV      R0,R4
+   \   0000001C   5D0100EF           SWI      +349
+   \   00000020   0010A0E1           MOV      R1,R0
+   \   00000024   0000A0E3           MOV      R0,#+0
+   \   00000028   01002DE9           PUSH     {R0}
+   \   0000002C   0130A0E3           MOV      R3,#+1
+   \   00000030   FF20A0E3           MOV      R2,#+255
+   \   00000034   FF2C82E3           ORR      R2,R2,#0xFF00
+   \   00000038   0500A0E1           MOV      R0,R5
+   \   0000003C   01002DE9           PUSH     {R0}
+   \   00000040   9004E0E3           MVN      R0,#-1879048192
+   \   00000044   570200EF           SWI      +599
+     90            message = NULL;
+     91            delay(time);
+   \   00000048   0500A0E1           MOV      R0,R5
+   \   0000004C   850100EF           SWI      +389
+     92          }
+   \   00000050   3380BDE8           POP      {R0,R1,R4,R5,PC}  ;; return
+     93          
+
+   \                                 In segment CODE, align 4, keep-with-next
+     94          wchar_t* getStateByHour(int hour) {
+     95            wchar_t* states[0x5] = { L"Morning", L"Noon", L"Afternoon", L"Evening", L"Night" };
+   \                     ??getStateByHour:
+   \   00000000   68209FE5           LDR      R2,??getStateByHour_1  ;; `?<Constant {&L"\\x4d\\x6f\\x72\\x6e\\x69\\x6e\\x67", `
+   \   00000004   70002DE9           PUSH     {R4-R6}
+   \   00000008   28D04DE2           SUB      SP,SP,#+40
+   \   0000000C   781092E8           LDM      R2,{R3-R6,R12}
+     96            int hourState[0x5] = { 0, 12, 13, 16, 18 };
+   \   00000010   5C209FE5           LDR      R2,??getStateByHour_1+0x4  ;; `?<Constant {0, 12, 13, 16, 18}>`
+   \   00000014   0D10A0E1           MOV      R1,SP
+   \   00000018   781081E8           STM      R1,{R3-R6,R12}
+   \   0000001C   781092E8           LDM      R2,{R3-R6,R12}
+   \   00000020   14108DE2           ADD      R1,SP,#+20
+   \   00000024   781081E8           STM      R1,{R3-R6,R12}
+     97            for (int i=0;i<4;i++)
+   \   00000028   0010A0E3           MOV      R1,#+0
+     98              if (hour >= hourState[i] && hour < hourState[i + 0x1])
+   \                     ??getStateByHour_2:
+   \   0000002C   14208DE2           ADD      R2,SP,#+20
+   \   00000030   012182E0           ADD      R2,R2,R1, LSL #+2
+   \   00000034   003092E5           LDR      R3,[R2, #+0]
+   \   00000038   030050E1           CMP      R0,R3
+   \   0000003C   040000BA           BLT      ??getStateByHour_3
+   \   00000040   042092E5           LDR      R2,[R2, #+4]
+   \   00000044   020050E1           CMP      R0,R2
+     99                return states[i];
+   \   00000048   0D00A0B1           MOVLT    R0,SP
+   \   0000004C   010190B7           LDRLT    R0,[R0, +R1, LSL #+2]
+   \   00000050   030000BA           BLT      ??getStateByHour_4
+   \                     ??getStateByHour_3:
+   \   00000054   011081E2           ADD      R1,R1,#+1
+   \   00000058   040051E3           CMP      R1,#+4
+   \   0000005C   F2FFFFBA           BLT      ??getStateByHour_2
+    100            return states[0x4];
+   \   00000060   10009DE5           LDR      R0,[SP, #+16]
+   \                     ??getStateByHour_4:
+   \   00000064   28D08DE2           ADD      SP,SP,#+40
+   \   00000068   7000BDE8           POP      {R4-R6}
+   \   0000006C   1EFF2FE1           BX       LR               ;; return
+   \                     ??getStateByHour_1:
+   \   00000070   ........           DC32     `?<Constant {&L"\\x4d\\x6f\\x72\\x6e\\x69\\x6e\\x67", `
+   \   00000074   ........           DC32     `?<Constant {0, 12, 13, 16, 18}>`
+    101          }
+    102          
+
+   \                                 In segment CODE, align 4, keep-with-next
+    103          wchar_t* returnMask(const wchar_t* mask, int tag, bool contentIf, float (*func)(int) , int cond) {
+   \                     ??returnMask:
+   \   00000000   F0472DE9           PUSH     {R4-R10,LR}
+   \   00000004   20A09DE5           LDR      R10,[SP, #+32]
+   \   00000008   0040A0E1           MOV      R4,R0
+   \   0000000C   0170A0E1           MOV      R7,R1
+   \   00000010   0280A0E1           MOV      R8,R2
+   \   00000014   0390A0E1           MOV      R9,R3
+    104            int sizeOfTemp = wstrlen(mask) + intlen(tag);
+   \   00000018   570100EF           SWI      +343
+   \   0000001C   0050A0E1           MOV      R5,R0
+   \   00000020   0700A0E1           MOV      R0,R7
+   \   00000024   ........           BL       ??intlen
+   \   00000028   055080E0           ADD      R5,R0,R5
+    105            wchar_t* newMask = makeNullWchar( sizeOfTemp );
+   \   0000002C   0500A0E1           MOV      R0,R5
+   \   00000030   ........           BL       ??makeNullWchar
+   \   00000034   0060A0E1           MOV      R6,R0
+    106            snwprintf( newMask, sizeOfTemp, mask, ( contentIf == cond ? tag : (*func)(tag) ) );
+   \   00000038   0A0058E1           CMP      R8,R10
+   \   0000003C   0700A0E1           MOV      R0,R7
+   \   00000040   0100001A           BNE      ??returnMask_1
+   \   00000044   ........           _BLF     __longToFloat,??__longToFloat??rA
+   \   00000048   000000EA           B        ??returnMask_2
+   \                     ??returnMask_1:
+   \   0000004C   39FF2FE1           BLX      R9
+   \                     ??returnMask_2:
+   \   00000050   ........           _BLF     __floatToDouble,??__floatToDouble??rA
+   \   00000054   03002DE9           PUSH     {R0,R1}
+   \   00000058   0800BDE8           POP      {R3}
+   \   0000005C   0420A0E1           MOV      R2,R4
+   \   00000060   0510A0E1           MOV      R1,R5
+   \   00000064   0600A0E1           MOV      R0,R6
+   \   00000068   150100EF           SWI      +277
+    107            return newMask;
+   \   0000006C   0600A0E1           MOV      R0,R6
+   \   00000070   F287BDE8           POP      {R1,R4-R10,PC}   ;; return
+    108          }
+    109          
+
+   \                                 In segment CODE, align 4, keep-with-next
+    110          wchar_t* makeAvgState(wchar_t* state, int averageTemp) {
+    111              wchar_t* temp = returnMask( BCFG_Tags_AverageTemperature_Mask , averageTemp , BCFG_Tags_AverageTemperature_Unit , celsiusToFahrenheit );
+   \                     ??makeAvgState:
+   \   00000000   68309FE5           LDR      R3,??makeAvgState_1  ;; ??celsiusToFahrenheit
+   \   00000004   70402DE9           PUSH     {R4-R6,LR}
+   \   00000008   0040A0E1           MOV      R4,R0
+   \   0000000C   60009FE5           LDR      R0,??makeAvgState_1+0x4  ;; BCFG_Tags_AverageTemperature_Unit
+   \   00000010   000090E5           LDR      R0,[R0, #+0]
+   \   00000014   000050E3           CMP      R0,#+0
+   \   00000018   0000A0E3           MOV      R0,#+0
+   \   0000001C   01002DE9           PUSH     {R0}
+   \   00000020   50009FE5           LDR      R0,??makeAvgState_1+0x8  ;; BCFG_Tags_AverageTemperature_Mask
+   \   00000024   0120A013           MOVNE    R2,#+1
+   \   00000028   0020A003           MOVEQ    R2,#+0
+   \   0000002C   ........           BL       ??returnMask
+   \   00000030   0050A0E1           MOV      R5,R0
+    112              wchar_t* stateAvg = makeNullWchar( 256 );
+   \   00000034   400FA0E3           MOV      R0,#+256
+   \   00000038   ........           BL       ??makeNullWchar
+   \   0000003C   0060A0E1           MOV      R6,R0
+    113              
+    114              wstrcpy(stateAvg,state);
+   \   00000040   0410A0E1           MOV      R1,R4
+   \   00000044   520100EF           SWI      +338
+    115              wstrcat(stateAvg, L"\\n");
+   \   00000048   2C109FE5           LDR      R1,??makeAvgState_1+0xC  ;; `?<Constant L"\\x5c\\x6e">`
+   \   0000004C   0600A0E1           MOV      R0,R6
+   \   00000050   540100EF           SWI      +340
+    116              wstrcat(stateAvg, temp );
+   \   00000054   0510A0E1           MOV      R1,R5
+   \   00000058   0600A0E1           MOV      R0,R6
+   \   0000005C   540100EF           SWI      +340
+    117              delete temp;
+   \   00000060   0500A0E1           MOV      R0,R5
+   \   00000064   ........           _BLF     `??operator delete`,`??operator delete??rA`
+    118              return stateAvg;
+   \   00000068   0600A0E1           MOV      R0,R6
+   \   0000006C   7280BDE8           POP      {R1,R4-R6,PC}    ;; return
+   \                     ??makeAvgState_1:
+   \   00000070   ........           DC32     ??celsiusToFahrenheit
+   \   00000074   ........           DC32     BCFG_Tags_AverageTemperature_Unit
+   \   00000078   ........           DC32     BCFG_Tags_AverageTemperature_Mask
+   \   0000007C   ........           DC32     `?<Constant L"\\x5c\\x6e">`
+    119          }
+    120          
+
+   \                                 In segment CODE, align 4, keep-with-next
+    121          wchar_t* makeNullWchar(int len) {
+   \                     ??makeNullWchar:
+   \   00000000   30402DE9           PUSH     {R4,R5,LR}
+   \   00000004   0040A0E1           MOV      R4,R0
+    122            wchar_t* asRequested = new wchar_t[len];
+   \   00000008   8400A0E1           LSL      R0,R4,#+1
+   \   0000000C   ........           _BLF     `??operator new[]`,`??operator new[]??rA`
+   \   00000010   0050A0E1           MOV      R5,R0
+    123            memset( asRequested, 0, sizeof(wchar_t)*len );
+   \   00000014   8420A0E1           LSL      R2,R4,#+1
+   \   00000018   0010A0E3           MOV      R1,#+0
+   \   0000001C   120100EF           SWI      +274
+    124            return asRequested;
+   \   00000020   0500A0E1           MOV      R0,R5
+   \   00000024   3080BDE8           POP      {R4,R5,PC}       ;; return
+    125          }
+
+   \                                 In segment CODE, align 4, keep-with-next
+   \                     ??DataTable1:
+   \   00000000   67666666           DC32     0x66666667
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x25\\x64">`:
+   \   00000000   250064000000       DC8 25H, 0, 64H, 0, 0, 0
+   \   00000006   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x4d\\x6f\\x72\\x6e\\x69\\x6e\\x67">`:
+   \   00000000   4D006F007200       DC8 4DH, 0, 6FH, 0, 72H, 0, 6EH, 0
+   \              6E00        
+   \   00000008   69006E006700       DC8 69H, 0, 6EH, 0, 67H, 0, 0, 0
+   \              0000        
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x4e\\x6f\\x6f\\x6e">`:
+   \   00000000   4E006F006F00       DC8 4EH, 0, 6FH, 0, 6FH, 0, 6EH, 0
+   \              6E00        
+   \   00000008   0000               DC8 0, 0
+   \   0000000A   0000               DC8 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x41\\x66\\x74\\x65\\x72\\x6e\\x6f\\x6f\\`:
+   \   00000000   410066007400       DC8 41H, 0, 66H, 0, 74H, 0, 65H, 0
+   \              6500        
+   \   00000008   72006E006F00       DC8 72H, 0, 6EH, 0, 6FH, 0, 6FH, 0
+   \              6F00        
+   \   00000010   6E000000           DC8 6EH, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x45\\x76\\x65\\x6e\\x69\\x6e\\x67">`:
+   \   00000000   450076006500       DC8 45H, 0, 76H, 0, 65H, 0, 6EH, 0
+   \              6E00        
+   \   00000008   69006E006700       DC8 69H, 0, 6EH, 0, 67H, 0, 0, 0
+   \              0000        
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x4e\\x69\\x67\\x68\\x74">`:
+   \   00000000   4E0069006700       DC8 4EH, 0, 69H, 0, 67H, 0, 68H, 0
+   \              6800        
+   \   00000008   74000000           DC8 74H, 0, 0, 0
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant {&L"\\x4d\\x6f\\x72\\x6e\\x69\\x6e\\x67", `:
+   \   00000000   ........           DC32 `?<Constant L"\\x4d\\x6f\\x72\\x6e\\x69\\x6e\\x67">`
+   \   00000004   ........           DC32 `?<Constant L"\\x4e\\x6f\\x6f\\x6e">`
+   \   00000008   ........           DC32 `?<Constant L"\\x41\\x66\\x74\\x65\\x72\\x6e\\x6f\\x6f\\`
+   \   0000000C   ........           DC32 `?<Constant L"\\x45\\x76\\x65\\x6e\\x69\\x6e\\x67">`
+   \   00000010   ........           DC32 `?<Constant L"\\x4e\\x69\\x67\\x68\\x74">`
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant {0, 12, 13, 16, 18}>`:
+   \   00000000   000000000C00       DC32 0, 12, 13, 16, 18
+   \              00000D000000
+   \              100000001200
+   \              0000        
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant L"\\x5c\\x6e">`:
+   \   00000000   5C006E000000       DC8 5CH, 0, 6EH, 0, 0, 0
+   \   00000006   0000               DC8 0, 0
+
+   Maximum stack usage in bytes:
+
+     Function                       CSTACK
+     --------                       ------
+     celsiusToFahrenheit(int)           4
+     compareWchar(wchar_t *, wchar_t *)
+                                       16
+     getDateTime()                     16
+     getStateByHour(int)               52
+     getWSubStr(wchar_t *, int, int)
+                                       16
+     int2wstr(int)                     12
+     intlen(int)                        0
+     isDateEqual(DATETIME *, DATETIME *)
+                                        0
+     km2Mile(int)                       4
+     km2meter(int)                      4
+     makeAvgState(wchar_t *, int)      20
+     makeNullWchar(int)                12
+     returnMask(wchar_t const *, int, bool, float (*)(int), int)
+                                       40
+     searchLine(wchar_t *)             12
+     showBox(wchar_t *, int)           20
+     wGetIndexOf(wchar_t *, char, int, int)
+                                       28
+     wGetIndexOfLine(wchar_t *)        12
+
+
+   Segment part sizes:
+
+     Function/Label                 Bytes
+     --------------                 -----
+     getWSubStr(wchar_t *, int, int)
+                                      92
+     wGetIndexOfLine(wchar_t *)       76
+     searchLine(wchar_t *)            76
+     wGetIndexOf(wchar_t *, char, int, int)
+                                      92
+     compareWchar(wchar_t *, wchar_t *)
+                                      96
+     intlen(int)                      48
+     getDateTime()                    76
+     int2wstr(int)                    60
+     isDateEqual(DATETIME *, DATETIME *)
+                                      60
+     celsiusToFahrenheit(int)         28
+     km2Mile(int)                     36
+     km2meter(int)                    36
+     showBox(wchar_t *, int)          84
+     getStateByHour(int)             120
+     returnMask(wchar_t const *, int, bool, float (*)(int), int)
+                                     116
+     makeAvgState(wchar_t *, int)    128
+     makeNullWchar(int)               40
+     ??DataTable1                      4
+     ?<Constant L"\x25\x64">           8
+     ?<Constant L"\x4d\x6f\x72\x6e\x69\x6e\x67">
+                                      16
+     ?<Constant L"\x4e\x6f\x6f\x6e">
+                                      12
+     ?<Constant L"\x41\x66\x74\x65\x72\x6e\x6f\x6f\
+                                      20
+     ?<Constant L"\x45\x76\x65\x6e\x69\x6e\x67">
+                                      16
+     ?<Constant L"\x4e\x69\x67\x68\x74">
+                                      12
+     ?<Constant {&L"\x4d\x6f\x72\x6e\x69\x6e\x67",
+                                      20
+     ?<Constant {0, 12, 13, 16, 18}>
+                                      20
+     ?<Constant L"\x5c\x6e">           8
+      Others                         164
+
+ 
+ 1 432 bytes in segment CODE
+   132 bytes in segment DATA_C
+ 
+ 1 268 bytes of CODE  memory (+ 164 bytes shared)
+   132 bytes of CONST memory
+
+Errors: none
+Warnings: none

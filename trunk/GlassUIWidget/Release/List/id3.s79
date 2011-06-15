@@ -1,0 +1,467 @@
+//////////////////////////////////////////////////////////////////////////////
+//                                                                           /
+// IAR ARM ANSI C/C++ Compiler V4.42A/W32 EVALUATION   07/Jun/2011  23:13:18 /
+// Copyright 1999-2005 IAR Systems. All rights reserved.                     /
+//                                                                           /
+//    Cpu mode        =  interwork                                           /
+//    Endian          =  little                                              /
+//    Stack alignment =  4                                                   /
+//    Source file     =  C:\Documents and Settings\Davi\Desktop\StudyElf\Gla /
+//                       ssUIWidget\standby\id3.cpp                          /
+//    Command line    =  "C:\Documents and Settings\Davi\Desktop\StudyElf\Gl /
+//                       assUIWidget\standby\id3.cpp" -lC "C:\Documents and  /
+//                       Settings\Davi\Desktop\StudyElf\GlassUIWidget\Releas /
+//                       e\List\" -lA "C:\Documents and                      /
+//                       Settings\Davi\Desktop\StudyElf\GlassUIWidget\Releas /
+//                       e\List\" -o "C:\Documents and                       /
+//                       Settings\Davi\Desktop\StudyElf\GlassUIWidget\Releas /
+//                       e\Obj\" -s9 --no_unroll --no_inline --cpu_mode arm  /
+//                       --endian little --cpu ARM926EJ-S --stack_align 4    /
+//                       --interwork -e --enable_multibytes --fpu None       /
+//                       --eec++ --dlib_config "C:\Documents and             /
+//                       Settings\Davi\Desktop\IAR\Embedded Workbench 4.0    /
+//                       Evaluation\ARM\LIB\dl5tpainl8n.h" -I "C:\Documents  /
+//                       and Settings\Davi\Desktop\IAR\Embedded Workbench    /
+//                       4.0 Evaluation\ARM\INC\"                            /
+//    List file       =  C:\Documents and Settings\Davi\Desktop\StudyElf\Gla /
+//                       ssUIWidget\Release\List\id3.s79                     /
+//                                                                           /
+//                                                                           /
+//////////////////////////////////////////////////////////////////////////////
+
+        NAME id3
+
+        RTMODEL "StackAlign4", "USED"
+        RTMODEL "__cpu_mode", "__pcs__interwork"
+        RTMODEL "__data_model", "absolute"
+        RTMODEL "__endian", "little"
+        RTMODEL "__rt_version", "6"
+
+        RSEG CSTACK:DATA:NOROOT(2)
+
+        ERROR
+//NOTE: This module defines or uses C++ features that are not
+//      accessible from assembler code. Assembling this file will
+//      not produce an equivalent object file to the one produced
+//      by the C++ compiler.
+
+        MULTWEAK ??dbtf??rA
+        PUBLIC ??drawId3
+        FUNCTION ??drawId3,0203H
+        LOCFRAME CSTACK, 8444, STACK
+        MULTWEAK ??drawId3??rT
+        MULTWEAK ??ifDrawNoMask??rA
+        MULTWEAK ??printInt??rA
+        PUBWEAK ?init?tab?DATA_Z
+        PUBLIC _mybook
+        
+        CFI Names cfiNames0
+        CFI StackFrame CFA R13 HUGEDATA
+        CFI Resource R0:32, R1:32, R2:32, R3:32, R4:32, R5:32, R6:32, R7:32
+        CFI Resource R8:32, R9:32, R10:32, R11:32, R12:32, CPSR:32, R13:32
+        CFI Resource R14:32, SPSR:32
+        CFI VirtualResource ?RET:32
+        CFI EndNames cfiNames0
+        
+        CFI Common cfiCommon0 Using cfiNames0
+        CFI CodeAlign 2
+        CFI DataAlign 4
+        CFI ReturnAddress ?RET CODE
+        CFI CFA R13+0
+        CFI R0 Undefined
+        CFI R1 Undefined
+        CFI R2 Undefined
+        CFI R3 Undefined
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI R8 SameValue
+        CFI R9 SameValue
+        CFI R10 SameValue
+        CFI R11 SameValue
+        CFI R12 Undefined
+        CFI CPSR SameValue
+        CFI R14 Undefined
+        CFI SPSR SameValue
+        CFI ?RET R14
+        CFI EndCommon cfiCommon0
+        
+        
+        CFI Common cfiCommon1 Using cfiNames0
+        CFI CodeAlign 4
+        CFI DataAlign 4
+        CFI ReturnAddress ?RET CODE
+        CFI CFA R13+0
+        CFI R0 Undefined
+        CFI R1 Undefined
+        CFI R2 Undefined
+        CFI R3 Undefined
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI R8 SameValue
+        CFI R9 SameValue
+        CFI R10 SameValue
+        CFI R11 SameValue
+        CFI R12 Undefined
+        CFI CPSR SameValue
+        CFI R14 Undefined
+        CFI SPSR SameValue
+        CFI ?RET R14
+        CFI EndCommon cfiCommon1
+        
+
+
+
+??dbtf??rA          SYMBOL "??rA", ??dbtf
+
+??drawId3??rT       SYMBOL "??rT", ??drawId3
+??ifDrawNoMask??rA  SYMBOL "??rA", ??ifDrawNoMask
+??printInt??rA      SYMBOL "??rA", ??printInt
+
+        EXTERN ??dbtf
+        FUNCTION ??dbtf,0202H
+        EXTERN ??ifDrawNoMask
+        FUNCTION ??ifDrawNoMask,0202H
+        EXTERN ??printInt
+        FUNCTION ??printInt,0202H
+        EXTERN BCFG_Music_Artist_Align
+        EXTERN BCFG_Music_Artist_Enable
+        EXTERN BCFG_Music_Artist_FontSize
+        EXTERN BCFG_Music_Artist_Position_X
+        EXTERN BCFG_Music_Artist_Position_Y
+        EXTERN BCFG_Music_Artist_TextColor
+        EXTERN BCFG_Music_Title_Align
+        EXTERN BCFG_Music_Title_Enable
+        EXTERN BCFG_Music_Title_FontSize
+        EXTERN BCFG_Music_Title_Position_X
+        EXTERN BCFG_Music_Title_Position_Y
+        EXTERN BCFG_Music_Title_TextColor
+
+// C:\Documents and Settings\Davi\Desktop\StudyElf\GlassUIWidget\standby\id3.cpp
+//    1 #include "..\..\include\Lib_Clara.h"
+//    2 #include "..\..\include\Dir.h"
+//    3 #include "..\..\include\cfg_items.h"
+//    4 #include "..\bcfg\config_data.h"
+//    5 #include "..\utils\weather.h"
+//    6 #include "..\utils\utils.h"
+//    7 #include "..\mybook.h"
+//    8 #include "..\debug.h"
+//    9 #include "id3.h"
+//   10 #include "MetaDataDll.h"
+//   11 #include "standbyDraw.h"
+//   12 
+
+        RSEG DATA_Z:DATA:SORT:NOROOT(2)
+//   13 MyBook* _mybook;
+_mybook:
+        DS8 4
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock0 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??drawId3??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock0
+        REQUIRE ??drawId3
+//   14 //ifDrawNoMask(bool contentIf, wchar_t* message, int fontSize, int align, int x, int y, unsigned int color);
+//   15 //drawOnStby(wchar_t* message, int fontSize, int align, int x, int y, int textColor )
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock1 Using cfiCommon1
+        CFI Function ??drawId3
+        ARM
+//   16 void drawId3(MyBook* mybook) {
+??drawId3:
+        PUSH     {R4,R5,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R5 Frame(CFA, -8)
+        CFI R4 Frame(CFA, -12)
+        CFI CFA R13+12
+//   17   _mybook = mybook;
+        LDR      R4,??drawId3_1   ;; _mybook
+        SUB      SP,SP,#+196
+        CFI CFA R13+208
+        SUB      SP,SP,#+8192
+        CFI CFA R13+8400
+        STR      R0,[R4, #+0]
+//   18   wchar_t trackPath[0x256] , fileName[0x256] , songTitle[0x256], songArtist[0x256], songAlbum[0x256], songYear[0x256], songGenre[0x256];
+//   19   memset( trackPath, 0, sizeof(wchar_t)*256);   memset( fileName, 0, sizeof(wchar_t)*256);   memset( songTitle, 0, sizeof(wchar_t)*256);
+        MOV      R2,#+512
+        MOV      R1,#+0
+        ADD      R0,SP,#+16
+        SWI      +274
+        MOV      R2,#+512
+        MOV      R1,#+0
+        ADD      R0,SP,#+188
+        ADD      R0,R0,#+1024
+        SWI      +274
+        MOV      R2,#+512
+        MOV      R1,#+0
+        ADD      R0,SP,#+360
+        ADD      R0,R0,#+2048
+        SWI      +274
+//   20     memset( songArtist, 0, sizeof(wchar_t)*256);   memset( songAlbum, 0, sizeof(wchar_t)*256);   memset( songYear, 0, sizeof(wchar_t)*256);
+        MOV      R2,#+512
+        MOV      R1,#+0
+        ADD      R0,SP,#+532
+        ADD      R0,R0,#+3072
+        SWI      +274
+        MOV      R2,#+512
+        MOV      R1,#+0
+        ADD      R0,SP,#+4800
+        SWI      +274
+        MOV      R2,#+512
+        MOV      R1,#+0
+        ADD      R0,SP,#+876
+        ADD      R0,R0,#+5120
+        SWI      +274
+//   21       memset( songGenre, 0, sizeof(wchar_t)*256);
+        MOV      R2,#+512
+        MOV      R1,#+0
+        ADD      R0,SP,#+24
+        ADD      R0,R0,#+7168
+        SWI      +274
+//   22   int fullTime = 0, frequency = 0, bitRate = 0, songMode = 0;
+//   23   dbtf("geting track info");
+        LDR      R0,??drawId3_1+0x4  ;; `?<Constant "geting track info">`
+        MOV      R1,#+0
+        STR      R1,[SP, #+0]
+        STR      R1,[SP, #+4]
+        STR      R1,[SP, #+8]
+        STR      R1,[SP, #+12]
+        _BLF     ??dbtf,??dbtf??rA
+//   24   METADATA_GetCurrent_Track(_mybook->metadataDll, FindBook(get_IsAudioPlayerBook()) , GetChipID()&CHIPID_MASK, trackPath, fileName);
+        SWI      +590
+        MOV      R5,R0
+        SWI      +33419
+        SWI      +304
+        MOV      R1,R0
+        LDR      R0,[R4, #+0]
+        AND      R2,R5,#0xFE00
+        LDR      R12,[R0, #+32]
+        ADD      R0,SP,#+188
+        ADD      R0,R0,#+1024
+        PUSH     {R0}
+        CFI CFA R13+8404
+        LDR      R5,[R12, #+4]
+        ADD      R3,SP,#+20
+        MOV      R0,R12
+        BLX      R5
+//   25   METADATA_GetTrack_FullInfo(_mybook->metadataDll, trackPath, fileName, GetChipID()&CHIPID_MASK, songTitle, songArtist, songAlbum, songYear, songGenre);
+        SWI      +590
+        LDR      R1,[R4, #+0]
+        AND      R3,R0,#0xFE00
+        LDR      R5,[R1, #+32]
+        ADD      R1,SP,#+28
+        ADD      R1,R1,#+7168
+        PUSH     {R1}
+        CFI CFA R13+8408
+        MOV      R0,R5
+        ADD      R1,SP,#+884
+        ADD      R1,R1,#+5120
+        PUSH     {R1}
+        CFI CFA R13+8412
+        ADD      R1,SP,#+716
+        ADD      R1,R1,#+4096
+        PUSH     {R1}
+        CFI CFA R13+8416
+        ADD      R1,SP,#+548
+        ADD      R1,R1,#+3072
+        PUSH     {R1}
+        CFI CFA R13+8420
+        ADD      R1,SP,#+380
+        ADD      R1,R1,#+2048
+        PUSH     {R1}
+        CFI CFA R13+8424
+        LDR      R5,[R5, #+8]
+        ADD      R2,SP,#+212
+        ADD      R2,R2,#+1024
+        ADD      R1,SP,#+40
+        BLX      R5
+//   26   METADATA_GetTrack_ExtraInfo(_mybook->metadataDll, FindBook(get_IsAudioPlayerBook()), GetChipID()&CHIPID_MASK, trackPath, fileName,
+//   27                               &fullTime, &frequency, &bitRate, &songMode );
+        SWI      +590
+        MOV      R5,R0
+        SWI      +33419
+        SWI      +304
+        LDR      R1,[R4, #+0]
+        AND      R2,R5,#0xFE00
+        LDR      R4,[R1, #+32]
+        ADD      R1,SP,#+36
+        PUSH     {R1}
+        CFI CFA R13+8428
+        ADD      R1,SP,#+36
+        PUSH     {R1}
+        CFI CFA R13+8432
+        ADD      R1,SP,#+36
+        PUSH     {R1}
+        CFI CFA R13+8436
+        ADD      R1,SP,#+36
+        PUSH     {R1}
+        CFI CFA R13+8440
+        ADD      R1,SP,#+228
+        ADD      R1,R1,#+1024
+        PUSH     {R1}
+        CFI CFA R13+8444
+        ADD      R3,SP,#+60
+        MOV      R1,R0
+        MOV      R0,R4
+        LDR      R4,[R4, #+12]
+        BLX      R4
+//   28   ifDrawNoMask( BCFG_Music_Artist_Enable, songArtist, BCFG_Music_Artist_FontSize, BCFG_Music_Artist_Align,
+//   29                BCFG_Music_Artist_Position_X, BCFG_Music_Artist_Position_Y, BCFG_Music_Artist_TextColor );
+        LDR      R0,??drawId3_1+0x8  ;; BCFG_Music_Artist_Enable
+        LDR      R1,??drawId3_1+0xC  ;; BCFG_Music_Artist_TextColor
+        ADD      SP,SP,#+44
+        CFI CFA R13+8400
+        LDR      R0,[R0, #+0]
+        LDR      R1,[R1, #+0]
+        CMP      R0,#+0
+        PUSH     {R1}
+        CFI CFA R13+8404
+        LDR      R1,??drawId3_1+0x10  ;; BCFG_Music_Artist_Position_Y
+        MOVNE    R0,#+1
+        LDR      R1,[R1, #+0]
+        PUSH     {R1}
+        CFI CFA R13+8408
+        LDR      R1,??drawId3_1+0x14  ;; BCFG_Music_Artist_Position_X
+        LDR      R1,[R1, #+0]
+        PUSH     {R1}
+        CFI CFA R13+8412
+        LDR      R1,??drawId3_1+0x18  ;; BCFG_Music_Artist_Align
+        LDR      R3,[R1, #+0]
+        LDR      R1,??drawId3_1+0x1C  ;; BCFG_Music_Artist_FontSize
+        LDR      R2,[R1, #+0]
+        ADD      R1,SP,#+3616
+        _BLF     ??ifDrawNoMask,??ifDrawNoMask??rA
+//   30   
+//   31   ifDrawNoMask( BCFG_Music_Title_Enable, songTitle, BCFG_Music_Title_FontSize, BCFG_Music_Title_Align,
+//   32                BCFG_Music_Title_Position_X, BCFG_Music_Title_Position_Y, BCFG_Music_Title_TextColor );
+        LDR      R0,??drawId3_1+0x20  ;; BCFG_Music_Title_Enable
+        LDR      R1,??drawId3_1+0x24  ;; BCFG_Music_Title_TextColor
+        LDR      R0,[R0, #+0]
+        ADD      SP,SP,#+12
+        CFI CFA R13+8400
+        LDR      R1,[R1, #+0]
+        CMP      R0,#+0
+        PUSH     {R1}
+        CFI CFA R13+8404
+        LDR      R1,??drawId3_1+0x28  ;; BCFG_Music_Title_Position_Y
+        MOVNE    R0,#+1
+        LDR      R1,[R1, #+0]
+        MOVEQ    R0,#+0
+        PUSH     {R1}
+        CFI CFA R13+8408
+        LDR      R1,??drawId3_1+0x2C  ;; BCFG_Music_Title_Position_X
+        LDR      R1,[R1, #+0]
+        PUSH     {R1}
+        CFI CFA R13+8412
+        LDR      R1,??drawId3_1+0x30  ;; BCFG_Music_Title_Align
+        LDR      R3,[R1, #+0]
+        LDR      R1,??drawId3_1+0x34  ;; BCFG_Music_Title_FontSize
+        LDR      R2,[R1, #+0]
+        ADD      R1,SP,#+372
+        ADD      R1,R1,#+2048
+        _BLF     ??ifDrawNoMask,??ifDrawNoMask??rA
+//   33   printInt( fullTime );
+        LDR      R0,[SP, #+12]
+        _BLF     ??printInt,??printInt??rA
+//   34   printInt( frequency );
+        LDR      R0,[SP, #+16]
+        _BLF     ??printInt,??printInt??rA
+//   35   printInt( bitRate );
+        LDR      R0,[SP, #+20]
+        _BLF     ??printInt,??printInt??rA
+//   36   printInt( songMode );
+        LDR      R0,[SP, #+24]
+        _BLF     ??printInt,??printInt??rA
+//   37 }
+        ADD      SP,SP,#+208
+        CFI CFA R13+8204
+        ADD      SP,SP,#+8192
+        CFI CFA R13+12
+        POP      {R4,R5,PC}       ;; return
+        DATA
+??drawId3_1:
+        DC32     _mybook
+        DC32     `?<Constant "geting track info">`
+        DC32     BCFG_Music_Artist_Enable
+        DC32     BCFG_Music_Artist_TextColor
+        DC32     BCFG_Music_Artist_Position_Y
+        DC32     BCFG_Music_Artist_Position_X
+        DC32     BCFG_Music_Artist_Align
+        DC32     BCFG_Music_Artist_FontSize
+        DC32     BCFG_Music_Title_Enable
+        DC32     BCFG_Music_Title_TextColor
+        DC32     BCFG_Music_Title_Position_Y
+        DC32     BCFG_Music_Title_Position_X
+        DC32     BCFG_Music_Title_Align
+        DC32     BCFG_Music_Title_FontSize
+        CFI EndBlock cfiBlock1
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock2 Using cfiCommon1
+        CFI NoFunction
+        ARM
+??dbtf??rA:
+        LDR      R12,??Subroutine1_0  ;; ??dbtf
+        BX       R12
+        DATA
+??Subroutine1_0:
+        DC32     ??dbtf
+        CFI EndBlock cfiBlock2
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock3 Using cfiCommon1
+        CFI NoFunction
+        ARM
+??ifDrawNoMask??rA:
+        LDR      R12,??Subroutine2_0  ;; ??ifDrawNoMask
+        BX       R12
+        DATA
+??Subroutine2_0:
+        DC32     ??ifDrawNoMask
+        CFI EndBlock cfiBlock3
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock4 Using cfiCommon1
+        CFI NoFunction
+        ARM
+??printInt??rA:
+        LDR      R12,??Subroutine3_0  ;; ??printInt
+        BX       R12
+        DATA
+??Subroutine3_0:
+        DC32     ??printInt
+        CFI EndBlock cfiBlock4
+
+        RSEG INITTAB:CODE:ROOT(2)
+        DATA
+?init?tab?DATA_Z:
+        DCD      sfe(DATA_Z) - sfb(DATA_Z), sfb(DATA_Z), sfb(DATA_Z)
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant "geting track info">`:
+        DATA
+        DC8 "geting track info"
+        DC8 0, 0
+
+        END
+//   38 
+// 
+// 740 bytes in segment CODE
+//  20 bytes in segment DATA_C
+//   4 bytes in segment DATA_Z
+//  12 bytes in segment INITTAB
+// 
+// 700 bytes of CODE  memory (+ 52 bytes shared)
+//  20 bytes of CONST memory
+//   4 bytes of DATA  memory
+//
+//Errors: none
+//Warnings: none

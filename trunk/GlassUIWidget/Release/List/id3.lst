@@ -1,0 +1,292 @@
+##############################################################################
+#                                                                            #
+# IAR ARM ANSI C/C++ Compiler V4.42A/W32 EVALUATION    07/Jun/2011  23:13:18 #
+# Copyright 1999-2005 IAR Systems. All rights reserved.                      #
+#                                                                            #
+#    Cpu mode        =  interwork                                            #
+#    Endian          =  little                                               #
+#    Stack alignment =  4                                                    #
+#    Source file     =  C:\Documents and Settings\Davi\Desktop\StudyElf\Glas #
+#                       sUIWidget\standby\id3.cpp                            #
+#    Command line    =  "C:\Documents and Settings\Davi\Desktop\StudyElf\Gla #
+#                       ssUIWidget\standby\id3.cpp" -lC "C:\Documents and    #
+#                       Settings\Davi\Desktop\StudyElf\GlassUIWidget\Release #
+#                       \List\" -lA "C:\Documents and                        #
+#                       Settings\Davi\Desktop\StudyElf\GlassUIWidget\Release #
+#                       \List\" -o "C:\Documents and                         #
+#                       Settings\Davi\Desktop\StudyElf\GlassUIWidget\Release #
+#                       \Obj\" -s9 --no_unroll --no_inline --cpu_mode arm    #
+#                       --endian little --cpu ARM926EJ-S --stack_align 4     #
+#                       --interwork -e --enable_multibytes --fpu None        #
+#                       --eec++ --dlib_config "C:\Documents and              #
+#                       Settings\Davi\Desktop\IAR\Embedded Workbench 4.0     #
+#                       Evaluation\ARM\LIB\dl5tpainl8n.h" -I "C:\Documents   #
+#                       and Settings\Davi\Desktop\IAR\Embedded Workbench     #
+#                       4.0 Evaluation\ARM\INC\"                             #
+#    List file       =  C:\Documents and Settings\Davi\Desktop\StudyElf\Glas #
+#                       sUIWidget\Release\List\id3.lst                       #
+#    Object file     =  C:\Documents and Settings\Davi\Desktop\StudyElf\Glas #
+#                       sUIWidget\Release\Obj\id3.r79                        #
+#                                                                            #
+#                                                                            #
+##############################################################################
+
+C:\Documents and Settings\Davi\Desktop\StudyElf\GlassUIWidget\standby\id3.cpp
+      1          #include "..\..\include\Lib_Clara.h"
+      2          #include "..\..\include\Dir.h"
+      3          #include "..\..\include\cfg_items.h"
+      4          #include "..\bcfg\config_data.h"
+      5          #include "..\utils\weather.h"
+      6          #include "..\utils\utils.h"
+      7          #include "..\mybook.h"
+      8          #include "..\debug.h"
+      9          #include "id3.h"
+     10          #include "MetaDataDll.h"
+     11          #include "standbyDraw.h"
+     12          
+
+   \                                 In segment DATA_Z, align 4, align-sorted
+     13          MyBook* _mybook;
+   \                     _mybook:
+   \   00000000                      DS8 4
+     14          //ifDrawNoMask(bool contentIf, wchar_t* message, int fontSize, int align, int x, int y, unsigned int color);
+     15          //drawOnStby(wchar_t* message, int fontSize, int align, int x, int y, int textColor )
+
+   \                                 In segment CODE, align 4, keep-with-next
+     16          void drawId3(MyBook* mybook) {
+   \                     ??drawId3:
+   \   00000000   30402DE9           PUSH     {R4,R5,LR}
+     17            _mybook = mybook;
+   \   00000004   78429FE5           LDR      R4,??drawId3_1   ;; _mybook
+   \   00000008   C4D04DE2           SUB      SP,SP,#+196
+   \   0000000C   80DD4DE2           SUB      SP,SP,#+8192
+   \   00000010   000084E5           STR      R0,[R4, #+0]
+     18            wchar_t trackPath[0x256] , fileName[0x256] , songTitle[0x256], songArtist[0x256], songAlbum[0x256], songYear[0x256], songGenre[0x256];
+     19            memset( trackPath, 0, sizeof(wchar_t)*256);   memset( fileName, 0, sizeof(wchar_t)*256);   memset( songTitle, 0, sizeof(wchar_t)*256);
+   \   00000014   802FA0E3           MOV      R2,#+512
+   \   00000018   0010A0E3           MOV      R1,#+0
+   \   0000001C   10008DE2           ADD      R0,SP,#+16
+   \   00000020   120100EF           SWI      +274
+   \   00000024   802FA0E3           MOV      R2,#+512
+   \   00000028   0010A0E3           MOV      R1,#+0
+   \   0000002C   BC008DE2           ADD      R0,SP,#+188
+   \   00000030   400E80E2           ADD      R0,R0,#+1024
+   \   00000034   120100EF           SWI      +274
+   \   00000038   802FA0E3           MOV      R2,#+512
+   \   0000003C   0010A0E3           MOV      R1,#+0
+   \   00000040   5A0F8DE2           ADD      R0,SP,#+360
+   \   00000044   800E80E2           ADD      R0,R0,#+2048
+   \   00000048   120100EF           SWI      +274
+     20              memset( songArtist, 0, sizeof(wchar_t)*256);   memset( songAlbum, 0, sizeof(wchar_t)*256);   memset( songYear, 0, sizeof(wchar_t)*256);
+   \   0000004C   802FA0E3           MOV      R2,#+512
+   \   00000050   0010A0E3           MOV      R1,#+0
+   \   00000054   850F8DE2           ADD      R0,SP,#+532
+   \   00000058   C00E80E2           ADD      R0,R0,#+3072
+   \   0000005C   120100EF           SWI      +274
+   \   00000060   802FA0E3           MOV      R2,#+512
+   \   00000064   0010A0E3           MOV      R1,#+0
+   \   00000068   4B0D8DE2           ADD      R0,SP,#+4800
+   \   0000006C   120100EF           SWI      +274
+   \   00000070   802FA0E3           MOV      R2,#+512
+   \   00000074   0010A0E3           MOV      R1,#+0
+   \   00000078   DB0F8DE2           ADD      R0,SP,#+876
+   \   0000007C   500D80E2           ADD      R0,R0,#+5120
+   \   00000080   120100EF           SWI      +274
+     21                memset( songGenre, 0, sizeof(wchar_t)*256);
+   \   00000084   802FA0E3           MOV      R2,#+512
+   \   00000088   0010A0E3           MOV      R1,#+0
+   \   0000008C   18008DE2           ADD      R0,SP,#+24
+   \   00000090   700D80E2           ADD      R0,R0,#+7168
+   \   00000094   120100EF           SWI      +274
+     22            int fullTime = 0, frequency = 0, bitRate = 0, songMode = 0;
+     23            dbtf("geting track info");
+   \   00000098   E8019FE5           LDR      R0,??drawId3_1+0x4  ;; `?<Constant "geting track info">`
+   \   0000009C   0010A0E3           MOV      R1,#+0
+   \   000000A0   00108DE5           STR      R1,[SP, #+0]
+   \   000000A4   04108DE5           STR      R1,[SP, #+4]
+   \   000000A8   08108DE5           STR      R1,[SP, #+8]
+   \   000000AC   0C108DE5           STR      R1,[SP, #+12]
+   \   000000B0   ........           _BLF     ??dbtf,??dbtf??rA
+     24            METADATA_GetCurrent_Track(_mybook->metadataDll, FindBook(get_IsAudioPlayerBook()) , GetChipID()&CHIPID_MASK, trackPath, fileName);
+   \   000000B4   4E0200EF           SWI      +590
+   \   000000B8   0050A0E1           MOV      R5,R0
+   \   000000BC   8B8200EF           SWI      +33419
+   \   000000C0   300100EF           SWI      +304
+   \   000000C4   0010A0E1           MOV      R1,R0
+   \   000000C8   000094E5           LDR      R0,[R4, #+0]
+   \   000000CC   FE2C05E2           AND      R2,R5,#0xFE00
+   \   000000D0   20C090E5           LDR      R12,[R0, #+32]
+   \   000000D4   BC008DE2           ADD      R0,SP,#+188
+   \   000000D8   400E80E2           ADD      R0,R0,#+1024
+   \   000000DC   01002DE9           PUSH     {R0}
+   \   000000E0   04509CE5           LDR      R5,[R12, #+4]
+   \   000000E4   14308DE2           ADD      R3,SP,#+20
+   \   000000E8   0C00A0E1           MOV      R0,R12
+   \   000000EC   35FF2FE1           BLX      R5
+     25            METADATA_GetTrack_FullInfo(_mybook->metadataDll, trackPath, fileName, GetChipID()&CHIPID_MASK, songTitle, songArtist, songAlbum, songYear, songGenre);
+   \   000000F0   4E0200EF           SWI      +590
+   \   000000F4   001094E5           LDR      R1,[R4, #+0]
+   \   000000F8   FE3C00E2           AND      R3,R0,#0xFE00
+   \   000000FC   205091E5           LDR      R5,[R1, #+32]
+   \   00000100   1C108DE2           ADD      R1,SP,#+28
+   \   00000104   701D81E2           ADD      R1,R1,#+7168
+   \   00000108   02002DE9           PUSH     {R1}
+   \   0000010C   0500A0E1           MOV      R0,R5
+   \   00000110   DD1F8DE2           ADD      R1,SP,#+884
+   \   00000114   501D81E2           ADD      R1,R1,#+5120
+   \   00000118   02002DE9           PUSH     {R1}
+   \   0000011C   B31F8DE2           ADD      R1,SP,#+716
+   \   00000120   401D81E2           ADD      R1,R1,#+4096
+   \   00000124   02002DE9           PUSH     {R1}
+   \   00000128   891F8DE2           ADD      R1,SP,#+548
+   \   0000012C   C01E81E2           ADD      R1,R1,#+3072
+   \   00000130   02002DE9           PUSH     {R1}
+   \   00000134   5F1F8DE2           ADD      R1,SP,#+380
+   \   00000138   801E81E2           ADD      R1,R1,#+2048
+   \   0000013C   02002DE9           PUSH     {R1}
+   \   00000140   085095E5           LDR      R5,[R5, #+8]
+   \   00000144   D4208DE2           ADD      R2,SP,#+212
+   \   00000148   402E82E2           ADD      R2,R2,#+1024
+   \   0000014C   28108DE2           ADD      R1,SP,#+40
+   \   00000150   35FF2FE1           BLX      R5
+     26            METADATA_GetTrack_ExtraInfo(_mybook->metadataDll, FindBook(get_IsAudioPlayerBook()), GetChipID()&CHIPID_MASK, trackPath, fileName,
+     27                                        &fullTime, &frequency, &bitRate, &songMode );
+   \   00000154   4E0200EF           SWI      +590
+   \   00000158   0050A0E1           MOV      R5,R0
+   \   0000015C   8B8200EF           SWI      +33419
+   \   00000160   300100EF           SWI      +304
+   \   00000164   001094E5           LDR      R1,[R4, #+0]
+   \   00000168   FE2C05E2           AND      R2,R5,#0xFE00
+   \   0000016C   204091E5           LDR      R4,[R1, #+32]
+   \   00000170   24108DE2           ADD      R1,SP,#+36
+   \   00000174   02002DE9           PUSH     {R1}
+   \   00000178   24108DE2           ADD      R1,SP,#+36
+   \   0000017C   02002DE9           PUSH     {R1}
+   \   00000180   24108DE2           ADD      R1,SP,#+36
+   \   00000184   02002DE9           PUSH     {R1}
+   \   00000188   24108DE2           ADD      R1,SP,#+36
+   \   0000018C   02002DE9           PUSH     {R1}
+   \   00000190   E4108DE2           ADD      R1,SP,#+228
+   \   00000194   401E81E2           ADD      R1,R1,#+1024
+   \   00000198   02002DE9           PUSH     {R1}
+   \   0000019C   3C308DE2           ADD      R3,SP,#+60
+   \   000001A0   0010A0E1           MOV      R1,R0
+   \   000001A4   0400A0E1           MOV      R0,R4
+   \   000001A8   0C4094E5           LDR      R4,[R4, #+12]
+   \   000001AC   34FF2FE1           BLX      R4
+     28            ifDrawNoMask( BCFG_Music_Artist_Enable, songArtist, BCFG_Music_Artist_FontSize, BCFG_Music_Artist_Align,
+     29                         BCFG_Music_Artist_Position_X, BCFG_Music_Artist_Position_Y, BCFG_Music_Artist_TextColor );
+   \   000001B0   D4009FE5           LDR      R0,??drawId3_1+0x8  ;; BCFG_Music_Artist_Enable
+   \   000001B4   D4109FE5           LDR      R1,??drawId3_1+0xC  ;; BCFG_Music_Artist_TextColor
+   \   000001B8   2CD08DE2           ADD      SP,SP,#+44
+   \   000001BC   000090E5           LDR      R0,[R0, #+0]
+   \   000001C0   001091E5           LDR      R1,[R1, #+0]
+   \   000001C4   000050E3           CMP      R0,#+0
+   \   000001C8   02002DE9           PUSH     {R1}
+   \   000001CC   C0109FE5           LDR      R1,??drawId3_1+0x10  ;; BCFG_Music_Artist_Position_Y
+   \   000001D0   0100A013           MOVNE    R0,#+1
+   \   000001D4   001091E5           LDR      R1,[R1, #+0]
+   \   000001D8   02002DE9           PUSH     {R1}
+   \   000001DC   B4109FE5           LDR      R1,??drawId3_1+0x14  ;; BCFG_Music_Artist_Position_X
+   \   000001E0   001091E5           LDR      R1,[R1, #+0]
+   \   000001E4   02002DE9           PUSH     {R1}
+   \   000001E8   AC109FE5           LDR      R1,??drawId3_1+0x18  ;; BCFG_Music_Artist_Align
+   \   000001EC   003091E5           LDR      R3,[R1, #+0]
+   \   000001F0   A8109FE5           LDR      R1,??drawId3_1+0x1C  ;; BCFG_Music_Artist_FontSize
+   \   000001F4   002091E5           LDR      R2,[R1, #+0]
+   \   000001F8   E21E8DE2           ADD      R1,SP,#+3616
+   \   000001FC   ........           _BLF     ??ifDrawNoMask,??ifDrawNoMask??rA
+     30            
+     31            ifDrawNoMask( BCFG_Music_Title_Enable, songTitle, BCFG_Music_Title_FontSize, BCFG_Music_Title_Align,
+     32                         BCFG_Music_Title_Position_X, BCFG_Music_Title_Position_Y, BCFG_Music_Title_TextColor );
+   \   00000200   9C009FE5           LDR      R0,??drawId3_1+0x20  ;; BCFG_Music_Title_Enable
+   \   00000204   9C109FE5           LDR      R1,??drawId3_1+0x24  ;; BCFG_Music_Title_TextColor
+   \   00000208   000090E5           LDR      R0,[R0, #+0]
+   \   0000020C   0CD08DE2           ADD      SP,SP,#+12
+   \   00000210   001091E5           LDR      R1,[R1, #+0]
+   \   00000214   000050E3           CMP      R0,#+0
+   \   00000218   02002DE9           PUSH     {R1}
+   \   0000021C   88109FE5           LDR      R1,??drawId3_1+0x28  ;; BCFG_Music_Title_Position_Y
+   \   00000220   0100A013           MOVNE    R0,#+1
+   \   00000224   001091E5           LDR      R1,[R1, #+0]
+   \   00000228   0000A003           MOVEQ    R0,#+0
+   \   0000022C   02002DE9           PUSH     {R1}
+   \   00000230   78109FE5           LDR      R1,??drawId3_1+0x2C  ;; BCFG_Music_Title_Position_X
+   \   00000234   001091E5           LDR      R1,[R1, #+0]
+   \   00000238   02002DE9           PUSH     {R1}
+   \   0000023C   70109FE5           LDR      R1,??drawId3_1+0x30  ;; BCFG_Music_Title_Align
+   \   00000240   003091E5           LDR      R3,[R1, #+0]
+   \   00000244   6C109FE5           LDR      R1,??drawId3_1+0x34  ;; BCFG_Music_Title_FontSize
+   \   00000248   002091E5           LDR      R2,[R1, #+0]
+   \   0000024C   5D1F8DE2           ADD      R1,SP,#+372
+   \   00000250   801E81E2           ADD      R1,R1,#+2048
+   \   00000254   ........           _BLF     ??ifDrawNoMask,??ifDrawNoMask??rA
+     33            printInt( fullTime );
+   \   00000258   0C009DE5           LDR      R0,[SP, #+12]
+   \   0000025C   ........           _BLF     ??printInt,??printInt??rA
+     34            printInt( frequency );
+   \   00000260   10009DE5           LDR      R0,[SP, #+16]
+   \   00000264   ........           _BLF     ??printInt,??printInt??rA
+     35            printInt( bitRate );
+   \   00000268   14009DE5           LDR      R0,[SP, #+20]
+   \   0000026C   ........           _BLF     ??printInt,??printInt??rA
+     36            printInt( songMode );
+   \   00000270   18009DE5           LDR      R0,[SP, #+24]
+   \   00000274   ........           _BLF     ??printInt,??printInt??rA
+     37          }
+   \   00000278   D0D08DE2           ADD      SP,SP,#+208
+   \   0000027C   80DD8DE2           ADD      SP,SP,#+8192
+   \   00000280   3080BDE8           POP      {R4,R5,PC}       ;; return
+   \                     ??drawId3_1:
+   \   00000284   ........           DC32     _mybook
+   \   00000288   ........           DC32     `?<Constant "geting track info">`
+   \   0000028C   ........           DC32     BCFG_Music_Artist_Enable
+   \   00000290   ........           DC32     BCFG_Music_Artist_TextColor
+   \   00000294   ........           DC32     BCFG_Music_Artist_Position_Y
+   \   00000298   ........           DC32     BCFG_Music_Artist_Position_X
+   \   0000029C   ........           DC32     BCFG_Music_Artist_Align
+   \   000002A0   ........           DC32     BCFG_Music_Artist_FontSize
+   \   000002A4   ........           DC32     BCFG_Music_Title_Enable
+   \   000002A8   ........           DC32     BCFG_Music_Title_TextColor
+   \   000002AC   ........           DC32     BCFG_Music_Title_Position_Y
+   \   000002B0   ........           DC32     BCFG_Music_Title_Position_X
+   \   000002B4   ........           DC32     BCFG_Music_Title_Align
+   \   000002B8   ........           DC32     BCFG_Music_Title_FontSize
+
+   \                                 In segment DATA_C, align 4, align-sorted
+   \                     `?<Constant "geting track info">`:
+   \   00000000   676574696E67       DC8 "geting track info"
+   \              20747261636B
+   \              20696E666F00
+   \   00000012   0000               DC8 0, 0
+     38          
+
+   Maximum stack usage in bytes:
+
+     Function          CSTACK
+     --------          ------
+     drawId3(MyBook *)  8444
+
+
+   Segment part sizes:
+
+     Function/Label                 Bytes
+     --------------                 -----
+     _mybook                           4
+     drawId3(MyBook *)               700
+     ?<Constant "geting track info">
+                                      20
+      Others                          52
+
+ 
+ 740 bytes in segment CODE
+  20 bytes in segment DATA_C
+   4 bytes in segment DATA_Z
+  12 bytes in segment INITTAB
+ 
+ 700 bytes of CODE  memory (+ 52 bytes shared)
+  20 bytes of CONST memory
+   4 bytes of DATA  memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,103 @@
+<!--
+	AccuWeather.com Weather System
+	Copyright: 2009 Joseph Earl & Dragontje124
+	
+	AccuWeather.com Weather update service 1.10
+	Forecast data provided by AccuWeather.com
+-->
+
+<Weather>
+<Forecast Loc="Rio De Janeiro" LocId="SAM;BR;BR017;RIO%20DE%20JANEIRO;" UpdateDate="2011/4/3" UpdateTime="16:35">
+		<Period StartDate="2011/4/3">
+				<Day State="15">
+					<Temp Min="22" Max="29" />
+					<Wind Speed="3" Dir="S" />
+				</Day>
+				<Night State="18">
+					<Temp Min="22" Max="29" />
+					<Wind Speed="2" Dir="WSW" />
+				</Night>
+		</Period>
+		<Period StartDate="2011/4/4">
+				<Day State="13">
+					<Temp Min="24" Max="29" />
+					<Wind Speed="3" Dir="SW" />
+				</Day>
+				<Night State="12">
+					<Temp Min="24" Max="29" />
+					<Wind Speed="2" Dir="SE" />
+				</Night>
+		</Period>
+		<Period StartDate="2011/4/5">
+				<Day State="16">
+					<Temp Min="21" Max="28" />
+					<Wind Speed="2" Dir="N" />
+				</Day>
+				<Night State="12">
+					<Temp Min="21" Max="28" />
+					<Wind Speed="3" Dir="WSW" />
+				</Night>
+		</Period>
+		<Period StartDate="2011/4/6">
+				<Day State="14">
+					<Temp Min="21" Max="26" />
+					<Wind Speed="6" Dir="SW" />
+				</Day>
+				<Night State="18">
+					<Temp Min="21" Max="26" />
+					<Wind Speed="6" Dir="SW" />
+				</Night>
+		</Period>
+		<Period StartDate="2011/4/7">
+				<Day State="13">
+					<Temp Min="19" Max="26" />
+					<Wind Speed="2" Dir="SSW" />
+				</Day>
+				<Night State="34">
+					<Temp Min="19" Max="26" />
+					<Wind Speed="2" Dir="SSE" />
+				</Night>
+		</Period>
+		<Period StartDate="2011/4/8">
+				<Day State="03">
+					<Temp Min="21" Max="26" />
+					<Wind Speed="2" Dir="E" />
+				</Day>
+				<Night State="33">
+					<Temp Min="21" Max="26" />
+					<Wind Speed="3" Dir="E" />
+				</Night>
+		</Period>
+		<Period StartDate="2011/4/9">
+				<Day State="03">
+					<Temp Min="22" Max="28" />
+					<Wind Speed="3" Dir="E" />
+				</Day>
+				<Night State="07">
+					<Temp Min="22" Max="28" />
+					<Wind Speed="4" Dir="ENE" />
+				</Night>
+		</Period>
+		<Period StartDate="2011/4/10">
+				<Day State="04">
+					<Temp Min="23" Max="28" />
+					<Wind Speed="6" Dir="ENE" />
+				</Day>
+				<Night State="18">
+					<Temp Min="23" Max="28" />
+					<Wind Speed="5" Dir="ENE" />
+				</Night>
+		</Period>
+		<Period StartDate="2011/4/11">
+				<Day State="15">
+					<Temp Min="23" Max="30" />
+					<Wind Speed="4" Dir="ENE" />
+				</Day>
+				<Night State="15">
+					<Temp Min="23" Max="30" />
+					<Wind Speed="2" Dir="ENE" />
+				</Night>
+		</Period>
+		
+	</Forecast>
+</Weather>

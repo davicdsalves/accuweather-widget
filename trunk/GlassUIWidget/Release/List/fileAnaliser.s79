@@ -1,0 +1,889 @@
+//////////////////////////////////////////////////////////////////////////////
+//                                                                           /
+// IAR ARM ANSI C/C++ Compiler V4.42A/W32 EVALUATION   07/Jun/2011  15:55:25 /
+// Copyright 1999-2005 IAR Systems. All rights reserved.                     /
+//                                                                           /
+//    Cpu mode        =  interwork                                           /
+//    Endian          =  little                                              /
+//    Stack alignment =  4                                                   /
+//    Source file     =  F:\Phone\Making elf patches\Elf's\GlassUIWidget\fil /
+//                       e\fileAnaliser.cpp                                  /
+//    Command line    =  "F:\Phone\Making elf patches\Elf's\GlassUIWidget\fi /
+//                       le\fileAnaliser.cpp" -lC "F:\Phone\Making elf       /
+//                       patches\Elf's\GlassUIWidget\Release\List\" -lA      /
+//                       "F:\Phone\Making elf patches\Elf's\GlassUIWidget\Re /
+//                       lease\List\" -o "F:\Phone\Making elf                /
+//                       patches\Elf's\GlassUIWidget\Release\Obj\" -s9       /
+//                       --no_unroll --no_inline --cpu_mode arm --endian     /
+//                       little --cpu ARM926EJ-S --stack_align 4             /
+//                       --interwork -e --enable_multibytes --fpu None       /
+//                       --eec++ --dlib_config "F:\Phone\Making elf          /
+//                       patches\IAR\Embedded Workbench 4.0                  /
+//                       Evaluation\ARM\LIB\dl5tpainl8n.h" -I                /
+//                       "F:\Phone\Making elf patches\IAR\Embedded           /
+//                       Workbench 4.0 Evaluation\ARM\INC\"                  /
+//    List file       =  F:\Phone\Making elf patches\Elf's\GlassUIWidget\Rel /
+//                       ease\List\fileAnaliser.s79                          /
+//                                                                           /
+//                                                                           /
+//////////////////////////////////////////////////////////////////////////////
+
+        NAME fileAnaliser
+
+        RTMODEL "StackAlign4", "USED"
+        RTMODEL "__cpu_mode", "__pcs__interwork"
+        RTMODEL "__data_model", "absolute"
+        RTMODEL "__endian", "little"
+        RTMODEL "__rt_version", "6"
+
+        RSEG CSTACK:DATA:NOROOT(2)
+
+        ERROR
+//NOTE: This module defines or uses C++ features that are not
+//      accessible from assembler code. Assembling this file will
+//      not produce an equivalent object file to the one produced
+//      by the C++ compiler.
+
+        MULTWEAK ??compareWchar??rA
+        PUBLIC ??getDate
+        FUNCTION ??getDate,0203H
+        LOCFRAME CSTACK, 24, STACK
+        MULTWEAK ??getDate??rT
+        PUBLIC ??getDayState
+        FUNCTION ??getDayState,0203H
+        LOCFRAME CSTACK, 12, STACK
+        MULTWEAK ??getDayState??rT
+        PUBLIC ??getDayWeather
+        FUNCTION ??getDayWeather,0203H
+        LOCFRAME CSTACK, 32, STACK
+        MULTWEAK ??getDayWeather??rT
+        PUBLIC ??getEqualContent
+        FUNCTION ??getEqualContent,0203H
+        LOCFRAME CSTACK, 16, STACK
+        MULTWEAK ??getEqualContent??rT
+        PUBLIC ??getLocation
+        FUNCTION ??getLocation,0203H
+        LOCFRAME CSTACK, 12, STACK
+        MULTWEAK ??getLocation??rT
+        PUBLIC ??getTag
+        FUNCTION ??getTag,0203H
+        LOCFRAME CSTACK, 32, STACK
+        MULTWEAK ??getTag??rT
+        MULTWEAK ??getWSubStr??rA
+        PUBLIC ??getWeather
+        FUNCTION ??getWeather,0203H
+        LOCFRAME CSTACK, 40, STACK
+        MULTWEAK ??getWeather??rT
+        PUBLIC ??getWeatherConditions
+        FUNCTION ??getWeatherConditions,0203H
+        LOCFRAME CSTACK, 20, STACK
+        MULTWEAK ??getWeatherConditions??rT
+        MULTWEAK ??int2wstr??rA
+        MULTWEAK `??new Weather??rA`
+        MULTWEAK `??operator delete??rA`
+        MULTWEAK `??operator new[]??rA`
+        MULTWEAK ??wGetIndexOf??rA
+        
+        CFI Names cfiNames0
+        CFI StackFrame CFA R13 HUGEDATA
+        CFI Resource R0:32, R1:32, R2:32, R3:32, R4:32, R5:32, R6:32, R7:32
+        CFI Resource R8:32, R9:32, R10:32, R11:32, R12:32, CPSR:32, R13:32
+        CFI Resource R14:32, SPSR:32
+        CFI VirtualResource ?RET:32
+        CFI EndNames cfiNames0
+        
+        CFI Common cfiCommon0 Using cfiNames0
+        CFI CodeAlign 2
+        CFI DataAlign 4
+        CFI ReturnAddress ?RET CODE
+        CFI CFA R13+0
+        CFI R0 Undefined
+        CFI R1 Undefined
+        CFI R2 Undefined
+        CFI R3 Undefined
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI R8 SameValue
+        CFI R9 SameValue
+        CFI R10 SameValue
+        CFI R11 SameValue
+        CFI R12 Undefined
+        CFI CPSR SameValue
+        CFI R14 Undefined
+        CFI SPSR SameValue
+        CFI ?RET R14
+        CFI EndCommon cfiCommon0
+        
+        
+        CFI Common cfiCommon1 Using cfiNames0
+        CFI CodeAlign 4
+        CFI DataAlign 4
+        CFI ReturnAddress ?RET CODE
+        CFI CFA R13+0
+        CFI R0 Undefined
+        CFI R1 Undefined
+        CFI R2 Undefined
+        CFI R3 Undefined
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI R8 SameValue
+        CFI R9 SameValue
+        CFI R10 SameValue
+        CFI R11 SameValue
+        CFI R12 Undefined
+        CFI CPSR SameValue
+        CFI R14 Undefined
+        CFI SPSR SameValue
+        CFI ?RET R14
+        CFI EndCommon cfiCommon1
+        
+
+
+
+
+
+
+
+??compareWchar??rA  SYMBOL "??rA", ??compareWchar
+
+??getDate??rT       SYMBOL "??rT", ??getDate
+
+??getDayState??rT   SYMBOL "??rT", ??getDayState
+
+??getDayWeather??rT SYMBOL "??rT", ??getDayWeather
+
+??getEqualContent??rT SYMBOL "??rT", ??getEqualContent
+
+??getLocation??rT   SYMBOL "??rT", ??getLocation
+
+??getTag??rT        SYMBOL "??rT", ??getTag
+??getWSubStr??rA    SYMBOL "??rA", ??getWSubStr
+
+??getWeather??rT    SYMBOL "??rT", ??getWeather
+
+??getWeatherConditions??rT SYMBOL "??rT", ??getWeatherConditions
+??int2wstr??rA      SYMBOL "??rA", ??int2wstr
+`??new Weather??rA` SYMBOL "??rA", `??new Weather`
+`??operator delete??rA` SYMBOL "??rA", `??operator delete`
+`??operator new[]??rA` SYMBOL "??rA", `??operator new[]`
+??wGetIndexOf??rA   SYMBOL "??rA", ??wGetIndexOf
+
+        EXTERN ??compareWchar
+        FUNCTION ??compareWchar,0202H
+        EXTERN ??getWSubStr
+        FUNCTION ??getWSubStr,0202H
+        EXTERN ??int2wstr
+        FUNCTION ??int2wstr,0202H
+        EXTERN `??new Weather`
+        FUNCTION `??new Weather`,0202H
+        EXTERN `??operator delete`
+        FUNCTION `??operator delete`,0202H
+        EXTERN `??operator new[]`
+        FUNCTION `??operator new[]`,0202H
+        EXTERN ??wGetIndexOf
+        FUNCTION ??wGetIndexOf,0202H
+        EXTERN SYNC
+
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock0 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getDate??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock0
+        REQUIRE ??getDate
+// F:\Phone\Making elf patches\Elf's\GlassUIWidget\file\fileAnaliser.cpp
+//    1 #include "..\..\include\Lib_Clara.h"
+//    2 #include "..\..\include\Dir.h"
+//    3 #include "..\utils\utils.h"
+//    4 #include "fileAnaliser.h"
+//    5 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock1 Using cfiCommon1
+        CFI Function ??getDate
+        ARM
+//    6 wchar_t* getDate() { //"2011/3/20"
+//    7   DATETIME dt;
+//    8   REQUEST_DATEANDTIME_GET(SYNC,&dt);
+??getDate:
+        LDR      R0,??getDate_1   ;; SYNC
+        PUSH     {R4,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R4 Frame(CFA, -8)
+        CFI CFA R13+8
+        SUB      SP,SP,#+8
+        CFI CFA R13+16
+        LDR      R0,[R0, #+0]
+        MOV      R1,SP
+        SWI      +366
+//    9   wchar_t* data = new wchar_t[0x32];
+        MOV      R0,#+100
+        _BLF     `??operator new[]`,`??operator new[]??rA`
+//   10   snwprintf(data,32,L"<Period StartDate=\"%u/%d/%d\">",dt.date.year,dt.date.mon,dt.date.day);
+        LDR      R2,??getDate_1+0x4  ;; `?<Constant L"\\x3c\\x50\\x65\\x72\\x69\\x6f\\x64\\x20\\`
+        MOV      R4,R0
+        LDRB     R0,[SP, #+3]
+        MOV      R1,#+32
+        PUSH     {R0}
+        CFI CFA R13+20
+        LDRB     R0,[SP, #+6]
+        PUSH     {R0}
+        CFI CFA R13+24
+        LDRH     R3,[SP, #+8]
+        MOV      R0,R4
+        SWI      +277
+//   11   return data;
+        MOV      R0,R4
+        ADD      SP,SP,#+16
+        CFI CFA R13+8
+        POP      {R4,PC}          ;; return
+        DATA
+??getDate_1:
+        DC32     SYNC
+        DC32     `?<Constant L"\\x3c\\x50\\x65\\x72\\x69\\x6f\\x64\\x20\\`
+        CFI EndBlock cfiBlock1
+//   12 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock2 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getTag??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock2
+        REQUIRE ??getTag
+//   13 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock3 Using cfiCommon1
+        CFI Function ??getTag
+        ARM
+//   14 wchar_t* getTag(wchar_t* line, int pos, int& sizeOfTag) {
+??getTag:
+        PUSH     {R4-R10,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R10 Frame(CFA, -8)
+        CFI R9 Frame(CFA, -12)
+        CFI R8 Frame(CFA, -16)
+        CFI R7 Frame(CFA, -20)
+        CFI R6 Frame(CFA, -24)
+        CFI R5 Frame(CFA, -28)
+        CFI R4 Frame(CFA, -32)
+        CFI CFA R13+32
+        MOV      R4,R0
+        MOV      R5,R1
+        MOV      R6,R2
+//   15   int tagClose = wGetIndexOf(line, '>', 1, pos);
+        MOV      R3,R5
+        MOV      R2,#+1
+        MOV      R1,#+62
+        _BLF     ??wGetIndexOf,??wGetIndexOf??rA
+        MOV      R8,R0
+//   16   wchar_t* tag = new wchar_t[tagClose+0x2];
+        ADD      R0,R8,#+2
+        LSL      R0,R0,#+1
+        _BLF     `??operator new[]`,`??operator new[]??rA`
+        MOV      R7,R0
+//   17   sizeOfTag = tagClose - pos + 2;
+        SUB      R0,R8,R5
+        ADD      R0,R0,#+2
+        STR      R0,[R6, #+0]
+//   18   for (tagClose=0; tagClose < wstrlen(line) && line[pos + tagClose] != '>' && (tagClose < sizeOfTag); tagClose++)
+        MOV      R8,#+0
+        B        ??getTag_1
+//   19     tag[tagClose] = line[pos + tagClose];
+??getTag_2:
+        LDRH     R0,[R10, #+0]
+        ADD      R8,R8,#+1
+        STRH     R0,[R9, #+0]
+??getTag_1:
+        ADD      R0,R8,R5
+        ADD      R10,R4,R0, LSL #+1
+        ADD      R9,R7,R8, LSL #+1
+        MOV      R0,R4
+        SWI      +343
+        CMP      R8,R0
+        BGE      ??getTag_3
+        LDRH     R0,[R10, #+0]
+        CMP      R0,#+62
+        BEQ      ??getTag_3
+        LDR      R0,[R6, #+0]
+        CMP      R8,R0
+        BLT      ??getTag_2
+//   20   tag[tagClose] = line[pos + tagClose];
+??getTag_3:
+        LDRH     R0,[R10, #+0]
+        STRH     R0,[R9, #+0]
+//   21   tag[tagClose+0x1] = 0;
+        MOV      R0,#+0
+        STRH     R0,[R9, #+2]
+//   22   return tag;
+        MOV      R0,R7
+        POP      {R4-R10,PC}      ;; return
+        CFI EndBlock cfiBlock3
+//   23 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock4 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getEqualContent??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock4
+        REQUIRE ??getEqualContent
+//   24 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock5 Using cfiCommon1
+        CFI Function ??getEqualContent
+        ARM
+//   25 wchar_t* getEqualContent(wchar_t* fileContent, int& pos) {
+??getEqualContent:
+        PUSH     {R4-R6,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R6 Frame(CFA, -8)
+        CFI R5 Frame(CFA, -12)
+        CFI R4 Frame(CFA, -16)
+        CFI CFA R13+16
+        MOV      R4,R0
+        MOV      R5,R1
+//   26   int indexOfEqual = wGetIndexOf(fileContent,'=',1,pos);
+        LDR      R3,[R5, #+0]
+        MOV      R2,#+1
+        MOV      R1,#+61
+        _BLF     ??wGetIndexOf,??wGetIndexOf??rA
+//   27   indexOfEqual+=2;
+        ADD      R6,R0,#+2
+//   28   int indexOfQuotes = wGetIndexOf(fileContent,'"',1,indexOfEqual);
+        MOV      R3,R6
+        MOV      R2,#+1
+        MOV      R1,#+34
+        MOV      R0,R4
+        _BLF     ??wGetIndexOf,??wGetIndexOf??rA
+//   29   pos = indexOfQuotes;
+        STR      R0,[R5, #+0]
+//   30 
+//   31   return getWSubStr(fileContent,indexOfEqual,indexOfQuotes-1);
+        SUB      R2,R0,#+1
+        MOV      R1,R6
+        MOV      R0,R4
+        POP      {R4-R6,LR}       ;; Pop
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI R6 SameValue
+        CFI ?RET R14
+        CFI CFA R13+0
+        _BF      ??getWSubStr,??getWSubStr??rA  ;; tailcall
+        CFI EndBlock cfiBlock5
+//   32 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock6 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getDayState??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock6
+        REQUIRE ??getDayState
+//   33 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock7 Using cfiCommon1
+        CFI Function ??getDayState
+        ARM
+//   34 int getDayState(wchar_t* fileContent,int& pos) {
+??getDayState:
+        PUSH     {R4,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R4 Frame(CFA, -8)
+        CFI CFA R13+8
+        SUB      SP,SP,#+4
+        CFI CFA R13+12
+//   35   int dayState_ = 0;
+        MOV      R3,#+0
+        STR      R3,[SP, #+0]
+//   36 
+//   37   wchar_t* dayState = getEqualContent(fileContent,pos); //getWSubStr(fileContent,indexOfEqual,indexOfQuotes-1);
+        BL       ??getEqualContent
+//   38   swscanf (dayState, L"%d", &dayState_);
+        LDR      R1,??getDayState_1  ;; `?<Constant L"\\x25\\x64">`
+        MOV      R4,R0
+        MOV      R2,SP
+        SWI      +972
+//   39   delete dayState; dayState = NULL;
+        MOV      R0,R4
+        _BLF     `??operator delete`,`??operator delete??rA`
+//   40   
+//   41   return dayState_;
+        LDR      R0,[SP, #+0]
+        POP      {R1,R4,PC}       ;; return
+        DATA
+??getDayState_1:
+        DC32     `?<Constant L"\\x25\\x64">`
+        CFI EndBlock cfiBlock7
+//   42 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock8 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getLocation??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock8
+        REQUIRE ??getLocation
+//   43 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock9 Using cfiCommon1
+        CFI Function ??getLocation
+        ARM
+//   44 wchar_t* getLocation(wchar_t* fileContent, int& cursor) {
+??getLocation:
+        PUSH     {R4,R5,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R5 Frame(CFA, -8)
+        CFI R4 Frame(CFA, -12)
+        CFI CFA R13+12
+        MOV      R4,R0
+        MOV      R5,R1
+        B        ??getLocation_1
+//   45       while (cursor < wstrlen(fileContent)) {
+//   46         if (fileContent[cursor] == '<' && fileContent[cursor+0x1] == 'F')
+//   47           return getEqualContent(fileContent,cursor);
+//   48         cursor++;
+??getLocation_2:
+        ADD      R0,R1,#+1
+        STR      R0,[R5, #+0]
+??getLocation_1:
+        MOV      R0,R4
+        SWI      +343
+        LDR      R1,[R5, #+0]
+        CMP      R1,R0
+        BGE      ??getLocation_3
+        ADD      R0,R4,R1, LSL #+1
+        LDRH     R2,[R0, #+0]
+        CMP      R2,#+60
+        LDRHEQ   R0,[R0, #+2]
+        CMPEQ    R0,#+70
+        BNE      ??getLocation_2
+        MOV      R1,R5
+        MOV      R0,R4
+        POP      {R4,R5,LR}       ;; Pop
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI ?RET R14
+        CFI CFA R13+0
+        B        ??getEqualContent  ;; tailcall
+        CFI R4 Frame(CFA, -12)
+        CFI R5 Frame(CFA, -8)
+        CFI ?RET Frame(CFA, -4)
+        CFI CFA R13+12
+//   49       }
+//   50       return NULL;
+??getLocation_3:
+        MOV      R0,#+0
+        POP      {R4,R5,PC}       ;; return
+        CFI EndBlock cfiBlock9
+//   51 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock10 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getWeatherConditions??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock10
+        REQUIRE ??getWeatherConditions
+//   52 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock11 Using cfiCommon1
+        CFI Function ??getWeatherConditions
+        ARM
+//   53 wchar_t* getWeatherConditions(wchar_t* num, wchar_t* xmlContent) {
+??getWeatherConditions:
+        PUSH     {R4-R6,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R6 Frame(CFA, -8)
+        CFI R5 Frame(CFA, -12)
+        CFI R4 Frame(CFA, -16)
+        CFI CFA R13+16
+        SUB      SP,SP,#+4
+        CFI CFA R13+20
+        MOV      R4,R0
+        MOV      R5,R1
+//   54   wchar_t* tag = NULL;
+//   55   for (int i=0; i<wstrlen(xmlContent);i++){
+        MOV      R1,#+0
+        B        ??getWeatherConditions_1
+//   56     if (xmlContent[i] == '"') {
+//   57       tag = getWSubStr(xmlContent,i+1,wGetIndexOf(xmlContent,'"',1,i+1));
+//   58       if (compareWchar(tag,num)) {
+//   59         delete tag; tag = NULL;
+//   60         return getEqualContent(xmlContent,i);
+//   61       }
+//   62       if (tag != NULL) { delete tag; tag = NULL; }
+??getWeatherConditions_2:
+        CMP      R6,#+0
+        BEQ      ??getWeatherConditions_3
+        MOV      R0,R6
+        _BLF     `??operator delete`,`??operator delete??rA`
+??getWeatherConditions_3:
+        LDR      R1,[SP, #+0]
+        ADD      R1,R1,#+1
+??getWeatherConditions_1:
+        STR      R1,[SP, #+0]
+        MOV      R0,R5
+        SWI      +343
+        LDR      R1,[SP, #+0]
+        CMP      R1,R0
+        BGE      ??getWeatherConditions_4
+        ADD      R0,R5,R1, LSL #+1
+        LDRH     R0,[R0, #+0]
+        CMP      R0,#+34
+        BNE      ??getWeatherConditions_3
+        ADD      R3,R1,#+1
+        MOV      R2,#+1
+        MOV      R1,#+34
+        MOV      R0,R5
+        _BLF     ??wGetIndexOf,??wGetIndexOf??rA
+        MOV      R2,R0
+        LDR      R0,[SP, #+0]
+        ADD      R1,R0,#+1
+        MOV      R0,R5
+        _BLF     ??getWSubStr,??getWSubStr??rA
+        MOV      R6,R0
+        MOV      R1,R4
+        _BLF     ??compareWchar,??compareWchar??rA
+        CMP      R0,#+0
+        BEQ      ??getWeatherConditions_2
+        MOV      R0,R6
+        _BLF     `??operator delete`,`??operator delete??rA`
+        MOV      R1,SP
+        MOV      R0,R5
+        BL       ??getEqualContent
+        POP      {R1,R4-R6,PC}
+//   63     }
+//   64   }
+//   65   return NULL;
+??getWeatherConditions_4:
+        MOV      R0,#+0
+        POP      {R1,R4-R6,PC}    ;; return
+        CFI EndBlock cfiBlock11
+//   66 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock12 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getWeather??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock12
+        REQUIRE ??getWeather
+//   67 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock13 Using cfiCommon1
+        CFI Function ??getWeather
+        ARM
+//   68 Weather* getWeather(wchar_t* fileContent, int& pos, wchar_t* xmlContent) {
+??getWeather:
+        PUSH     {R4-R9,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R9 Frame(CFA, -8)
+        CFI R8 Frame(CFA, -12)
+        CFI R7 Frame(CFA, -16)
+        CFI R6 Frame(CFA, -20)
+        CFI R5 Frame(CFA, -24)
+        CFI R4 Frame(CFA, -28)
+        CFI CFA R13+28
+        MOV      R5,R0
+        MOV      R6,R1
+        MOV      R7,R2
+//   69   int* states = new int[0x4];
+        MOV      R0,#+16
+        _BLF     `??operator new[]`,`??operator new[]??rA`
+        MOV      R4,R0
+//   70   for (int i=0;i<4;i++)
+        MOV      R8,#+0
+//   71     states[i] = getDayState(fileContent,pos);
+??getWeather_1:
+        MOV      R1,R6
+        MOV      R0,R5
+        BL       ??getDayState
+        STR      R0,[R4, +R8, LSL #+2]
+        ADD      R8,R8,#+1
+        CMP      R8,#+4
+        BLT      ??getWeather_1
+//   72   wchar_t* state_ = int2wstr(states[0x0]);
+        LDR      R0,[R4, #+0]
+        _BLF     ??int2wstr,??int2wstr??rA
+        MOV      R8,R0
+//   73   wchar_t* dayState = getWeatherConditions(state_, xmlContent);
+        MOV      R1,R7
+        BL       ??getWeatherConditions
+        MOV      R9,R0
+//   74   wchar_t* windDirection = getEqualContent(fileContent,pos);
+        MOV      R1,R6
+        MOV      R0,R5
+        BL       ??getEqualContent
+        MOV      R5,R0
+//   75   wchar_t* longWind = getWeatherConditions(windDirection, xmlContent);
+        MOV      R1,R7
+        BL       ??getWeatherConditions
+//   76   Weather* todayWeather = new Weather(states[0x0],states[0x1],states[0x2],states[0x3],dayState,windDirection,longWind);
+        PUSH     {R0}
+        CFI CFA R13+32
+        PUSH     {R5}
+        CFI CFA R13+36
+        PUSH     {R9}
+        CFI CFA R13+40
+        LDR      R0,[R4, #+0]
+        LDR      R3,[R4, #+12]
+        LDR      R2,[R4, #+8]
+        LDR      R1,[R4, #+4]
+        _BLF     `??new Weather`,`??new Weather??rA`
+        MOV      R5,R0
+//   77   delete states; states = NULL;
+        MOV      R0,R4
+        _BLF     `??operator delete`,`??operator delete??rA`
+//   78   delete state_; state_ = NULL;
+        MOV      R0,R8
+        _BLF     `??operator delete`,`??operator delete??rA`
+//   79   return todayWeather;
+        MOV      R0,R5
+        POP      {R1-R9,PC}       ;; return
+        CFI EndBlock cfiBlock13
+//   80 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock14 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getDayWeather??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock14
+        REQUIRE ??getDayWeather
+//   81 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock15 Using cfiCommon1
+        CFI Function ??getDayWeather
+        ARM
+//   82 Weather* getDayWeather(wchar_t* fileContent, int& i, wchar_t* xmlContent) {
+??getDayWeather:
+        PUSH     {R4-R9,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R9 Frame(CFA, -8)
+        CFI R8 Frame(CFA, -12)
+        CFI R7 Frame(CFA, -16)
+        CFI R6 Frame(CFA, -20)
+        CFI R5 Frame(CFA, -24)
+        CFI R4 Frame(CFA, -28)
+        CFI CFA R13+28
+        SUB      SP,SP,#+4
+        CFI CFA R13+32
+        MOV      R4,R0
+        MOV      R5,R1
+        MOV      R6,R2
+//   83     Weather* todayWeather = NULL;
+        MOV      R7,#+0
+        B        ??getDayWeather_1
+//   84 
+//   85 
+//   86     while (i < wstrlen(fileContent)) {
+//   87 
+//   88       if (fileContent[i] == '<' && fileContent[i+0x1] == 'P') {
+//   89         int sizeOfTag = 0;
+//   90         wchar_t* tag = getTag(fileContent,i,sizeOfTag);
+//   91         i += sizeOfTag;
+//   92 
+//   93         wchar_t* today = getDate();
+//   94         if (compareWchar(tag,today))
+//   95           todayWeather = getWeather(fileContent,i, xmlContent);
+//   96         delete tag;
+//   97         delete today;
+//   98         if (todayWeather != NULL) break;
+//   99        }
+//  100       i++;
+??getDayWeather_2:
+        LDR      R0,[R5, #+0]
+        ADD      R0,R0,#+1
+        STR      R0,[R5, #+0]
+??getDayWeather_1:
+        MOV      R0,R4
+        SWI      +343
+        LDR      R1,[R5, #+0]
+        CMP      R1,R0
+        BGE      ??getDayWeather_3
+        ADD      R0,R4,R1, LSL #+1
+        LDRH     R1,[R0, #+0]
+        CMP      R1,#+60
+        LDRHEQ   R0,[R0, #+2]
+        CMPEQ    R0,#+80
+        BNE      ??getDayWeather_2
+        MOV      R1,#+0
+        STR      R1,[SP, #+0]
+        LDR      R1,[R5, #+0]
+        MOV      R2,SP
+        MOV      R0,R4
+        BL       ??getTag
+        LDR      R1,[SP, #+0]
+        MOV      R8,R0
+        LDR      R0,[R5, #+0]
+        ADD      R0,R1,R0
+        STR      R0,[R5, #+0]
+        BL       ??getDate
+        MOV      R9,R0
+        MOV      R1,R9
+        MOV      R0,R8
+        _BLF     ??compareWchar,??compareWchar??rA
+        CMP      R0,#+0
+        BEQ      ??getDayWeather_4
+        MOV      R2,R6
+        MOV      R1,R5
+        MOV      R0,R4
+        BL       ??getWeather
+        MOV      R7,R0
+??getDayWeather_4:
+        MOV      R0,R8
+        _BLF     `??operator delete`,`??operator delete??rA`
+        MOV      R0,R9
+        _BLF     `??operator delete`,`??operator delete??rA`
+        CMP      R7,#+0
+        BEQ      ??getDayWeather_2
+//  101     }
+//  102     
+//  103    return todayWeather;
+??getDayWeather_3:
+        MOV      R0,R7
+        POP      {R1,R4-R9,PC}    ;; return
+        CFI EndBlock cfiBlock15
+//  104 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock16 Using cfiCommon1
+        CFI NoFunction
+        ARM
+`??operator new[]??rA`:
+        LDR      R12,??Subroutine8_0  ;; `??operator new[]`
+        BX       R12
+        DATA
+??Subroutine8_0:
+        DC32     `??operator new[]`
+        CFI EndBlock cfiBlock16
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock17 Using cfiCommon1
+        CFI NoFunction
+        ARM
+??wGetIndexOf??rA:
+        LDR      R12,??Subroutine9_0  ;; ??wGetIndexOf
+        BX       R12
+        DATA
+??Subroutine9_0:
+        DC32     ??wGetIndexOf
+        CFI EndBlock cfiBlock17
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock18 Using cfiCommon1
+        CFI NoFunction
+        ARM
+??getWSubStr??rA:
+        LDR      R12,??Subroutine10_0  ;; ??getWSubStr
+        BX       R12
+        DATA
+??Subroutine10_0:
+        DC32     ??getWSubStr
+        CFI EndBlock cfiBlock18
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock19 Using cfiCommon1
+        CFI NoFunction
+        ARM
+`??operator delete??rA`:
+        LDR      R12,??Subroutine11_0  ;; `??operator delete`
+        BX       R12
+        DATA
+??Subroutine11_0:
+        DC32     `??operator delete`
+        CFI EndBlock cfiBlock19
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock20 Using cfiCommon1
+        CFI NoFunction
+        ARM
+??compareWchar??rA:
+        LDR      R12,??Subroutine12_0  ;; ??compareWchar
+        BX       R12
+        DATA
+??Subroutine12_0:
+        DC32     ??compareWchar
+        CFI EndBlock cfiBlock20
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock21 Using cfiCommon1
+        CFI NoFunction
+        ARM
+??int2wstr??rA:
+        LDR      R12,??Subroutine13_0  ;; ??int2wstr
+        BX       R12
+        DATA
+??Subroutine13_0:
+        DC32     ??int2wstr
+        CFI EndBlock cfiBlock21
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock22 Using cfiCommon1
+        CFI NoFunction
+        ARM
+`??new Weather??rA`:
+        LDR      R12,??Subroutine14_0  ;; `??new Weather`
+        BX       R12
+        DATA
+??Subroutine14_0:
+        DC32     `??new Weather`
+        CFI EndBlock cfiBlock22
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x3c\\x50\\x65\\x72\\x69\\x6f\\x64\\x20\\`:
+        DATA
+        DC8 3CH, 0, 50H, 0, 65H, 0, 72H, 0
+        DC8 69H, 0, 6FH, 0, 64H, 0, 20H, 0
+        DC8 53H, 0, 74H, 0, 61H, 0, 72H, 0
+        DC8 74H, 0, 44H, 0, 61H, 0, 74H, 0
+        DC8 65H, 0, 3DH, 0, 22H, 0, 25H, 0
+        DC8 75H, 0, 2FH, 0, 25H, 0, 64H, 0
+        DC8 2FH, 0, 25H, 0, 64H, 0, 22H, 0
+        DC8 3EH, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x25\\x64">`:
+        DATA
+        DC8 25H, 0, 64H, 0, 0, 0
+        DC8 0, 0
+
+        END
+// 
+// 1 148 bytes in segment CODE
+//    68 bytes in segment DATA_C
+// 
+// 1 032 bytes of CODE  memory (+ 116 bytes shared)
+//    68 bytes of CONST memory
+//
+//Errors: none
+//Warnings: none

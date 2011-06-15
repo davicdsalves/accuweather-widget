@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>WeatherWidget/Release</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>161</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      <PreferedWindows><Position>1</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows></Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1035</ColumnWidth1><ColumnWidth2>276</ColumnWidth2><ColumnWidth3>69</ColumnWidth3></Build>
+    </Static>
+    <Windows>
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-17559-11076</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd3><Tabs><Tab><Identity>TabID-14178-28965</Identity><TabName>Workspace</TabName><Factory>Workspace</Factory><Session><NodeDict><ExpandedNode>WeatherWidget</ExpandedNode></NodeDict></Session></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd3></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>C:\Users\Faby\Desktop\StudyElf\Weather Widget\main.cpp</Filename><XPos>0</XPos><YPos>84</YPos><SelStart>2213</SelStart><SelEnd>2213</SelEnd></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>C:\Users\Faby\Desktop\StudyElf\Weather Widget\standbyDraw.cpp</Filename><XPos>0</XPos><YPos>168</YPos><SelStart>8247</SelStart><SelEnd>8247</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Users\Faby\Desktop\StudyElf\Weather Widget\config_data.c</Filename><XPos>0</XPos><YPos>267</YPos><SelStart>19306</SelStart><SelEnd>19330</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Users\Faby\Desktop\StudyElf\Weather Widget\Utils.cpp</Filename><XPos>0</XPos><YPos>27</YPos><SelStart>833</SelStart><SelEnd>839</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-01952bd0><key>iaridepm.enu1</key></Toolbar-01952bd0></Sizes></Row0></Top><Left><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>557</Bottom><Right>235</Right><x>-2</x><y>-2</y><xscreen>200</xscreen><yscreen>200</yscreen><sizeHorzCX>173611</sizeHorzCX><sizeHorzCY>251889</sizeHorzCY><sizeVertCX>205729</sizeVertCX><sizeVertCY>704030</sizeVertCY></Rect></Wnd3></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>192</Bottom><Right>1154</Right><x>-2</x><y>-2</y><xscreen>1156</xscreen><yscreen>194</yscreen><sizeHorzCX>1003472</sizeHorzCX><sizeHorzCY>244332</sizeHorzCY><sizeVertCX>138889</sizeVertCX><sizeVertCY>244332</sizeVertCY></Rect></Wnd0></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

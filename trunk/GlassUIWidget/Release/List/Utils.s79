@@ -1,0 +1,1264 @@
+//////////////////////////////////////////////////////////////////////////////
+//                                                                           /
+// IAR ARM ANSI C/C++ Compiler V4.42A/W32 EVALUATION   07/Jun/2011  15:55:23 /
+// Copyright 1999-2005 IAR Systems. All rights reserved.                     /
+//                                                                           /
+//    Cpu mode        =  interwork                                           /
+//    Endian          =  little                                              /
+//    Stack alignment =  4                                                   /
+//    Source file     =  F:\Phone\Making elf patches\Elf's\GlassUIWidget\uti /
+//                       ls\Utils.cpp                                        /
+//    Command line    =  "F:\Phone\Making elf patches\Elf's\GlassUIWidget\ut /
+//                       ils\Utils.cpp" -lC "F:\Phone\Making elf             /
+//                       patches\Elf's\GlassUIWidget\Release\List\" -lA      /
+//                       "F:\Phone\Making elf patches\Elf's\GlassUIWidget\Re /
+//                       lease\List\" -o "F:\Phone\Making elf                /
+//                       patches\Elf's\GlassUIWidget\Release\Obj\" -s9       /
+//                       --no_unroll --no_inline --cpu_mode arm --endian     /
+//                       little --cpu ARM926EJ-S --stack_align 4             /
+//                       --interwork -e --enable_multibytes --fpu None       /
+//                       --eec++ --dlib_config "F:\Phone\Making elf          /
+//                       patches\IAR\Embedded Workbench 4.0                  /
+//                       Evaluation\ARM\LIB\dl5tpainl8n.h" -I                /
+//                       "F:\Phone\Making elf patches\IAR\Embedded           /
+//                       Workbench 4.0 Evaluation\ARM\INC\"                  /
+//    List file       =  F:\Phone\Making elf patches\Elf's\GlassUIWidget\Rel /
+//                       ease\List\Utils.s79                                 /
+//                                                                           /
+//                                                                           /
+//////////////////////////////////////////////////////////////////////////////
+
+        NAME Utils
+
+        RTMODEL "StackAlign4", "USED"
+        RTMODEL "__cpu_mode", "__pcs__interwork"
+        RTMODEL "__data_model", "absolute"
+        RTMODEL "__endian", "little"
+        RTMODEL "__rt_version", "6"
+
+        RSEG CSTACK:DATA:NOROOT(2)
+
+        ERROR
+//NOTE: This module defines or uses C++ features that are not
+//      accessible from assembler code. Assembling this file will
+//      not produce an equivalent object file to the one produced
+//      by the C++ compiler.
+
+??DataTable0 EQU 0
+        MULTWEAK ??__dDiv??rA
+        MULTWEAK ??__dMul??rA
+        MULTWEAK ??__doubleToFloat??rA
+        MULTWEAK ??__floatToDouble??rA
+        MULTWEAK ??__longToDouble??rA
+        MULTWEAK ??__longToFloat??rA
+        PUBLIC ??celsiusToFahrenheit
+        FUNCTION ??celsiusToFahrenheit,0603H
+        LOCFRAME CSTACK, 4, STACK
+        MULTWEAK ??celsiusToFahrenheit??rT
+        PUBLIC ??compareWchar
+        FUNCTION ??compareWchar,0203H
+        LOCFRAME CSTACK, 16, STACK
+        MULTWEAK ??compareWchar??rT
+        PUBLIC ??getDateTime
+        FUNCTION ??getDateTime,0203H
+        LOCFRAME CSTACK, 16, STACK
+        MULTWEAK ??getDateTime??rT
+        PUBLIC ??getStateByHour
+        FUNCTION ??getStateByHour,0203H
+        LOCFRAME CSTACK, 52, STACK
+        MULTWEAK ??getStateByHour??rT
+        PUBLIC ??getWSubStr
+        FUNCTION ??getWSubStr,0203H
+        LOCFRAME CSTACK, 16, STACK
+        MULTWEAK ??getWSubStr??rT
+        PUBLIC ??int2wstr
+        FUNCTION ??int2wstr,0203H
+        LOCFRAME CSTACK, 12, STACK
+        MULTWEAK ??int2wstr??rT
+        PUBLIC ??intlen
+        FUNCTION ??intlen,0203H
+        MULTWEAK ??intlen??rT
+        PUBLIC ??isDateEqual
+        FUNCTION ??isDateEqual,0203H
+        MULTWEAK ??isDateEqual??rT
+        PUBLIC ??km2Mile
+        FUNCTION ??km2Mile,0203H
+        LOCFRAME CSTACK, 4, STACK
+        MULTWEAK ??km2Mile??rT
+        PUBLIC ??km2meter
+        FUNCTION ??km2meter,0203H
+        LOCFRAME CSTACK, 4, STACK
+        MULTWEAK ??km2meter??rT
+        PUBLIC ??makeAvgState
+        FUNCTION ??makeAvgState,0203H
+        LOCFRAME CSTACK, 20, STACK
+        MULTWEAK ??makeAvgState??rT
+        PUBLIC ??makeNullWchar
+        FUNCTION ??makeNullWchar,0203H
+        LOCFRAME CSTACK, 12, STACK
+        MULTWEAK ??makeNullWchar??rT
+        MULTWEAK `??operator delete??rA`
+        MULTWEAK `??operator new[]??rA`
+        PUBLIC ??returnMask
+        FUNCTION ??returnMask,0203H
+        LOCFRAME CSTACK, 40, STACK
+        MULTWEAK ??returnMask??rT
+        PUBLIC ??searchLine
+        FUNCTION ??searchLine,0203H
+        LOCFRAME CSTACK, 12, STACK
+        MULTWEAK ??searchLine??rT
+        PUBLIC ??showBox
+        FUNCTION ??showBox,0203H
+        LOCFRAME CSTACK, 20, STACK
+        MULTWEAK ??showBox??rT
+        PUBLIC ??wGetIndexOf
+        FUNCTION ??wGetIndexOf,0203H
+        LOCFRAME CSTACK, 28, STACK
+        MULTWEAK ??wGetIndexOf??rT
+        PUBLIC ??wGetIndexOfLine
+        FUNCTION ??wGetIndexOfLine,0203H
+        LOCFRAME CSTACK, 12, STACK
+        MULTWEAK ??wGetIndexOfLine??rT
+        
+        CFI Names cfiNames0
+        CFI StackFrame CFA R13 HUGEDATA
+        CFI Resource R0:32, R1:32, R2:32, R3:32, R4:32, R5:32, R6:32, R7:32
+        CFI Resource R8:32, R9:32, R10:32, R11:32, R12:32, CPSR:32, R13:32
+        CFI Resource R14:32, SPSR:32
+        CFI VirtualResource ?RET:32
+        CFI EndNames cfiNames0
+        
+        CFI Common cfiCommon0 Using cfiNames0
+        CFI CodeAlign 2
+        CFI DataAlign 4
+        CFI ReturnAddress ?RET CODE
+        CFI CFA R13+0
+        CFI R0 Undefined
+        CFI R1 Undefined
+        CFI R2 Undefined
+        CFI R3 Undefined
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI R8 SameValue
+        CFI R9 SameValue
+        CFI R10 SameValue
+        CFI R11 SameValue
+        CFI R12 Undefined
+        CFI CPSR SameValue
+        CFI R14 Undefined
+        CFI SPSR SameValue
+        CFI ?RET R14
+        CFI EndCommon cfiCommon0
+        
+        
+        CFI Common cfiCommon1 Using cfiNames0
+        CFI CodeAlign 4
+        CFI DataAlign 4
+        CFI ReturnAddress ?RET CODE
+        CFI CFA R13+0
+        CFI R0 Undefined
+        CFI R1 Undefined
+        CFI R2 Undefined
+        CFI R3 Undefined
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI R8 SameValue
+        CFI R9 SameValue
+        CFI R10 SameValue
+        CFI R11 SameValue
+        CFI R12 Undefined
+        CFI CPSR SameValue
+        CFI R14 Undefined
+        CFI SPSR SameValue
+        CFI ?RET R14
+        CFI EndCommon cfiCommon1
+        
+
+
+__dDiv              SYMBOL "__dDiv"
+__dMul              SYMBOL "__dMul"
+__doubleToFloat     SYMBOL "__doubleToFloat"
+__floatToDouble     SYMBOL "__floatToDouble"
+__longToDouble      SYMBOL "__longToDouble"
+__longToFloat       SYMBOL "__longToFloat"
+??__dDiv??rA        SYMBOL "??rA", __dDiv
+??__dMul??rA        SYMBOL "??rA", __dMul
+??__doubleToFloat??rA SYMBOL "??rA", __doubleToFloat
+??__floatToDouble??rA SYMBOL "??rA", __floatToDouble
+??__longToDouble??rA SYMBOL "??rA", __longToDouble
+??__longToFloat??rA SYMBOL "??rA", __longToFloat
+
+??celsiusToFahrenheit??rT SYMBOL "??rT", ??celsiusToFahrenheit
+
+??compareWchar??rT  SYMBOL "??rT", ??compareWchar
+
+??getDateTime??rT   SYMBOL "??rT", ??getDateTime
+
+??getStateByHour??rT SYMBOL "??rT", ??getStateByHour
+
+??getWSubStr??rT    SYMBOL "??rT", ??getWSubStr
+
+??int2wstr??rT      SYMBOL "??rT", ??int2wstr
+
+??intlen??rT        SYMBOL "??rT", ??intlen
+
+??isDateEqual??rT   SYMBOL "??rT", ??isDateEqual
+
+??km2Mile??rT       SYMBOL "??rT", ??km2Mile
+
+??km2meter??rT      SYMBOL "??rT", ??km2meter
+
+??makeAvgState??rT  SYMBOL "??rT", ??makeAvgState
+
+??makeNullWchar??rT SYMBOL "??rT", ??makeNullWchar
+`??operator delete??rA` SYMBOL "??rA", `??operator delete`
+`??operator new[]??rA` SYMBOL "??rA", `??operator new[]`
+
+??returnMask??rT    SYMBOL "??rT", ??returnMask
+
+??searchLine??rT    SYMBOL "??rT", ??searchLine
+
+??showBox??rT       SYMBOL "??rT", ??showBox
+
+??wGetIndexOf??rT   SYMBOL "??rT", ??wGetIndexOf
+
+??wGetIndexOfLine??rT SYMBOL "??rT", ??wGetIndexOfLine
+
+        EXTERN `??operator delete`
+        FUNCTION `??operator delete`,0202H
+        EXTERN `??operator new[]`
+        FUNCTION `??operator new[]`,0202H
+        EXTERN BCFG_Tags_AverageTemperature_Mask
+        EXTERN BCFG_Tags_AverageTemperature_Unit
+        EXTERN SYNC
+        EXTERN __dDiv
+        FUNCTION __dDiv,0202H
+        EXTERN __dMul
+        FUNCTION __dMul,0202H
+        EXTERN __doubleToFloat
+        FUNCTION __doubleToFloat,0202H
+        EXTERN __floatToDouble
+        FUNCTION __floatToDouble,0202H
+        EXTERN __longToDouble
+        FUNCTION __longToDouble,0202H
+        EXTERN __longToFloat
+        FUNCTION __longToFloat,0202H
+
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock0 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getWSubStr??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock0
+        REQUIRE ??getWSubStr
+// F:\Phone\Making elf patches\Elf's\GlassUIWidget\utils\Utils.cpp
+//    1 #include "..\..\include\Lib_Clara.h"
+//    2 #include "..\..\include\Dir.h"
+//    3 #include "..\bcfg\config_data.h"
+//    4 #include "utils.h"
+//    5 
+//    6 //<Day State="02">,12,13
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock1 Using cfiCommon1
+        CFI Function ??getWSubStr
+        ARM
+//    7 wchar_t* getWSubStr(wchar_t* wString, int begin, int end) {
+??getWSubStr:
+        PUSH     {R4-R6,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R6 Frame(CFA, -8)
+        CFI R5 Frame(CFA, -12)
+        CFI R4 Frame(CFA, -16)
+        CFI CFA R13+16
+        MOV      R4,R0
+        MOVS     R5,R1
+//    8   if (begin < 0 || end < 0 || (end - begin) < 0) return NULL;
+        CMPPL    R2,#+0
+        SUBSPL   R6,R2,R5
+        MOVMI    R0,#+0
+        POPMI    {R4-R6,PC}
+//    9   wchar_t* wSubStr = makeNullWchar( end - begin + 0x2 );
+        ADD      R0,R6,#+2
+        BL       ??makeNullWchar
+//   10   int i;
+//   11   for (i=0;i < (end - begin + 1); i++)
+        MOV      R1,#+0
+        ADD      R2,R6,#+1
+        CMP      R2,#+1
+        BGE      ??getWSubStr_1
+        POP      {R4-R6,PC}
+//   12        wSubStr[i] = wString[begin + i];
+??getWSubStr_2:
+        ADD      R6,R1,R5
+        ADD      R6,R4,R6, LSL #+1
+        LDRH     R6,[R6, #+0]
+        ADD      R3,R0,R1, LSL #+1
+        ADD      R1,R1,#+1
+        STRH     R6,[R3, #+0]
+??getWSubStr_1:
+        CMP      R1,R2
+        BLT      ??getWSubStr_2
+//   13   return wSubStr;
+        POP      {R4-R6,PC}       ;; return
+        CFI EndBlock cfiBlock1
+//   14 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock2 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??wGetIndexOfLine??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock2
+        REQUIRE ??wGetIndexOfLine
+//   15 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock3 Using cfiCommon1
+        CFI Function ??wGetIndexOfLine
+        ARM
+//   16 int wGetIndexOfLine(wchar_t* string) {
+??wGetIndexOfLine:
+        PUSH     {R4,R5,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R5 Frame(CFA, -8)
+        CFI R4 Frame(CFA, -12)
+        CFI CFA R13+12
+        MOV      R4,R0
+//   17   for (int i=0;i<wstrlen(string);i++)
+        MOV      R5,#+0
+        B        ??wGetIndexOfLine_1
+??wGetIndexOfLine_2:
+        ADD      R5,R5,#+1
+??wGetIndexOfLine_1:
+        MOV      R0,R4
+        SWI      +343
+        CMP      R5,R0
+        BGE      ??wGetIndexOfLine_3
+//   18 	if (string[i] == '\\' && string[i+0x1] == 'n')
+        ADD      R0,R4,R5, LSL #+1
+        LDRH     R1,[R0, #+0]
+        CMP      R1,#+92
+        LDRHEQ   R0,[R0, #+2]
+        CMPEQ    R0,#+110
+        BNE      ??wGetIndexOfLine_2
+//   19           return i;
+        MOV      R0,R5
+        POP      {R4,R5,PC}
+//   20   return 0;  
+??wGetIndexOfLine_3:
+        MOV      R0,#+0
+        POP      {R4,R5,PC}       ;; return
+        CFI EndBlock cfiBlock3
+//   21 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock4 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??searchLine??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock4
+        REQUIRE ??searchLine
+//   22 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock5 Using cfiCommon1
+        CFI Function ??searchLine
+        ARM
+//   23 bool searchLine(wchar_t* string) {
+??searchLine:
+        PUSH     {R4,R5,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R5 Frame(CFA, -8)
+        CFI R4 Frame(CFA, -12)
+        CFI CFA R13+12
+        MOV      R4,R0
+//   24   for (int i=0;i<wstrlen(string);i++)
+        MOV      R5,#+0
+        B        ??searchLine_1
+??searchLine_2:
+        ADD      R5,R5,#+1
+??searchLine_1:
+        MOV      R0,R4
+        SWI      +343
+        CMP      R5,R0
+        BGE      ??searchLine_3
+//   25     if (string[i] == '\\' && string[i+0x1] == 'n') return true;
+        ADD      R0,R4,R5, LSL #+1
+        LDRH     R1,[R0, #+0]
+        CMP      R1,#+92
+        LDRHEQ   R0,[R0, #+2]
+        CMPEQ    R0,#+110
+        BNE      ??searchLine_2
+        MOV      R0,#+1
+        POP      {R4,R5,PC}
+//   26   return false;
+??searchLine_3:
+        MOV      R0,#+0
+        POP      {R4,R5,PC}       ;; return
+        CFI EndBlock cfiBlock5
+//   27 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock6 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??wGetIndexOf??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock6
+        REQUIRE ??wGetIndexOf
+//   28 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock7 Using cfiCommon1
+        CFI Function ??wGetIndexOf
+        ARM
+//   29 int wGetIndexOf(wchar_t* string, char search, int time, int from) {
+??wGetIndexOf:
+        PUSH     {R4-R9,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R9 Frame(CFA, -8)
+        CFI R8 Frame(CFA, -12)
+        CFI R7 Frame(CFA, -16)
+        CFI R6 Frame(CFA, -20)
+        CFI R5 Frame(CFA, -24)
+        CFI R4 Frame(CFA, -28)
+        CFI CFA R13+28
+        MOV      R4,R0
+        MOV      R5,R1
+        MOV      R6,R2
+        MOV      R7,R3
+//   30   int found = 0;
+        MOV      R8,#+0
+//   31   for (int i=0;i<wstrlen(string);i++) {
+        MOV      R9,#+0
+        B        ??wGetIndexOf_1
+??wGetIndexOf_2:
+        ADD      R9,R9,#+1
+??wGetIndexOf_1:
+        MOV      R0,R4
+        SWI      +343
+        CMP      R9,R0
+        BGE      ??wGetIndexOf_3
+//   32 	if (string[i + from] == search){
+        ADD      R0,R7,R9
+        ADD      R1,R4,R0, LSL #+1
+        LDRH     R1,[R1, #+0]
+        CMP      R1,R5
+//   33 	  found++;
+        ADDEQ    R8,R8,#+1
+//   34 	  if (found == time) return i+from;
+        CMPEQ    R8,R6
+        BNE      ??wGetIndexOf_2
+        POP      {R4-R9,PC}
+//   35 	}
+//   36   }
+//   37   return 0;
+??wGetIndexOf_3:
+        MOV      R0,#+0
+        POP      {R4-R9,PC}       ;; return
+        CFI EndBlock cfiBlock7
+//   38 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock8 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??compareWchar??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock8
+        REQUIRE ??compareWchar
+//   39 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock9 Using cfiCommon1
+        CFI Function ??compareWchar
+        ARM
+//   40 bool compareWchar(wchar_t* tagFound, wchar_t* todayTag) {
+??compareWchar:
+        PUSH     {R4-R6,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R6 Frame(CFA, -8)
+        CFI R5 Frame(CFA, -12)
+        CFI R4 Frame(CFA, -16)
+        CFI CFA R13+16
+        MOV      R4,R0
+        MOV      R5,R1
+//   41   for (int i=0;i<wstrlen(tagFound) && i<wstrlen(todayTag);i++)
+        MOV      R6,#+0
+        B        ??compareWchar_1
+??compareWchar_2:
+        ADD      R6,R6,#+1
+??compareWchar_1:
+        MOV      R0,R4
+        SWI      +343
+        CMP      R6,R0
+        BGE      ??compareWchar_3
+        MOV      R0,R5
+        SWI      +343
+        CMP      R6,R0
+        BGE      ??compareWchar_3
+//   42     if (tagFound[i] != todayTag[i]) return false;
+        ADD      R0,R4,R6, LSL #+1
+        LDRH     R0,[R0, #+0]
+        ADD      R1,R5,R6, LSL #+1
+        LDRH     R1,[R1, #+0]
+        CMP      R0,R1
+        BEQ      ??compareWchar_2
+        MOV      R0,#+0
+        POP      {R4-R6,PC}
+//   43   return true;
+??compareWchar_3:
+        MOV      R0,#+1
+        POP      {R4-R6,PC}       ;; return
+        CFI EndBlock cfiBlock9
+//   44 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock10 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??intlen??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock10
+        REQUIRE ??intlen
+//   45 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock11 Using cfiCommon1
+        CFI Function ??intlen
+        ARM
+//   46 int intlen(int start) {
+//   47     int end = 0;
+??intlen:
+        LDR      R2,??DataTable1  ;; 0x66666667
+        MOV      R1,#+0
+        CMP      R0,#+1
+        BLT      ??intlen_1
+//   48     while(start > 0) {
+//   49         start = start/10;
+??intlen_2:
+        SMULL    R3,R12,R2,R0
+//   50         end++;
+        ADD      R1,R1,#+1
+        ASR      R12,R12,#+2
+        ADD      R0,R12,R0, LSR #+31
+//   51     }
+        CMP      R0,#+1
+        BGE      ??intlen_2
+//   52     return end;
+??intlen_1:
+        MOV      R0,R1
+        BX       LR               ;; return
+        CFI EndBlock cfiBlock11
+//   53 }  
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock12 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getDateTime??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock12
+        REQUIRE ??getDateTime
+//   54 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock13 Using cfiCommon1
+        CFI Function ??getDateTime
+        ARM
+//   55 DATETIME getDateTime() { //"2011/3/20"
+??getDateTime:
+        PUSH     {R4,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R4 Frame(CFA, -8)
+        CFI CFA R13+8
+        SUB      SP,SP,#+8
+        CFI CFA R13+16
+//   56   DATETIME dt;
+//   57   REQUEST_DATEANDTIME_GET(SYNC,&dt);
+        MOV      R1,SP
+        MOV      R4,R0
+        LDR      R0,??getDateTime_1  ;; SYNC
+        LDR      R0,[R0, #+0]
+        SWI      +366
+//   58   return dt;
+        MOV      R0,SP
+        LDRH     R1,[R0, #0]
+        STRH     R1,[R4, #+0]
+        LDRH     R1,[R0, #+2]
+        STRH     R1,[R4, #+2]
+        LDRH     R1,[R0, #+4]
+        STRH     R1,[R4, #+4]
+        LDRH     R1,[R0, #+6]
+        MOV      R0,R4
+        STRH     R1,[R4, #+6]
+        POP      {R1,R2,R4,PC}    ;; return
+        DATA
+??getDateTime_1:
+        DC32     SYNC
+        CFI EndBlock cfiBlock13
+//   59 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock14 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??int2wstr??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock14
+        REQUIRE ??int2wstr
+//   60 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock15 Using cfiCommon1
+        CFI Function ??int2wstr
+        ARM
+//   61 wchar_t* int2wstr(int num) {
+??int2wstr:
+        PUSH     {R4,R5,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R5 Frame(CFA, -8)
+        CFI R4 Frame(CFA, -12)
+        CFI CFA R13+12
+        MOV      R4,R0
+//   62   wchar_t* number = makeNullWchar( intlen(num) );
+        BL       ??intlen
+        BL       ??makeNullWchar
+        MOV      R5,R0
+//   63   snwprintf(number,intlen(num),L"%d",num);
+        MOV      R0,R4
+        BL       ??intlen
+        LDR      R2,??int2wstr_1  ;; `?<Constant L"\\x25\\x64">`
+        MOV      R1,R0
+        MOV      R3,R4
+        MOV      R0,R5
+        SWI      +277
+//   64   return number;
+        MOV      R0,R5
+        POP      {R4,R5,PC}       ;; return
+        DATA
+??int2wstr_1:
+        DC32     `?<Constant L"\\x25\\x64">`
+        CFI EndBlock cfiBlock15
+//   65 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock16 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??isDateEqual??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock16
+        REQUIRE ??isDateEqual
+//   66 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock17 Using cfiCommon1
+        CFI Function ??isDateEqual
+        ARM
+//   67 bool isDateEqual(DATETIME* r1, DATETIME* r2) {
+//   68   int dif = r1->date.year - r2->date.year;
+??isDateEqual:
+        LDRH     R2,[R0, #+0]
+        LDRH     R3,[R1, #+0]
+        SUBS     R2,R2,R3
+//   69   if (dif == 0) {
+        BNE      ??isDateEqual_1
+//   70     dif = r1->date.mon - r2->date.mon;
+        LDRB     R2,[R0, #+2]
+        LDRB     R3,[R1, #+2]
+        SUBS     R2,R2,R3
+//   71     if (dif == 0) dif = r1->date.day - r2->date.day;
+        LDRBEQ   R0,[R0, #+3]
+        LDRBEQ   R1,[R1, #+3]
+        SUBEQ    R2,R0,R1
+//   72   }
+//   73   return dif;
+??isDateEqual_1:
+        CMP      R2,#+0
+        MOVNE    R0,#+1
+        BXNE     LR
+        MOV      R0,#+0
+        BX       LR               ;; return
+        CFI EndBlock cfiBlock17
+//   74 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock18 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??celsiusToFahrenheit??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock18
+        REQUIRE ??celsiusToFahrenheit
+//   75 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock19 Using cfiCommon1
+        CFI Function ??celsiusToFahrenheit
+        ARM
+//   76 float celsiusToFahrenheit(int celsius) {
+//   77   return (celsius * 9 / 5) + 32;
+??celsiusToFahrenheit:
+        LDR      R1,??DataTable1  ;; 0x66666667
+        ADD      R0,R0,R0, LSL #+3
+        SMULL    R2,R3,R1,R0
+        ASR      R3,R3,#+1
+        ADD      R0,R3,R0, LSR #+31
+        ADD      R0,R0,#+32
+        _BF      __longToFloat,??__longToFloat??rA  ;; tailcall
+        CFI EndBlock cfiBlock19
+//   78 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        DATA
+??DataTable1:
+        DC32     0x66666667
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock20 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??km2Mile??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock20
+        REQUIRE ??km2Mile
+//   79 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock21 Using cfiCommon1
+        CFI Function ??km2Mile
+        ARM
+//   80 float km2Mile(int km) {
+??km2Mile:
+        PUSH     {LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI CFA R13+4
+//   81   return (km * 0.6214);
+        _BLF     __longToDouble,??__longToDouble??rA
+        LDR      R2,??km2Mile_1   ;; 0x40b78034
+        LDR      R3,??km2Mile_1+0x4  ;; 0x3fe3e282
+        _BLF     __dMul,??__dMul??rA
+        POP      {LR}             ;; Pop
+        CFI ?RET R14
+        CFI CFA R13+0
+        _BF      __doubleToFloat,??__doubleToFloat??rA  ;; tailcall
+        DATA
+??km2Mile_1:
+        DC32     0x40b78034
+        DC32     0x3fe3e282
+        CFI EndBlock cfiBlock21
+//   82 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock22 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??km2meter??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock22
+        REQUIRE ??km2meter
+//   83 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock23 Using cfiCommon1
+        CFI Function ??km2meter
+        ARM
+//   84 float km2meter(int km) {
+??km2meter:
+        PUSH     {LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI CFA R13+4
+//   85   return (km / 3.6);
+        _BLF     __longToDouble,??__longToDouble??rA
+        LDR      R2,??km2meter_1  ;; 0xffffffffcccccccd
+        LDR      R3,??km2meter_1+0x4  ;; 0x400ccccc
+        _BLF     __dDiv,??__dDiv??rA
+        POP      {LR}             ;; Pop
+        CFI ?RET R14
+        CFI CFA R13+0
+        _BF      __doubleToFloat,??__doubleToFloat??rA  ;; tailcall
+        DATA
+??km2meter_1:
+        DC32     0xffffffffcccccccd
+        DC32     0x400ccccc
+        CFI EndBlock cfiBlock23
+//   86 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock24 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??showBox??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock24
+        REQUIRE ??showBox
+//   87 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock25 Using cfiCommon1
+        CFI Function ??showBox
+        ARM
+//   88 void showBox(wchar_t* message, int time) {
+??showBox:
+        PUSH     {R4,R5,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R5 Frame(CFA, -8)
+        CFI R4 Frame(CFA, -12)
+        CFI CFA R13+12
+        MOV      R4,R0
+        MOV      R5,R1
+//   89   MessageBox(0x6FFFFFFF,TextID_Create(message,ENC_UCS2 , wstrlen(message)), NOIMAGE, 1, time,0);
+        SWI      +343
+        MOV      R2,R0
+        MOV      R1,#+0
+        MOV      R0,R4
+        SWI      +349
+        MOV      R1,R0
+        MOV      R0,#+0
+        PUSH     {R0}
+        CFI CFA R13+16
+        MOV      R3,#+1
+        MOV      R2,#+255
+        ORR      R2,R2,#0xFF00
+        MOV      R0,R5
+        PUSH     {R0}
+        CFI CFA R13+20
+        MVN      R0,#-1879048192
+        SWI      +599
+//   90   message = NULL;
+//   91   delay(time);
+        MOV      R0,R5
+        SWI      +389
+//   92 }
+        POP      {R0,R1,R4,R5,PC}  ;; return
+        CFI EndBlock cfiBlock25
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock26 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??getStateByHour??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock26
+        REQUIRE ??getStateByHour
+//   93 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock27 Using cfiCommon1
+        CFI Function ??getStateByHour
+        ARM
+//   94 wchar_t* getStateByHour(int hour) {
+//   95   wchar_t* states[0x5] = { L"Morning", L"Noon", L"Afternoon", L"Evening", L"Night" };
+??getStateByHour:
+        LDR      R2,??getStateByHour_1  ;; `?<Constant {&L"\\x4d\\x6f\\x72\\x6e\\x69\\x6e\\x67", `
+        PUSH     {R4-R6}
+        CFI R6 Frame(CFA, -4)
+        CFI R5 Frame(CFA, -8)
+        CFI R4 Frame(CFA, -12)
+        CFI CFA R13+12
+        SUB      SP,SP,#+40
+        CFI CFA R13+52
+        LDM      R2,{R3-R6,R12}
+//   96   int hourState[0x5] = { 0, 12, 13, 16, 18 };
+        LDR      R2,??getStateByHour_1+0x4  ;; `?<Constant {0, 12, 13, 16, 18}>`
+        MOV      R1,SP
+        STM      R1,{R3-R6,R12}
+        LDM      R2,{R3-R6,R12}
+        ADD      R1,SP,#+20
+        STM      R1,{R3-R6,R12}
+//   97   for (int i=0;i<4;i++)
+        MOV      R1,#+0
+//   98     if (hour >= hourState[i] && hour < hourState[i + 0x1])
+??getStateByHour_2:
+        ADD      R2,SP,#+20
+        ADD      R2,R2,R1, LSL #+2
+        LDR      R3,[R2, #+0]
+        CMP      R0,R3
+        BLT      ??getStateByHour_3
+        LDR      R2,[R2, #+4]
+        CMP      R0,R2
+//   99       return states[i];
+        MOVLT    R0,SP
+        LDRLT    R0,[R0, +R1, LSL #+2]
+        BLT      ??getStateByHour_4
+??getStateByHour_3:
+        ADD      R1,R1,#+1
+        CMP      R1,#+4
+        BLT      ??getStateByHour_2
+//  100   return states[0x4];
+        LDR      R0,[SP, #+16]
+??getStateByHour_4:
+        ADD      SP,SP,#+40
+        CFI CFA R13+12
+        POP      {R4-R6}
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI R6 SameValue
+        CFI CFA R13+0
+        BX       LR               ;; return
+        DATA
+??getStateByHour_1:
+        DC32     `?<Constant {&L"\\x4d\\x6f\\x72\\x6e\\x69\\x6e\\x67", `
+        DC32     `?<Constant {0, 12, 13, 16, 18}>`
+        CFI EndBlock cfiBlock27
+//  101 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock28 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??returnMask??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock28
+        REQUIRE ??returnMask
+//  102 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock29 Using cfiCommon1
+        CFI Function ??returnMask
+        ARM
+//  103 wchar_t* returnMask(const wchar_t* mask, int tag, bool contentIf, float (*func)(int) , int cond) {
+??returnMask:
+        PUSH     {R4-R10,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R10 Frame(CFA, -8)
+        CFI R9 Frame(CFA, -12)
+        CFI R8 Frame(CFA, -16)
+        CFI R7 Frame(CFA, -20)
+        CFI R6 Frame(CFA, -24)
+        CFI R5 Frame(CFA, -28)
+        CFI R4 Frame(CFA, -32)
+        CFI CFA R13+32
+        LDR      R10,[SP, #+32]
+        MOV      R4,R0
+        MOV      R7,R1
+        MOV      R8,R2
+        MOV      R9,R3
+//  104   int sizeOfTemp = wstrlen(mask) + intlen(tag);
+        SWI      +343
+        MOV      R5,R0
+        MOV      R0,R7
+        BL       ??intlen
+        ADD      R5,R0,R5
+//  105   wchar_t* newMask = makeNullWchar( sizeOfTemp );
+        MOV      R0,R5
+        BL       ??makeNullWchar
+        MOV      R6,R0
+//  106   snwprintf( newMask, sizeOfTemp, mask, ( contentIf == cond ? tag : (*func)(tag) ) );
+        CMP      R8,R10
+        MOV      R0,R7
+        BNE      ??returnMask_1
+        _BLF     __longToFloat,??__longToFloat??rA
+        B        ??returnMask_2
+??returnMask_1:
+        BLX      R9
+??returnMask_2:
+        _BLF     __floatToDouble,??__floatToDouble??rA
+        PUSH     {R0,R1}
+        CFI CFA R13+40
+        POP      {R3}
+        CFI CFA R13+36
+        MOV      R2,R4
+        MOV      R1,R5
+        MOV      R0,R6
+        SWI      +277
+//  107   return newMask;
+        MOV      R0,R6
+        POP      {R1,R4-R10,PC}   ;; return
+        CFI EndBlock cfiBlock29
+//  108 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock30 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??makeAvgState??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock30
+        REQUIRE ??makeAvgState
+//  109 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock31 Using cfiCommon1
+        CFI Function ??makeAvgState
+        ARM
+//  110 wchar_t* makeAvgState(wchar_t* state, int averageTemp) {
+//  111     wchar_t* temp = returnMask( BCFG_Tags_AverageTemperature_Mask , averageTemp , BCFG_Tags_AverageTemperature_Unit , celsiusToFahrenheit );
+??makeAvgState:
+        LDR      R3,??makeAvgState_1  ;; ??celsiusToFahrenheit
+        PUSH     {R4-R6,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R6 Frame(CFA, -8)
+        CFI R5 Frame(CFA, -12)
+        CFI R4 Frame(CFA, -16)
+        CFI CFA R13+16
+        MOV      R4,R0
+        LDR      R0,??makeAvgState_1+0x4  ;; BCFG_Tags_AverageTemperature_Unit
+        LDR      R0,[R0, #+0]
+        CMP      R0,#+0
+        MOV      R0,#+0
+        PUSH     {R0}
+        CFI CFA R13+20
+        LDR      R0,??makeAvgState_1+0x8  ;; BCFG_Tags_AverageTemperature_Mask
+        MOVNE    R2,#+1
+        MOVEQ    R2,#+0
+        BL       ??returnMask
+        MOV      R5,R0
+//  112     wchar_t* stateAvg = makeNullWchar( 256 );
+        MOV      R0,#+256
+        BL       ??makeNullWchar
+        MOV      R6,R0
+//  113     
+//  114     wstrcpy(stateAvg,state);
+        MOV      R1,R4
+        SWI      +338
+//  115     wstrcat(stateAvg, L"\\n");
+        LDR      R1,??makeAvgState_1+0xC  ;; `?<Constant L"\\x5c\\x6e">`
+        MOV      R0,R6
+        SWI      +340
+//  116     wstrcat(stateAvg, temp );
+        MOV      R1,R5
+        MOV      R0,R6
+        SWI      +340
+//  117     delete temp;
+        MOV      R0,R5
+        _BLF     `??operator delete`,`??operator delete??rA`
+//  118     return stateAvg;
+        MOV      R0,R6
+        POP      {R1,R4-R6,PC}    ;; return
+        DATA
+??makeAvgState_1:
+        DC32     ??celsiusToFahrenheit
+        DC32     BCFG_Tags_AverageTemperature_Unit
+        DC32     BCFG_Tags_AverageTemperature_Mask
+        DC32     `?<Constant L"\\x5c\\x6e">`
+        CFI EndBlock cfiBlock31
+//  119 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock32 Using cfiCommon0
+        CFI NoFunction
+        THUMB
+??makeNullWchar??rT:
+        BX       PC
+        Nop      
+        CFI EndBlock cfiBlock32
+        REQUIRE ??makeNullWchar
+//  120 
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock33 Using cfiCommon1
+        CFI Function ??makeNullWchar
+        ARM
+//  121 wchar_t* makeNullWchar(int len) {
+??makeNullWchar:
+        PUSH     {R4,R5,LR}
+        CFI ?RET Frame(CFA, -4)
+        CFI R5 Frame(CFA, -8)
+        CFI R4 Frame(CFA, -12)
+        CFI CFA R13+12
+        MOV      R4,R0
+//  122   wchar_t* asRequested = new wchar_t[len];
+        LSL      R0,R4,#+1
+        _BLF     `??operator new[]`,`??operator new[]??rA`
+        MOV      R5,R0
+//  123   memset( asRequested, 0, sizeof(wchar_t)*len );
+        LSL      R2,R4,#+1
+        MOV      R1,#+0
+        SWI      +274
+//  124   return asRequested;
+        MOV      R0,R5
+        POP      {R4,R5,PC}       ;; return
+        CFI EndBlock cfiBlock33
+//  125 }
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock34 Using cfiCommon1
+        CFI NoFunction
+        ARM
+??__longToFloat??rA:
+        LDR      R3,??Subroutine17_0  ;; __longToFloat
+        BX       R3
+        DATA
+??Subroutine17_0:
+        DC32     __longToFloat
+        CFI EndBlock cfiBlock34
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock35 Using cfiCommon1
+        CFI NoFunction
+        ARM
+??__longToDouble??rA:
+        LDR      R3,??Subroutine18_0  ;; __longToDouble
+        BX       R3
+        DATA
+??Subroutine18_0:
+        DC32     __longToDouble
+        CFI EndBlock cfiBlock35
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock36 Using cfiCommon1
+        CFI NoFunction
+        ARM
+??__dMul??rA:
+        LDR      R12,??Subroutine19_0  ;; __dMul
+        BX       R12
+        DATA
+??Subroutine19_0:
+        DC32     __dMul
+        CFI EndBlock cfiBlock36
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock37 Using cfiCommon1
+        CFI NoFunction
+        ARM
+??__doubleToFloat??rA:
+        LDR      R3,??Subroutine20_0  ;; __doubleToFloat
+        BX       R3
+        DATA
+??Subroutine20_0:
+        DC32     __doubleToFloat
+        CFI EndBlock cfiBlock37
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock38 Using cfiCommon1
+        CFI NoFunction
+        ARM
+??__dDiv??rA:
+        LDR      R12,??Subroutine21_0  ;; __dDiv
+        BX       R12
+        DATA
+??Subroutine21_0:
+        DC32     __dDiv
+        CFI EndBlock cfiBlock38
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock39 Using cfiCommon1
+        CFI NoFunction
+        ARM
+??__floatToDouble??rA:
+        LDR      R3,??Subroutine22_0  ;; __floatToDouble
+        BX       R3
+        DATA
+??Subroutine22_0:
+        DC32     __floatToDouble
+        CFI EndBlock cfiBlock39
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock40 Using cfiCommon1
+        CFI NoFunction
+        ARM
+`??operator delete??rA`:
+        LDR      R12,??Subroutine23_0  ;; `??operator delete`
+        BX       R12
+        DATA
+??Subroutine23_0:
+        DC32     `??operator delete`
+        CFI EndBlock cfiBlock40
+
+        RSEG CODE:CODE:NOROOT(2)
+        CFI Block cfiBlock41 Using cfiCommon1
+        CFI NoFunction
+        ARM
+`??operator new[]??rA`:
+        LDR      R12,??Subroutine24_0  ;; `??operator new[]`
+        BX       R12
+        DATA
+??Subroutine24_0:
+        DC32     `??operator new[]`
+        CFI EndBlock cfiBlock41
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x25\\x64">`:
+        DATA
+        DC8 25H, 0, 64H, 0, 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x4d\\x6f\\x72\\x6e\\x69\\x6e\\x67">`:
+        DATA
+        DC8 4DH, 0, 6FH, 0, 72H, 0, 6EH, 0
+        DC8 69H, 0, 6EH, 0, 67H, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x4e\\x6f\\x6f\\x6e">`:
+        DATA
+        DC8 4EH, 0, 6FH, 0, 6FH, 0, 6EH, 0
+        DC8 0, 0
+        DC8 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x41\\x66\\x74\\x65\\x72\\x6e\\x6f\\x6f\\`:
+        DATA
+        DC8 41H, 0, 66H, 0, 74H, 0, 65H, 0
+        DC8 72H, 0, 6EH, 0, 6FH, 0, 6FH, 0
+        DC8 6EH, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x45\\x76\\x65\\x6e\\x69\\x6e\\x67">`:
+        DATA
+        DC8 45H, 0, 76H, 0, 65H, 0, 6EH, 0
+        DC8 69H, 0, 6EH, 0, 67H, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x4e\\x69\\x67\\x68\\x74">`:
+        DATA
+        DC8 4EH, 0, 69H, 0, 67H, 0, 68H, 0
+        DC8 74H, 0, 0, 0
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant {&L"\\x4d\\x6f\\x72\\x6e\\x69\\x6e\\x67", `:
+        DATA
+        DC32 `?<Constant L"\\x4d\\x6f\\x72\\x6e\\x69\\x6e\\x67">`
+        DC32 `?<Constant L"\\x4e\\x6f\\x6f\\x6e">`
+        DC32 `?<Constant L"\\x41\\x66\\x74\\x65\\x72\\x6e\\x6f\\x6f\\`
+        DC32 `?<Constant L"\\x45\\x76\\x65\\x6e\\x69\\x6e\\x67">`
+        DC32 `?<Constant L"\\x4e\\x69\\x67\\x68\\x74">`
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant {0, 12, 13, 16, 18}>`:
+        DATA
+        DC32 0, 12, 13, 16, 18
+
+        RSEG DATA_C:CONST:SORT:NOROOT(2)
+`?<Constant L"\\x5c\\x6e">`:
+        DATA
+        DC8 5CH, 0, 6EH, 0, 0, 0
+        DC8 0, 0
+
+        END
+// 
+// 1 432 bytes in segment CODE
+//   132 bytes in segment DATA_C
+// 
+// 1 268 bytes of CODE  memory (+ 164 bytes shared)
+//   132 bytes of CONST memory
+//
+//Errors: none
+//Warnings: none
